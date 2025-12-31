@@ -1,6 +1,3 @@
-# Large media files - too big for GitHub
-exfil/media/
-
 # Python scripts (local tools only)
 *.py
 
