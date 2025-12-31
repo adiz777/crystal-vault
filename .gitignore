@@ -1,0 +1,12 @@
+# Large media files - too big for GitHub
+exfil/media/
+
+# Python scripts (local tools only)
+*.py
+
+# Local reports
+exfil/reports/EXIF_REPORT_FULL.json
+
+# System files
+.DS_Store
+Thumbs.db

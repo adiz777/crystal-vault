@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venezuela Glossary for Americans</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 {
+            color: #FFCC00;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 40px;
+            font-size: 14px;
+        }
+        .flag-bar {
+            height: 6px;
+            background: linear-gradient(90deg, #FFCC00 33%, #00247D 33%, #00247D 66%, #CF142B 66%);
+            margin-bottom: 40px;
+            border-radius: 3px;
+        }
+        .category {
+            margin-bottom: 40px;
+        }
+        .category-title {
+            color: #FFCC00;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #CF142B;
+            margin-bottom: 20px;
+        }
+        .term {
+            background: #1a1a1a;
+            border-left: 4px solid #CF142B;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+        .term.identity { border-left-color: #FFCC00; }
+        .term.agency { border-left-color: #00247D; }
+        .term.surveillance { border-left-color: #CF142B; }
+        .term.economic { border-left-color: #28a745; }
+        .term.political { border-left-color: #9333ea; }
+        .term-name {
+            color: #FFCC00;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .term-spanish {
+            color: #CF142B;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .term-desc { line-height: 1.6; margin-bottom: 10px; }
+        .us-equiv {
+            background: rgba(0,36,125,0.3);
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        .us-equiv strong { color: #FFCC00; }
+        .tag {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+            margin-right: 5px;
+            margin-top: 10px;
+        }
+        .tag-danger { background: #CF142B; color: #fff; }
+        .tag-warning { background: #FFCC00; color: #000; }
+        .tag-info { background: #00247D; color: #fff; }
+        .search-box {
+            width: 100%;
+            padding: 15px;
+            background: #1a1a1a;
+            border: 2px solid #333;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .search-box:focus { border-color: #FFCC00; outline: none; }
+        .search-box::placeholder { color: #666; }
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-num { color: #FFCC00; font-size: 1.5rem; font-weight: bold; }
+        .stat-label { color: #666; font-size: 0.75rem; text-transform: uppercase; }
+        .hidden { display: none; }
+        a { color: #FFCC00; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Venezuela Glossary</h1>
+        <p class="subtitle">Plain English translations for Americans | Updated Dec 30, 2025</p>
+        <div class="flag-bar"></div>
+
+        <div class="stats-bar">
+            <div class="stat"><div class="stat-num">70</div><div class="stat-label">Terms Defined</div></div>
+            <div class="stat"><div class="stat-num">9</div><div class="stat-label">Categories</div></div>
+            <div class="stat"><div class="stat-num">30M</div><div class="stat-label">Citizens Tracked</div></div>
+        </div>
+
+        <input type="text" class="search-box" id="search" placeholder="Search terms... (e.g., cedula, SAIME, Crystal Vault)" onkeyup="filterTerms()">
+
+        <!-- IDENTITY & DOCUMENTS -->
+        <div class="category">
+            <h2 class="category-title">Identity & Documents</h2>
+
+            <div class="term identity" data-search="cedula id identity ssn social security">
+                <div class="term-name">CEDULA</div>
+                <div class="term-spanish">Cedula de Identidad</div>
+                <div class="term-desc">Venezuela's national ID number. 6-8 digits prefixed with V (Venezuelan) or E (Foreigner). Required for literally everything - voting, banking, buying gas, getting food.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Social Security Number + Driver's License + Voter ID combined into one mandatory card you must carry.</div>
+                <span class="tag tag-danger">TRACKED IN CRYSTAL VAULT</span>
+            </div>
+
+            <div class="term identity" data-search="carnet patria fatherland card benefits">
+                <div class="term-name">CARNET DE LA PATRIA</div>
+                <div class="term-spanish">Fatherland Card</div>
+                <div class="term-desc">A "loyalty card" for government benefits containing a QR code linked to your cedula, voting record, and benefit status. Opposition voters report being denied benefits.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Imagine if your EBT card also tracked your voting, location, and political activities.</div>
+                <span class="tag tag-danger">SURVEILLANCE TOOL</span>
+            </div>
+
+            <div class="term identity" data-search="rif tax id">
+                <div class="term-name">RIF</div>
+                <div class="term-spanish">Registro de Informacion Fiscal</div>
+                <div class="term-desc">Tax ID number derived from your cedula. Required for all tax filings and business transactions.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> EIN (for businesses) or your SSN for tax purposes.</div>
+            </div>
+
+            <div class="term identity" data-search="passport pasaporte travel">
+                <div class="term-name">PASAPORTE</div>
+                <div class="term-spanish">Passport</div>
+                <div class="term-desc">Controlled by SAIME. Officially ~$200 but corruption makes real cost $500-2000+. Wait times: months to years unless you pay bribes. 7+ million fled, many couldn't get one.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Same concept, but imagine State Department demanding bribes.</div>
+                <span class="tag tag-warning">CORRUPTION BOTTLENECK</span>
+            </div>
+        </div>
+
+        <!-- GOVERNMENT AGENCIES -->
+        <div class="category">
+            <h2 class="category-title">Government Agencies</h2>
+
+            <div class="term agency" data-search="saime identity migration immigration dmv passport">
+                <div class="term-name">SAIME</div>
+                <div class="term-spanish">Servicio Administrativo de Identificacion, Migracion y Extranjeria</div>
+                <div class="term-desc">Controls cedulas, passports, and immigration. Single point of control for your entire legal identity. 134 offices nationwide (we have all GPS coordinates).</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> DMV + Passport Agency + USCIS merged into one agency.</div>
+                <span class="tag tag-danger">OPEN API - WE RIPPED IT</span>
+            </div>
+
+            <div class="term agency" data-search="saren registry notary property deeds">
+                <div class="term-name">SAREN</div>
+                <div class="term-spanish">Servicio Autonomo de Registros y Notarias</div>
+                <div class="term-desc">Registry and notary service. Controls property deeds, business registration, contracts.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> County Clerk + Notary Public + DMV Title Office.</div>
+                <span class="tag tag-danger">OPEN API - WE RIPPED IT</span>
+            </div>
+
+            <div class="term agency" data-search="cne election voting fraud">
+                <div class="term-name">CNE</div>
+                <div class="term-spanish">Consejo Nacional Electoral</div>
+                <div class="term-desc">Runs ALL elections. Controls voter registration, voting machines, counts votes. Declared Maduro winner in 2024 despite exit polls showing 40-point loss.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Imagine FEC + all state election boards controlled by one party.</div>
+                <span class="tag tag-danger">ACCUSED OF FRAUD</span>
+            </div>
+
+            <div class="term agency" data-search="cicpc fbi police investigation crime">
+                <div class="term-name">CICPC</div>
+                <div class="term-spanish">Cuerpo de Investigaciones Cientificas, Penales y Criminalisticas</div>
+                <div class="term-desc">Criminal investigation corps. Investigates major crimes, runs forensic labs. Accused of extrajudicial killings, torture, political arrests.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> FBI + CSI combined (but with no oversight).</div>
+                <span class="tag tag-warning">HUMAN RIGHTS ABUSES</span>
+            </div>
+
+            <div class="term agency" data-search="sebin intelligence cia spy political police">
+                <div class="term-name">SEBIN</div>
+                <div class="term-spanish">Servicio Bolivariano de Inteligencia Nacional</div>
+                <div class="term-desc">Political police. Arrests dissidents, surveils opposition. HQ: "El Helicoide" - a half-built shopping mall turned prison/spy HQ.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> CIA + Secret Service but for domestic political repression.</div>
+                <span class="tag tag-danger">TORTURE DOCUMENTED</span>
+            </div>
+
+            <div class="term agency" data-search="pdvsa oil petroleum state company sanctions">
+                <div class="term-name">PDVSA</div>
+                <div class="term-spanish">Petroleos de Venezuela S.A.</div>
+                <div class="term-desc">State oil company. Once produced 3.5M barrels/day, now ~800K due to mismanagement. Heavily sanctioned by US.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> If ExxonMobil was government-owned and corrupt.</div>
+                <span class="tag tag-info">US SANCTIONED</span>
+            </div>
+
+            <div class="term agency" data-search="bcv central bank banking currency bolivar">
+                <div class="term-name">BCV</div>
+                <div class="term-spanish">Banco Central de Venezuela</div>
+                <div class="term-desc">Central Bank. Presided over the bolivar's collapse (1,000,000%+ inflation). Now integrated into Crystal Vault for real-time financial surveillance.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> The Federal Reserve.</div>
+                <span class="tag tag-danger">CRYSTAL VAULT INTEGRATED</span>
+            </div>
+
+            <div class="term agency" data-search="cantv telecom telecommunications internet state phone network zte">
+                <div class="term-name">CANTV</div>
+                <div class="term-spanish">Compania Anonima Nacional Telefonos de Venezuela</div>
+                <div class="term-desc">State telecommunications company. Controls internet, phone lines, and all network infrastructure. Hosts the Crystal Vault database at La Boyera Data Center in Caracas. 12+ ZTE developers embedded here building surveillance systems.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Imagine AT&T was government-owned and ran all surveillance infrastructure.</div>
+                <span class="tag tag-danger">HOSTS CRYSTAL VAULT</span>
+                <span class="tag tag-info">AS8048 NETWORK</span>
+            </div>
+
+            <div class="term agency" data-search="inces ince training vocational education workforce job socialist">
+                <div class="term-name">INCES</div>
+                <div class="term-spanish">Instituto Nacional de Capacitacion y Educacion Socialista</div>
+                <div class="term-desc">National Institute of Socialist Training and Education. Vocational training funded by mandatory 2% payroll tax on employers. Originally INCE before "Socialista" was added in 2008. Once respected, now politicized.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Community college vocational programs + workforce development agencies.</div>
+                <span class="tag tag-warning">POLITICIZED</span>
+            </div>
+
+            <div class="term agency" data-search="mppef economy ministry finance economic">
+                <div class="term-name">MPPEF</div>
+                <div class="term-spanish">Ministerio del Poder Popular de Economia y Finanzas</div>
+                <div class="term-desc">Ministry of Economy and Finance. Controls fiscal policy. New website with only 3 posts so far. Open WordPress API.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Department of Treasury.</div>
+                <span class="tag tag-danger">OPEN API</span>
+            </div>
+
+            <div class="term agency" data-search="siacper cne employees personnel hr intranet">
+                <div class="term-name">SIACPER</div>
+                <div class="term-spanish">Sistema de Administracion de Personal</div>
+                <div class="term-desc">CNE's internal HR/Personnel system. Exposed via Next.js build manifest. Routes reveal employee tracking, payroll, tax withholding, deceased employees table, and cedula-based lookups.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Government employee HR database (OPM-level data).</div>
+                <span class="tag tag-danger">78 ROUTES EXPOSED</span>
+            </div>
+
+            <div class="term agency" data-search="seniat tax customs irs import export fiscal">
+                <div class="term-name">SENIAT</div>
+                <div class="term-spanish">Servicio Nacional Integrado de Administracion Aduanera y Tributaria</div>
+                <div class="term-desc">Tax and Customs Authority. Controls all tax collection, customs, import/export duties. Knows every business transaction in the country.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> IRS + Customs and Border Protection (import side).</div>
+            </div>
+
+            <div class="term agency" data-search="tsj supreme court judicial tribunal justice">
+                <div class="term-name">TSJ</div>
+                <div class="term-spanish">Tribunal Supremo de Justicia</div>
+                <div class="term-desc">Supreme Court. Packed with Maduro loyalists, rubber-stamps everything. Famous for dissolving the opposition-controlled National Assembly in 2017.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> US Supreme Court, but imagine if one party appointed all justices.</div>
+                <span class="tag tag-warning">RUBBER STAMP</span>
+            </div>
+
+            <div class="term agency" data-search="dgcim military counterintelligence torture coup">
+                <div class="term-name">DGCIM</div>
+                <div class="term-spanish">Direccion General de Contrainteligencia Militar</div>
+                <div class="term-desc">Military Counterintelligence. Hunts "traitors" in the military, arrests coup plotters. Known for torturing detained officers to enforce loyalty to Maduro.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Military intelligence + internal affairs with no oversight.</div>
+                <span class="tag tag-danger">TORTURE DOCUMENTED</span>
+            </div>
+
+            <div class="term agency" data-search="fanb armed forces military army navy air force">
+                <div class="term-name">FANB</div>
+                <div class="term-spanish">Fuerza Armada Nacional Bolivariana</div>
+                <div class="term-desc">Bolivarian National Armed Forces. Deeply involved in government, business, and drug trafficking. Senior officers run PDVSA, mines, and food distribution.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Combined US armed forces, but running the economy and trafficking drugs.</div>
+                <span class="tag tag-warning">DRUG TRAFFICKING</span>
+            </div>
+
+            <div class="term agency" data-search="gnb national guard border riot police protest">
+                <div class="term-name">GNB</div>
+                <div class="term-spanish">Guardia Nacional Bolivariana</div>
+                <div class="term-desc">Bolivarian National Guard. Border control, internal security, crowd control. Known for violent crackdowns on protesters with tear gas and buckshot.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> National Guard + Border Patrol + riot police.</div>
+                <span class="tag tag-danger">PROTEST VIOLENCE</span>
+            </div>
+
+            <div class="term agency" data-search="faes special forces death squad extrajudicial killing">
+                <div class="term-name">FAES</div>
+                <div class="term-spanish">Fuerzas de Acciones Especiales</div>
+                <div class="term-desc">Special Action Forces. Elite police unit notorious for extrajudicial killings in poor neighborhoods. UN documented thousands of executions disguised as "confrontations."</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> SWAT team that operates as a death squad.</div>
+                <span class="tag tag-danger">DEATH SQUAD</span>
+            </div>
+
+            <div class="term agency" data-search="inea maritime port ship coast guard aquatic">
+                <div class="term-name">INEA</div>
+                <div class="term-spanish">Instituto Nacional de los Espacios Acuaticos</div>
+                <div class="term-desc">National Institute of Aquatic Spaces. Controls all ports, ships, and maritime activity. Controls the ports allegedly used for drug trafficking.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Coast Guard + Port Authority + Maritime Administration.</div>
+            </div>
+
+            <div class="term agency" data-search="cavim weapons guns ammunition military factory atf">
+                <div class="term-name">CAVIM</div>
+                <div class="term-spanish">Compania Anonima Venezolana de Industrias Militares</div>
+                <div class="term-desc">State-owned weapons manufacturer AND gun regulator. Controls all legal weapons and ammunition. Result: civilians can't legally arm themselves - only criminals have guns.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Imagine if the government owned Remington AND was the ATF.</div>
+            </div>
+
+            <div class="term agency" data-search="conatel telecom censorship internet block website media">
+                <div class="term-name">CONATEL</div>
+                <div class="term-spanish">Comision Nacional de Telecomunicaciones</div>
+                <div class="term-desc">National Telecommunications Commission. Regulates internet and media. Orders website blocks, forces ISPs to censor content, and shuts down critical broadcasters.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> FCC but with power to censor any website or media outlet.</div>
+                <span class="tag tag-danger">CENSORSHIP ENFORCER</span>
+            </div>
+
+            <div class="term agency" data-search="banco venezuela state bank banking crystal vault financial">
+                <div class="term-name">BANCO DE VENEZUELA</div>
+                <div class="term-spanish">Bank of Venezuela</div>
+                <div class="term-desc">Largest state-owned bank. Now integrated into Crystal Vault - every transaction reports IMEI and GPS coordinates. If you're flagged, your accounts freeze instantly.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Bank of America but government-owned and reporting your location with every transaction.</div>
+                <span class="tag tag-danger">CRYSTAL VAULT INTEGRATED</span>
+            </div>
+
+            <div class="term agency" data-search="ivss social security pension retirement benefits">
+                <div class="term-name">IVSS</div>
+                <div class="term-spanish">Instituto Venezolano de los Seguros Sociales</div>
+                <div class="term-desc">Venezuelan Social Security Institute. Manages pensions, disability, and healthcare benefits. Integrated with Sistema Patria for benefit tracking and control.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Social Security Administration.</div>
+            </div>
+
+            <div class="term agency" data-search="sundde price control enforcement shortages economic">
+                <div class="term-name">SUNDDE</div>
+                <div class="term-spanish">Superintendencia Nacional para la Defensa de los Derechos Socioeconomicos</div>
+                <div class="term-desc">Price control enforcement agency. Sets maximum prices on goods, raids businesses for "hoarding," and arrests store owners. Created the shortages that caused the crisis.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Imagine a federal agency that tells every store what prices to charge and jails them for non-compliance.</div>
+                <span class="tag tag-warning">CAUSED SHORTAGES</span>
+            </div>
+        </div>
+
+        <!-- SURVEILLANCE SYSTEMS -->
+        <div class="category">
+            <h2 class="category-title">Surveillance Systems</h2>
+
+            <div class="term surveillance" data-search="crystal vault boveda database centralized surveillance zte china christmas">
+                <div class="term-name">LA BOVEDA DE CRISTAL</div>
+                <div class="term-spanish">The Crystal Vault</div>
+                <div class="term-desc">Centralized surveillance database activated Christmas 2025 (Dec 24-26). Merged SAIME (identity) + BCV (banking) + Sistema Patria (benefits/voting). Built by ZTE (China). Can disable your entire existence with one click.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Imagine SSA + IRS + DMV + all banks merged with an "off switch" for your life.</div>
+                <span class="tag tag-danger">ACTIVATED DEC 2025</span>
+                <span class="tag tag-info">ZTE (CHINA) BUILT</span>
+            </div>
+
+            <div class="term surveillance" data-search="patria system benefits voting tracking">
+                <div class="term-name">SISTEMA PATRIA</div>
+                <div class="term-spanish">Fatherland System</div>
+                <div class="term-desc">Digital platform for government benefits and surveillance. 21.8 million users. Tracks voting, location, and political loyalty. Login: patria.org.ve</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Benefits.gov + voter tracking + location surveillance.</div>
+                <span class="tag tag-danger">21.8M TRACKED</span>
+            </div>
+
+            <div class="term surveillance" data-search="zte china chinese telecom huawei surveillance infrastructure">
+                <div class="term-name">ZTE CORPORATION</div>
+                <div class="term-spanish">Zhongxing Telecommunication Equipment</div>
+                <div class="term-desc">Chinese telecom company that built Venezuela's surveillance infrastructure. Provided the tech for Crystal Vault and the Carnet de la Patria system. US-sanctioned for violating Iran/North Korea embargoes.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Imagine AT&T but Chinese-government-linked and building surveillance for dictators.</div>
+                <span class="tag tag-danger">BUILT CRYSTAL VAULT</span>
+                <span class="tag tag-info">US SANCTIONED</span>
+            </div>
+
+            <div class="term surveillance" data-search="lista tascon blacklist opposition petition 2004 recall">
+                <div class="term-name">LISTA TASCON</div>
+                <div class="term-spanish">Tascon List</div>
+                <div class="term-desc">The original 2004 blacklist of 3.4 million citizens who signed petition to recall Chavez. Named after congressman Luis Tascon who published it. Used to deny jobs, contracts, passports. Predecessor to Crystal Vault.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Imagine a public list of everyone who signed a recall petition, used to deny them employment.</div>
+                <span class="tag tag-danger">3.4M BLACKLISTED</span>
+            </div>
+
+            <div class="term surveillance" data-search="maisanta software voter opposition cedula lookup">
+                <div class="term-name">MAISANTA</div>
+                <div class="term-spanish">Named after Chavez's great-grandfather</div>
+                <div class="term-desc">Software distributed to government offices to look up any citizen's voting history by cedula. Shows if you signed recall petitions or voted against Chavez. Still used today.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Software that lets any government worker check if you voted Republican or Democrat.</div>
+                <span class="tag tag-danger">VOTER SURVEILLANCE</span>
+            </div>
+
+            <div class="term surveillance" data-search="venapp snitching reporting app denounce neighbors">
+                <div class="term-name">VENAPP</div>
+                <div class="term-spanish">Venezuelan App</div>
+                <div class="term-desc">Government mobile app for citizens to report "irregularities" - price gouging, hoarding, anti-government activity. Essentially a snitching app to report your neighbors.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> East German Stasi informant network, but there's an app for that.</div>
+                <span class="tag tag-danger">SNITCH APP</span>
+            </div>
+
+            <div class="term surveillance" data-search="monedero patria wallet digital payment qr">
+                <div class="term-name">MONEDERO PATRIA</div>
+                <div class="term-spanish">Fatherland Wallet</div>
+                <div class="term-desc">Digital wallet tied to Sistema Patria. Receives government bonuses, makes payments. Every transaction tracked, linked to your cedula, and now feeds into Crystal Vault.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Venmo but the government sees every transaction and can freeze it instantly.</div>
+                <span class="tag tag-danger">TRACKED PAYMENTS</span>
+            </div>
+
+            <div class="term surveillance" data-search="soltein database mexico contractor carnet">
+                <div class="term-name">SOLTEIN DATABASE</div>
+                <div class="term-spanish">Soltein SA de CV (Mexican company)</div>
+                <div class="term-desc">The original database infrastructure for Carnet de la Patria, built by Mexican company Soltein. Started as CLAP food tracking in 2016, evolved into citizen surveillance backbone.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Third-party contractor building government surveillance database.</div>
+                <span class="tag tag-info">MEXICAN CONTRACTOR</span>
+            </div>
+
+            <div class="term surveillance" data-search="dpi deep packet inspection censorship internet traffic">
+                <div class="term-name">DPI</div>
+                <div class="term-spanish">Deep Packet Inspection</div>
+                <div class="term-desc">Technology that inspects internet traffic content, not just headers. Detected during Christmas 2025 Crystal Vault migration - used to redirect independent press traffic to "digital black holes."</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Your ISP reading the contents of every email and website you visit.</div>
+                <span class="tag tag-danger">DETECTED DEC 2025</span>
+            </div>
+
+            <div class="term surveillance" data-search="imei phone tracking device identifier location gps">
+                <div class="term-name">IMEI TRACKING</div>
+                <div class="term-spanish">International Mobile Equipment Identity</div>
+                <div class="term-desc">Your phone's hardware ID. Crystal Vault now captures IMEI with every banking transaction, linking your physical device to your financial activity and location.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Your bank reporting your phone's serial number and GPS with every purchase.</div>
+                <span class="tag tag-danger">CRYSTAL VAULT FEATURE</span>
+            </div>
+        </div>
+
+        <!-- POLITICAL TERMS -->
+        <div class="category">
+            <h2 class="category-title">Political Terms</h2>
+
+            <div class="term political" data-search="chavismo chavez hugo ideology socialist">
+                <div class="term-name">CHAVISMO</div>
+                <div class="term-spanish">Chavista = follower</div>
+                <div class="term-desc">Political movement founded by Hugo Chavez. Socialism, anti-imperialism, state control. Like saying "Trumpism" - an ideology built around one leader.</div>
+            </div>
+
+            <div class="term political" data-search="colectivos armed groups paramilitary thugs">
+                <div class="term-name">COLECTIVOS</div>
+                <div class="term-spanish">Collectives</div>
+                <div class="term-desc">Armed pro-government civilian groups. Intimidate opposition, attack protesters, control neighborhoods. Paramilitary thugs with impunity.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Imagine if Antifa had government backing and motorcycles.</div>
+                <span class="tag tag-danger">ARMED PARAMILITARY</span>
+            </div>
+
+            <div class="term political" data-search="tren de aragua gang criminal trafficking ms13">
+                <div class="term-name">TREN DE ARAGUA</div>
+                <div class="term-spanish">Aragua Train</div>
+                <div class="term-desc">Mega-gang born in Tocoron Prison. Now operates across Venezuela, Colombia, Chile, Peru, and the US. Drug trafficking, extortion, kidnapping, human smuggling. The gang the US claims to be targeting.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> MS-13 but bigger and better organized.</div>
+                <span class="tag tag-danger">INTERNATIONAL REACH</span>
+            </div>
+
+            <div class="term political" data-search="pran prison gang leader control">
+                <div class="term-name">PRANES</div>
+                <div class="term-spanish">Prison gang leaders</div>
+                <div class="term-desc">Prison bosses who actually control Venezuelan prisons. Government ceded control years ago. They maintain order, government looks the other way.</div>
+            </div>
+
+            <div class="term political" data-search="maduro nicolas president dictator bus driver">
+                <div class="term-name">NICOLAS MADURO</div>
+                <div class="term-spanish">President / Dictator</div>
+                <div class="term-desc">Former bus driver who became Chavez's successor in 2013. Lost 2024 election by ~40 points according to exit polls but CNE declared him winner. Under US indictment for narco-terrorism. $15M bounty on his head.</div>
+                <div class="us-equiv"><strong>Status:</strong> Indicted by US DOJ, $15 million reward for capture.</div>
+                <span class="tag tag-danger">US INDICTED</span>
+                <span class="tag tag-info">$15M BOUNTY</span>
+            </div>
+
+            <div class="term political" data-search="diosdado cabello military power drug trafficking">
+                <div class="term-name">DIOSDADO CABELLO</div>
+                <div class="term-spanish">Second most powerful figure</div>
+                <div class="term-desc">Controls the military and intelligence services. Widely considered the real power behind Maduro. US alleges he runs the Cartel de los Soles (drug trafficking). Also under US indictment.</div>
+                <div class="us-equiv"><strong>Status:</strong> US indicted for drug trafficking, considered kingpin.</div>
+                <span class="tag tag-danger">US INDICTED</span>
+                <span class="tag tag-warning">CARTEL TIES</span>
+            </div>
+
+            <div class="term political" data-search="madurismo madurista loyalist follower">
+                <div class="term-name">MADURISMO</div>
+                <div class="term-spanish">Madurista = follower</div>
+                <div class="term-desc">Loyalty to Nicolas Maduro specifically. Many original Chavistas don't like Maduro but have no alternative. Maduristas are the true believers who benefit from the regime.</div>
+            </div>
+
+            <div class="term political" data-search="oposicion opposition anti-government dissent">
+                <div class="term-name">OPOSICION</div>
+                <div class="term-spanish">Opposition</div>
+                <div class="term-desc">Everyone who opposes the Maduro government. Fragmented and often fighting among themselves. Leaders are in exile, prison, or banned from running for office.</div>
+            </div>
+
+            <div class="term political" data-search="psuv partido socialista ruling party">
+                <div class="term-name">PSUV</div>
+                <div class="term-spanish">Partido Socialista Unido de Venezuela</div>
+                <div class="term-desc">United Socialist Party of Venezuela. The ruling party that controls all institutions. Maduro is party president. Membership often required for government jobs and benefits.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Imagine if one party controlled the presidency, all courts, all agencies, and all elections.</div>
+            </div>
+
+            <div class="term political" data-search="olp operation liberate people extrajudicial killing death">
+                <div class="term-name">OLP</div>
+                <div class="term-spanish">Operacion de Liberacion del Pueblo</div>
+                <div class="term-desc">"Operation to Liberate the People." Government raids on poor neighborhoods that resulted in thousands of extrajudicial killings. Bodies staged with planted weapons. UN documented systematic executions.</div>
+                <div class="us-equiv"><strong>Reality:</strong> State-sponsored death squads targeting the poor.</div>
+                <span class="tag tag-danger">MASS KILLINGS</span>
+            </div>
+
+            <div class="term political" data-search="cartel soles military drug trafficking generals">
+                <div class="term-name">CARTEL DE LOS SOLES</div>
+                <div class="term-spanish">Cartel of the Suns</div>
+                <div class="term-desc">Drug trafficking organization allegedly run by Venezuelan military generals. Named for the sun insignias on their uniforms. US indictments name Maduro, Cabello, and senior military as members.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Imagine if the Joint Chiefs of Staff ran a drug cartel.</div>
+                <span class="tag tag-danger">US INDICTED</span>
+            </div>
+        </div>
+
+        <!-- ECONOMIC TERMS -->
+        <div class="category">
+            <h2 class="category-title">Economic Terms</h2>
+
+            <div class="term economic" data-search="bolivar currency money inflation worthless">
+                <div class="term-name">BOLIVAR</div>
+                <div class="term-spanish">Bs. / VES</div>
+                <div class="term-desc">Venezuelan currency. Basically worthless - ~40 Bs = $1 after removing 14 zeros through redenominations. Peak inflation: 1,000,000%+ in 2018. Everyone uses USD when possible.</div>
+            </div>
+
+            <div class="term economic" data-search="bono bonus stimulus handout">
+                <div class="term-name">BONO</div>
+                <div class="term-spanish">Bonus</div>
+                <div class="term-desc">Government cash handout through Sistema Patria. Usually $3-30 USD. Distributed randomly, often before elections. Must be registered in Patria to receive.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Stimulus check tied to political loyalty.</div>
+            </div>
+
+            <div class="term economic" data-search="clap food box rations government">
+                <div class="term-name">CLAP</div>
+                <div class="term-spanish">Comite Local de Abastecimiento y Produccion</div>
+                <div class="term-desc">Government food box program. Rice, pasta, oil, flour (often expired). Distributed through party committees that track who gets what. Oppose the government, lose food.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Food stamps, but the government picks what you eat.</div>
+                <span class="tag tag-warning">POLITICAL CONTROL TOOL</span>
+            </div>
+        </div>
+
+        <!-- STATE MEDIA -->
+        <div class="category">
+            <h2 class="category-title">State Media</h2>
+
+            <div class="term" data-search="vtv television state propaganda tv">
+                <div class="term-name">VTV</div>
+                <div class="term-spanish">Venezolana de Television</div>
+                <div class="term-desc">State television. 24/7 Maduro worship, no opposition voices. 168,178 articles in their WordPress (we have the API access).</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> PBS if it was pure government propaganda.</div>
+                <span class="tag tag-danger">168K POSTS - API OPEN</span>
+            </div>
+
+            <div class="term" data-search="avn news agency state press">
+                <div class="term-name">AVN</div>
+                <div class="term-spanish">Agencia Venezolana de Noticias</div>
+                <div class="term-desc">Venezuelan News Agency. Official government press releases disguised as news. 13,617 articles accessible via open API.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> If the White House ran AP/Reuters.</div>
+                <span class="tag tag-danger">13K POSTS - API OPEN</span>
+            </div>
+
+            <div class="term" data-search="correo orinoco newspaper state press chavez">
+                <div class="term-name">CORREO DEL ORINOCO</div>
+                <div class="term-spanish">Orinoco Post / Mail</div>
+                <div class="term-desc">State newspaper founded by Hugo Chavez in 2009. Named after a paper Simon Bolivar published in 1818. 10,420 articles accessible via open API.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Government-owned Washington Post.</div>
+                <span class="tag tag-danger">10K POSTS - API OPEN</span>
+            </div>
+
+            <div class="term" data-search="telesur television latin america leftist cuba">
+                <div class="term-name">TELESUR</div>
+                <div class="term-spanish">Television del Sur</div>
+                <div class="term-desc">Multi-national leftist news network. Funded by Venezuela, Cuba, and other leftist governments. Broadcasts across Latin America pushing anti-US, pro-socialist narratives.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> RT (Russia Today) but for Latin American socialism.</div>
+                <span class="tag tag-info">MULTI-NATIONAL</span>
+            </div>
+        </div>
+
+        <!-- US & INTERNATIONAL -->
+        <div class="category">
+            <h2 class="category-title">US & International</h2>
+
+            <div class="term agency" data-search="ofac treasury sanctions sdn list">
+                <div class="term-name">OFAC</div>
+                <div class="term-spanish">Office of Foreign Assets Control</div>
+                <div class="term-desc">US Treasury department that enforces economic sanctions. Maintains the SDN (Specially Designated Nationals) list of sanctioned individuals and entities. 470 Venezuela-related entries, ~210 with cedula numbers we cross-referenced.</div>
+                <div class="us-equiv"><strong>What it does:</strong> Freezes assets, blocks transactions, and makes sanctioned individuals untouchable by US banks.</div>
+                <span class="tag tag-info">470 VENEZUELA ENTRIES</span>
+            </div>
+
+            <div class="term" data-search="sdn list sanctions blocked">
+                <div class="term-name">SDN LIST</div>
+                <div class="term-spanish">Specially Designated Nationals</div>
+                <div class="term-desc">OFAC's list of blocked individuals and entities. Being on this list means no US bank will touch you, your assets are frozen, and Americans can't do business with you.</div>
+                <div class="us-equiv"><strong>Effect:</strong> Financial death sentence for anyone trying to move money through US-connected systems.</div>
+            </div>
+        </div>
+
+        <!-- KEY PHRASES -->
+        <div class="category">
+            <h2 class="category-title">Key Phrases</h2>
+
+            <div class="term" data-search="patria muerte fatherland death slogan">
+                <div class="term-name">"PATRIA O MUERTE"</div>
+                <div class="term-spanish">"Fatherland or Death"</div>
+                <div class="term-desc">Official Chavista slogan. You'll see it everywhere - billboards, TV, official documents.</div>
+            </div>
+
+            <div class="term" data-search="guerra economica economic war sanctions excuse">
+                <div class="term-name">"GUERRA ECONOMICA"</div>
+                <div class="term-spanish">"Economic War"</div>
+                <div class="term-desc">Government's excuse for economic collapse. Blames US sanctions instead of decades of mismanagement, corruption, and socialist policies.</div>
+            </div>
+
+            <div class="term" data-search="golpe estado coup">
+                <div class="term-name">"GOLPE DE ESTADO"</div>
+                <div class="term-spanish">"Coup d'etat"</div>
+                <div class="term-desc">What the government calls any opposition activity - protests, elections, even tweets critical of Maduro.</div>
+            </div>
+
+            <div class="term" data-search="no volveran return opposition slogan">
+                <div class="term-name">"NO VOLVERAN"</div>
+                <div class="term-spanish">"They will not return"</div>
+                <div class="term-desc">Chavista slogan claiming the opposition/old elite will never return to power. Chanted at rallies and painted on walls.</div>
+            </div>
+
+            <div class="term" data-search="somos millones ten million supporters">
+                <div class="term-name">"SOMOS 10 MILLONES"</div>
+                <div class="term-spanish">"We are 10 million"</div>
+                <div class="term-desc">Government claim that Maduro has 10 million loyal supporters. Used to justify election results that show otherwise.</div>
+            </div>
+
+            <div class="term" data-search="bachaquero black market reseller ant">
+                <div class="term-name">BACHAQUERO</div>
+                <div class="term-spanish">Black market reseller</div>
+                <div class="term-desc">People who buy subsidized goods and resell them at markup. Named after leafcutter ants (bachacos) that carry things on their backs. Created by the price control system.</div>
+            </div>
+        </div>
+
+        <!-- GEOGRAPHY -->
+        <div class="category">
+            <h2 class="category-title">Geography</h2>
+
+            <div class="term" data-search="caracas capital city government">
+                <div class="term-name">CARACAS</div>
+                <div class="term-spanish">Capital city</div>
+                <div class="term-desc">Capital and largest city. Population ~3 million (down from 5M due to exodus). Where most government institutions are based. Extremely dangerous - one of the world's highest murder rates.</div>
+            </div>
+
+            <div class="term" data-search="miraflores palace president white house">
+                <div class="term-name">MIRAFLORES</div>
+                <div class="term-spanish">Presidential Palace</div>
+                <div class="term-desc">The Venezuelan White House. Where Maduro lives and governs. Named for the flowers that once grew there. Scene of the 2002 coup attempt.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> The White House.</div>
+            </div>
+
+            <div class="term" data-search="helicoide sebin prison torture spy mall">
+                <div class="term-name">EL HELICOIDE</div>
+                <div class="term-spanish">The Helix</div>
+                <div class="term-desc">Half-built shopping mall from the 1950s, now SEBIN headquarters and political prison. Symbol of Venezuela's decline - meant to be a futuristic mall, became a dungeon. Political prisoners held and tortured here.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Imagine an abandoned mall that became the CIA's secret prison.</div>
+                <span class="tag tag-danger">POLITICAL PRISON</span>
+            </div>
+
+            <div class="term" data-search="tocoron prison tren aragua gang">
+                <div class="term-name">TOCORON PRISON</div>
+                <div class="term-spanish">Centro Penitenciario de Tocoron</div>
+                <div class="term-desc">Prison where Tren de Aragua was born and still operates from. Government ceded control to pranes years ago. Has pools, clubs, a zoo. Run entirely by inmates.</div>
+                <div class="us-equiv"><strong>US Equivalent:</strong> Imagine if the government gave up and let inmates run the prison as their own city.</div>
+                <span class="tag tag-danger">GANG CONTROLLED</span>
+            </div>
+
+            <div class="term" data-search="la guaira port shipping drugs trafficking coast">
+                <div class="term-name">LA GUAIRA</div>
+                <div class="term-spanish">Main port near Caracas</div>
+                <div class="term-desc">Venezuela's primary port, 30 minutes from Caracas. Key for imports and exports. One of the areas allegedly used for drug trafficking by Cartel de los Soles.</div>
+                <span class="tag tag-warning">TRAFFICKING ROUTE</span>
+            </div>
+
+            <div class="term" data-search="la boyera cantv data center crystal vault server">
+                <div class="term-name">LA BOYERA DATA CENTER</div>
+                <div class="term-spanish">CANTV Data Center</div>
+                <div class="term-desc">CANTV's primary data center in Caracas. Hosts the Crystal Vault centralized database. Where ZTE developers built the surveillance infrastructure. The physical location of Venezuela's surveillance state.</div>
+                <div class="us-equiv"><strong>Location:</strong> Calle A, La Boyera, Caracas (coordinates available via Waze).</div>
+                <span class="tag tag-danger">HOSTS CRYSTAL VAULT</span>
+            </div>
+        </div>
+
+        <div style="text-align:center;margin-top:50px;padding:20px;border-top:1px solid #333;">
+            <p style="color:#666;font-size:12px;">
+                Compiled from open source intelligence | <a href="https://github.com/Ringmast4r/crystal-vault">Crystal Vault Project</a><br>
+                "The regime that surveils everyone forgot to secure anything."
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function filterTerms() {
+            var filter = document.getElementById('search').value.toLowerCase();
+            var terms = document.querySelectorAll('.term');
+            terms.forEach(function(term) {
+                var text = term.textContent.toLowerCase();
+                var searchData = term.getAttribute('data-search') || '';
+                if(text.indexOf(filter) > -1 || searchData.indexOf(filter) > -1) {
+                    term.classList.remove('hidden');
+                } else {
+                    term.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

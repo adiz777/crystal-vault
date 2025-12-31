@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crystal Vault - Venezuela OSINT Dashboard</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        /* Venezuelan Flag Accents: Yellow #FFCC00, Blue #00247D, Red #CF142B on Dark */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: #0d0d0d; color: #e0e0e0; }
+        .header { background: linear-gradient(135deg, #1a1a1a, #0d0d0d); padding: 20px; border-bottom: 4px solid #CF142B; position: relative; }
+        .header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, #FFCC00 33%, #00247D 33%, #00247D 66%, #CF142B 66%); }
+        .header h1 { color: #FFCC00; }
+        .header p { color: rgba(255,255,255,0.5); font-size: 14px; }
+        .tabs { display: flex; background: #1a1a1a; border-bottom: 1px solid #333; flex-wrap: wrap; }
+        .tab { padding: 12px 18px; cursor: pointer; background: transparent; color: rgba(255,255,255,0.5); border: none; font-size: 13px; }
+        .tab:hover { color: #FFCC00; background: rgba(255,255,255,0.05); }
+        .tab.active { color: #FFCC00; border-bottom: 3px solid #FFCC00; background: rgba(255,204,0,0.1); }
+        .content { display: none; padding: 20px; }
+        .content.active { display: block; }
+        #map { height: 70vh; width: 100%; border-radius: 8px; border: 2px solid #CF142B; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 20px; }
+        .stat-card { background: #1a1a1a; padding: 15px; border-radius: 8px; border-left: 4px solid #CF142B; }
+        .stat-card.blue { border-left-color: #00247D; }
+        .stat-card.yellow { border-left-color: #FFCC00; }
+        .stat-card h3 { color: #FFCC00; font-size: 24px; }
+        .stat-card p { color: rgba(255,255,255,0.7); font-size: 11px; margin-top: 5px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.2); font-size: 12px; }
+        th { background: #1a1a1a; color: #FFCC00; position: sticky; top: 0; }
+        tr:hover { background: rgba(255,204,0,0.05); }
+        .search-box { width: 100%; padding: 10px; background: #1a1a1a; border: 1px solid #333; color: #fff; border-radius: 4px; margin-bottom: 15px; }
+        .search-box:focus { border-color: #FFCC00; outline: none; }
+        .badge { padding: 3px 6px; border-radius: 4px; font-size: 10px; font-weight: bold; }
+        .badge-red { background: #CF142B; color: #fff; }
+        .badge-yellow { background: #FFCC00; color: #000; }
+        .badge-blue { background: #00247D; color: #fff; }
+        .badge-green { background: #28a745; color: #fff; }
+        .code-block { background: #1a1a1a; padding: 15px; border-radius: 4px; font-family: monospace; font-size: 11px; border: 1px solid #333; border-left: 4px solid #CF142B; white-space: pre-wrap; overflow-x: auto; color: #e0e0e0; }
+        .section-title { color: #FFCC00; font-size: 16px; margin: 20px 0 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 8px; }
+        .media-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 8px; }
+        .media-item { background: #1a1a1a; padding: 6px; border-radius: 4px; text-align: center; cursor: pointer; transition: transform 0.2s; }
+        .media-item:hover { transform: scale(1.05); border: 1px solid #FFCC00; }
+        .media-item img { max-width: 100%; height: 80px; object-fit: cover; border-radius: 4px; }
+        .media-item p { font-size: 9px; color: rgba(255,255,255,0.6); margin-top: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .media-item .exif-badge { font-size: 8px; color: #FFCC00; background: rgba(255,204,0,0.2); padding: 2px 4px; border-radius: 3px; margin-top: 3px; display: inline-block; }
+        .media-item .exif-info { font-size: 8px; color: #CF142B; margin-top: 2px; }
+        .table-container { max-height: 60vh; overflow-y: auto; }
+        .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; justify-content: center; align-items: center; flex-direction: column; }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 90%; max-height: 70%; object-fit: contain; border: 2px solid #FFCC00; border-radius: 8px; }
+        .lightbox-title { color: #FFCC00; margin-top: 15px; font-size: 14px; }
+        .lightbox-meta { color: #CF142B; margin-top: 8px; font-size: 12px; text-align: center; }
+        .lightbox-meta span { background: rgba(207,20,43,0.2); padding: 4px 8px; border-radius: 4px; margin: 0 5px; }
+        .lightbox-close { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 40px; cursor: pointer; }
+        .lightbox-close:hover { color: #CF142B; }
+        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); color: #fff; font-size: 50px; cursor: pointer; padding: 20px; }
+        .lightbox-nav:hover { color: #FFCC00; }
+        .lightbox-prev { left: 20px; }
+        .lightbox-next { right: 20px; }
+        .source-card { background: #1a1a1a; padding: 15px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #333; }
+        .source-card h4 { color: #FFCC00; margin-bottom: 8px; }
+        .source-card .url { color: #CF142B; font-family: monospace; font-size: 11px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>CRYSTAL VAULT - VENEZUELA OSINT</h1>
+        <p>Open source intelligence from government APIs | Data collected: 2025-12-31 | Total: 4.34 GB exfiltrated | 9,716 media files | 18 staff phone GPS locations | 2,901 EXIF records | <a href="glossary.html" style="color:#FFCC00;text-decoration:none;">GLOSSARY</a> | <a href="timeline.html" style="color:#FFCC00;text-decoration:none;">TIMELINE</a></p>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" onclick="showTab('overview')">Overview</button>
+        <button class="tab" onclick="showTab('map-tab')">Map (152 locations)</button>
+        <button class="tab" onclick="showTab('sanctions')">OFAC Sanctions</button>
+        <button class="tab" onclick="showTab('sources')">Data Sources</button>
+        <button class="tab" onclick="showTab('operations')">Operations</button>
+        <button class="tab" onclick="showTab('statemedia')">State Media</button>
+        <button class="tab" onclick="showTab('api')">APIs</button>
+        <button class="tab" onclick="showTab('media')">Media (9,716)</button>
+        <button class="tab" onclick="showTab('exif')">EXIF Intel (2,901)</button>
+        <button class="tab" onclick="showTab('gps-intel')" style="background:rgba(207,20,43,0.3);color:#CF142B;font-weight:bold;">GPS INTEL (18)</button>
+    </div>
+
+    <div id="overview" class="content active">
+        <div class="stats-grid">
+            <div class="stat-card" style="border-left-color:#CF142B;background:rgba(207,20,43,0.1);"><h3>18</h3><p>Staff Phone GPS Locations</p></div>
+            <div class="stat-card"><h3>134</h3><p>SAIME Offices with GPS</p></div>
+            <div class="stat-card blue"><h3>4.34 GB</h3><p>Total Data Exfiltrated</p></div>
+            <div class="stat-card yellow"><h3>9,716</h3><p>Media Files Downloaded</p></div>
+            <div class="stat-card"><h3>470</h3><p>OFAC Sanctions</p></div>
+            <div class="stat-card blue"><h3>230,205</h3><p>Government Posts Indexed</p></div>
+            <div class="stat-card yellow"><h3>2,901</h3><p>Files with EXIF Data</p></div>
+            <div class="stat-card"><h3>732</h3><p>Camera/Phone Models ID'd</p></div>
+            <div class="stat-card blue"><h3>1,442</h3><p>Software Tools Detected</p></div>
+        </div>
+
+        <h2 class="section-title">Open APIs Discovered (9 Sources)</h2>
+        <table>
+            <tr><th>Source</th><th>Type</th><th>Records</th><th>Downloaded</th><th>Status</th></tr>
+            <tr><td>VTV</td><td>State Television</td><td>168,178 posts</td><td>In Progress (12.3%)</td><td><span class="badge badge-red">OPEN API</span></td></tr>
+            <tr><td>INCES</td><td>National Training</td><td>28,776 items + 20,168 media</td><td><span class="badge badge-green">COMPLETE</span></td><td><span class="badge badge-red">OPEN API</span></td></tr>
+            <tr><td>AVN</td><td>News Agency</td><td>13,617 posts + 13,809 media</td><td><span class="badge badge-green">COMPLETE</span></td><td><span class="badge badge-red">OPEN API</span></td></tr>
+            <tr><td>Correo del Orinoco</td><td>State Newspaper</td><td>10,420 posts + 11,420 media</td><td><span class="badge badge-green">COMPLETE</span></td><td><span class="badge badge-red">OPEN API</span></td></tr>
+            <tr><td>MPPEF</td><td>Economy Ministry</td><td>8,702 searchable items</td><td><span class="badge badge-green">COMPLETE</span></td><td><span class="badge badge-red">OPEN API</span></td></tr>
+            <tr><td>SAREN</td><td>Registry/Notary</td><td>800 posts + 1,245 media</td><td><span class="badge badge-green">COMPLETE</span></td><td><span class="badge badge-red">OPEN API</span></td></tr>
+            <tr><td>CANTV</td><td>State Telecom</td><td>465 media files</td><td><span class="badge badge-green">COMPLETE</span></td><td><span class="badge badge-red">OPEN API</span></td></tr>
+            <tr><td>SAIME</td><td>Identity Agency</td><td>134 offices GPS, 191 items</td><td><span class="badge badge-green">COMPLETE</span></td><td><span class="badge badge-red">OPEN API</span></td></tr>
+            <tr><td>Sistema Patria</td><td>Benefits/Surveillance</td><td>11 items</td><td><span class="badge badge-green">COMPLETE</span></td><td><span class="badge badge-red">OPEN API</span></td></tr>
+            <tr><td>CNE Intranet</td><td>Elections HR System</td><td>78 routes exposed</td><td><span class="badge badge-green">COMPLETE</span></td><td><span class="badge badge-red">OPEN (Next.js)</span></td></tr>
+            <tr><td>OFAC Treasury</td><td>US Government</td><td>470 Venezuela entries</td><td><span class="badge badge-green">COMPLETE</span></td><td><span class="badge badge-blue">PUBLIC</span></td></tr>
+        </table>
+
+        <h2 class="section-title">Christmas 2025 Database Merger</h2>
+        <div class="code-block">December 24-26, 2025: SAIME migrated to "La Boveda de Cristal" (Crystal Vault)
+
+CONFIRMED INTEGRATIONS:
+  SAIME (Identity) -------> Crystal Vault  [134 offices mapped]
+  BCV (Banking) ----------> Crystal Vault
+  Sistema Patria ---------> Crystal Vault  [21.8M users tracked]
+  CNE (Voter Data) -------> Crystal Vault  [78 intranet routes exposed]
+
+INFRASTRUCTURE: Built by ZTE Corporation (China)
+USERS AFFECTED: 30+ million Venezuelan citizens
+REFUGEES: 7+ million fled, their data remains in system
+
+DATA EXFILTRATED FROM THEIR OPEN APIs:
+  - 4.34 GB total government data
+  - 230,205 posts/items indexed
+  - 9,716 media files downloaded
+  - 18 staff phone GPS coordinates
+  - 2,901 files with EXIF metadata
+  - 1,442 software tools detected (Adobe, GIMP, etc.)
+  - 732 camera/phone models identified
+  - 470 OFAC sanctions with cedulas
+  - 4 WordPress admin accounts exposed
+
+SOFTWARE DETECTED IN PHOTOS:
+  - Adobe Photoshop (multiple versions)
+  - Adobe Lightroom Classic
+  - GIMP 2.8.14, 2.10.18
+  - BeFunky Photo Editor
+  - Shotwell (Linux)
+  - Windows Photo Editor
+  - Instagram, Picasa, Photopea
+
+IRONY: They built a surveillance panopticon but left WordPress APIs wide open.
+       Staff phones have GPS enabled and EXIF data is not stripped.
+       Linux workstations detected at INCES via GIMP/Shotwell fingerprints.</div>
+    </div>
+
+    <div id="map-tab" class="content">
+        <h2 class="section-title">Venezuela Government Locations (152 GPS Coordinates)</h2>
+        <div class="stats-grid" style="margin-bottom:15px;">
+            <div class="stat-card"><h3>134</h3><p>SAIME Offices</p></div>
+            <div class="stat-card" style="border-left-color:#CF142B;background:rgba(207,20,43,0.15);"><h3>18</h3><p>Staff Phone GPS</p></div>
+        </div>
+        <p style="color:#888;margin-bottom:10px;font-size:12px;">
+            <span style="color:#FFCC00;">Yellow markers</span> = SAIME offices |
+            <span style="color:#CF142B;">Red markers</span> = Staff phone GPS locations (EXIF extracted) |
+            <span style="color:#00247D;">Use layer toggle (top-right)</span> for satellite/terrain views
+        </p>
+        <div id="map"></div>
+    </div>
+
+    <div id="sanctions" class="content">
+        <h2 class="section-title">OFAC Sanctioned Venezuelans with Cedula Numbers</h2>
+        <input type="text" class="search-box" id="sanc-search" placeholder="Search by name or cedula number..." onkeyup="filterTable()">
+        <div class="table-container">
+        <table id="sanc-table">
+            <tr><th>Name</th><th>Cedula</th><th>Program</th><th>Title/Role</th></tr>
+            <tr><td>RODRIGUEZ OREJUELA, Gilberto Jose</td><td><code>6068015</code></td><td><span class="badge badge-red">SDNT</span></td><td>-0- </td></tr>
+            <tr><td>GONZALEZ POLANCO, Hermagoras</td><td><code>7789819</code></td><td><span class="badge badge-red">SDNTK</span></td><td>-0- </td></tr>
+            <tr><td>RANGEL SILVA, Henry de Jesus</td><td><code>5.764.952</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>CARVAJAL BARRIOS, Hugo Armando</td><td><code>8.352.301</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>MAKLED GARCIA, Walid</td><td><code>18489167</code></td><td><span class="badge badge-red">SDNTK</span></td><td>-0- </td></tr>
+            <tr><td>SERRALDE PLAZA, Carlos Fernando</td><td><code>19134433</code></td><td><span class="badge badge-red">SDNTK</span></td><td>-0- </td></tr>
+            <tr><td>FIGUEROA SALAZAR, Amilcar Jesus</td><td><code>3946770</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>BERNAL ROSALES, Freddy Alirio</td><td><code>5665018</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Venezuelas Minister of Urban Agriculture</td></tr>
+            <tr><td>VILLARROEL RAMIREZ, Vassyly Kotosky</td><td><code>11295239</code></td><td><span class="badge badge-red">SDNTK</span></td><td>-0- </td></tr>
+            <tr><td>HARINGHTON PADRON, Katherine Nayarith</td><td><code>10.548.414</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>National Level Prosecutor, 20th District, Venezuelas Public</td></tr>
+            <tr><td>BENAVIDES TORRES, Antonio Jose</td><td><code>6.371.374</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Major General, Commander of the Strategic Region for the Int</td></tr>
+            <tr><td>NOGUERA PIETRI, Justo Jose</td><td><code>5.944.426</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>President of the Venezuelan Corporation of Guayana (CVG); fo</td></tr>
+            <tr><td>GONZALEZ LOPEZ, Gustavo Enrique</td><td><code>5.726.284</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Director General of Venezuelas Bolivarian National Intellig</td></tr>
+            <tr><td>VIVAS LANDINO, Miguel Alcides</td><td><code>7.617.778</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Major General, Inspector General of Venezuelas Bolivarian N</td></tr>
+            <tr><td>BERNAL MARTINEZ, Manuel Gregorio</td><td><code>6.976.131</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Brigadier General, Chief of the 31st Armored Brigade of Cara</td></tr>
+            <tr><td>PEREZ URDANETA, Manuel Eduardo</td><td><code>6.357.038</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Director of Venezuelas Bolivarian National Police</td></tr>
+            <tr><td>MORENO PEREZ, Maikel Jose</td><td><code>6652632</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>President of Venezuelas Supreme Court of Justice; President</td></tr>
+            <tr><td>MENDOZA JOVER, Juan Jose</td><td><code>9499372</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Second Vice President of Venezuelas Supreme Court of Justic</td></tr>
+            <tr><td>DELGADO ROSALES, Arcadio de Jesus</td><td><code>4159158</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Vice President of the Constitutional Chamber of Venezuelas </td></tr>
+            <tr><td>GUTIERREZ ALVARADO, Gladys Maria</td><td><code>7525777</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Magistrate of the Constitutional Chamber of Venezuelas Supr</td></tr>
+            <tr><td>ZULETA DE MERCHAN, Carmen Auxiliadora</td><td><code>3507807</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Magistrate of the Constitutional Chamber of Venezuelas Supr</td></tr>
+            <tr><td>DAMIANI BUSTILLOS, Luis Fernando</td><td><code>2940803</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Magistrate of the Constitutional Chamber of Venezuelas Supr</td></tr>
+            <tr><td>SUAREZ ANDERSON, Lourdes Benicia</td><td><code>6726793</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Magistrate of the Constitutional Chamber of Venezuelas Supr</td></tr>
+            <tr><td>ORTEGA RIOS, Calixto Antonio</td><td><code>3264031</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Magistrate of the Constitutional Chamber of Venezuelas Supr</td></tr>
+            <tr><td>ALBISINNI SERRANO, Rocco</td><td><code>15481927</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>President of Venezuelas National Center for Foreign Commerc</td></tr>
+            <tr><td>ZERPA DELGADO, Simon Alejandro</td><td><code>16544324</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Vice President of Finance for Petroleos de Venezuela, S.A. (</td></tr>
+            <tr><td>REVEROL TORRES, Nestor Luis</td><td><code>7844507</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Venezuelas Minister of Interior, Justice, and Peace; Former</td></tr>
+            <tr><td>JAUA MILANO, Elias Jose</td><td><code>10096662</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Head of Venezuelas Presidential Commission for the Constitu</td></tr>
+            <tr><td>GARCIA DUQUE, Franklin Horacio</td><td><code>9125430</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Former National Director of Venezuelas Bolivarian National </td></tr>
+            <tr><td>SAAB HALABI, Tarek William</td><td><code>8459301</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Venezuelas Ombudsman; President of Venezuelas Republican M</td></tr>
+            <tr><td>LUCENA RAMIREZ, Tibisay</td><td><code>5224732</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>President of Venezuelas National Electoral Council; Preside</td></tr>
+            <tr><td>SUAREZ CHOURIO, Jesus Rafael</td><td><code>9195336</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>General Commander of Venezuelas Bolivarian Army</td></tr>
+            <tr><td>RIVERO MARCANO, Sergio Jose</td><td><code>6893454</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Commander General of Venezuelas Bolivarian National Guard; </td></tr>
+            <tr><td>VARELA RANGEL, Maria Iris</td><td><code>9242760</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Member of Venezuelas Presidential Commission for the Consti</td></tr>
+            <tr><td>PEREZ AMPUEDA, Carlos Alfredo</td><td><code>9871452</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>National Director of Venezuelas Bolivarian National Police;</td></tr>
+            <tr><td>MADURO MOROS, Nicolas</td><td><code>5892464</code></td><td><span class="badge badge-red">VENEZUELA] [IRAN-CON-ARMS</span></td><td>President of the Bolivarian Republic of Venezuela</td></tr>
+            <tr><td>AMELIACH ORTA, Francisco Jose</td><td><code>7062172</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Constituent of Venezuelas Constituent Assembly for Valencia</td></tr>
+            <tr><td>CHAVEZ FRIAS, Adan Coromoto</td><td><code>3915103</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Constituent of Venezuelas Constituent Assembly for Barinas </td></tr>
+            <tr><td>DAMELIO CARDIET, Tania</td><td><code>11691429</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Rector of Venezuelas National Electoral Council</td></tr>
+            <tr><td>LUGO ARMAS, Bladimir Humberto</td><td><code>8760081</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Commander of the Special Unit to the Federal Legislative Pal</td></tr>
+            <tr><td>FARIAS PENA, Erika del Valle</td><td><code>9493443</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Constituent of Venezuelas Constituent Assembly for Ezequiel</td></tr>
+            <tr><td>MELENDEZ RIVAS, Carmen Teresa</td><td><code>8146803</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Constituent of Venezuelas Constituent Assembly for Iribarre</td></tr>
+            <tr><td>VIVAS VELASCO, Ramon Dario</td><td><code>3569721</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Constituent of Venezuelas Constituent Assembly for Vargas M</td></tr>
+            <tr><td>ESCARRA MALAVE, Hermann Eduardo</td><td><code>3820195</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Constituent of Venezuelas Constituent Assembly for Zamora M</td></tr>
+            <tr><td>OBLITAS RUZZA, Sandra</td><td><code>10517860</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Vice President of Venezuelas National Electoral Council; Re</td></tr>
+            <tr><td>HERNANDEZ DE HERNANDEZ, Socorro Elizabeth</td><td><code>3977396</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Rector of Venezuelas National Electoral Council; Member of </td></tr>
+            <tr><td>HIDROBO AMOROSO, Elvis Eduardo</td><td><code>7659695</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Second Vice President of Venezuelas Constituent Assembly</td></tr>
+            <tr><td>VILLEGAS POLJAK, Ernesto Emilio</td><td><code>9487963</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Venezuelas Minster of Culture</td></tr>
+            <tr><td>MARQUEZ MONSALVE, Jorge Elieser</td><td><code>8714253</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Venezuelas Minister of the Office of the Presidency</td></tr>
+            <tr><td>FERNANDEZ MELENDEZ, Manuel Angel</td><td><code>6873122</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>OSORIO ZAMBRANO, Carlos Alberto</td><td><code>6397281</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>President of the Superior Organ of Venezuelas Transport Mis</td></tr>
+            <tr><td>QUINTERO CUEVAS, Carlos Enrique</td><td><code>10719241</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Alternate Rector of Venezuelas National Electoral Council; </td></tr>
+            <tr><td>RODRIGUEZ DIAZ, Julian Isaias</td><td><code>2218534</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Venezuelan Ambassador to Italy</td></tr>
+            <tr><td>MARCO TORRES, Rodolfo Clemente</td><td><code>8812571</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Governor of Aragua State</td></tr>
+            <tr><td>RANGEL GOMEZ, Francisco Jose</td><td><code>2520281</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Former Governor of Bolivar State</td></tr>
+            <tr><td>ZAVARSE PABON, Fabio Enrique</td><td><code>6967914</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Commander of the Capital Integral Defense Operational Zone o</td></tr>
+            <tr><td>IZQUIERDO TORRES, Gerardo Jose</td><td><code>6030540</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>State Minister for the New Border of Peace</td></tr>
+            <tr><td>MARTIN OLIVARES, Pedro Luis</td><td><code>6252562</code></td><td><span class="badge badge-red">SDNTK</span></td><td>-0- </td></tr>
+            <tr><td>DEL NOGAL MARQUEZ, Walter Alexander</td><td><code>9965580</code></td><td><span class="badge badge-red">SDNTK</span></td><td>-0- </td></tr>
+            <tr><td>RODRIGUEZ ESPINOZA, Mario Antonio</td><td><code>6859414</code></td><td><span class="badge badge-red">SDNTK</span></td><td>-0- </td></tr>
+            <tr><td>MATA GARCIA, Americo Alex</td><td><code>12711021</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Alternate Director on the Board of Directors of the National</td></tr>
+            <tr><td>CONTRERAS, Willian Antonio</td><td><code>9953939</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Vice Minister of Internal Commerce, within the Ministry of P</td></tr>
+            <tr><td>LEPAJE SALAZAR, Nelson Reinaldo</td><td><code>10049353</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>Acted in the Capacity of the Head of the Office of the Natio</td></tr>
+            <tr><td>CABELLO RONDON, Diosdado</td><td><code>8370825</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>CABELLO RONDON, Jose David</td><td><code>10300226</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>SARRIA DIAZ, Rafael Alfredo</td><td><code>6974302</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>CONTRERAS HERNANDEZ, Marleny Josefina</td><td><code>6437804</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>RODRIGUEZ GOMEZ, Delcy Eloina</td><td><code>10353667</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>RODRIGUEZ GOMEZ, Jorge Jesus</td><td><code>6823952</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>FLORES DE MADURO, Cilia Adela</td><td><code>5315632</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>PADRINO LOPEZ, Vladimir</td><td><code>6122963</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>PAREDES, Jose Omar</td><td><code>3476436</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>SARRIA DIAZ, Edgar Alberto</td><td><code>11734796</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>GORRIN BELISARIO, Raul</td><td><code>8682996</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>PERDOMO ROSALES, Gustavo Adolfo</td><td><code>14585388</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>DIAZ GUILLEN, Claudia Patricia</td><td><code>11502896</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>VELASQUEZ FIGUEROA, Adrian Jose</td><td><code>13813453</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>BASTARDO MENDOZA, Rafael Enrique</td><td><code>14335819</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>LACAVA EVANGELISTA, Rafael Alejandro</td><td><code>8611651</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>HERNANDEZ DALA, Ivan Rafael</td><td><code>6961149</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>QUEVEDO FERNANDEZ, Manuel Salvador</td><td><code>9705800</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>RODRIGUEZ MUCURA, Hildemaro Jose</td><td><code>13432397</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>CEBALLOS ICHASO, Remigio</td><td><code>6557495</code></td><td><span class="badge badge-red">VENEZUELA-EO13884</span></td><td>-0- </td></tr>
+            <tr><td>CARRIZALEZ RENGIFO, Ramon Alonso</td><td><code>2516238</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>PRIETO FERNANDEZ, Omar Jose</td><td><code>9761075</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>GARCIA CARNEIRO, Jorge Luis</td><td><code>4169273</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>MANTILLA OLIVEROS, Jesus Maria</td><td><code>9215693</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>LOPEZ VARGAS, Richard Jesus</td><td><code>6166221</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>NORONO TORRES, Jose Leonardo</td><td><code>9931609</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>DOMINGUEZ RAMIREZ, Jose Miguel</td><td><code>14444352</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>MORALES ZAMBRANO, Cristhiam Abelardo</td><td><code>9656561</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>BERMUDEZ VALDERREY, Alberto Mirtiliano</td><td><code>9895508</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>ARREAZA MONTSERRAT, Jorge Alberto</td><td><code>11945178</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>RUZZA TERAN, Iliana Josefa</td><td><code>14310920</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>PADILLA DE ARRETURETA, Carol Bealexis</td><td><code>11763586</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>MADURO GUERRA, Nicolas Ernesto</td><td><code>19398759</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>LUGO GOMEZ, Eustiquio Jose</td><td><code>8435812</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>MOTTA DOMINGUEZ, Luis Alfredo</td><td><code>4423539</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>RUBIO GONZALEZ, Emmanuel Enrique</td><td><code>21807689</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>VIELMA MORA, Jose Gregorio</td><td><code>6206038</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>SAAB MORAN, Alex Nain</td><td><code>72180017</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>PULIDO VARGAS, Alvaro Enrique</td><td><code>79324956</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>GAVIDIA FLORES, Walter Jacob</td><td><code>14407259</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>GAVIDIA FLORES, Yosser Daniel</td><td><code>18815328</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>GAVIDIA FLORES, Yoswal Alexander</td><td><code>19733466</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>STAUDINGER LEMOINE, Mariana Andrea</td><td><code>19195336</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>GUERRERO MIJARES, Hannover Esteban</td><td><code>10537738</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>BLANCO MARRERO, Rafael Ramon</td><td><code>6250588</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>FRANCO QUINTERO, Rafael Antonio</td><td><code>11311672</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>GRANKO ARTEAGA, Alexander Enrique</td><td><code>14970215</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>SAAB MORAN, Amir Luis</td><td><code>72170020</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>SAAB MORAN, Luis Alberto</td><td><code>72224947</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>RUBIO GONZALEZ, David Nicolas</td><td><code>1015399085</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>DUGARTE PADRON, Juan Carlos</td><td><code>4353212</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>VIZCAINO GIL, Gustavo Adolfo</td><td><code>6297704</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>CARRENO ESCOBAR, Pedro Miguel</td><td><code>8142392</code></td><td><span class="badge badge-red">VENEZUELA-EO13884</span></td><td>-0- </td></tr>
+            <tr><td>ORNELAS FERREIRA, Jose Adelino</td><td><code>7087964</code></td><td><span class="badge badge-red">VENEZUELA-EO13884</span></td><td>-0- </td></tr>
+            <tr><td>CALDERON CHIRINOS, Carlos Alberto</td><td><code>10352300</code></td><td><span class="badge badge-red">VENEZUELA-EO13884</span></td><td>-0- </td></tr>
+            <tr><td>BLANCO HURTADO, Nestor Neptali</td><td><code>15222057</code></td><td><span class="badge badge-red">VENEZUELA-EO13884</span></td><td>-0- </td></tr>
+            <tr><td>NORIEGA FIGUEROA, Jose Gregorio</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>PARRA RIVERO, Luis Eduardo</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>BRITO RODRIGUEZ, Jose Dionisio</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>PEREZ LINARES, Conrado Antonio</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>MORALES LLOVERA, Negal Manuel</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>DUARTE, Franklyn Leonardo</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>SUPERLANO, Adolfo Ramon</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>MORON HERNANDEZ, Santiago Jose</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>MORON HERNANDEZ, Ricardo Jose</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>DE LIMA SALAS, David Eugenio</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>MUNOZ PEDROZA, Reinaldo Enrique</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>ALFONZO IZAGUIRRE, Indira Maira</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>GUTIERREZ PARRA, Jose Luis</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>GUTIERREZ PARRA, Jose Bernabe</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>PONENTE PARRA, Miguel Antonio Jose</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>LUCES OSORIO, Guillermo Antonio</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>BUCARAN PARAGUAN, Chaim Jose</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>BENAVIDES RONDON, Williams Jose</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>SAN AGUSTIN, Guillermo Carlos</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>MACHADO REQUENA, Marcos Javier</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>CORNIELLES RUIZ, Lorena Carolina</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>TORRES ESPINOZA, Ramon Antonio</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>BUSTAMANTE PUERTA, Dinorah Yoselin</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>RADA, Amer Mohamed Akil</td><td><code>67121004582</code></td><td><span class="badge badge-red">SDGT</span></td><td>-0- </td></tr>
+            <tr><td>GIL PACHECO, Rosalba</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>FIGUEROA ARIZALETA, Inocencio Antonio</td><td><code>5016509</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>GIL RODRIGUEZ, Malaquias</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>HIDALGO PANDARES, Juan Carlos</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>MENESES RODRIGUEZ, Antonio Jose</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>INFANTE APARICIO, Pedro Jose</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>HERNANDEZ LAREZ, Johan Alexander</td><td><code>9888327</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>ESTRADA PAREDES, Elio Ramon</td><td><code>6857541</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>MUNOZ PALACIOS, Miguel Antonio</td><td><code>6186648</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>BRITO HERNANDEZ, Asdrubal Jose</td><td><code>12251274</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>HERNANDEZ LAREZ, Domingo Antonio</td><td><code>6133376</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>RODRIGUEZ RODRIGUEZ, Caryslia Beatriz</td><td><code>8671555</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>MARQUEZ CORDERO, Fanny Beatriz</td><td><code>6272864</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>DUENEZ REYES, Luis Ernesto</td><td><code>18880942</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>BRICENO CISNEROS, Edward Miguel</td><td><code>17514632</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>REYES RIVERO, Luis Gerardo</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>MATHEUS MELENDEZ, Alberto Alexander</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>VILLAMIZAR GOMEZ, Jesus Rafael</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>ROMERO BOLIVAR, Orlando Ramon</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>FERNANDEZ ALAYON, Jesus Ramon</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>HERRERA DUARTE, Jose Yunior</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>AIGSTER VILLAMIZAR, Carlos Eduardo</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>BALESTRINI JARAMILLO, Angel Daniel</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>LIZANO COLMENTER, Pablo Ernesto</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>RIVERA BASTARDO, Jose Alfredo</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>SANTIAGO SERVIGNA, Ruben</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>CORONADO MILLAN, Anibal Eduardo</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>GARCIA ZERPA, Julio Jose</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>CASTILLO BOLLE, William Alfredo</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>CABELLO CONTRERAS, Daniella Desiree</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>MENENDEZ PRIETO, Ricardo Jose</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>NAZARET NANEZ CONTRERAS, Freddy Alfred</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>PEREZ DAVILA, America Valentina</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>RODRIGUEZ DIAZ, Dilio Guillermo</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>RODRIGUEZ CABELLO, Alexis Jose</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>MARCANO TABATA, Javier Jose</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>OBREGON PEREZ, Hector Andres</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>CASTILLO RENGIFO, Manuel Enrique</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>FIGUERA VALDEZ, Jose Ramon</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>VELASQUEZ ARAGUAYAN, Ramon Celestino</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>OSORIO GUZMAN, Felix Ramon</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>FERRER SANDREA, Danny Ramon</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>RICO GONZALEZ, Douglas Arnoldo</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>SALAZAR BELLO, Jhonny Rafael</td><td><code>.</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>MOSQUERA SERRANO, Giovanni Vicente</td><td><code>20243384</code></td><td><span class="badge badge-red">SDGT] [TCO</span></td><td>-0- </td></tr>
+            <tr><td>DUNCAN, Randolph</td><td><code>.</code></td><td><span class="badge badge-red">ILLICIT-DRUGS-EO14059</span></td><td>-0- </td></tr>
+            <tr><td>GUERRERO FLORES, Hector Rusthenford</td><td><code>.</code></td><td><span class="badge badge-red">SDGT] [TCO</span></td><td>-0- </td></tr>
+            <tr><td>PEREZ CASTILLO, Wilmer Jose</td><td><code>.</code></td><td><span class="badge badge-red">SDGT] [TCO</span></td><td>-0- </td></tr>
+            <tr><td>CASTILLO RONDON, Felix Anner</td><td><code>.</code></td><td><span class="badge badge-red">SDGT] [TCO</span></td><td>-0- </td></tr>
+            <tr><td>ESPINAL QUINTERO, Richard Jose</td><td><code>24419648</code></td><td><span class="badge badge-red">SDGT] [TCO</span></td><td>-0- </td></tr>
+            <tr><td>GUERRERO PALMA, Cheison Royer</td><td><code>17984659</code></td><td><span class="badge badge-red">SDGT] [TCO</span></td><td>-0- </td></tr>
+            <tr><td>SEVILLA ARTEAGA, Kenffersso Jhosue</td><td><code>21098983</code></td><td><span class="badge badge-red">SDGT] [TCO</span></td><td>-0- </td></tr>
+            <tr><td>APONTE CORDOVA, Noe Manases</td><td><code>19554865</code></td><td><span class="badge badge-red">SDGT] [TCO</span></td><td>-0- </td></tr>
+            <tr><td>ESCOBAR CABRERA, Asdrubal Rafael</td><td><code>21269516</code></td><td><span class="badge badge-red">SDGT] [TCO</span></td><td>-0- </td></tr>
+            <tr><td>ARAYA NAVARRO, Jimena Romina</td><td><code>16011070</code></td><td><span class="badge badge-red">SDGT] [TCO</span></td><td>-0- </td></tr>
+            <tr><td>LANDAETA HERNANDEZ, Eryk Manuel</td><td><code>15978329</code></td><td><span class="badge badge-red">SDGT] [TCO</span></td><td>-0- </td></tr>
+            <tr><td>CAMPO FLORES, Efrain Antonio</td><td><code>18330183</code></td><td><span class="badge badge-red">ILLICIT-DRUGS-EO14059</span></td><td>-0- </td></tr>
+            <tr><td>FLORES DE FREITAS, Franqui Francisco</td><td><code>17751244</code></td><td><span class="badge badge-red">ILLICIT-DRUGS-EO14059</span></td><td>-0- </td></tr>
+            <tr><td>MALPICA FLORES, Carlos Erik</td><td><code>11810943</code></td><td><span class="badge badge-red">VENEZUELA</span></td><td>-0- </td></tr>
+            <tr><td>CARRETERO NAPOLITANO, Ramon</td><td><code>388114</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>FLORES DE MALPICA, Eloisa</td><td><code>3989591</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>MALPICA TORREALBA, Carlos Evelio</td><td><code>3056173</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>MALPICA FLORES, Iriamni</td><td><code>12761280</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>HURTADO PEREZ, Damaris del Carmen</td><td><code>12207076</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>MALPICA HURTADO, Erica Patricia</td><td><code>28331171</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>CARRETERO NAPOLITANO, Roberto</td><td><code>3701218</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+            <tr><td>CARRETERO NAPOLITANO, Vicente Luis</td><td><code>3901065</code></td><td><span class="badge badge-red">VENEZUELA-EO13850</span></td><td>-0- </td></tr>
+        </table>
+        </div>
+        <p style="color:#666;margin-top:10px;">Total: 210 sanctioned entities with cedula numbers</p>
+    </div>
+
+    <div id="sources" class="content">
+        <h2 class="section-title">Exfiltrated Data Sources (4.34 GB Total)</h2>
+
+        <div class="source-card" style="border-color:#CF142B;">
+            <h4 style="color:#CF142B;">INCES - Instituto Nacional de Capacitacion y Educacion Socialista</h4>
+            <p class="url">https://www.inces.gob.ve/wp-json/</p>
+            <p style="margin-top:8px;">National training institute. Largest media collection discovered.</p>
+            <p style="color:#CF142B;margin-top:5px;font-weight:bold;"><span class="badge badge-red">16 GPS LOCATIONS</span> 28,776 items | 20,168 media files | 3,167 downloaded</p>
+        </div>
+
+        <div class="source-card" style="border-color:#CF142B;">
+            <h4 style="color:#CF142B;">AVN - Agencia Venezolana de Noticias</h4>
+            <p class="url">https://avn.info.ve/wp-json/</p>
+            <p style="margin-top:8px;">State news agency. Official government communications.</p>
+            <p style="color:#CF142B;margin-top:5px;font-weight:bold;"><span class="badge badge-red">2 GPS LOCATIONS</span> 13,617 posts | 13,809 media | 2,813 downloaded</p>
+        </div>
+
+        <div class="source-card">
+            <h4>SAIME - Servicio Administrativo de Identificacion</h4>
+            <p class="url">https://www.saime.gob.ve/wp-json/</p>
+            <p style="margin-top:8px;">National identity agency. Manages cedulas, passports, migration.</p>
+            <p style="color:#FFCC00;margin-top:5px;"><span class="badge badge-red">COMPLETE</span> 134 office GPS coords | 191 items | 298 media files</p>
+        </div>
+
+        <div class="source-card">
+            <h4>SAREN - Servicio Autonomo de Registros y Notarias</h4>
+            <p class="url">https://www.saren.gob.ve/wp-json/</p>
+            <p style="margin-top:8px;">Registry and notary service. Property records, business registration. 3 users exposed.</p>
+            <p style="color:#FFCC00;margin-top:5px;"><span class="badge badge-green">COMPLETE</span> 800 posts | 1,245 media | 484 downloaded | 792 searchable items</p>
+        </div>
+
+        <div class="source-card">
+            <h4>Correo del Orinoco</h4>
+            <p class="url">https://www.correodelorinoco.gob.ve/wp-json/</p>
+            <p style="margin-top:8px;">State newspaper. Founded by Chavez in 2009. Behind Cloudflare.</p>
+            <p style="color:#FFCC00;margin-top:5px;"><span class="badge badge-green">COMPLETE</span> 10,420 posts | 11,420 media | 772 downloaded</p>
+        </div>
+
+        <div class="source-card">
+            <h4>MPPEF - Ministerio del Poder Popular de Economia y Finanzas</h4>
+            <p class="url">https://www.mppef.gob.ve/wp-json/</p>
+            <p style="margin-top:8px;">Ministry of Economy and Finance. 8,702 searchable items.</p>
+            <p style="color:#FFCC00;margin-top:5px;"><span class="badge badge-green">COMPLETE</span> 8,702 searchable items indexed</p>
+        </div>
+
+        <div class="source-card">
+            <h4>CANTV - Compania Anonima Nacional Telefonos de Venezuela</h4>
+            <p class="url">https://www.cantv.com.ve/wp-json/</p>
+            <p style="margin-top:8px;">State telecommunications company.</p>
+            <p style="color:#FFCC00;margin-top:5px;"><span class="badge badge-green">COMPLETE</span> 465 media files | 421 downloaded</p>
+        </div>
+
+        <div class="source-card">
+            <h4>VTV - Venezolana de Television</h4>
+            <p class="url">https://www.vtv.gob.ve/wp-json/</p>
+            <p style="margin-top:8px;">State television. Primary regime propaganda outlet. Largest source.</p>
+            <p style="color:#FFCC00;margin-top:5px;"><span class="badge badge-yellow">IN PROGRESS</span> 168,178 posts across 1,682 pages | Google Analytics: UA-130677023-1</p>
+        </div>
+
+        <div class="source-card">
+            <h4>Sistema Patria - Plataforma Patria</h4>
+            <p class="url">https://www.patria.org.ve/wp-json/</p>
+            <p style="margin-top:8px;">Benefits and surveillance platform. 21.8M users. 1 user exposed (ptrmaster).</p>
+            <p style="color:#FFCC00;margin-top:5px;"><span class="badge badge-green">COMPLETE</span> 11 items indexed</p>
+        </div>
+
+        <div class="source-card">
+            <h4>CNE Intranet - Consejo Nacional Electoral</h4>
+            <p class="url">https://intranet.cne.gob.ve/</p>
+            <p style="margin-top:8px;">Election council internal HR system. Next.js app with exposed build manifest.</p>
+            <p style="color:#FFCC00;margin-top:5px;"><span class="badge badge-green">COMPLETE</span> 78 routes | SIACPER HR system | Payroll endpoints | Personnel management</p>
+        </div>
+
+        <div class="source-card">
+            <h4>OFAC SDN List</h4>
+            <p class="url">https://www.treasury.gov/ofac/downloads/</p>
+            <p style="margin-top:8px;">US Treasury sanctions database. Public record.</p>
+            <p style="color:#FFCC00;margin-top:5px;"><span class="badge badge-blue">PUBLIC</span> 470 Venezuela entries | ~210 with cedula numbers | CSV + parsed JSON</p>
+        </div>
+    </div>
+
+    <div id="operations" class="content">
+        <h2 class="section-title">SAIME Operational Programs (extracted from API)</h2>
+        <div class="stats-grid">
+            <div class="stat-card"><h3>7,257</h3><p>Fisheries Route - Cedulas issued to fishermen</p></div>
+            <div class="stat-card"><h3>15,511</h3><p>Indigenous Route - IDs for native communities</p></div>
+            <div class="stat-card"><h3>56,785</h3><p>Manuelita Saenz Route - Workers at workplaces</p></div>
+            <div class="stat-card"><h3>28,000+</h3><p>Small Steps Program - Children first-time IDs</p></div>
+            <div class="stat-card"><h3>127,415</h3><p>Plaza Caracas Office - 2025 total processed</p></div>
+            <div class="stat-card"><h3>34,716</h3><p>Nov 2025 Drive - 4-day national campaign</p></div>
+        </div>
+        <h2 class="section-title">Recent News from SAIME API</h2>
+        <table>
+            <tr><th>Date</th><th>Event</th></tr>
+            <tr><td>2025-12-24</td><td>Database migration to Crystal Vault begins</td></tr>
+            <tr><td>2025-12-19</td><td>Digital Migration Validation Service launched</td></tr>
+            <tr><td>2025-12-16</td><td>Caracas Smiles event - 100+ IDs issued</td></tr>
+            <tr><td>2025-12-08</td><td>ExpoTransporte 2025 - 1,000+ renewals</td></tr>
+            <tr><td>2025-11-27</td><td>Digital Migration Certificates go online</td></tr>
+            <tr><td>2025-11-20</td><td>Fisheries Route completed - 7,257 cedulas</td></tr>
+            <tr><td>2025-11-14</td><td>Indigenous Route closed - 15,511 documents</td></tr>
+            <tr><td>2025-11-05</td><td>New modernized web platform launched</td></tr>
+        </table>
+    </div>
+
+    <div id="statemedia" class="content">
+        <h2 class="section-title">State Media Archives (230,205 items accessible)</h2>
+        <div class="stats-grid">
+            <div class="stat-card"><h3>168,178</h3><p>VTV - State Television<br><span style="font-size:9px;color:#CF142B;">DOWNLOADING 12.3%</span></p></div>
+            <div class="stat-card blue"><h3>28,776</h3><p>INCES - Training Institute<br><span style="font-size:9px;color:#28a745;">COMPLETE</span></p></div>
+            <div class="stat-card yellow"><h3>13,617</h3><p>AVN - News Agency<br><span style="font-size:9px;color:#28a745;">COMPLETE</span></p></div>
+            <div class="stat-card"><h3>10,420</h3><p>Correo del Orinoco<br><span style="font-size:9px;color:#28a745;">COMPLETE</span></p></div>
+            <div class="stat-card blue"><h3>8,702</h3><p>MPPEF - Economy Ministry<br><span style="font-size:9px;color:#28a745;">COMPLETE</span></p></div>
+            <div class="stat-card yellow"><h3>800</h3><p>SAREN - Registry<br><span style="font-size:9px;color:#28a745;">COMPLETE</span></p></div>
+        </div>
+
+        <h2 class="section-title">Latest VTV Headlines (sample)</h2>
+        <div class="table-container" style="max-height:40vh;">
+        <table>
+            <tr><th>Date</th><th>Headline</th></tr>
+            <tr><td>2025-12-30</td><td>Jefe de Estado asegura que la fuerza invencible de Venezuela son sus mujeres emp</td></tr>
+            <tr><td>2025-12-30</td><td>Presidente Maduro proyecta cinco millones de lideresas comunitarias para 2026</td></tr>
+            <tr><td>2025-12-30</td><td>Circulación del transporte de carga pesada será restringida 31-Dic y 1-Ene</td></tr>
+            <tr><td>2025-12-30</td><td>Protagonismo femenino marcará el rumbo del Reto Admirable 2026</td></tr>
+            <tr><td>2025-12-30</td><td>Aragua se convierte en epicentro de la formación del liderazgo feminista</td></tr>
+            <tr><td>2025-12-30</td><td>Aprueban traspaso de acciones Clase B de Cantv al Mincyt</td></tr>
+            <tr><td>2025-12-30</td><td>Yelitza Santaella es designada rectora de la Escuela de Liderazgo de la Mujer “N</td></tr>
+            <tr><td>2025-12-30</td><td>Movimiento Josefa Joaquina Sánchez se consolida con nuevas líneas de formación</td></tr>
+            <tr><td>2025-12-30</td><td>REDI Capital presenta balance de operaciones durante este 2025</td></tr>
+            <tr><td>2025-12-30</td><td>Escuela Nora Castañeda formará mujeres para transformar la sociedad venezolana</td></tr>
+            <tr><td>2025-12-30</td><td>Ministro Padrino López: La independencia de Venezuela costó sangre, sudor y lágr</td></tr>
+            <tr><td>2025-12-30</td><td>Nueva sede de liderazgo “Nora Castañeda” fortalece el empoderamiento femenino</td></tr>
+            <tr><td>2025-12-30</td><td>Operaciones 2025 de las ZODI reafirman disciplina, unidad y compromiso con el pa</td></tr>
+            <tr><td>2025-12-30</td><td>Museo Ilimitado ofrece un recorrido diverso para conocer el arte nacional contem</td></tr>
+            <tr><td>2025-12-30</td><td>Irán designa a la Marina Canadiense como organización terrorista</td></tr>
+            <tr><td>2025-12-30</td><td>Autoridades definen estrategias para abordar las prioridades de la juventud</td></tr>
+            <tr><td>2025-12-30</td><td>Balance operacional de la Redimain demuestra compromiso con la paz y seguridad d</td></tr>
+            <tr><td>2025-12-30</td><td>¿Por qué las mujeres sienten más frío que los hombres?</td></tr>
+            <tr><td>2025-12-30</td><td>La calma habita en lo simple: Hábitos que sanan la incertidumbre</td></tr>
+            <tr><td>2025-12-30</td><td>Fuerte incendio en cohetería arrasa un mercado en Honduras</td></tr>
+            <tr><td>2025-12-30</td><td>Metro de Caracas ofrecerá servicio comercial hasta las nueve de la noche el 31-D</td></tr>
+            <tr><td>2025-12-30</td><td>Habilitan tramo rehabilitado de la autopista Valencia–Puerto Cabello</td></tr>
+            <tr><td>2025-12-30</td><td>Desarrollan sensor capaz de captar señales internas del cerebro</td></tr>
+            <tr><td>2025-12-30</td><td>Más de 20 palestinos pierden la vida por frío extremo tras bloqueo israelí</td></tr>
+            <tr><td>2025-12-30</td><td>Jubilados en Argentina sobreviven al ajuste y toman las calles</td></tr>
+            <tr><td>2025-12-30</td><td>Productos  venezolanos cautivan en “Coffee Culture and Business Networking”</td></tr>
+            <tr><td>2025-12-30</td><td>Banco Digital de los Trabajadores incorpora pagos NFC</td></tr>
+            <tr><td>2025-12-30</td><td>Más de tres mil familias barcelonesas cuentan con tierras propias</td></tr>
+            <tr><td>2025-12-30</td><td>Bomberos de Miranda intensifica operativo por venta y uso de pirotecnia</td></tr>
+            <tr><td>2025-12-30</td><td>Fuerzas de ocupación de Israel arrestan a palestinos en redadas en Cisjordania</td></tr>
+        </table>
+        </div>
+
+        <h2 class="section-title">Latest AVN Headlines (sample)</h2>
+        <div class="table-container" style="max-height:40vh;">
+        <table>
+            <tr><th>Date</th><th>Headline</th></tr>
+            <tr><td>2025-12-30</td><td>Autoridades trazan plan de acción para corredor Macarao Productivo</td></tr>
+            <tr><td>2025-12-30</td><td>Presidente Maduro inaugura Escuela Internacional de Liderazgo de la Mujer Nora C</td></tr>
+            <tr><td>2025-12-30</td><td>Metro de Caracas tendrá horario especial este miércoles y jueves</td></tr>
+            <tr><td>2025-12-30</td><td>REDI Capital refuerza la defensa en la región durante 2025</td></tr>
+            <tr><td>2025-12-30</td><td>Continúan la ejecución del Plan Resuelve tu Calle en Caracas</td></tr>
+            <tr><td>2025-12-30</td><td>Argentina anuncia la eliminación de la Agencia Nacional de Discapacidad</td></tr>
+            <tr><td>2025-12-30</td><td>Programa Semilleros Científicos ha movilizado a más 850 mil jóvenes al área desd</td></tr>
+            <tr><td>2025-12-30</td><td>Este martes ofrecen concierto en la Plaza Bolívar de Caracas para despedir el 20</td></tr>
+            <tr><td>2025-12-30</td><td>Incendio forestal en Chile central afectó hasta 800 hectáreas</td></tr>
+            <tr><td>2025-12-30</td><td>Sistema 1x10 entrega en Mérida 450 ayudas a personas con enfermedades crónicas y</td></tr>
+            <tr><td>2025-12-30</td><td>Zelenski anuncia que coalición de voluntarios se reunirá el 6 de enero en Franci</td></tr>
+            <tr><td>2025-12-30</td><td>Emiratos Árabes Unidos pone fin a sus misiones antiterroristas en Yemen</td></tr>
+            <tr><td>2025-12-30</td><td>Turquía suscribe cooperación energética con Somalia</td></tr>
+            <tr><td>2025-12-30</td><td>Presidente de China pronunciará mensaje de Año Nuevo para dar la bienvenida al 2</td></tr>
+            <tr><td>2025-12-30</td><td>Venezuela proyecta crecimiento del turismo receptivo para el 2026</td></tr>
+            <tr><td>2025-12-30</td><td>Presidenta de México exige mayor protagonismo de la ONU frente a presiones de EE</td></tr>
+            <tr><td>2025-12-30</td><td>Aprueban traspaso de acciones de Cantv al Ministerio para Ciencia y Tecnología</td></tr>
+            <tr><td>2025-12-30</td><td>Redi Occidental incautó 52,8 toneladas de drogas durante el presente año</td></tr>
+            <tr><td>2025-12-30</td><td>Investigadores del Zulia realizan ensayos para conservación de la fresa</td></tr>
+            <tr><td>2025-12-30</td><td>Desinformación impulsada por IA enciende alertas sobre manipulación electoral en</td></tr>
+            <tr><td>2025-12-30</td><td>Tigres de Aragua obtuvo victoria de 5-4 en primer juego de la Serie del Comodín</td></tr>
+            <tr><td>2025-12-30</td><td>Brasil cierra el año con una taza minima e histórica de desempleo del 5,2 por ci</td></tr>
+            <tr><td>2025-12-30</td><td>Fuerzas Militares de EEUU ejecutan otro ataque letal contra buque en el océano P</td></tr>
+            <tr><td>2025-12-30</td><td>Feria del Girasol en Portuguesa impulsa el agroturismo</td></tr>
+            <tr><td>2025-12-30</td><td>China promoverá paz y cooperación diplomática para el desarrollo a nivel global</td></tr>
+            <tr><td>2025-12-30</td><td>Rusia declara indeseable en su territorio actividad de Universidad George Washin</td></tr>
+            <tr><td>2025-12-30</td><td>Embajadores de la FAO evalúan impacto de las sanciones en la seguridad alimentar</td></tr>
+            <tr><td>2025-12-30</td><td>Maduro: Es un récord de la FANB destruir nueve aeronaves del narcotráfico en 24 </td></tr>
+            <tr><td>2025-12-30</td><td>Inameh prevé cielo con nubosidad generadora de lluvias en varios estados</td></tr>
+            <tr><td>2025-12-29</td><td>Presidente Maduro califica a Venezuela como referente mundial en elecciones</td></tr>
+        </table>
+        </div>
+    </div>
+
+    <div id="api" class="content">
+        <h2 class="section-title">SAIME WordPress REST API</h2>
+        <div class="code-block">BASE URL: https://www.saime.gob.ve/wp-json/
+
+ACCESSIBLE ENDPOINTS (no auth required):
+  /wp/v2/posts          - 191 news posts with full content
+  /wp/v2/pages          - 10 service pages
+  /wp/v2/media          - 98 media files with direct URLs
+  /geodir/v2/places     - 134 office locations with GPS coordinates
+
+BLOCKED: /wp/v2/users (403 Forbidden)
+DOWNLOADED: 298 media files | 5 with EXIF | 0 GPS</div>
+
+        <h2 class="section-title">SAREN WordPress REST API</h2>
+        <div class="code-block">BASE URL: https://www.saren.gob.ve/wp-json/
+
+ACCESSIBLE ENDPOINTS:
+  /wp/v2/posts          - 800 posts (paginated)
+  /wp/v2/pages          - 16 service pages
+  /wp/v2/media          - 1,245 media files
+  /wp/v2/users          - 3 user accounts exposed
+
+PLUGINS: Divi, Duplicator, Contact Form 7
+DOWNLOADED: 1,117 media files | 364 with EXIF</div>
+
+        <h2 class="section-title">State Media APIs</h2>
+        <div class="code-block">VTV: https://www.vtv.gob.ve/wp-json/wp/v2/posts
+     168,178 posts | Wordfence detected but not blocking
+     DOWNLOADED: 457 media | 193 with EXIF | 0 GPS
+
+AVN: https://avn.info.ve/wp-json/wp/v2/posts
+     13,617 posts | Yoast SEO, Telegram integration
+     DOWNLOADED: 2,813 media | 704 with EXIF | 2 GPS EXPOSED!
+
+CORREO: https://www.correodelorinoco.gob.ve/wp-json/wp/v2/posts
+        10,420 posts | Depicter, Templately plugins
+        DOWNLOADED: 1,438 media | 950 with EXIF | 0 GPS
+
+INCES: https://www.inces.gob.ve/wp-json/wp/v2/posts
+       28,776 items | Largest media collection
+       DOWNLOADED: 3,167 media | 571 with EXIF | 16 GPS EXPOSED!
+
+CANTV: https://www.cantv.com.ve/wp-json/wp/v2/posts
+       465 media files | State telecommunications
+       DOWNLOADED: 421 media | 113 with EXIF | 0 GPS</div>
+
+        <h2 class="section-title">Sistema Patria WordPress API</h2>
+        <div class="code-block">BASE URL: https://www.patria.org.ve/wp-json/
+
+ACCESSIBLE ENDPOINTS (no auth required):
+  /wp/v2/pages          - 11 service pages (vePatria, veMonedero, vePOS, veQR)
+  /wp/v2/media          - 227 media files with direct URLs
+
+APP ECOSYSTEM DOCUMENTED:
+  vePatria    - Main platform app
+  veMonedero  - Digital wallet (Monedero Patria)
+  vePOS       - Point of sale terminals
+  veQR        - QR code payments
+  veTicket    - Ticketing system
+  vePDV       - Point of sale
+
+PLUGINS: AIOSEO
+
+USER PORTAL (requires auth):
+  https://persona.patria.org.ve/login
+  21.8 million registered users (Jan 2023)
+
+DOWNLOADED: 5 media files | 1 with EXIF | 0 GPS</div>
+
+        <h2 class="section-title">CNE Intranet (Next.js) - 78 ROUTES EXPOSED</h2>
+        <div class="code-block">BASE URL: https://intranet.cne.gob.ve/
+PLATFORM: Next.js (React)
+STATUS: Accessible from US (main cne.gob.ve is geoblocked)
+
+=== SIACPER PERSONNEL SYSTEM (PRIVATE) ===
+  /siacper/privada                     - Private personnel dashboard
+  /siacper/privada/TablaFallecidos     - DECEASED EMPLOYEES TABLE
+  /siacper/privada/TablaRegistrados    - Registered employees
+  /siacper/privada/TablaVerificados    - Verified employees
+  /siacper/privada/TablaNegados        - Rejected/denied employees
+  /siacper/privada/TablaNoTerminados   - Incomplete registrations
+  /siacper/privada/AltasyBajas         - HIRES AND TERMINATIONS
+  /siacper/privada/estadisticas        - INTERNAL STATISTICS
+  /siacper/privada/ReporteFinal        - Final reports
+  /siacper/privada/ConsultaInhabilitar - Disable consultation
+  /siacper/privada/VerRegistrado       - View registered employee
+
+=== SIACPER (PUBLIC LOOKUP) ===
+  /siacper/publica                     - Public portal
+  /siacper/publica/[cedula]/[token]    - LOOKUP EMPLOYEE BY CEDULA
+  /siacper/publica/fichaPersonal       - Personal file
+  /siacper/publica/infoPersonal        - Personal info
+  /siacper/publica/formCargaFamiliar   - Family dependents form
+  /siacper/publica/formDocumentos      - Documents upload
+  /siacper/publica/formDirHabitacion   - Home address
+  /siacper/publica/formCajaAhorro      - Savings account
+
+=== PAYROLL & COMPENSATION ===
+  /recibo-pago                         - PAY RECEIPTS
+  /recibo-pago/recibo-pago             - View pay receipt
+  /recibo-pago/verificar/[hash]        - VERIFY PAY RECEIPT BY HASH
+  /constancia-trabajo                  - WORK CERTIFICATES
+  /constancia-trabajo/basico           - Basic certificate
+  /constancia-trabajo/integral         - Full certificate
+  /constancia-trabajo/integral-detallado - Detailed certificate
+  /constancia-trabajo/jubilado         - Retiree certificate
+  /constancia-trabajo/sin-sueldo       - Unpaid leave certificate
+  /constancia-trabajo/verificar/[hash] - VERIFY WORK CERTIFICATE
+
+=== PENSION & TRUST ===
+  /fideicomiso                         - TRUST/PENSION SYSTEM
+  /fideicomiso/form-planilla           - Pension form
+  /fideicomiso/planilla                - Pension statement
+
+=== EMPLOYEE IDENTITY (RIC) ===
+  /ric                                 - Employee ID system
+  /ric/identificacionFuncionari        - OFFICIAL EMPLOYEE IDS
+  /ric/experienciaLaboral              - Work experience
+  /ric/niveEducacion                   - Education level
+  /ric/competencias                    - Competencies
+  /ric/caracteristicasCargo            - Job characteristics
+  /ric/aprobaciones                    - Approvals
+
+=== TAX WITHHOLDING (ARI) ===
+  /ari                                 - Tax system
+  /ari/retenciones                     - TAX WITHHOLDINGS
+  /ari/retenciones/estimacion-inicial  - Initial tax estimate
+  /ari/retenciones/primera-variacion   - First adjustment
+  /ari/retenciones/segunda-variacion   - Second adjustment
+  /ari/retenciones/tercera-variacion   - Third adjustment
+  /ari/retenciones/cuarta-variacion    - Fourth adjustment
+  /ari/historico                       - Tax history
+  /ari/configuracion                   - Tax configuration
+
+=== REGISTRATION ===
+  /registro                            - New user registration
+  /registro/[cedula]/[token]           - REGISTER BY CEDULA
+
+=== OTHER ===
+  /citas-medicas/solicitudes           - MEDICAL APPOINTMENTS
+  /parametros                          - System parameters
+  /cambio-clave                        - Password change
+  /home                                - Main dashboard</div>
+    </div>
+
+    <div id="media" class="content">
+        <h2 class="section-title">Downloaded Media (9,716 files stored locally)</h2>
+        <p style="color:#FFCC00;margin-bottom:15px;">Raw media files downloaded from government APIs and stored in exfil/media/ (2.1 GB)</p>
+        <div class="stats-grid" style="margin-bottom:15px;">
+            <div class="stat-card" onclick="switchMediaSource('INCES')" style="cursor:pointer;"><h3>3,167</h3><p>INCES Media<br><span style="font-size:9px;color:#CF142B;">16 WITH GPS!</span></p></div>
+            <div class="stat-card blue" onclick="switchMediaSource('AVN')" style="cursor:pointer;"><h3>2,813</h3><p>AVN Media<br><span style="font-size:9px;color:#CF142B;">2 WITH GPS</span></p></div>
+            <div class="stat-card yellow" onclick="switchMediaSource('Correo')" style="cursor:pointer;"><h3>1,438</h3><p>Correo Media</p></div>
+            <div class="stat-card" onclick="switchMediaSource('SAREN')" style="cursor:pointer;"><h3>1,117</h3><p>SAREN Media<br><span style="font-size:9px;color:#FFCC00;">364 WITH EXIF</span></p></div>
+            <div class="stat-card blue" onclick="switchMediaSource('VTV')" style="cursor:pointer;"><h3>457</h3><p>VTV Media</p></div>
+            <div class="stat-card yellow" onclick="switchMediaSource('CANTV')" style="cursor:pointer;"><h3>421</h3><p>CANTV Media</p></div>
+            <div class="stat-card" onclick="switchMediaSource('SAIME')" style="cursor:pointer;"><h3>298</h3><p>SAIME Media</p></div>
+            <div class="stat-card blue" onclick="switchMediaSource('Patria')" style="cursor:pointer;"><h3>5</h3><p>Patria Media</p></div>
+        </div>
+        <h3 id="media-source-title" style="color:#FFCC00;margin-bottom:10px;">Showing: INCES (3,167 files)</h3>
+        <div class="pagination-controls" style="margin-bottom:15px;display:flex;align-items:center;gap:10px;">
+            <button onclick="prevMediaPage()" id="media-prev" style="padding:8px 16px;background:#CF142B;color:#fff;border:none;border-radius:4px;cursor:pointer;">Prev</button>
+            <span id="media-page-info" style="color:#FFCC00;">Page 1</span>
+            <button onclick="nextMediaPage()" id="media-next" style="padding:8px 16px;background:#CF142B;color:#fff;border:none;border-radius:4px;cursor:pointer;">Next</button>
+        </div>
+        <div class="media-grid" id="media-grid"></div>
+    </div>
+
+    <div id="exif" class="content">
+        <h2 class="section-title">EXIF Metadata Intelligence</h2>
+        <p style="color:#CF142B;margin-bottom:15px;">Camera equipment and timestamps extracted from downloaded government media files.</p>
+
+        <div class="stats-grid">
+            <div class="stat-card"><h3>9,716</h3><p>Images Analyzed</p></div>
+            <div class="stat-card yellow"><h3>2,901</h3><p>With EXIF Data</p></div>
+            <div class="stat-card blue"><h3>732</h3><p>Cameras Identified</p></div>
+            <div class="stat-card"><h3>1,313</h3><p>With Timestamps</p></div>
+            <div class="stat-card" style="border-left-color:#CF142B;background:rgba(207,20,43,0.15);"><h3>18</h3><p>With GPS Coords!</p></div>
+            <div class="stat-card blue"><h3>1,442</h3><p>Software Detected</p></div>
+        </div>
+
+        <h2 class="section-title">Camera Equipment Identified</h2>
+        <p style="color:rgba(255,255,255,0.6);margin-bottom:10px;">Professional equipment used by Venezuelan government photographers (~$15-20K+ value)</p>
+        <table>
+            <tr><th>Camera Model</th><th>Images</th><th>Est. Value</th><th>GPS</th></tr>
+            <tr><td>Canon EOS R5 C</td><td><span class="badge badge-red">13</span></td><td>$4,500</td><td>-</td></tr>
+            <tr><td>Canon EOS R5</td><td><span class="badge badge-red">7</span></td><td>$3,900</td><td>-</td></tr>
+            <tr><td>Canon EOS 5D Mark IV</td><td><span class="badge badge-red">7</span></td><td>$2,800</td><td>-</td></tr>
+            <tr><td>Canon EOS 5D Mark III</td><td><span class="badge badge-yellow">4</span></td><td>$2,500</td><td>-</td></tr>
+            <tr><td>Canon EOS 7D Mark II</td><td><span class="badge badge-yellow">3</span></td><td>$1,500</td><td>-</td></tr>
+            <tr><td>Sony A7 IV (ILCE-7M4)</td><td><span class="badge badge-yellow">4</span></td><td>$2,500</td><td>-</td></tr>
+            <tr><td>Sony A6700 (ILCE-6700)</td><td><span class="badge badge-blue">2</span></td><td>$1,400</td><td>-</td></tr>
+            <tr><td style="color:#CF142B;">Xiaomi Redmi A3x</td><td><span class="badge badge-red">5</span></td><td>$100</td><td><span class="badge badge-red">GPS!</span></td></tr>
+            <tr><td style="color:#CF142B;">Xiaomi M2004J19C</td><td><span class="badge badge-red">3</span></td><td>$150</td><td><span class="badge badge-red">GPS!</span></td></tr>
+            <tr><td style="color:#CF142B;">Xiaomi M2006C3LG</td><td><span class="badge badge-yellow">2</span></td><td>$100</td><td><span class="badge badge-red">GPS!</span></td></tr>
+            <tr><td style="color:#CF142B;">Xiaomi Redmi Note 8 Pro</td><td><span class="badge badge-yellow">1</span></td><td>$200</td><td><span class="badge badge-red">GPS!</span></td></tr>
+            <tr><td style="color:#CF142B;">Samsung SM-J260MU</td><td><span class="badge badge-blue">1</span></td><td>$80</td><td><span class="badge badge-red">GPS!</span></td></tr>
+        </table>
+        <p style="color:#CF142B;margin-top:10px;font-weight:bold;">12 photos from staff phones with GPS coordinates - <a href="#" onclick="showTab('gps-intel');return false;" style="color:#FFCC00;">View GPS Intel Tab</a></p>
+
+        <h2 class="section-title">EXIF Retention by Source</h2>
+        <table>
+            <tr><th>Source</th><th>Total</th><th>With EXIF</th><th>GPS</th><th>Status</th></tr>
+            <tr><td style="color:#CF142B;font-weight:bold;">INCES</td><td>3,167</td><td><span class="badge badge-red">571</span></td><td><span class="badge badge-red">16</span></td><td><span class="badge badge-red">GPS EXPOSED!</span></td></tr>
+            <tr><td>AVN</td><td>2,813</td><td><span class="badge badge-red">704</span></td><td><span class="badge badge-red">2</span></td><td><span class="badge badge-red">GPS EXPOSED!</span></td></tr>
+            <tr><td>SAREN</td><td>1,117</td><td><span class="badge badge-yellow">364</span></td><td>-</td><td><span class="badge badge-yellow">PARTIAL</span></td></tr>
+            <tr><td>Correo</td><td>1,438</td><td><span class="badge badge-yellow">950</span></td><td>-</td><td><span class="badge badge-yellow">PARTIAL</span></td></tr>
+            <tr><td>CANTV</td><td>421</td><td><span class="badge badge-yellow">113</span></td><td>-</td><td><span class="badge badge-yellow">PARTIAL</span></td></tr>
+            <tr><td>VTV</td><td>457</td><td><span class="badge badge-yellow">193</span></td><td>-</td><td><span class="badge badge-yellow">PARTIAL</span></td></tr>
+            <tr><td>SAIME</td><td>298</td><td>5</td><td>-</td><td><span class="badge badge-blue">MOSTLY STRIPPED</span></td></tr>
+            <tr><td>Patria</td><td>5</td><td>1</td><td>-</td><td><span class="badge badge-blue">STRIPPED</span></td></tr>
+        </table>
+
+        <h2 class="section-title">Files with Camera & Timestamp Data</h2>
+        <div class="table-container" style="max-height:60vh;">
+            <table>
+                <tr><th style="width:80px;">Photo</th><th>File</th><th>Source</th><th>Camera</th><th>DateTime</th></tr>
+                <tr>
+                    <td><img src="exfil/media/SAIME/SAIME_2156_38.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAIME/SAIME_2156_38.jpg', 'SAIME_2156_38.jpg', 'SONY', '2025:11:04 11:30:58')"></td>
+                    <td><code>SAIME_2156_38.jpg</code></td>
+                    <td><span class="badge badge-red">SAIME</span></td>
+                    <td>SONY</td>
+                    <td>2025:11:04 11:30:58</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAIME/SAIME_2175_36.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAIME/SAIME_2175_36.jpg', 'SAIME_2175_36.jpg', 'SONY', '2025:10:23 11:58:32')"></td>
+                    <td><code>SAIME_2175_36.jpg</code></td>
+                    <td><span class="badge badge-red">SAIME</span></td>
+                    <td>SONY</td>
+                    <td>2025:10:23 11:58:32</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12557_81.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12557_81.jpg', 'SAREN_12557_81.jpg', 'Canon', '2025:12:09 17:50:01')"></td>
+                    <td><code>SAREN_12557_81.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:09 17:50:01</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12566_79.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12566_79.jpg', 'SAREN_12566_79.jpg', 'Canon', '2025:12:09 17:50:00')"></td>
+                    <td><code>SAREN_12566_79.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:09 17:50:00</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12570_77.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12570_77.jpg', 'SAREN_12570_77.jpg', 'Canon', '2025:12:09 17:49:59')"></td>
+                    <td><code>SAREN_12570_77.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:09 17:49:59</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12582_73.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12582_73.jpg', 'SAREN_12582_73.jpg', 'Canon', '2025:12:11 18:12:59')"></td>
+                    <td><code>SAREN_12582_73.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:11 18:12:59</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12593_69.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12593_69.jpg', 'SAREN_12593_69.jpg', 'Canon', '2025:12:12 14:28:30')"></td>
+                    <td><code>SAREN_12593_69.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:12 14:28:30</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12598_67.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12598_67.jpg', 'SAREN_12598_67.jpg', 'Canon', '2025:12:12 17:21:01')"></td>
+                    <td><code>SAREN_12598_67.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:12 17:21:01</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12630_55.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12630_55.jpg', 'SAREN_12630_55.jpg', 'Canon', '2025:12:15 20:42:49')"></td>
+                    <td><code>SAREN_12630_55.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:15 20:42:49</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12631_54.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12631_54.jpg', 'SAREN_12631_54.jpg', 'Canon', '2025:12:15 20:42:49')"></td>
+                    <td><code>SAREN_12631_54.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:15 20:42:49</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12637_52.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12637_52.jpg', 'SAREN_12637_52.jpg', 'Canon', '2025:12:18 14:35:25')"></td>
+                    <td><code>SAREN_12637_52.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:18 14:35:25</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12660_42.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12660_42.jpg', 'SAREN_12660_42.jpg', 'Canon', '2025:12:19 16:43:07')"></td>
+                    <td><code>SAREN_12660_42.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:19 16:43:07</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12661_41.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12661_41.jpg', 'SAREN_12661_41.jpg', 'Canon', '2025:12:19 16:43:06')"></td>
+                    <td><code>SAREN_12661_41.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:19 16:43:06</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12664_40.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12664_40.jpg', 'SAREN_12664_40.jpg', 'Canon', '2025:12:19 16:43:09')"></td>
+                    <td><code>SAREN_12664_40.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:19 16:43:09</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12665_39.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12665_39.jpg', 'SAREN_12665_39.jpg', 'Canon', '2025:12:19 16:43:09')"></td>
+                    <td><code>SAREN_12665_39.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:19 16:43:09</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12672_38.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12672_38.jpg', 'SAREN_12672_38.jpg', 'Canon', '2025:12:22 19:19:44')"></td>
+                    <td><code>SAREN_12672_38.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:22 19:19:44</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12676_36.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12676_36.jpg', 'SAREN_12676_36.jpg', 'Canon', '2025:12:22 14:51:50')"></td>
+                    <td><code>SAREN_12676_36.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:22 14:51:50</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12684_32.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12684_32.jpg', 'SAREN_12684_32.jpg', 'Canon', '2025:12:23 18:47:06')"></td>
+                    <td><code>SAREN_12684_32.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:23 18:47:06</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12687_31.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12687_31.jpg', 'SAREN_12687_31.jpg', 'Canon', '2025:12:23 15:44:59')"></td>
+                    <td><code>SAREN_12687_31.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:23 15:44:59</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12688_30.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12688_30.jpg', 'SAREN_12688_30.jpg', 'Canon', '2025:12:23 18:07:42')"></td>
+                    <td><code>SAREN_12688_30.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:23 18:07:42</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12691_29.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12691_29.jpg', 'SAREN_12691_29.jpg', 'Canon', '2025:12:23 23:32:54')"></td>
+                    <td><code>SAREN_12691_29.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:23 23:32:54</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12692_28.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12692_28.jpg', 'SAREN_12692_28.jpg', 'Canon', '2025:12:23 23:32:54')"></td>
+                    <td><code>SAREN_12692_28.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:23 23:32:54</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12695_27.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12695_27.jpg', 'SAREN_12695_27.jpg', 'Canon', '2025:12:23 23:32:53')"></td>
+                    <td><code>SAREN_12695_27.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:23 23:32:53</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12696_26.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12696_26.jpg', 'SAREN_12696_26.jpg', 'Canon', '2025:12:23 23:32:52')"></td>
+                    <td><code>SAREN_12696_26.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:23 23:32:52</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12697_25.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12697_25.jpg', 'SAREN_12697_25.jpg', 'Canon', '2025:12:23 23:32:53')"></td>
+                    <td><code>SAREN_12697_25.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:23 23:32:53</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12700_24.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12700_24.jpg', 'SAREN_12700_24.jpg', 'Canon', '2025:12:24 20:40:57')"></td>
+                    <td><code>SAREN_12700_24.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:24 20:40:57</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12701_23.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12701_23.jpg', 'SAREN_12701_23.jpg', 'Canon', '2025:12:24 20:40:39')"></td>
+                    <td><code>SAREN_12701_23.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:24 20:40:39</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12702_22.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12702_22.jpg', 'SAREN_12702_22.jpg', 'Canon', '2025:12:24 20:40:44')"></td>
+                    <td><code>SAREN_12702_22.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:24 20:40:44</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12705_21.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12705_21.jpg', 'SAREN_12705_21.jpg', 'Canon', '2025:12:24 20:40:33')"></td>
+                    <td><code>SAREN_12705_21.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:24 20:40:33</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12706_20.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12706_20.jpg', 'SAREN_12706_20.jpg', 'Canon', '2025:12:24 20:14:57')"></td>
+                    <td><code>SAREN_12706_20.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:24 20:14:57</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12707_19.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12707_19.jpg', 'SAREN_12707_19.jpg', 'Canon', '2025:12:24 20:40:50')"></td>
+                    <td><code>SAREN_12707_19.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:24 20:40:50</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12725_14.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12725_14.jpg', 'SAREN_12725_14.jpg', 'SONY', '2025:12:30 11:00:05')"></td>
+                    <td><code>SAREN_12725_14.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>SONY</td>
+                    <td>2025:12:30 11:00:05</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12728_13.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12728_13.jpg', 'SAREN_12728_13.jpg', 'SONY', '2025:12:26 19:47:08')"></td>
+                    <td><code>SAREN_12728_13.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>SONY</td>
+                    <td>2025:12:26 19:47:08</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12729_12.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12729_12.jpg', 'SAREN_12729_12.jpg', 'SONY', '2025:12:30 10:59:11')"></td>
+                    <td><code>SAREN_12729_12.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>SONY</td>
+                    <td>2025:12:30 10:59:11</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12730_11.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12730_11.jpg', 'SAREN_12730_11.jpg', 'SONY', '2025:12:30 10:58:58')"></td>
+                    <td><code>SAREN_12730_11.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>SONY</td>
+                    <td>2025:12:30 10:58:58</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12739_6.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12739_6.jpg', 'SAREN_12739_6.jpg', 'Canon', '2025:12:30 10:58:28')"></td>
+                    <td><code>SAREN_12739_6.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:30 10:58:28</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12740_5.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12740_5.jpg', 'SAREN_12740_5.jpg', 'Canon', '2025:12:30 10:58:20')"></td>
+                    <td><code>SAREN_12740_5.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:30 10:58:20</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12744_4.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12744_4.jpg', 'SAREN_12744_4.jpg', 'Canon', '2025:12:30 10:58:10')"></td>
+                    <td><code>SAREN_12744_4.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:30 10:58:10</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12747_3.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12747_3.jpg', 'SAREN_12747_3.jpg', 'Canon', '2025:12:30 10:57:09')"></td>
+                    <td><code>SAREN_12747_3.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:30 10:57:09</td>
+                </tr>
+                <tr>
+                    <td><img src="exfil/media/SAREN/SAREN_12753_1.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openExifImage('exfil/media/SAREN/SAREN_12753_1.jpg', 'SAREN_12753_1.jpg', 'Canon', '2025:12:29 17:52:47')"></td>
+                    <td><code>SAREN_12753_1.jpg</code></td>
+                    <td><span class="badge badge-red">SAREN</span></td>
+                    <td>Canon</td>
+                    <td>2025:12:29 17:52:47</td>
+                </tr>
+            </table>
+        </div>
+        <p style="color:#666;margin-top:10px;">Showing 40 of 40 files with camera data. Full data in exfil/EXIF_REPORT.json</p>
+    </div>
+
+    <div id="gps-intel" class="content">
+        <h2 class="section-title" style="color:#CF142B;">STAFF PHONE GPS INTELLIGENCE</h2>
+        <p style="color:#CF142B;margin-bottom:15px;font-weight:bold;">18 GPS coordinates extracted from EXIF data in photos taken by Venezuelan government employees on personal phones.</p>
+
+        <div class="stats-grid">
+            <div class="stat-card" style="border-left-color:#CF142B;background:rgba(207,20,43,0.15);"><h3>18</h3><p>GPS Locations Found</p></div>
+            <div class="stat-card yellow"><h3>8</h3><p>Phone Models w/ GPS</p></div>
+            <div class="stat-card blue"><h3>2</h3><p>Agencies (INCES, AVN)</p></div>
+            <div class="stat-card"><h3>2021-2025</h3><p>Date Range</p></div>
+        </div>
+
+        <h2 class="section-title">Phone Devices Identified (Top GPS-Tagged)</h2>
+        <table>
+            <tr><th>Device</th><th>Model</th><th>Agency</th><th>GPS Photos</th><th>Software</th></tr>
+            <tr><td>Xiaomi</td><td>Redmi A3x</td><td><span class="badge badge-red">INCES</span></td><td>5</td><td>Shotwell 0.20.1</td></tr>
+            <tr><td>Xiaomi</td><td>M2004J19C</td><td><span class="badge badge-red">INCES</span></td><td>3</td><td>MediaTek Camera</td></tr>
+            <tr><td>Xiaomi</td><td>M2006C3LG</td><td><span class="badge badge-red">INCES</span></td><td>3</td><td>GIMP 2.8.14 / MediaTek</td></tr>
+            <tr><td>Xiaomi</td><td>M2006C3MG</td><td><span class="badge badge-red">INCES</span></td><td>3</td><td>GIMP 2.8.14</td></tr>
+            <tr><td>HONOR</td><td>JDY-LX3</td><td><span class="badge badge-yellow">AVN</span></td><td>1</td><td>JDY-L43 8.0.0.312</td></tr>
+            <tr><td>Xiaomi</td><td>Redmi Note 8 Pro</td><td><span class="badge badge-yellow">AVN</span></td><td>1</td><td>-</td></tr>
+            <tr><td>Xiaomi</td><td>Redmi 8</td><td><span class="badge badge-red">INCES</span></td><td>1</td><td>Windows Photo Viewer</td></tr>
+            <tr><td>Samsung</td><td>SM-J260MU</td><td><span class="badge badge-red">INCES</span></td><td>1</td><td>Shotwell 0.20.1</td></tr>
+        </table>
+
+        <h2 class="section-title">GPS Locations with Photos</h2>
+        <p style="color:#FFCC00;margin-bottom:10px;">Click any location to open in Google Maps. <a href="exfil/reports/gps-photo-map.html" style="color:#CF142B;text-decoration:none;font-weight:bold;">VIEW INTERACTIVE MAP</a></p>
+        <div class="table-container" style="max-height:50vh;">
+        <table>
+            <tr><th style="width:80px;">Photo</th><th>Agency</th><th>Phone</th><th>Date/Time</th><th>Coordinates</th><th>Software</th><th>Map</th></tr>
+            <tr style="background:rgba(255,204,0,0.1);">
+                <td><img src="exfil/media/AVN/AVN_38360.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openGpsImage('exfil/media/AVN/AVN_38360.jpg', 'AVN_38360.jpg', 'HONOR JDY-LX3', '2025-10-21 13:04:53', '10.5031, -66.9161')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-yellow">AVN</span></td>
+                <td>HONOR JDY-LX3</td>
+                <td style="color:#FFCC00;font-weight:bold;">2025-10-21</td>
+                <td><code style="color:#4ecdc4;">10.5031, -66.9161</code></td>
+                <td style="font-size:10px;">JDY-L43 8.0.0.312</td>
+                <td><a href="https://maps.google.com/?q=10.503130912777777,-66.91614532444444" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfil/media/AVN/AVN_43325.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openGpsImage('exfil/media/AVN/AVN_43325.jpg', 'AVN_43325.jpg', 'Xiaomi Redmi Note 8 Pro', '2023-11-01 11:33:42', '10.2741, -68.9095')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-yellow">AVN</span></td>
+                <td>Xiaomi Redmi Note 8 Pro</td>
+                <td>2023-11-01</td>
+                <td><code style="color:#4ecdc4;">10.2741, -68.9095</code></td>
+                <td style="font-size:10px;">-</td>
+                <td><a href="https://maps.google.com/?q=10.274094416666667,-68.90948608333333" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfil/media/INCES/INCES_37469.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openGpsImage('exfil/media/INCES/INCES_37469.jpg', 'INCES_37469.jpg', 'Xiaomi M2006C3MG', '2021-03-09', '9.4513, -69.2662')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td>Xiaomi M2006C3MG</td>
+                <td>2021-03-09</td>
+                <td><code style="color:#4ecdc4;">9.4513, -69.2662</code></td>
+                <td style="font-size:10px;">GIMP 2.8.14</td>
+                <td><a href="https://maps.google.com/?q=9.45129011111111,-69.26619719444444" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfil/media/INCES/INCES_37583.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openGpsImage('exfil/media/INCES/INCES_37583.jpg', 'INCES_37583.jpg', 'Xiaomi M2006C3MG', '2021-03-12', '9.5586, -69.2149')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td>Xiaomi M2006C3MG</td>
+                <td>2021-03-12</td>
+                <td><code style="color:#4ecdc4;">9.5586, -69.2149</code></td>
+                <td style="font-size:10px;">GIMP 2.8.14</td>
+                <td><a href="https://maps.google.com/?q=9.558589916666667,-69.21492766666667" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfil/media/INCES/INCES_37606.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openGpsImage('exfil/media/INCES/INCES_37606.jpg', 'INCES_37606.jpg', 'Xiaomi M2006C3LG', '2021-03-03', '9.3151, -70.6033')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td>Xiaomi M2006C3LG</td>
+                <td>2021-03-03</td>
+                <td><code style="color:#4ecdc4;">9.3151, -70.6033</code></td>
+                <td style="font-size:10px;">GIMP 2.8.14</td>
+                <td><a href="https://maps.google.com/?q=9.315099694444445,-70.603302" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfil/media/INCES/INCES_41394.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openGpsImage('exfil/media/INCES/INCES_41394.jpg', 'INCES_41394.jpg', 'Xiaomi Redmi 8', '2022-02-10', '10.3425, -68.7284')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td>Xiaomi Redmi 8</td>
+                <td>2022-02-10</td>
+                <td><code style="color:#4ecdc4;">10.3425, -68.7284</code></td>
+                <td style="font-size:10px;">Win Photo Viewer</td>
+                <td><a href="https://maps.google.com/?q=10.342503972222223,-68.72835194444444" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfil/media/INCES/INCES_42575.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openGpsImage('exfil/media/INCES/INCES_42575.jpg', 'INCES_42575.jpg', 'Samsung SM-J260MU', 'Unknown', '11.3555, -69.5219')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td>Samsung SM-J260MU</td>
+                <td>Unknown</td>
+                <td><code style="color:#4ecdc4;">11.3555, -69.5219</code></td>
+                <td><a href="https://maps.google.com/?q=11.355520805555555,-69.52191483333333" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfil/media/INCES/INCES_42646.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openGpsImage('exfil/media/INCES/INCES_42646.jpg', 'INCES_42646.jpg', 'Xiaomi M2006C3LG', '2022-05-03 11:29:51', '8.6314, -71.0775')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td>Xiaomi M2006C3LG</td>
+                <td>2022-05-03 11:29:51</td>
+                <td><code style="color:#4ecdc4;">8.6314, -71.0775</code></td>
+                <td><a href="https://maps.google.com/?q=8.631411527777779,-71.07752988888889" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfil/media/INCES/INCES_42954.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openGpsImage('exfil/media/INCES/INCES_42954.jpg', 'INCES_42954.jpg', 'Xiaomi M2004J19C', '2022-05-18 15:10:59', '10.5044, -66.9152')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td>Xiaomi M2004J19C</td>
+                <td>2022-05-18 15:10:59</td>
+                <td><code style="color:#4ecdc4;">10.5044, -66.9152</code></td>
+                <td><a href="https://maps.google.com/?q=10.504424083333333,-66.91522216666667" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfil/media/INCES/INCES_43878.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openGpsImage('exfil/media/INCES/INCES_43878.jpg', 'INCES_43878.jpg', 'Xiaomi M2006C3LG', '2022-06-15 10:55:42', '8.5936, -71.1480')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td>Xiaomi M2006C3LG</td>
+                <td>2022-06-15 10:55:42</td>
+                <td><code style="color:#4ecdc4;">8.5936, -71.1480</code></td>
+                <td><a href="https://maps.google.com/?q=8.593620277777779,-71.14795683333334" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfil/media/INCES/INCES_44309.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openGpsImage('exfil/media/INCES/INCES_44309.jpg', 'INCES_44309.jpg', 'Xiaomi M2004J19C', '2022-08-06 11:00:35', '10.4843, -66.9058')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td>Xiaomi M2004J19C</td>
+                <td>2022-08-06 11:00:35</td>
+                <td><code style="color:#4ecdc4;">10.4843, -66.9058</code></td>
+                <td><a href="https://maps.google.com/?q=10.484319666666666,-66.90579986111112" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfil/media/INCES/INCES_44310.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openGpsImage('exfil/media/INCES/INCES_44310.jpg', 'INCES_44310.jpg', 'Xiaomi M2004J19C', '2022-08-06 10:48:43', '10.4845, -66.9057')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td>Xiaomi M2004J19C</td>
+                <td>2022-08-06 10:48:43</td>
+                <td><code style="color:#4ecdc4;">10.4845, -66.9057</code></td>
+                <td><a href="https://maps.google.com/?q=10.484464638888888,-66.90573880555556" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfil/media/INCES/INCES_69066.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openGpsImage('exfil/media/INCES/INCES_69066.jpg', 'INCES_69066.jpg', 'Xiaomi Redmi A3x', 'Unknown', '11.4089, -69.6500')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td>Xiaomi Redmi A3x</td>
+                <td>Unknown</td>
+                <td><code style="color:#4ecdc4;">11.4089, -69.6500</code></td>
+                <td><a href="https://maps.google.com/?q=11.408856400000001,-69.6499685" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfil/media/INCES/INCES_69067.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openGpsImage('exfil/media/INCES/INCES_69067.jpg', 'INCES_69067.jpg', 'Xiaomi Redmi A3x', 'Unknown', '11.4089, -69.6500')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td>Xiaomi Redmi A3x</td>
+                <td>Unknown</td>
+                <td><code style="color:#4ecdc4;">11.4089, -69.6500</code></td>
+                <td><a href="https://maps.google.com/?q=11.4088554,-69.64998940000001" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfil/media/INCES/INCES_69069.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openGpsImage('exfil/media/INCES/INCES_69069.jpg', 'INCES_69069.jpg', 'Xiaomi Redmi A3x', 'Unknown', '11.4089, -69.6500')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td>Xiaomi Redmi A3x</td>
+                <td>Unknown</td>
+                <td><code style="color:#4ecdc4;">11.4089, -69.6500</code></td>
+                <td><a href="https://maps.google.com/?q=11.4088554,-69.64998940000001" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfil/media/INCES/INCES_69070.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openGpsImage('exfil/media/INCES/INCES_69070.jpg', 'INCES_69070.jpg', 'Xiaomi Redmi A3x', 'Unknown', '11.4089, -69.6500')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td>Xiaomi Redmi A3x</td>
+                <td>Unknown</td>
+                <td><code style="color:#4ecdc4;">11.4089, -69.6500</code></td>
+                <td><a href="https://maps.google.com/?q=11.4088554,-69.64998940000001" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfil/media/INCES/INCES_69071.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openGpsImage('exfil/media/INCES/INCES_69071.jpg', 'INCES_69071.jpg', 'Xiaomi Redmi A3x', 'Unknown', '11.4089, -69.6500')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td>Xiaomi Redmi A3x</td>
+                <td>Unknown</td>
+                <td><code style="color:#4ecdc4;">11.4089, -69.6500</code></td>
+                <td><a href="https://maps.google.com/?q=11.4088554,-69.64998940000001" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+        </table>
+        </div>
+
+        <h2 class="section-title">Location Analysis</h2>
+        <div class="code-block" style="border-left-color:#CF142B;">CLUSTER 1: Merida State (8.59-8.63°N, 71.07-71.15°W)
+  - 3 photos from Xiaomi M2006C3LG phones
+  - 2021-2022 (earliest data!)
+  - Edited with GIMP 2.8.14 / MediaTek Camera
+  - Likely same INCES employee
+
+CLUSTER 2: Caracas Area (10.48-10.50°N, 66.90-66.92°W)
+  - 4 photos from multiple Xiaomi devices (M2004J19C, HONOR JDY-LX3)
+  - 2022-2025 (most recent: Oct 2025!)
+  - AVN and INCES operations
+  - Software: MediaTek Camera, JDY-L43
+
+CLUSTER 3: Falcon State (11.35-11.41°N, 69.52-69.65°W)
+  - 6 photos (Samsung SM-J260MU + Xiaomi Redmi A3x)
+  - Multiple employees
+  - INCES field operations
+  - Software: Shotwell 0.20.1 (Linux)
+
+CLUSTER 4: Carabobo State (10.27-10.34°N, 68.72-68.91°W)
+  - 2 photos (Xiaomi Redmi Note 8 Pro, Xiaomi Redmi 8)
+  - 2022-2023
+  - AVN journalist + INCES staff
+  - Software: Windows Photo Viewer
+
+CLUSTER 5: Portuguesa/Lara State (9.31-9.56°N, 69.21-70.60°W)
+  - 3 photos from Xiaomi M2006C3MG/M2006C3LG
+  - March 2021
+  - Earliest GPS data found
+  - All edited with GIMP 2.8.14
+
+SOFTWARE FINGERPRINTS DETECTED:
+  - GIMP 2.8.14 (Linux photo editing)
+  - Shotwell 0.20.1 (Linux photo manager)
+  - MediaTek Camera Application
+  - Windows Photo Viewer 6.1.7600.16385
+  - JDY-L43 8.0.0.312 (HONOR firmware)
+
+OPSEC FAILURE: Staff phones with GPS enabled, EXIF not stripped before upload.
+               Software fingerprints reveal Linux workstations at INCES.</div>
+
+        <p style="color:#666;margin-top:15px;">Full data: <a href="exfil/reports/STAFF_PHONE_GPS_INTEL.json" style="color:#FFCC00;">STAFF_PHONE_GPS_INTEL.json</a> | <a href="exfil/reports/ALL_GPS_COORDINATES.json" style="color:#FFCC00;">ALL_GPS_COORDINATES.json</a> | <a href="exfil/reports/EXIF_REPORT_FULL.json" style="color:#FFCC00;">EXIF_REPORT_FULL.json</a></p>
+    </div>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="prevImage(event)">&#10094;</span>
+        <span class="lightbox-nav lightbox-next" onclick="nextImage(event)">&#10095;</span>
+        <img id="lightbox-img" src="" alt="">
+        <p class="lightbox-title" id="lightbox-title"></p>
+        <div class="lightbox-meta" id="lightbox-meta"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        var offices = [{"name": "6. Barquisimeto II - EL Ujano", "address": "Avenida Hernan Garmendia. Sector El Ujano.", "lat": 10.084358083961684, "lon": -69.2758332732111}, {"name": "154. Jacinto Lara", "address": "Avenida Lara con Avenida Bracamonte. Barquisimeto Estado Lara.", "lat": 10.065392281990071, "lon": -69.29310217470979}, {"name": "130. Catia La Mar", "address": "Av. El Ejercito. Centro Comercial Paseo La Marina. terminal de pasajero LA Zorra. PB.", "lat": 10.600627149963803, "lon": -67.04069043052708}, {"name": "166. Caraballeda", "address": "Av. La Costanera entre Caraballeda y La Calle Osorio Antigua CANTV.", "lat": 10.618286992032592, "lon": -66.85237463052698}, {"name": "002. La G\u00fcaira - Vargas I", "address": "Terminal de pasajero Carua. 2do Piso.", "lat": 10.594923133562613, "lon": -66.95157140005884}, {"name": "020. Valle de la PasC\u00faa", "address": "Calle Las Flores Cruce con calle martillo. Casco Central. Edificio Maria Alejandra 2do. Piso.", "lat": 9.210427324447629, "lon": -66.00655884587916}, {"name": "189. Tucupido", "address": "Calle Gabante Sector Mandilito / Antigua sede del Hospital.", "lat": 9.278881236807178, "lon": -65.77557933053562}, {"name": "102. Calabozo", "address": "Calle 13 entre Carrera 11/12 diagonal al Banco BicentenaR\u00edo.", "lat": 8.925928070427439, "lon": -67.42851730355228}, {"name": "101. Zaraza", "address": "Calle Troconis con calle Higuerote. Centro Comercial La Tarragona Local 1.", "lat": 9.348744390161722, "lon": -65.32219950355008}, {"name": "026.. San Juan de Los Morros", "address": "Av. Fuerzas Armadas al frente del destacamento 28 de la GNB. Edificio Saime.", "lat": 9.915484279079996, "lon": -67.37370295936755}, {"name": "172. Mene de Mauroa", "address": "Av.Principal de Mene Mauroa Frente a la Plaza Bol \u00edvar.", "lat": 10.681460591193153, "lon": -71.03615531703393}, {"name": "195. Dabajuro", "address": "Calle Victor Marin Camacho. Con Prolongacion Calle Creole. al lado del estadio municipal.", "lat": 11.02360506843693, "lon": -70.68176774771781}, {"name": "210. Tucacas", "address": "", "lat": 10.757508614617828, "lon": -68.32499619004808}, {"name": "79. Mercado Turistico", "address": "Av. Principal del Antiguo Aeropuerto. Centro Comercial Mercado Turistico. Municipio Carirubana.", "lat": 11.717892217079683, "lon": -70.18959880949973}, {"name": "14. La Vela de Coro", "address": "Av. Generalisimo Francisco de -miranda. Paseo Las Banderas. Sector Leon Colina.", "lat": 11.454137465112114, "lon": -69.57495687655015}, {"name": "204. IPSFA", "address": "", "lat": 10.47363212588266, "lon": -66.89555285695668}, {"name": "165. TSJ", "address": "Final Avenida Baralt. Esquina Dos Pilitas. Edif. Tribunal Supremo de Justicia. Caracas. Distrito Capital.", "lat": 10.517479877686151, "lon": -66.91518506827983}, {"name": "184. GNB El Para\u00edso", "address": "", "lat": 10.493713677616853, "lon": -66.9295722170352}, {"name": "053. Coche", "address": "Edif. Anzo\u00e1tegui. C.C. Coche. Piso 3. a la salida de la Est. del Metro. Av. Intercomunal de El Valle. Caracas.", "lat": 10.448090661577018, "lon": -66.9239681323787}, {"name": "072. 23 de Enero", "address": "", "lat": 10.509160069309688, "lon": -66.93115281888564}, {"name": "071. CariC\u00faao", "address": "Av. La Hacienda. UD 5. Parque Zoologico de CariC\u00faao. Caracas. Distrito Capital.", "lat": 10.43271036768719, "lon": -66.96618544772195}, {"name": "084. Defensa P\u00fablica", "address": "Av. Norte del boulevard Panten\u00f3n. EDF Defensa P\u00fablica. Caracas. Distrito Capital.", "lat": 10.509619707888067, "lon": -66.91371228638357}, {"name": "025. Catia", "address": "Av. 5 entre Calle Argentina y Colombia. Catia. Caracas. Distrito Capital.", "lat": 10.510311567376213, "lon": -66.9481560077147}, {"name": "037. Propatria", "address": "Av. Principal de Propatria. CC Propatria. Nivel 3. Local B-5. Propatria. Caracas. Distrito Capital.", "lat": 10.503866584409636, "lon": -66.9528336000589}, {"name": "077. IND", "address": "Av Teheran. Montalban. Edificio Instituto Nacional de Deporte. Caracas 1020. Distrito Capital.", "lat": 10.474296441322087, "lon": -66.94771590539334}, {"name": "216. Simon Bol \u00edvar", "address": "Av. Baralt Centro Simon Bol \u00edvar", "lat": 10.50363252364934, "lon": -66.91774407470677}, {"name": "065. Fuerte Tiuna", "address": "Av. Los Proceres. FuerteTiuna. Parroquia El Valle. Caracas. Distrito Capital. MinisteR\u00edo e la defensa", "lat": 10.460796776789927, "lon": -66.90010312318446}, {"name": "067. Parque Central", "address": "", "lat": 10.498114722368374, "lon": -66.89974237687005}, {"name": "090. Cotiza", "address": "Avenida Fuerzas Armadas. Esquina San Jos\u00e9. Edificio gubernamental. Caracas.Distrito Capital.", "lat": 10.514837205782216, "lon": -66.90743527994486}, {"name": "054. San Bernardino", "address": "Residencias Parque Estrella. PB. Local PB-1. Av. Gamboa. Caracas.Distrito Capital.", "lat": 10.50883070544218, "lon": -66.90183891124798}, {"name": "152. Plaza Caracas", "address": "", "lat": 10.503128800865792, "lon": -66.91589639327717}, {"name": "146. Tucupita", "address": "Terminal de pasajero. av. 19 de abril.", "lat": 9.051648352786286, "lon": -62.04217422105656}, {"name": "137. Tinaquillo", "address": "Zona Industrial de Tinaquillo al lado del Comando de la Guardia.", "lat": 9.920361543939247, "lon": -68.29008679091025}, {"name": "007. San Carlos", "address": "Av. Universidad. sector Los Mangos. al lado de la aldea Bol \u00edvariana", "lat": 9.673234698812935, "lon": -68.58039479093829}, {"name": "099. La Noria", "address": "", "lat": 10.470119056375482, "lon": -68.01872932946974}, {"name": "085. Los Guayos", "address": "Av. Bol\u00edvar . Edificio Mencey. PB. Los Guayos.", "lat": 10.188774134315196, "lon": -67.94232519881733}, {"name": "105. Vicente Salias", "address": "Municipio Valmore Rodr\u00edguez. Parroquia La Victoria. Av. Principal frente al terminal de pasajero del municipio.", "lat": 10.221607755390966, "lon": -68.00965366812625}, {"name": "023. Valencia I - Los Colorados", "address": "Av. Carabobo con Montilla. Edificio HCH. Municipio San Jos\u00e9.", "lat": 10.19357534163234, "lon": -68.00770740622151}, {"name": "209. Mariara", "address": "Av. Carabobo. Sector La Haciendita. calle Santos Michelena.", "lat": 10.29153098652762, "lon": -67.71840991414837}, {"name": "106. Arturo Michelena", "address": "C.C Big Low Center. Nave H. Local 7 y 8. Parroquia San Blas.", "lat": 10.474196260426908, "lon": -67.970629339686}, {"name": "126. Ciudad Bol\u00edvar", "address": "Av. Circunvalacion. Edificio Centro Cultural Bol \u00edvar. Vista Hermosa.", "lat": 8.107546508099343, "lon": -63.5328197910899}, {"name": "083. Guasipati", "address": "Av. Urdaneta al lado del Juzgado. Municipio Roscio.", "lat": 7.480826232690667, "lon": -61.895587845107364}, {"name": "113. Puerto Ordaz", "address": "", "lat": 8.28226671145213, "lon": -62.77444954155732}, {"name": "012. San F\u00e9lix", "address": "Avenida Dalla Costa. Centro Comercial Icabaru. PB.", "lat": 8.342631669902751, "lon": -62.680029645039454}, {"name": "082. Upata", "address": "Calle Ruiz Pineda S/N frente Bloquera El Patio.", "lat": 8.01130140356775, "lon": -62.39943879109778}, {"name": "183. Socopo", "address": "Sector Barrio Obrero calle 11 entre 5 y 6.", "lat": 8.23330538405597, "lon": -70.818055889632}, {"name": "223. Santa B\u00c1rbara", "address": "", "lat": 7.822328225319658, "lon": -71.1867463297386}, {"name": "187. Barinas II", "address": "", "lat": 8.655642234809617, "lon": -70.24709442172905}, {"name": "192. Cagua II", "address": "Centro Comercial Multicentro. 2do Piso. Local 40.41.42. calle Bol\u00edvar Cruce con Rondon. Frente Casa de la Cultura.", "lat": 10.187263754234086, "lon": -67.46189450195922}, {"name": "125. Jos\u00e9 F\u00e9lix Ribas", "address": "La Victoria- Calle Dr Carias. Condominio La Fuente. Local L4 PB.", "lat": 10.18729890159254, "lon": -67.46196369262576}, {"name": "145. San Sebasti\u00e1n de los Reyes", "address": "Calle Bol\u00edvar cruce con Guaicaipuro. Antigua sede de la Biblioteca Virtual.", "lat": 10.2304801336677, "lon": -67.3367497216184}, {"name": "117. Santa Rita", "address": "Av. General\u00edsimo Francisco de Miranda. Sector Santa Rita. Sede de la Alcald\u00eda Francisco Linares Alc\u00e1ntara.", "lat": 10.19732351500025, "lon": -67.5735114654003}, {"name": "039. La Victoria", "address": "Av. Victoria. Centro Comercial El Cilento. Piso 03. Oficina 36.", "lat": 10.2273010593607, "lon": -67.3237961129536}, {"name": "149. Jos\u00e9 Antonio Anzo\u00e1tegui", "address": "Calle Guaraguao. Edificio Puerto Oriental.", "lat": 10.219089345432, "lon": -64.6369300767739}, {"name": "207. Guanipa", "address": "Av. Roma. Sector Vista al Sol.", "lat": 8.896093447858, "lon": -64.1759880138265}, {"name": "169. Trailer Barcelona", "address": "Parroquia San Crist\u00f3bal. Cisrcunscripci\u00f3n Militar Zodi 51.", "lat": 10.143351248186, "lon": -64.6853976067611}, {"name": "160. Anaco", "address": "Av. Jos\u00e9 Antonio Anzo\u00e1tegui. Centro Comercial Anaco.", "lat": 9.43392045063011, "lon": -64.4637245830843}, {"name": "114. Puerto Ayacucho", "address": "Av. Aguerrevere. Barrio Luisa Caseres. Frente a la escuela Gabriela Mistral.", "lat": 5.665564312401557, "lon": -67.63149837589266}, {"name": "213. Tumeremo", "address": "Avenida Carabobo, Edif. La Prefectura PB, Frente a la Plaza Bolivar.", "lat": 7.306753521601759, "lon": -61.50400804464402}, {"name": "206. Sabaneta", "address": "Urb. El Rosario, calle 1, con callejon 2, edificio SAIME.", "lat": 8.757686832141575, "lon": -69.93524838262316}, {"name": "005. Maracay. El Lim\u00f3n", "address": "Av.Universidad - El Lim\u00f3n, al lado del INTT", "lat": 10.285129380263857, "lon": -67.6219532443634}, {"name": "35. San Fernando", "address": "Edif. Carrusel, Piso 2, frente a la Estatua de San Fernando", "lat": 7.884530778370422, "lon": -67.47052022925833}, {"name": "147-P\u00edritu.", "address": "Calle Bolivar, Centro Civico Do\u00f1a Calea Mata.", "lat": 10.040056247579647, "lon": -65.03042865180028}, {"name": "017. Juan Antonio Sotillo", "address": "Av. 5 de Julio, Edf. Oriente, Piso 2, Casco Central.", "lat": 10.219173788630684, "lon": -64.6369300977821}, {"name": "222. El Tigre", "address": "Av. Rotaria, Sector Campo Oficina", "lat": 8.87909316308627, "lon": -64.24809340565872}, {"name": "121. MERCABAR", "address": "Zona III. ENTRE AV LAS INDUSTRIAS GIFFONI", "lat": 10.068973318358964, "lon": -69.3897581236062}, {"name": "115. Duaca", "address": "Carrera 7 entre calles 15 y 16 mucipio Crespo.", "lat": 10.287340440727412, "lon": -69.15763875971653}, {"name": "034. El Tocuyo", "address": "Esquina Calle 15 entre av. Fraternidad y Av. Lisandro Alvarado municipio Moran.", "lat": 9.785732090506368, "lon": -69.79490879040559}, {"name": "194. Siquisique", "address": "Calle 7 entre Av. Urdaneta y Av. Comercio.", "lat": 10.570453944988316, "lon": -69.70263715240576}, {"name": "108. Carora", "address": "Calle Monagas entre Bol\u00edvar y Torres. Centro Comercial Don Cherra. locales 12. 13. 14.", "lat": 10.180649248571912, "lon": -70.08531601923836}, {"name": "112. Quibor", "address": "Estacion de Servicio Shell via Cubiro Sector la Piolin. Parroquia Coronel Mariano Peraza.", "lat": 9.929017418942788, "lon": -69.61097731197262}, {"name": "64. Estadio Metropolitano", "address": "Municipio Libertador. Parroquia Juan Rodr\u00edguez Suarez. Sector Zumba. Estadio Metropolitano 5 Aguilas Blancas Tribuna Oeste.", "lat": 8.555088571239574, "lon": -71.21861856157791}, {"name": "163. Santa Cruz de Mora", "address": "Av. Antonio Pinto Salinas al ladode PDVAL. Parroquia Santa Cruz de Mora. Municipio Antonio Pinto Salinas.", "lat": 8.397816809094794, "lon": -71.64084377322214}, {"name": "98. Pueblo Llano", "address": "Casa de la cultara (ATENEO) Calle Ayaucucho. Pueblo Llano.", "lat": 8.916473548840768, "lon": -70.66007079484649}, {"name": "89. Campo Elias", "address": "Av. Bol\u00edvar . Edf. Municipal.Municipio Campo Elias. Parroquia Matriz.", "lat": 8.546534292138476, "lon": -71.24274106441781}, {"name": "104. Santa Elena de Arenales", "address": "Municipio Obispo Ramos de Lora. Sector Santa Elena Centro Calle Cristo Rey Frente a la Plaza Bol \u00edvar.", "lat": 8.822234327401963, "lon": -71.46625981924761}, {"name": "76. Tovar", "address": "Sector Las Acacias Calle Principal casa comunal Juan Ozuna Paredes.", "lat": 8.337236200749794, "lon": -71.7479374462364}, {"name": "179. El Vigia", "address": "Av. 15 Sector BarR\u00edo Bol\u00edvar. Centro Comercial Mayorca. PB Local 1 y 2 antiguo edificio Banco Progreso.", "lat": 8.614295829561021, "lon": -71.65736544467836}, {"name": "004. Los Ruices", "address": "Av. Diego CisneroCentro Empresarial Los Ruices PB. LOCAL B", "lat": 10.487959533516172, "lon": -66.82982327690729}, {"name": "024. Los Teques I - Super Lider", "address": "Carretera Panamericana KM21. Centro Comercial Super Lider. LOS TEQUES.", "lat": 10.350707360257944, "lon": -67.01451422117077}, {"name": "111. Guarenas", "address": "", "lat": 10.468819396065006, "lon": -66.610005546222}, {"name": "097. Higuerote", "address": "", "lat": 10.477893412257963, "lon": -66.09975011193353}, {"name": "131. San Jos\u00e9 de Barlovento", "address": "Esquina Calle Junincon Malabar. San Jos\u00e9 de Barlovento.", "lat": 10.303187262382913, "lon": -65.9947475615661}, {"name": "047. Caucagua", "address": "", "lat": 10.291195783310137, "lon": -66.37687586156609}, {"name": "033. Ocumare del Tuy", "address": "Ocumare del Tuy Calle Urdaneta. Residencia Parque Central. LOCAL 29", "lat": 10.120470642309794, "lon": -66.77329029040322}, {"name": "091. Santa Teresa del Tuy", "address": "", "lat": 10.232993171641168, "lon": -66.66891887505975}, {"name": "095. San Francisco de Yare", "address": "", "lat": 10.17877458374027, "lon": -66.7459059696262}, {"name": "050. Los Teques II - Guaicaipuro", "address": "Calle Carabobo con Boyaca. Edf. Centro Maracaibo. Frente del Hotal El Gran Casino.", "lat": 10.342748393974551, "lon": -67.03952951484973}, {"name": "075. IFE - C\u00faa", "address": "Estacion Ferrocarriles Ezequiel Zamora. Oficina 04.", "lat": 10.154040788273367, "lon": -66.8745453750603}, {"name": "003. La Trinidad", "address": "Calle San Rafael. CC Plaza La Trinidad. Caracas 1080. Miranda.", "lat": 10.442065954659157, "lon": -66.86547490204417}, {"name": "055. Las Mercedes", "address": "Edif. La Hacienda. Av. Veracruz. Las Mercedes. Caracas 1080. Miranda.", "lat": 10.478941637562638, "lon": -66.85755963087938}, {"name": "056. La Urbina", "address": "Calle 4. Cruce con Calle 13. La Urbina. Caracas.", "lat": 10.485244733047432, "lon": -66.80800293087941}, {"name": "074. IFE - Charallave Sur", "address": "Estacion Terminal de Ferrocarril Generalisimo Francisco de Miranda. Municipio Crist\u00f3bal Rojas.", "lat": 10.237203538076072, "lon": -66.85691553273097}, {"name": "31. Matur\u00edn", "address": "Av. Jos\u00e9 Tadeo Monagas. Edif. SAIME. Entrada del Aeropurto. Parroquia Las Cocuiza. Municipio Matur\u00edn.", "lat": 9.751748361624305, "lon": -63.15709615107922}, {"name": "138. Punta de Mata", "address": "Final Av. Bol \u00edvar. al lado del destacamento 512 de GNB. Municipio Ezequiel Zamora. Parroquia Punta de Mata.", "lat": 9.691879432507049, "lon": -63.62032885692116}, {"name": "088. Boca del R\u00edo", "address": "", "lat": 10.951577417117644, "lon": -64.18498498034344}, {"name": "164. Isla de Coche", "address": "Calle Independencia Sector Tumba Onda Cruce Con Callejon Via El Progreso.", "lat": 10.780516203131336, "lon": -63.99821322324059}, {"name": "202. Juan Griego", "address": "Av. 3 De Mayo. A 300Mtrs Del Terminal De Pasajeros. Juan Griego Municipio Marcano", "lat": 11.081842911237878, "lon": -63.96806483809276}, {"name": "205. El Espinal", "address": "", "lat": 10.964515791092403, "lon": -63.98046139994139}, {"name": "123. Fente Porlamar", "address": "Av 4 De Mayo. Centro Comercial Galeria Fente. Piso 1. Locales G11-G12.", "lat": 10.966883357119494, "lon": -63.84070142020747}, {"name": "181. Turen", "address": "Barrio El Cauchal Calle 13 y 14. Municipio Turen. Parroquia Bruzual.", "lat": 9.326597260977739, "lon": -69.11845334582242}, {"name": "29. Acarigua", "address": "Av. 32 con Av. 3. Sector Banco Obrero. Al lado de MRW. Diagonal a la panaderia EL Trebol. Municipio Paez. Parroquia Acarigua.", "lat": 9.558177182281046, "lon": -69.21249854827525}, {"name": "18. Cuman\u00c1", "address": "Av. Universidad al lado del consencionaR\u00edo Noel Motores. Parroquia Ayacucho.", "lat": 10.450513483175024, "lon": -64.18444606986704}, {"name": "224. Car\u00fapano", "address": "Calle San F\u00e9lix con Colombia a una C\u00faadra del Liceo Simon Rodr\u00edguez", "lat": 10.666747628031994, "lon": -63.25132602544464}, {"name": "119. Trailer G\u00fciria", "address": "Calle Bol \u00edvar. Edif. SAIME. Frente a Banesco. Municipio Valdez.", "lat": 10.575515528605177, "lon": -62.30002350837465}, {"name": "032. San Crist\u00f3bal", "address": "Av. Principal La Castra. Antigua Sede Foncafe. Parroquia La Concordia.", "lat": 7.750247647595205, "lon": -72.22648755368643}, {"name": "069. San Antonio", "address": "", "lat": 7.8141075372262225, "lon": -72.44407658900293}, {"name": "036. La Grita", "address": "Sv. Francisco de Caseres Casa numero#12-124 al lado del Supermercado Pekin.", "lat": 8.130453672888136, "lon": -71.98100896489512}, {"name": "198. San Juan de Col\u00f3n", "address": "Barrio Topon. Carretera 13 con calle 4 esquina. Municipio Ayacucho San Juan de Col\u00f3n.", "lat": 8.02791400632777, "lon": -72.25767683575424}, {"name": "061. Rubio", "address": "Av. 7 con calles# 7-21 Rubio-Tachira.", "lat": 7.703816347666042, "lon": -72.35618615036309}, {"name": "118. La Fr\u00eda", "address": "Calle 2 entre carreras 15 y 16. sector casco centra. La Fria.", "lat": 8.218101057562551, "lon": -72.25058346028396}, {"name": "151. El Dividive", "address": "Municipio Miranda.Parroquia El Dividive. Calle Panamericana. Sector 12 de Octubre. Terminalde Pasajeros Francisco de Miranda.", "lat": 9.475400662994536, "lon": -70.74004367879915}, {"name": "009. Trujillo", "address": "Municipio Trujillo. Parroquia Crist\u00f3bal Mendoza. Av. Laudelino Mejia. Edificio Saime.al lado del circuito judicial penal.", "lat": 9.381351199462838, "lon": -70.42997100563232}, {"name": "013. Valera", "address": "Municipio Valera. Parroquia Juan Ignacio Montilla. Sector La Plata. Quinta Fiorella.", "lat": 9.301035752856926, "lon": -70.61270844137121}, {"name": "139. Trailer Monay", "address": "Municipio PamPAm. Parroquia La Paz. Monay. Calle El Cine. Diagonal a la escuela Jos\u00e9fina Pimentel.", "lat": 9.539036814523053, "lon": -70.4634169785485}, {"name": "049. Bocon\u00f3", "address": "Municipio Bocono. Parroquia Bocono. Calle Sucre. Entre Calle Jauregui y Andres Bello. Edificio Barazarte. Piso 1.", "lat": 9.243615291662543, "lon": -70.27141464922624}, {"name": "010. San Felipe", "address": "Municipio Independencia. 5ta Avenida con esquina calle 24.", "lat": 10.34123927840836, "lon": -68.73718201009115}, {"name": "092. Aroa", "address": "Calle Principal entrada Aroa. Frente al Comando de GNB. Edif. Alcaldia.", "lat": 10.450485161906435, "lon": -68.89492035757382}, {"name": "176. Cocorote", "address": "Av. Bol\u00edvar con calle4. Instalaciones de la alcaldia de Cocorote.", "lat": 10.32290636660153, "lon": -68.78143610791459}, {"name": "094. Nirgua", "address": "", "lat": 10.14910526911017, "lon": -68.57025980170425}, {"name": "093. Yaritagua", "address": "Calle 20 entre Carrera 09 y 11", "lat": 10.080289048700253, "lon": -69.13009857620499}, {"name": "219. Chivacoa", "address": "", "lat": 10.155964574845285, "lon": -68.88960586290781}, {"name": "041. Maracaibo - Valle Fr\u00edo", "address": "Calle 78 Dr. Portillo. Av. 3D. Maracaibo.", "lat": 10.666204839088861, "lon": -71.6011862207839}, {"name": "080. Machiques", "address": "", "lat": 10.062274521585492, "lon": -72.53750504921783}, {"name": "028. Ciudad Ojeda", "address": "Boulevar Sucre local 88 casa central Ciudad Ojeda", "lat": 10.196188847692165, "lon": -71.3102110896973}, {"name": "027. Santa Rita", "address": "sector los andes. av. Pedro lucas urribarri. diagonal a la estacion de servivio la principal municipio santa rita.", "lat": 10.672084869918377, "lon": -71.5142098196703}, {"name": "220. Caja Seca", "address": "Caja Seca Calle Pedro Hernandez Edif. SOL Piso 1. Local 6.", "lat": 9.149881214355636, "lon": -71.07921276476046}, {"name": "059. Cabimas", "address": "Centro Civico. Edificio Rental Planta alta local 39.", "lat": 10.391515029869824, "lon": -71.4772224933914}, {"name": "122. Bachaquero / Valmore Rodr\u00edguez", "address": "Municipio Valmore Rodr\u00edguez. Parroquia La Victoria. Av. Principal frente al terminal de pasajero del municipio.", "lat": 9.956469975167963, "lon": -71.12029958969981}, {"name": "109. Domitila Flores", "address": "Barrio El Callao. Av. 50. Carretera a Perija Complejo recreacional Zumaque Km 7.", "lat": 10.564166729339636, "lon": -71.66938960688307}, {"name": "043. Sabaneta", "address": "Av 100 Sector San Trino. Parroquia Cristo de Aranza. Al lado del estacionamiento de los expresos Occidente y frente a la estacion Urdaneta del Metro de Maracaibo.", "lat": 10.636138921600052, "lon": -71.6295710287906}, {"name": "103. El Moj\u00e1n", "address": "Av 3 . con calle 23 y 24 . frente al mercado guajiro municipio Mara . parroquia San Rafael del Moj\u00e1n", "lat": 10.964153253379463, "lon": -71.73265129079097}, {"name": "221. Sinamaica", "address": "", "lat": 11.08473796193626, "lon": -71.85287550687673}, {"name": "156. Puertos de Altagracia", "address": "Casco Central entre calle 10 y 11 al ado de la alcaldia de Mirandina.", "lat": 10.712152185013966, "lon": -71.52613759394387}];
+
+        // EXIF lookup table for files with metadata
+        var exifLookup = {"SAIME_2156_38.jpg": {"camera": "SONY", "datetime": "2025:11:04 11:30:58"}, "SAIME_2175_36.jpg": {"camera": "SONY", "datetime": "2025:10:23 11:58:32"}, "SAREN_12557_81.jpg": {"camera": "Canon", "datetime": "2025:12:09 17:50:01"}, "SAREN_12566_79.jpg": {"camera": "Canon", "datetime": "2025:12:09 17:50:00"}, "SAREN_12570_77.jpg": {"camera": "Canon", "datetime": "2025:12:09 17:49:59"}, "SAREN_12582_73.jpg": {"camera": "Canon", "datetime": "2025:12:11 18:12:59"}, "SAREN_12593_69.jpg": {"camera": "Canon", "datetime": "2025:12:12 14:28:30"}, "SAREN_12598_67.jpg": {"camera": "Canon", "datetime": "2025:12:12 17:21:01"}, "SAREN_12630_55.jpg": {"camera": "Canon", "datetime": "2025:12:15 20:42:49"}, "SAREN_12631_54.jpg": {"camera": "Canon", "datetime": "2025:12:15 20:42:49"}, "SAREN_12637_52.jpg": {"camera": "Canon", "datetime": "2025:12:18 14:35:25"}, "SAREN_12660_42.jpg": {"camera": "Canon", "datetime": "2025:12:19 16:43:07"}, "SAREN_12661_41.jpg": {"camera": "Canon", "datetime": "2025:12:19 16:43:06"}, "SAREN_12664_40.jpg": {"camera": "Canon", "datetime": "2025:12:19 16:43:09"}, "SAREN_12665_39.jpg": {"camera": "Canon", "datetime": "2025:12:19 16:43:09"}, "SAREN_12672_38.jpg": {"camera": "Canon", "datetime": "2025:12:22 19:19:44"}, "SAREN_12676_36.jpg": {"camera": "Canon", "datetime": "2025:12:22 14:51:50"}, "SAREN_12684_32.jpg": {"camera": "Canon", "datetime": "2025:12:23 18:47:06"}, "SAREN_12687_31.jpg": {"camera": "Canon", "datetime": "2025:12:23 15:44:59"}, "SAREN_12688_30.jpg": {"camera": "Canon", "datetime": "2025:12:23 18:07:42"}, "SAREN_12691_29.jpg": {"camera": "Canon", "datetime": "2025:12:23 23:32:54"}, "SAREN_12692_28.jpg": {"camera": "Canon", "datetime": "2025:12:23 23:32:54"}, "SAREN_12695_27.jpg": {"camera": "Canon", "datetime": "2025:12:23 23:32:53"}, "SAREN_12696_26.jpg": {"camera": "Canon", "datetime": "2025:12:23 23:32:52"}, "SAREN_12697_25.jpg": {"camera": "Canon", "datetime": "2025:12:23 23:32:53"}, "SAREN_12700_24.jpg": {"camera": "Canon", "datetime": "2025:12:24 20:40:57"}, "SAREN_12701_23.jpg": {"camera": "Canon", "datetime": "2025:12:24 20:40:39"}, "SAREN_12702_22.jpg": {"camera": "Canon", "datetime": "2025:12:24 20:40:44"}, "SAREN_12705_21.jpg": {"camera": "Canon", "datetime": "2025:12:24 20:40:33"}, "SAREN_12706_20.jpg": {"camera": "Canon", "datetime": "2025:12:24 20:14:57"}, "SAREN_12707_19.jpg": {"camera": "Canon", "datetime": "2025:12:24 20:40:50"}, "SAREN_12725_14.jpg": {"camera": "SONY", "datetime": "2025:12:30 11:00:05"}, "SAREN_12728_13.jpg": {"camera": "SONY", "datetime": "2025:12:26 19:47:08"}, "SAREN_12729_12.jpg": {"camera": "SONY", "datetime": "2025:12:30 10:59:11"}, "SAREN_12730_11.jpg": {"camera": "SONY", "datetime": "2025:12:30 10:58:58"}, "SAREN_12739_6.jpg": {"camera": "Canon", "datetime": "2025:12:30 10:58:28"}, "SAREN_12740_5.jpg": {"camera": "Canon", "datetime": "2025:12:30 10:58:20"}, "SAREN_12744_4.jpg": {"camera": "Canon", "datetime": "2025:12:30 10:58:10"}, "SAREN_12747_3.jpg": {"camera": "Canon", "datetime": "2025:12:30 10:57:09"}, "SAREN_12753_1.jpg": {"camera": "Canon", "datetime": "2025:12:29 17:52:47"}};
+
+        // Local media files (downloaded to exfil/media/) with EXIF data
+        var allMediaSources = {
+            'SAIME': [{"url": "exfil/media/SAIME/SAIME_1827_98.png", "title": "SAIME_1827_98.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1828_97.png", "title": "SAIME_1828_97.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1829_96.png", "title": "SAIME_1829_96.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1830_95.png", "title": "SAIME_1830_95.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1831_94.png", "title": "SAIME_1831_94.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1832_93.png", "title": "SAIME_1832_93.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1833_92.png", "title": "SAIME_1833_92.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1834_91.png", "title": "SAIME_1834_91.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1835_90.png", "title": "SAIME_1835_90.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1836_89.png", "title": "SAIME_1836_89.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1837_88.png", "title": "SAIME_1837_88.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1838_87.png", "title": "SAIME_1838_87.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1839_86.png", "title": "SAIME_1839_86.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1840_85.png", "title": "SAIME_1840_85.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1842_84.png", "title": "SAIME_1842_84.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1843_83.png", "title": "SAIME_1843_83.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1849_82.png", "title": "SAIME_1849_82.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1851_81.jpg", "title": "SAIME_1851_81.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1852_80.jpg", "title": "SAIME_1852_80.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1853_79.jpg", "title": "SAIME_1853_79.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1855_78.jpg", "title": "SAIME_1855_78.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1857_77.png", "title": "SAIME_1857_77.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1858_76.png", "title": "SAIME_1858_76.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1877_75.jpg", "title": "SAIME_1877_75.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1881_74.png", "title": "SAIME_1881_74.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1885_73.png", "title": "SAIME_1885_73.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1889_72.png", "title": "SAIME_1889_72.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1897_71.png", "title": "SAIME_1897_71.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1899_70.png", "title": "SAIME_1899_70.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1900_69.png", "title": "SAIME_1900_69.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1901_68.png", "title": "SAIME_1901_68.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1902_67.png", "title": "SAIME_1902_67.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1904_66.png", "title": "SAIME_1904_66.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1905_65.png", "title": "SAIME_1905_65.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1906_64.png", "title": "SAIME_1906_64.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1908_63.png", "title": "SAIME_1908_63.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1909_62.png", "title": "SAIME_1909_62.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1910_61.png", "title": "SAIME_1910_61.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1911_60.png", "title": "SAIME_1911_60.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1912_59.png", "title": "SAIME_1912_59.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1913_58.png", "title": "SAIME_1913_58.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1914_57.png", "title": "SAIME_1914_57.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1915_56.png", "title": "SAIME_1915_56.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1916_55.png", "title": "SAIME_1916_55.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1918_54.png", "title": "SAIME_1918_54.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1919_53.png", "title": "SAIME_1919_53.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1920_52.png", "title": "SAIME_1920_52.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1921_51.png", "title": "SAIME_1921_51.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1922_50.png", "title": "SAIME_1922_50.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1923_49.png", "title": "SAIME_1923_49.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1937_48.jpg", "title": "SAIME_1937_48.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1938_47.jpg", "title": "SAIME_1938_47.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1940_46.png", "title": "SAIME_1940_46.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1941_45.png", "title": "SAIME_1941_45.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1942_44.png", "title": "SAIME_1942_44.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_1943_43.png", "title": "SAIME_1943_43.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2090_42.jpg", "title": "SAIME_2090_42.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2091_41.png", "title": "SAIME_2091_41.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2099_40.png", "title": "SAIME_2099_40.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2148_39.jpg", "title": "SAIME_2148_39.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2156_38.jpg", "title": "SAIME_2156_38.jpg", "exif": {"file": "SAIME_2156_38.jpg", "source": "SAIME", "camera": "SONY", "datetime": "2025:11:04 11:30:58"}}, {"url": "exfil/media/SAIME/SAIME_2160_37.jpg", "title": "SAIME_2160_37.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2175_36.jpg", "title": "SAIME_2175_36.jpg", "exif": {"file": "SAIME_2175_36.jpg", "source": "SAIME", "camera": "SONY", "datetime": "2025:10:23 11:58:32"}}, {"url": "exfil/media/SAIME/SAIME_2182_35.jpg", "title": "SAIME_2182_35.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2187_34.jpg", "title": "SAIME_2187_34.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2195_33.jpg", "title": "SAIME_2195_33.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2196_32.jpg", "title": "SAIME_2196_32.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2201_31.jpeg", "title": "SAIME_2201_31.jpeg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2204_30.jpeg", "title": "SAIME_2204_30.jpeg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2209_29.jpeg", "title": "SAIME_2209_29.jpeg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2218_28.png", "title": "SAIME_2218_28.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2221_27.jpg", "title": "SAIME_2221_27.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2222_26.jpg", "title": "SAIME_2222_26.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2224_25.jpg", "title": "SAIME_2224_25.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2226_24.jpg", "title": "SAIME_2226_24.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2228_23.jpeg", "title": "SAIME_2228_23.jpeg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2231_22.jpeg", "title": "SAIME_2231_22.jpeg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2233_21.png", "title": "SAIME_2233_21.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2235_20.jpg", "title": "SAIME_2235_20.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2238_19.jpg", "title": "SAIME_2238_19.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2240_18.jpg", "title": "SAIME_2240_18.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2241_17.jpg", "title": "SAIME_2241_17.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2243_16.jpg", "title": "SAIME_2243_16.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2245_15.png", "title": "SAIME_2245_15.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2247_14.jpg", "title": "SAIME_2247_14.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2249_13.jpg", "title": "SAIME_2249_13.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2250_12.jpg", "title": "SAIME_2250_12.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2252_11.jpg", "title": "SAIME_2252_11.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2254_10.png", "title": "SAIME_2254_10.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2256_9.jpg", "title": "SAIME_2256_9.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2257_8.jpg", "title": "SAIME_2257_8.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2258_7.jpg", "title": "SAIME_2258_7.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2262_6.png", "title": "SAIME_2262_6.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2264_5.jpg", "title": "SAIME_2264_5.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2266_4.jpg", "title": "SAIME_2266_4.jpg", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2267_3.png", "title": "SAIME_2267_3.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2270_2.png", "title": "SAIME_2270_2.png", "exif": null}, {"url": "exfil/media/SAIME/SAIME_2272_1.png", "title": "SAIME_2272_1.png", "exif": null}],
+            'SAREN': [{"url": "exfil/media/SAREN/SAREN_12509_100.jpg", "title": "SAREN_12509_100.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12512_99.jpg", "title": "SAREN_12512_99.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12513_98.jpg", "title": "SAREN_12513_98.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12514_97.jpg", "title": "SAREN_12514_97.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12518_96.jpg", "title": "SAREN_12518_96.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12519_95.jpg", "title": "SAREN_12519_95.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12522_94.jpg", "title": "SAREN_12522_94.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12523_93.jpg", "title": "SAREN_12523_93.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12526_92.jpg", "title": "SAREN_12526_92.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12527_91.jpg", "title": "SAREN_12527_91.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12530_90.jpg", "title": "SAREN_12530_90.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12533_89.jpg", "title": "SAREN_12533_89.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12535_88.jpg", "title": "SAREN_12535_88.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12538_87.jpg", "title": "SAREN_12538_87.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12541_86.jpg", "title": "SAREN_12541_86.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12544_85.jpg", "title": "SAREN_12544_85.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12547_84.jpg", "title": "SAREN_12547_84.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12551_83.png", "title": "SAREN_12551_83.png", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12555_82.jpg", "title": "SAREN_12555_82.jpg", "exif": {"file": "SAREN_12555_82.jpg", "source": "SAREN", "camera": null, "datetime": null}}, {"url": "exfil/media/SAREN/SAREN_12557_81.jpg", "title": "SAREN_12557_81.jpg", "exif": {"file": "SAREN_12557_81.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:09 17:50:01"}}, {"url": "exfil/media/SAREN/SAREN_12563_80.jpg", "title": "SAREN_12563_80.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12566_79.jpg", "title": "SAREN_12566_79.jpg", "exif": {"file": "SAREN_12566_79.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:09 17:50:00"}}, {"url": "exfil/media/SAREN/SAREN_12569_78.jpg", "title": "SAREN_12569_78.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12570_77.jpg", "title": "SAREN_12570_77.jpg", "exif": {"file": "SAREN_12570_77.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:09 17:49:59"}}, {"url": "exfil/media/SAREN/SAREN_12573_76.jpg", "title": "SAREN_12573_76.jpg", "exif": {"file": "SAREN_12573_76.jpg", "source": "SAREN", "camera": null, "datetime": null}}, {"url": "exfil/media/SAREN/SAREN_12574_75.jpg", "title": "SAREN_12574_75.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12577_74.jpg", "title": "SAREN_12577_74.jpg", "exif": {"file": "SAREN_12577_74.jpg", "source": "SAREN", "camera": null, "datetime": null}}, {"url": "exfil/media/SAREN/SAREN_12582_73.jpg", "title": "SAREN_12582_73.jpg", "exif": {"file": "SAREN_12582_73.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:11 18:12:59"}}, {"url": "exfil/media/SAREN/SAREN_12585_72.jpg", "title": "SAREN_12585_72.jpg", "exif": {"file": "SAREN_12585_72.jpg", "source": "SAREN", "camera": null, "datetime": null}}, {"url": "exfil/media/SAREN/SAREN_12588_71.jpg", "title": "SAREN_12588_71.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12591_70.jpg", "title": "SAREN_12591_70.jpg", "exif": {"file": "SAREN_12591_70.jpg", "source": "SAREN", "camera": null, "datetime": null}}, {"url": "exfil/media/SAREN/SAREN_12593_69.jpg", "title": "SAREN_12593_69.jpg", "exif": {"file": "SAREN_12593_69.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:12 14:28:30"}}, {"url": "exfil/media/SAREN/SAREN_12596_68.jpg", "title": "SAREN_12596_68.jpg", "exif": {"file": "SAREN_12596_68.jpg", "source": "SAREN", "camera": null, "datetime": null}}, {"url": "exfil/media/SAREN/SAREN_12598_67.jpg", "title": "SAREN_12598_67.jpg", "exif": {"file": "SAREN_12598_67.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:12 17:21:01"}}, {"url": "exfil/media/SAREN/SAREN_12601_66.jpg", "title": "SAREN_12601_66.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12602_65.jpg", "title": "SAREN_12602_65.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12603_64.jpg", "title": "SAREN_12603_64.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12607_63.jpg", "title": "SAREN_12607_63.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12611_62.jpg", "title": "SAREN_12611_62.jpg", "exif": {"file": "SAREN_12611_62.jpg", "source": "SAREN", "camera": null, "datetime": null}}, {"url": "exfil/media/SAREN/SAREN_12612_61.jpg", "title": "SAREN_12612_61.jpg", "exif": {"file": "SAREN_12612_61.jpg", "source": "SAREN", "camera": null, "datetime": null}}, {"url": "exfil/media/SAREN/SAREN_12613_60.jpg", "title": "SAREN_12613_60.jpg", "exif": {"file": "SAREN_12613_60.jpg", "source": "SAREN", "camera": null, "datetime": null}}, {"url": "exfil/media/SAREN/SAREN_12616_59.jpg", "title": "SAREN_12616_59.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12621_58.jpg", "title": "SAREN_12621_58.jpg", "exif": {"file": "SAREN_12621_58.jpg", "source": "SAREN", "camera": null, "datetime": null}}, {"url": "exfil/media/SAREN/SAREN_12624_57.jpg", "title": "SAREN_12624_57.jpg", "exif": {"file": "SAREN_12624_57.jpg", "source": "SAREN", "camera": null, "datetime": null}}, {"url": "exfil/media/SAREN/SAREN_12627_56.jpg", "title": "SAREN_12627_56.jpg", "exif": {"file": "SAREN_12627_56.jpg", "source": "SAREN", "camera": null, "datetime": null}}, {"url": "exfil/media/SAREN/SAREN_12630_55.jpg", "title": "SAREN_12630_55.jpg", "exif": {"file": "SAREN_12630_55.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:15 20:42:49"}}, {"url": "exfil/media/SAREN/SAREN_12631_54.jpg", "title": "SAREN_12631_54.jpg", "exif": {"file": "SAREN_12631_54.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:15 20:42:49"}}, {"url": "exfil/media/SAREN/SAREN_12634_53.jpg", "title": "SAREN_12634_53.jpg", "exif": {"file": "SAREN_12634_53.jpg", "source": "SAREN", "camera": null, "datetime": null}}, {"url": "exfil/media/SAREN/SAREN_12637_52.jpg", "title": "SAREN_12637_52.jpg", "exif": {"file": "SAREN_12637_52.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:18 14:35:25"}}, {"url": "exfil/media/SAREN/SAREN_12641_51.jpg", "title": "SAREN_12641_51.jpg", "exif": {"file": "SAREN_12641_51.jpg", "source": "SAREN", "camera": null, "datetime": null}}, {"url": "exfil/media/SAREN/SAREN_12642_50.jpg", "title": "SAREN_12642_50.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12646_49.jpg", "title": "SAREN_12646_49.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12647_48.jpg", "title": "SAREN_12647_48.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12648_47.jpg", "title": "SAREN_12648_47.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12649_46.jpg", "title": "SAREN_12649_46.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12653_45.jpg", "title": "SAREN_12653_45.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12655_44.jpg", "title": "SAREN_12655_44.jpg", "exif": {"file": "SAREN_12655_44.jpg", "source": "SAREN", "camera": null, "datetime": null}}, {"url": "exfil/media/SAREN/SAREN_12657_43.jpg", "title": "SAREN_12657_43.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12660_42.jpg", "title": "SAREN_12660_42.jpg", "exif": {"file": "SAREN_12660_42.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:19 16:43:07"}}, {"url": "exfil/media/SAREN/SAREN_12661_41.jpg", "title": "SAREN_12661_41.jpg", "exif": {"file": "SAREN_12661_41.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:19 16:43:06"}}, {"url": "exfil/media/SAREN/SAREN_12664_40.jpg", "title": "SAREN_12664_40.jpg", "exif": {"file": "SAREN_12664_40.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:19 16:43:09"}}, {"url": "exfil/media/SAREN/SAREN_12665_39.jpg", "title": "SAREN_12665_39.jpg", "exif": {"file": "SAREN_12665_39.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:19 16:43:09"}}, {"url": "exfil/media/SAREN/SAREN_12672_38.jpg", "title": "SAREN_12672_38.jpg", "exif": {"file": "SAREN_12672_38.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:22 19:19:44"}}, {"url": "exfil/media/SAREN/SAREN_12675_37.png", "title": "SAREN_12675_37.png", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12676_36.jpg", "title": "SAREN_12676_36.jpg", "exif": {"file": "SAREN_12676_36.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:22 14:51:50"}}, {"url": "exfil/media/SAREN/SAREN_12679_35.png", "title": "SAREN_12679_35.png", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12680_34.png", "title": "SAREN_12680_34.png", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12683_33.png", "title": "SAREN_12683_33.png", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12684_32.jpg", "title": "SAREN_12684_32.jpg", "exif": {"file": "SAREN_12684_32.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:23 18:47:06"}}, {"url": "exfil/media/SAREN/SAREN_12687_31.jpg", "title": "SAREN_12687_31.jpg", "exif": {"file": "SAREN_12687_31.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:23 15:44:59"}}, {"url": "exfil/media/SAREN/SAREN_12688_30.jpg", "title": "SAREN_12688_30.jpg", "exif": {"file": "SAREN_12688_30.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:23 18:07:42"}}, {"url": "exfil/media/SAREN/SAREN_12691_29.jpg", "title": "SAREN_12691_29.jpg", "exif": {"file": "SAREN_12691_29.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:23 23:32:54"}}, {"url": "exfil/media/SAREN/SAREN_12692_28.jpg", "title": "SAREN_12692_28.jpg", "exif": {"file": "SAREN_12692_28.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:23 23:32:54"}}, {"url": "exfil/media/SAREN/SAREN_12695_27.jpg", "title": "SAREN_12695_27.jpg", "exif": {"file": "SAREN_12695_27.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:23 23:32:53"}}, {"url": "exfil/media/SAREN/SAREN_12696_26.jpg", "title": "SAREN_12696_26.jpg", "exif": {"file": "SAREN_12696_26.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:23 23:32:52"}}, {"url": "exfil/media/SAREN/SAREN_12697_25.jpg", "title": "SAREN_12697_25.jpg", "exif": {"file": "SAREN_12697_25.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:23 23:32:53"}}, {"url": "exfil/media/SAREN/SAREN_12700_24.jpg", "title": "SAREN_12700_24.jpg", "exif": {"file": "SAREN_12700_24.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:24 20:40:57"}}, {"url": "exfil/media/SAREN/SAREN_12701_23.jpg", "title": "SAREN_12701_23.jpg", "exif": {"file": "SAREN_12701_23.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:24 20:40:39"}}, {"url": "exfil/media/SAREN/SAREN_12702_22.jpg", "title": "SAREN_12702_22.jpg", "exif": {"file": "SAREN_12702_22.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:24 20:40:44"}}, {"url": "exfil/media/SAREN/SAREN_12705_21.jpg", "title": "SAREN_12705_21.jpg", "exif": {"file": "SAREN_12705_21.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:24 20:40:33"}}, {"url": "exfil/media/SAREN/SAREN_12706_20.jpg", "title": "SAREN_12706_20.jpg", "exif": {"file": "SAREN_12706_20.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:24 20:14:57"}}, {"url": "exfil/media/SAREN/SAREN_12707_19.jpg", "title": "SAREN_12707_19.jpg", "exif": {"file": "SAREN_12707_19.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:24 20:40:50"}}, {"url": "exfil/media/SAREN/SAREN_12712_18.jpg", "title": "SAREN_12712_18.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12713_17.png", "title": "SAREN_12713_17.png", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12715_16.jpg", "title": "SAREN_12715_16.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12721_15.png", "title": "SAREN_12721_15.png", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12725_14.jpg", "title": "SAREN_12725_14.jpg", "exif": {"file": "SAREN_12725_14.jpg", "source": "SAREN", "camera": "SONY", "datetime": "2025:12:30 11:00:05"}}, {"url": "exfil/media/SAREN/SAREN_12728_13.jpg", "title": "SAREN_12728_13.jpg", "exif": {"file": "SAREN_12728_13.jpg", "source": "SAREN", "camera": "SONY", "datetime": "2025:12:26 19:47:08"}}, {"url": "exfil/media/SAREN/SAREN_12729_12.jpg", "title": "SAREN_12729_12.jpg", "exif": {"file": "SAREN_12729_12.jpg", "source": "SAREN", "camera": "SONY", "datetime": "2025:12:30 10:59:11"}}, {"url": "exfil/media/SAREN/SAREN_12730_11.jpg", "title": "SAREN_12730_11.jpg", "exif": {"file": "SAREN_12730_11.jpg", "source": "SAREN", "camera": "SONY", "datetime": "2025:12:30 10:58:58"}}, {"url": "exfil/media/SAREN/SAREN_12733_10.jpeg", "title": "SAREN_12733_10.jpeg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12734_9.jpeg", "title": "SAREN_12734_9.jpeg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12735_8.jpeg", "title": "SAREN_12735_8.jpeg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12736_7.jpeg", "title": "SAREN_12736_7.jpeg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12739_6.jpg", "title": "SAREN_12739_6.jpg", "exif": {"file": "SAREN_12739_6.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:30 10:58:28"}}, {"url": "exfil/media/SAREN/SAREN_12740_5.jpg", "title": "SAREN_12740_5.jpg", "exif": {"file": "SAREN_12740_5.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:30 10:58:20"}}, {"url": "exfil/media/SAREN/SAREN_12744_4.jpg", "title": "SAREN_12744_4.jpg", "exif": {"file": "SAREN_12744_4.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:30 10:58:10"}}, {"url": "exfil/media/SAREN/SAREN_12747_3.jpg", "title": "SAREN_12747_3.jpg", "exif": {"file": "SAREN_12747_3.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:30 10:57:09"}}, {"url": "exfil/media/SAREN/SAREN_12750_2.jpg", "title": "SAREN_12750_2.jpg", "exif": null}, {"url": "exfil/media/SAREN/SAREN_12753_1.jpg", "title": "SAREN_12753_1.jpg", "exif": {"file": "SAREN_12753_1.jpg", "source": "SAREN", "camera": "Canon", "datetime": "2025:12:29 17:52:47"}}],
+            'VTV': [{"url": "exfil/media/VTV/VTV_1214250_100.png", "title": "VTV_1214250_100.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214262_99.png", "title": "VTV_1214262_99.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214267_98.png", "title": "VTV_1214267_98.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214270_97.jpg", "title": "VTV_1214270_97.jpg", "exif": {"file": "VTV_1214270_97.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214277_96.png", "title": "VTV_1214277_96.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214282_95.png", "title": "VTV_1214282_95.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214283_94.png", "title": "VTV_1214283_94.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214287_93.png", "title": "VTV_1214287_93.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214288_92.png", "title": "VTV_1214288_92.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214297_91.png", "title": "VTV_1214297_91.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214306_90.png", "title": "VTV_1214306_90.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214307_89.png", "title": "VTV_1214307_89.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214312_88.png", "title": "VTV_1214312_88.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214317_87.png", "title": "VTV_1214317_87.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214321_86.png", "title": "VTV_1214321_86.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214326_85.png", "title": "VTV_1214326_85.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214337_84.png", "title": "VTV_1214337_84.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214342_83.png", "title": "VTV_1214342_83.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214350_82.jpg", "title": "VTV_1214350_82.jpg", "exif": {"file": "VTV_1214350_82.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214355_81.jpg", "title": "VTV_1214355_81.jpg", "exif": {"file": "VTV_1214355_81.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214357_80.jpg", "title": "VTV_1214357_80.jpg", "exif": null}, {"url": "exfil/media/VTV/VTV_1214358_79.jpg", "title": "VTV_1214358_79.jpg", "exif": {"file": "VTV_1214358_79.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214360_78.jpg", "title": "VTV_1214360_78.jpg", "exif": null}, {"url": "exfil/media/VTV/VTV_1214361_77.jpg", "title": "VTV_1214361_77.jpg", "exif": {"file": "VTV_1214361_77.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214362_76.jpg", "title": "VTV_1214362_76.jpg", "exif": null}, {"url": "exfil/media/VTV/VTV_1214365_75.jpg", "title": "VTV_1214365_75.jpg", "exif": {"file": "VTV_1214365_75.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214367_74.jpg", "title": "VTV_1214367_74.jpg", "exif": null}, {"url": "exfil/media/VTV/VTV_1214368_73.jpg", "title": "VTV_1214368_73.jpg", "exif": null}, {"url": "exfil/media/VTV/VTV_1214369_72.jpg", "title": "VTV_1214369_72.jpg", "exif": null}, {"url": "exfil/media/VTV/VTV_1214372_71.jpg", "title": "VTV_1214372_71.jpg", "exif": {"file": "VTV_1214372_71.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214375_70.jpg", "title": "VTV_1214375_70.jpg", "exif": {"file": "VTV_1214375_70.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214376_69.jpg", "title": "VTV_1214376_69.jpg", "exif": null}, {"url": "exfil/media/VTV/VTV_1214379_68.jpg", "title": "VTV_1214379_68.jpg", "exif": {"file": "VTV_1214379_68.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214382_67.jpg", "title": "VTV_1214382_67.jpg", "exif": {"file": "VTV_1214382_67.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214385_66.jpg", "title": "VTV_1214385_66.jpg", "exif": {"file": "VTV_1214385_66.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214395_65.jpg", "title": "VTV_1214395_65.jpg", "exif": {"file": "VTV_1214395_65.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214405_64.jpg", "title": "VTV_1214405_64.jpg", "exif": {"file": "VTV_1214405_64.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214406_63.jpg", "title": "VTV_1214406_63.jpg", "exif": null}, {"url": "exfil/media/VTV/VTV_1214417_62.jpg", "title": "VTV_1214417_62.jpg", "exif": {"file": "VTV_1214417_62.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214425_61.jpg", "title": "VTV_1214425_61.jpg", "exif": {"file": "VTV_1214425_61.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214426_60.jpg", "title": "VTV_1214426_60.jpg", "exif": null}, {"url": "exfil/media/VTV/VTV_1214434_59.jpg", "title": "VTV_1214434_59.jpg", "exif": {"file": "VTV_1214434_59.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214438_58.jpg", "title": "VTV_1214438_58.jpg", "exif": {"file": "VTV_1214438_58.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214445_57.jpg", "title": "VTV_1214445_57.jpg", "exif": {"file": "VTV_1214445_57.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214455_56.jpg", "title": "VTV_1214455_56.jpg", "exif": null}, {"url": "exfil/media/VTV/VTV_1214459_55.jpg", "title": "VTV_1214459_55.jpg", "exif": {"file": "VTV_1214459_55.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214464_54.jpg", "title": "VTV_1214464_54.jpg", "exif": null}, {"url": "exfil/media/VTV/VTV_1214471_53.jpg", "title": "VTV_1214471_53.jpg", "exif": {"file": "VTV_1214471_53.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214475_52.jpg", "title": "VTV_1214475_52.jpg", "exif": {"file": "VTV_1214475_52.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214483_51.jpg", "title": "VTV_1214483_51.jpg", "exif": {"file": "VTV_1214483_51.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214484_50.jpg", "title": "VTV_1214484_50.jpg", "exif": {"file": "VTV_1214484_50.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214501_49.jpg", "title": "VTV_1214501_49.jpg", "exif": {"file": "VTV_1214501_49.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214506_48.jpg", "title": "VTV_1214506_48.jpg", "exif": {"file": "VTV_1214506_48.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214510_47.jpg", "title": "VTV_1214510_47.jpg", "exif": {"file": "VTV_1214510_47.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214519_46.jpg", "title": "VTV_1214519_46.jpg", "exif": {"file": "VTV_1214519_46.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214526_45.jpg", "title": "VTV_1214526_45.jpg", "exif": {"file": "VTV_1214526_45.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214530_44.jpg", "title": "VTV_1214530_44.jpg", "exif": {"file": "VTV_1214530_44.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214536_43.jpg", "title": "VTV_1214536_43.jpg", "exif": {"file": "VTV_1214536_43.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214544_42.jpg", "title": "VTV_1214544_42.jpg", "exif": {"file": "VTV_1214544_42.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214551_41.jpg", "title": "VTV_1214551_41.jpg", "exif": {"file": "VTV_1214551_41.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214555_40.jpg", "title": "VTV_1214555_40.jpg", "exif": {"file": "VTV_1214555_40.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214557_39.jpg", "title": "VTV_1214557_39.jpg", "exif": {"file": "VTV_1214557_39.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214570_38.jpg", "title": "VTV_1214570_38.jpg", "exif": {"file": "VTV_1214570_38.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214572_37.jpg", "title": "VTV_1214572_37.jpg", "exif": null}, {"url": "exfil/media/VTV/VTV_1214581_36.png", "title": "VTV_1214581_36.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214586_35.jpg", "title": "VTV_1214586_35.jpg", "exif": {"file": "VTV_1214586_35.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214588_34.png", "title": "VTV_1214588_34.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214594_33.jpg", "title": "VTV_1214594_33.jpg", "exif": {"file": "VTV_1214594_33.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214598_32.png", "title": "VTV_1214598_32.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214604_31.png", "title": "VTV_1214604_31.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214612_30.jpg", "title": "VTV_1214612_30.jpg", "exif": {"file": "VTV_1214612_30.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214614_29.png", "title": "VTV_1214614_29.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214626_28.png", "title": "VTV_1214626_28.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214629_27.png", "title": "VTV_1214629_27.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214634_26.png", "title": "VTV_1214634_26.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214639_25.png", "title": "VTV_1214639_25.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214641_24.png", "title": "VTV_1214641_24.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214645_23.png", "title": "VTV_1214645_23.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214652_22.png", "title": "VTV_1214652_22.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214655_21.png", "title": "VTV_1214655_21.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214657_20.mp4", "title": "VTV_1214657_20.mp4", "exif": null}, {"url": "exfil/media/VTV/VTV_1214658_19.png", "title": "VTV_1214658_19.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214664_18.png", "title": "VTV_1214664_18.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214681_17.png", "title": "VTV_1214681_17.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214683_16.png", "title": "VTV_1214683_16.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214689_15.png", "title": "VTV_1214689_15.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214694_14.png", "title": "VTV_1214694_14.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214701_13.jpg", "title": "VTV_1214701_13.jpg", "exif": {"file": "VTV_1214701_13.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214704_12.png", "title": "VTV_1214704_12.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214708_11.png", "title": "VTV_1214708_11.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214712_10.jpg", "title": "VTV_1214712_10.jpg", "exif": {"file": "VTV_1214712_10.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214716_9.png", "title": "VTV_1214716_9.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214723_8.jpg", "title": "VTV_1214723_8.jpg", "exif": {"file": "VTV_1214723_8.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214728_7.png", "title": "VTV_1214728_7.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214735_6.png", "title": "VTV_1214735_6.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214739_5.png", "title": "VTV_1214739_5.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214746_4.png", "title": "VTV_1214746_4.png", "exif": null}, {"url": "exfil/media/VTV/VTV_1214747_3.jpg", "title": "VTV_1214747_3.jpg", "exif": {"file": "VTV_1214747_3.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214755_2.jpg", "title": "VTV_1214755_2.jpg", "exif": {"file": "VTV_1214755_2.jpg", "source": "VTV", "camera": null, "datetime": null}}, {"url": "exfil/media/VTV/VTV_1214761_1.jpg", "title": "VTV_1214761_1.jpg", "exif": {"file": "VTV_1214761_1.jpg", "source": "VTV", "camera": null, "datetime": null}}],
+            'Patria': [{"url": "exfil/media/Patria/Patria_777_1.jpg", "title": "Patria_777_1.jpg", "exif": null}]
+        };
+
+        var currentMediaSource = 'SAIME';
+        var mediaFiles = allMediaSources['SAIME'];
+        var mediaPage = 0;
+        var mediaPerPage = 24;
+        var map;
+
+        function switchMediaSource(source) {
+            currentMediaSource = source;
+            mediaFiles = allMediaSources[source];
+            mediaPage = 0;
+            document.getElementById('media-source-title').textContent = 'Showing: ' + source + ' (' + mediaFiles.length + ' files)';
+            renderMediaPage();
+        }
+
+        function showTab(id) {
+            document.querySelectorAll('.content').forEach(function(c) { c.classList.remove('active'); });
+            document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+            document.getElementById(id).classList.add('active');
+            event.target.classList.add('active');
+            if(id === 'map-tab') {
+                if(!map) initMap();
+                setTimeout(function() { map.invalidateSize(); }, 100);
+            }
+        }
+
+        function initMap() {
+            map = L.map('map').setView([8, -66], 6);
+
+            // Multiple base layers for military/intelligence use
+            var darkLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                attribution: 'CARTO Dark'
+            });
+            var lightLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                attribution: 'CARTO Light'
+            });
+            var satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                attribution: 'Esri Satellite'
+            });
+            var terrainLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+                attribution: 'OpenTopoMap'
+            });
+            var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'OpenStreetMap'
+            });
+
+            // Default to dark layer
+            darkLayer.addTo(map);
+
+            // Layer control toggle
+            var baseMaps = {
+                "Dark Mode": darkLayer,
+                "Light Mode": lightLayer,
+                "Satellite": satelliteLayer,
+                "Terrain/Topo": terrainLayer,
+                "OpenStreetMap": osmLayer
+            };
+            L.control.layers(baseMaps, null, {position: 'topright', collapsed: false}).addTo(map);
+
+            // Yellow icon for SAIME offices
+            var yellowIcon = L.divIcon({
+                className: 'custom-marker',
+                html: '<div style="background:#FFCC00;width:10px;height:10px;border-radius:50%;border:2px solid #fff;"></div>',
+                iconSize: [14, 14],
+                iconAnchor: [7, 7]
+            });
+
+            // Red icon for GPS intel
+            var redIcon = L.divIcon({
+                className: 'custom-marker',
+                html: '<div style="background:#CF142B;width:12px;height:12px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 10px rgba(207,20,43,0.8);"></div>',
+                iconSize: [16, 16],
+                iconAnchor: [8, 8]
+            });
+
+            var fg = L.featureGroup();
+
+            // Add SAIME offices (yellow)
+            offices.forEach(function(o) {
+                L.marker([o.lat, o.lon], {icon: yellowIcon})
+                    .bindPopup('<b style="color:#FFCC00;">SAIME Office</b><br>' + o.name + '<br>' + o.address + '<br><code>' + o.lat.toFixed(4) + ', ' + o.lon.toFixed(4) + '</code>')
+                    .addTo(fg);
+            });
+
+            // GPS Intel locations (red) - Staff phone coordinates (18 valid locations)
+            var gpsIntel = [
+                {lat: 10.5031, lon: -66.9161, agency: 'AVN', phone: 'HONOR JDY-LX3', date: '2025-10-21', sw: 'JDY-L43 8.0.0.312', file: 'AVN/AVN_38360.jpg'},
+                {lat: 10.2741, lon: -68.9095, agency: 'AVN', phone: 'Xiaomi Redmi Note 8 Pro', date: '2023-11-01', sw: '', file: 'AVN/AVN_43325.jpg'},
+                {lat: 9.4513, lon: -69.2662, agency: 'INCES', phone: 'Xiaomi M2006C3MG', date: '2021-03-09', sw: 'GIMP 2.8.14', file: 'INCES/INCES_37469.jpg'},
+                {lat: 9.5586, lon: -69.2149, agency: 'INCES', phone: 'Xiaomi M2006C3MG', date: '2021-03-12', sw: 'GIMP 2.8.14', file: 'INCES/INCES_37583.jpg'},
+                {lat: 9.5586, lon: -69.2149, agency: 'INCES', phone: 'Xiaomi M2006C3MG', date: '2021-03-12', sw: 'GIMP 2.8.14', file: 'INCES/INCES_37585.jpg'},
+                {lat: 9.3151, lon: -70.6033, agency: 'INCES', phone: 'Xiaomi M2006C3LG', date: '2021-03-03', sw: 'GIMP 2.8.14', file: 'INCES/INCES_37606.jpg'},
+                {lat: 10.3425, lon: -68.7284, agency: 'INCES', phone: 'Xiaomi Redmi 8', date: '2022-02-10', sw: 'Windows Photo Viewer', file: 'INCES/INCES_41394.jpg'},
+                {lat: 11.3555, lon: -69.5219, agency: 'INCES', phone: 'Samsung SM-J260MU', date: 'Unknown', sw: 'Shotwell 0.20.1', file: 'INCES/INCES_42575.jpg'},
+                {lat: 8.6314, lon: -71.0775, agency: 'INCES', phone: 'Xiaomi M2006C3LG', date: '2022-05-03', sw: 'MediaTek Camera', file: 'INCES/INCES_42646.jpg'},
+                {lat: 10.5044, lon: -66.9152, agency: 'INCES', phone: 'Xiaomi M2004J19C', date: '2022-05-18', sw: 'MediaTek Camera', file: 'INCES/INCES_42954.jpg'},
+                {lat: 8.5936, lon: -71.1480, agency: 'INCES', phone: 'Xiaomi M2006C3LG', date: '2022-06-15', sw: 'MediaTek Camera', file: 'INCES/INCES_43878.jpg'},
+                {lat: 10.4843, lon: -66.9058, agency: 'INCES', phone: 'Xiaomi M2004J19C', date: '2022-08-06', sw: 'MediaTek Camera', file: 'INCES/INCES_44309.jpg'},
+                {lat: 10.4845, lon: -66.9057, agency: 'INCES', phone: 'Xiaomi M2004J19C', date: '2022-08-06', sw: 'MediaTek Camera', file: 'INCES/INCES_44310.jpg'},
+                {lat: 11.4089, lon: -69.6500, agency: 'INCES', phone: 'Xiaomi Redmi A3x', date: 'Unknown', sw: 'Shotwell 0.20.1', file: 'INCES/INCES_69066.jpg'},
+                {lat: 11.4089, lon: -69.6500, agency: 'INCES', phone: 'Xiaomi Redmi A3x', date: 'Unknown', sw: 'Shotwell 0.20.1', file: 'INCES/INCES_69067.jpg'},
+                {lat: 11.4089, lon: -69.6500, agency: 'INCES', phone: 'Xiaomi Redmi A3x', date: 'Unknown', sw: 'Shotwell 0.20.1', file: 'INCES/INCES_69069.jpg'},
+                {lat: 11.4089, lon: -69.6500, agency: 'INCES', phone: 'Xiaomi Redmi A3x', date: 'Unknown', sw: 'Shotwell 0.20.1', file: 'INCES/INCES_69070.jpg'},
+                {lat: 11.4089, lon: -69.6500, agency: 'INCES', phone: 'Xiaomi Redmi A3x', date: 'Unknown', sw: 'Shotwell 0.20.1', file: 'INCES/INCES_69071.jpg'}
+            ];
+
+            gpsIntel.forEach(function(g) {
+                var popupContent = '<div style="text-align:center;">' +
+                    '<img src="exfil/media/' + g.file + '" style="width:120px;height:80px;object-fit:cover;border-radius:4px;border:2px solid #CF142B;margin-bottom:8px;" onerror="this.style.display=\'none\'">' +
+                    '</div>' +
+                    '<b style="color:#CF142B;">GPS INTEL - ' + g.agency + '</b><br>' +
+                    'Phone: ' + g.phone + '<br>' +
+                    'Date: ' + g.date + '<br>' +
+                    (g.sw ? 'Software: ' + g.sw + '<br>' : '') +
+                    '<code style="color:#4ecdc4;">' + g.lat.toFixed(4) + ', ' + g.lon.toFixed(4) + '</code><br>' +
+                    '<a href="https://maps.google.com/?q=' + g.lat + ',' + g.lon + '" target="_blank" style="color:#FFCC00;">Open in Google Maps</a>';
+                L.marker([g.lat, g.lon], {icon: redIcon})
+                    .bindPopup(popupContent, {maxWidth: 200})
+                    .addTo(fg);
+            });
+
+            fg.addTo(map);
+            map.fitBounds(fg.getBounds().pad(0.1));
+        }
+
+        function filterTable() {
+            var f = document.getElementById('sanc-search').value.toLowerCase();
+            var rows = document.getElementById('sanc-table').getElementsByTagName('tr');
+            for(var i = 1; i < rows.length; i++) {
+                var txt = rows[i].textContent.toLowerCase();
+                rows[i].style.display = txt.indexOf(f) > -1 ? '' : 'none';
+            }
+        }
+
+        function renderMediaPage() {
+            var grid = document.getElementById('media-grid');
+            var start = mediaPage * mediaPerPage;
+            var end = Math.min(start + mediaPerPage, mediaFiles.length);
+            var totalPages = Math.ceil(mediaFiles.length / mediaPerPage);
+            grid.innerHTML = '';
+
+            for(var i = start; i < end; i++) {
+                var m = mediaFiles[i];
+                var div = document.createElement('div');
+                div.className = 'media-item';
+                var idx = i;
+                div.onclick = (function(index) { return function() { openLightbox(index); }; })(i);
+
+                var html = '<img src="' + m.url + '" onerror="this.src=\'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><rect fill=%22%23333%22 width=%22100%22 height=%22100%22/><text x=%2250%22 y=%2250%22 fill=%22%23666%22 text-anchor=%22middle%22>No img</text></svg>\'" loading="lazy">';
+                html += '<p>' + m.title.substring(0,20) + '</p>';
+
+                // Show EXIF badge and info if available
+                if(m.exif && (m.exif.camera || m.exif.datetime)) {
+                    html += '<span class="exif-badge">EXIF</span>';
+                    if(m.exif.camera) {
+                        html += '<div class="exif-info">' + m.exif.camera + '</div>';
+                    }
+                    if(m.exif.datetime) {
+                        html += '<div class="exif-info">' + m.exif.datetime.substring(0,10) + '</div>';
+                    }
+                }
+
+                div.innerHTML = html;
+                grid.appendChild(div);
+            }
+            document.getElementById('media-page-info').textContent = 'Page ' + (mediaPage + 1) + ' of ' + totalPages + ' (' + mediaFiles.length + ' total)';
+            document.getElementById('media-prev').disabled = mediaPage === 0;
+            document.getElementById('media-next').disabled = mediaPage >= totalPages - 1;
+        }
+
+        var currentImageIndex = 0;
+
+        function openLightbox(index) {
+            currentImageIndex = index;
+            var m = mediaFiles[index];
+            document.getElementById('lightbox-img').src = m.url;
+            document.getElementById('lightbox-title').textContent = m.title + ' (' + (index + 1) + '/' + mediaFiles.length + ')';
+
+            // Display EXIF metadata in lightbox if available
+            var metaEl = document.getElementById('lightbox-meta');
+            if(m.exif && (m.exif.camera || m.exif.datetime)) {
+                var metaHtml = '';
+                if(m.exif.camera) {
+                    metaHtml += '<span>Camera: ' + m.exif.camera + '</span>';
+                }
+                if(m.exif.datetime) {
+                    metaHtml += '<span>DateTime: ' + m.exif.datetime + '</span>';
+                }
+                metaEl.innerHTML = metaHtml;
+                metaEl.style.display = 'block';
+            } else {
+                metaEl.innerHTML = '';
+                metaEl.style.display = 'none';
+            }
+
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(e) {
+            if(e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) {
+                document.getElementById('lightbox').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Open lightbox from EXIF table (single image, no navigation)
+        function openExifImage(url, title, camera, datetime) {
+            document.getElementById('lightbox-img').src = url;
+            document.getElementById('lightbox-title').textContent = title;
+            var metaEl = document.getElementById('lightbox-meta');
+            var metaHtml = '';
+            if(camera) metaHtml += '<span>Camera: ' + camera + '</span>';
+            if(datetime) metaHtml += '<span>DateTime: ' + datetime + '</span>';
+            metaEl.innerHTML = metaHtml;
+            metaEl.style.display = 'block';
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function openGpsImage(url, title, phone, datetime, coords) {
+            document.getElementById('lightbox-img').src = url;
+            document.getElementById('lightbox-title').textContent = title + ' - GPS INTEL';
+            var metaEl = document.getElementById('lightbox-meta');
+            var metaHtml = '<span style="background:rgba(207,20,43,0.4);">Phone: ' + phone + '</span>';
+            if(datetime && datetime !== 'Unknown') metaHtml += '<span>DateTime: ' + datetime + '</span>';
+            metaHtml += '<span style="background:rgba(78,205,196,0.3);color:#4ecdc4;">GPS: ' + coords + '</span>';
+            metaEl.innerHTML = metaHtml;
+            metaEl.style.display = 'block';
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            // Disable nav for single image view
+            currentImageIndex = -1;
+        }
+
+        function nextMediaPage() {
+            var totalPages = Math.ceil(mediaFiles.length / mediaPerPage);
+            if(mediaPage < totalPages - 1) { mediaPage++; renderMediaPage(); }
+        }
+
+        function prevMediaPage() {
+            if(mediaPage > 0) { mediaPage--; renderMediaPage(); }
+        }
+
+        function nextImage(e) {
+            e.stopPropagation();
+            if(currentImageIndex < mediaFiles.length - 1) openLightbox(currentImageIndex + 1);
+        }
+
+        function prevImage(e) {
+            e.stopPropagation();
+            if(currentImageIndex > 0) openLightbox(currentImageIndex - 1);
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if(document.getElementById('lightbox').classList.contains('active')) {
+                if(e.key === 'Escape') closeLightbox({target: {id: 'lightbox'}});
+                if(e.key === 'ArrowRight') nextImage({stopPropagation: function(){}});
+                if(e.key === 'ArrowLeft') prevImage({stopPropagation: function(){}});
+            }
+        });
+
+        renderMediaPage();
+    </script>
+</body>
+</html>

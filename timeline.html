@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venezuela Operations Timeline 2025</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', -apple-system, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h1 {
+            color: #FFCC00;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .flag-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #FFCC00 33%, #00247D 33%, #00247D 66%, #CF142B 66%);
+            border-radius: 2px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin: 30px 0;
+        }
+        nav a {
+            color: #888;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: #FFCC00; }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 50px;
+        }
+        @media (max-width: 600px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+        .stat {
+            background: #111;
+            padding: 20px 16px;
+            text-align: center;
+            border-radius: 6px;
+            border-bottom: 3px solid #333;
+        }
+        .stat:nth-child(1) { border-bottom-color: #CF142B; }
+        .stat:nth-child(2) { border-bottom-color: #FFCC00; }
+        .stat:nth-child(3) { border-bottom-color: #00247D; }
+        .stat:nth-child(4) { border-bottom-color: #CF142B; }
+        .stat-num {
+            color: #fff;
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+        .stat-label {
+            color: #555;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 28px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: #222;
+        }
+
+        .month {
+            color: #FFCC00;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 40px 0 16px 0;
+            position: relative;
+        }
+        .month::before {
+            content: '';
+            position: absolute;
+            left: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background: #FFCC00;
+            border-radius: 50%;
+        }
+        .month:first-child { margin-top: 0; }
+
+        .event {
+            background: #111;
+            padding: 18px 20px;
+            margin-bottom: 12px;
+            border-radius: 6px;
+            border-left: 3px solid #222;
+            position: relative;
+        }
+        .event::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 22px;
+            width: 8px;
+            height: 8px;
+            background: #333;
+            border-radius: 50%;
+        }
+
+        .event.major {
+            border-left-color: #CF142B;
+            background: linear-gradient(90deg, rgba(207,20,43,0.1) 0%, #111 100%);
+        }
+        .event.major::before { background: #CF142B; }
+
+        .event.surveillance { border-left-color: #FFCC00; }
+        .event.surveillance::before { background: #FFCC00; }
+
+        .event.military { border-left-color: #00247D; }
+        .event.military::before { background: #00247D; }
+
+        .event.current {
+            border-left-color: #FFCC00;
+            background: linear-gradient(90deg, rgba(255,204,0,0.08) 0%, #111 100%);
+        }
+        .event.current::before {
+            background: #FFCC00;
+            box-shadow: 0 0 8px #FFCC00;
+        }
+
+        .date {
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+        .title {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .event.major .title { color: #FFCC00; }
+
+        .desc {
+            color: #999;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .tags {
+            margin-top: 12px;
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .tag {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .tag-escalation { background: #CF142B; color: #fff; }
+        .tag-military { background: #00247D; color: #fff; }
+        .tag-surveillance { background: #FFCC00; color: #000; }
+        .tag-intel { background: #1a1a1a; color: #666; border: 1px solid #333; }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #1a1a1a;
+            color: #444;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+        footer a { color: #FFCC00; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        .footer-links {
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Venezuela Timeline</h1>
+            <p class="subtitle">From Stolen Election to Military Blockade | July 2024 - Present</p>
+            <div class="flag-bar"></div>
+        </header>
+
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="glossary.html">Glossary</a>
+            <a href="https://github.com/Ringmast4r/crystal-vault">GitHub</a>
+        </nav>
+
+        <div class="stats">
+            <div class="stat"><div class="stat-num">107+</div><div class="stat-label">Killed</div></div>
+            <div class="stat"><div class="stat-num">30</div><div class="stat-label">Strikes</div></div>
+            <div class="stat"><div class="stat-num">3</div><div class="stat-label">Tankers Seized</div></div>
+            <div class="stat"><div class="stat-num">15K</div><div class="stat-label">US Troops</div></div>
+        </div>
+
+        <div class="timeline">
+
+            <div class="month">July 2024</div>
+
+            <div class="event major">
+                <div class="date">July 28, 2024</div>
+                <div class="title">Stolen Election</div>
+                <div class="desc">Venezuela holds presidential election. Opposition candidate Edmundo Gonzalez wins by landslide according to tally sheets. Government announces Maduro "won." Protests erupt immediately.</div>
+                <div class="tags"><span class="tag tag-escalation">Escalation</span></div>
+            </div>
+
+            <div class="event">
+                <div class="date">July 29, 2024</div>
+                <div class="title">Protests and Crackdown Begin</div>
+                <div class="desc">Cacerolazos (pot-banging protests) across Caracas. Regime responds with mass arrests. Over 2,400 arrested, 28 killed, 200+ injured in following weeks.</div>
+                <div class="tags"><span class="tag tag-escalation">Escalation</span></div>
+            </div>
+
+            <div class="month">August 2024</div>
+
+            <div class="event">
+                <div class="date">August 2024</div>
+                <div class="title">Machado Goes Into Hiding</div>
+                <div class="desc">After threats to her life, Maria Corina Machado goes underground. Refuses to leave Venezuela. Inter-American Commission on Human Rights condemns regime's "state terrorism."</div>
+                <div class="tags"><span class="tag tag-intel">Intel</span></div>
+            </div>
+
+            <div class="month">November 2024</div>
+
+            <div class="event">
+                <div class="date">November 5, 2024</div>
+                <div class="title">Trump Wins US Election</div>
+                <div class="desc">Donald Trump wins US presidential election. Signals harder line on Venezuela during campaign.</div>
+                <div class="tags"><span class="tag tag-intel">Intel</span></div>
+            </div>
+
+            <div class="month">January 2025</div>
+
+            <div class="event major">
+                <div class="date">January 10, 2025</div>
+                <div class="title">Maduro Inaugurated / Machado Detained</div>
+                <div class="desc">Maduro sworn in for fraudulent third term. Maria Corina Machado emerges from hiding to lead massive protest in Caracas. Security forces intercept her convoy after rally. Gunfire reported. Brief detention.</div>
+                <div class="tags"><span class="tag tag-escalation">Escalation</span></div>
+            </div>
+
+            <div class="month">September 2025</div>
+
+            <div class="event military">
+                <div class="date">Early September 2025</div>
+                <div class="title">Maritime Strikes Begin</div>
+                <div class="desc">US military begins executing airstrikes on vessels in the Caribbean Sea. Operations positioned as counter-narcotics missions.</div>
+                <div class="tags"><span class="tag tag-military">Military</span></div>
+            </div>
+
+            <div class="month">October 2025</div>
+
+            <div class="event major">
+                <div class="date">October 10, 2025</div>
+                <div class="title">Machado Wins Nobel Peace Prize</div>
+                <div class="desc">Maria Corina Machado awarded Nobel Peace Prize "for her tireless work promoting democratic rights" and struggle for peaceful transition from dictatorship. Still in hiding inside Venezuela.</div>
+                <div class="tags"><span class="tag tag-intel">Intel</span></div>
+            </div>
+
+            <div class="event military">
+                <div class="date">October 2025</div>
+                <div class="title">Strikes Expand to Pacific</div>
+                <div class="desc">US operations expand beyond Caribbean to Eastern Pacific Ocean. Casualty count rises.</div>
+                <div class="tags">
+                    <span class="tag tag-military">Military</span>
+                    <span class="tag tag-escalation">Escalation</span>
+                </div>
+            </div>
+
+            <div class="month">November 2025</div>
+
+            <div class="event surveillance">
+                <div class="date">November 2025</div>
+                <div class="title">SAIME "Modernization"</div>
+                <div class="desc">Venezuela's SAIME announces new web portal launch. Preparation for December database merger.</div>
+                <div class="tags"><span class="tag tag-surveillance">Surveillance</span></div>
+            </div>
+
+            <div class="event military">
+                <div class="date">November 14, 2025</div>
+                <div class="title">Operation Southern Spear</div>
+                <div class="desc">15,000 US troops deployed to Caribbean. USS Gerald Ford aircraft carrier positioned near Venezuela.</div>
+                <div class="tags"><span class="tag tag-military">Military</span></div>
+            </div>
+
+            <div class="event major">
+                <div class="date">November 21, 2025</div>
+                <div class="title">Trump-Maduro Phone Call</div>
+                <div class="desc">Trump calls Maduro directly, gives ultimatum: leave Venezuela by Friday or face consequences. Trump tells Maduro he will keep "blowing up" boats. Maduro refuses, demands global amnesty.</div>
+                <div class="tags"><span class="tag tag-escalation">Escalation</span></div>
+            </div>
+
+            <div class="month">December 2025</div>
+
+            <div class="event">
+                <div class="date">December 5, 2025</div>
+                <div class="title">"Pandora's Box" Warning</div>
+                <div class="desc">Al Jazeera publishes: "What happens if the US attacks Venezuela?"</div>
+                <div class="tags"><span class="tag tag-intel">Intel</span></div>
+            </div>
+
+            <div class="event major">
+                <div class="date">December 10-11, 2025</div>
+                <div class="title">Machado Escapes to Oslo</div>
+                <div class="desc">Maria Corina Machado dramatically escapes Venezuela after months in hiding. Arrives in Oslo to accept Nobel Peace Prize. Greets supporters from hotel balcony. Taunts Maduro regime from safety.</div>
+                <div class="tags"><span class="tag tag-intel">Intel</span></div>
+            </div>
+
+            <div class="event major military">
+                <div class="date">December 10, 2025</div>
+                <div class="title">Tanker #1 Seized: Skipper</div>
+                <div class="desc">US seizes oil tanker Skipper off Venezuelan coast. 1.8 million barrels of crude. Boarded by Coast Guard, Marines, and special forces from USS Gerald Ford. Tanker was sanctioned for ties to IRGC/Hezbollah.</div>
+                <div class="tags">
+                    <span class="tag tag-military">Military</span>
+                    <span class="tag tag-escalation">Escalation</span>
+                </div>
+            </div>
+
+            <div class="event military">
+                <div class="date">December 17, 2025</div>
+                <div class="title">Naval Blockade Begins</div>
+                <div class="desc">Trump announces "total and complete blockade" of sanctioned tankers. Venezuelan airspace declared "closed in its entirety." Largest armada ever assembled in South America.</div>
+                <div class="tags">
+                    <span class="tag tag-military">Military</span>
+                    <span class="tag tag-escalation">Escalation</span>
+                </div>
+            </div>
+
+            <div class="event military">
+                <div class="date">December 18, 2025</div>
+                <div class="title">Pacific Attack - 4 Killed</div>
+                <div class="desc">US strikes in Pacific Ocean kill 4 people. Death toll approaches 100.</div>
+                <div class="tags">
+                    <span class="tag tag-military">Military</span>
+                    <span class="tag tag-escalation">Escalation</span>
+                </div>
+            </div>
+
+            <div class="event major military">
+                <div class="date">December 20, 2025</div>
+                <div class="title">Tanker #2 Seized: Centuries</div>
+                <div class="desc">US seizes second tanker - NOT on any sanctions list. Bella 1 resists boarding, makes U-turn with Coast Guard in pursuit.</div>
+                <div class="tags">
+                    <span class="tag tag-military">Military</span>
+                    <span class="tag tag-escalation">Escalation</span>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="date">December 22, 2025</div>
+                <div class="title">Trump's Final Warning</div>
+                <div class="desc">At Mar-a-Lago with Rubio and Hegseth, Trump warns Maduro: "If he plays tough, it'll be the last time he's ever able to play tough." Says he doesn't rule out war.</div>
+                <div class="tags"><span class="tag tag-escalation">Escalation</span></div>
+            </div>
+
+            <div class="event">
+                <div class="date">December 23, 2025</div>
+                <div class="title">UN Security Council Emergency Session</div>
+                <div class="desc">Venezuela calls emergency UN meeting. Ambassador Moncada accuses US of "greatest extortion in history" and warns of US "continental ambitions." Russia and China back Venezuela.</div>
+                <div class="tags"><span class="tag tag-intel">Intel</span></div>
+            </div>
+
+            <div class="event major military">
+                <div class="date">December 24, 2025</div>
+                <div class="title">Christmas Eve Strike - First Land Attack</div>
+                <div class="desc">CIA drone strike hits port facility on Venezuelan coast. Target: dock allegedly used by Tren de Aragua gang. First US attack on Venezuelan soil.</div>
+                <div class="tags">
+                    <span class="tag tag-military">Military</span>
+                    <span class="tag tag-escalation">Escalation</span>
+                </div>
+            </div>
+
+            <div class="event surveillance major">
+                <div class="date">December 24-26, 2025</div>
+                <div class="title">"La Boveda de Cristal" Activated</div>
+                <div class="desc">Maduro regime secretly merges SAIME + Banks + Patria into "Crystal Vault" system. Creates single control dashboard to disable any citizen's identity instantly. Includes IMEI/GPS tracking on all bank transactions.</div>
+                <div class="tags">
+                    <span class="tag tag-surveillance">Surveillance</span>
+                    <span class="tag tag-escalation">Escalation</span>
+                </div>
+            </div>
+
+            <div class="event surveillance">
+                <div class="date">December 26, 2025</div>
+                <div class="title">Crystal Vault Exposed</div>
+                <div class="desc">Journalist Milagros Socorro (La Gran Aldea) publishes investigation exposing the Christmas database merger. 40,000+ engagement on Instagram.</div>
+                <div class="tags"><span class="tag tag-surveillance">Surveillance</span></div>
+            </div>
+
+            <div class="event">
+                <div class="date">December 26, 2025</div>
+                <div class="title">Trump Reveals Strike</div>
+                <div class="desc">Trump calls WABC radio: "We knocked out a big facility where the ships come from. We hit them very hard."</div>
+                <div class="tags"><span class="tag tag-intel">Intel</span></div>
+            </div>
+
+            <div class="event">
+                <div class="date">December 29, 2025</div>
+                <div class="title">CNN Confirms CIA Strike</div>
+                <div class="desc">CNN exclusive confirms CIA drone strike on Venezuelan port facility.</div>
+                <div class="tags"><span class="tag tag-intel">Intel</span></div>
+            </div>
+
+            <div class="event current">
+                <div class="date">December 30, 2025</div>
+                <div class="title">Current Situation</div>
+                <div class="desc">US missiles kill 2 more in Pacific. Database centralization exposed. Total: 107+ killed in 30 strikes since September. Crystal Vault documentation project launched.</div>
+                <div class="tags">
+                    <span class="tag tag-military">Military</span>
+                    <span class="tag tag-surveillance">Surveillance</span>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <div>Research compiled December 30, 2025</div>
+            <div>Sources: CNN, Al Jazeera, Bloomberg, NBC, The Hill, El Nacional, La Gran Aldea, VOA, CBS News</div>
+            <div>La Boveda de Cristal investigation by Milagros Socorro</div>
+            <div class="footer-links">
+                <a href="https://github.com/Ringmast4r/crystal-vault">Crystal Vault Project</a>
+                <a href="index.html">Dashboard</a>
+                <a href="glossary.html">Glossary</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
