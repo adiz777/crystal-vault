@@ -30,7 +30,7 @@ Built by **ZTE Corporation (China)**, this system consolidates:
 - Sistema Patria (social programs / surveillance)
 - CNE (voter registration) — suspected
 
-This repository documents what we found when we looked at their public infrastructure.
+This repository documents what I found when I looked at their public infrastructure.
 
 ---
 
@@ -40,7 +40,7 @@ They built a surveillance system to track every citizen.
 
 They announced it on a **WordPress blog with open REST APIs**.
 
-We pulled their entire office network, operational statistics, and infrastructure documentation — **no authentication required**.
+I pulled their entire office network, operational statistics, and infrastructure documentation — **no authentication required**.
 
 ---
 
@@ -92,7 +92,7 @@ We pulled their entire office network, operational statistics, and infrastructur
 - **21.8 million** Sistema Patria users (as of Jan 2023)
 
 ### Sanctioned Individuals with Cedulas
-We extracted ~210 cedula numbers from OFAC sanctions data:
+I extracted ~210 cedula numbers from OFAC sanctions data:
 
 | Name | Cedula | Role |
 |------|--------|------|
