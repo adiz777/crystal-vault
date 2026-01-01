@@ -1,0 +1,231 @@
+============================================================
+DGCIM - DIRECCION GENERAL DE CONTRAINTELIGENCIA MILITAR
+OSINT INTELLIGENCE REPORT
+Date: 2026-01-01
+============================================================
+
+ORGANIZATION OVERVIEW
+============================================================
+Name: Direccion General de Contrainteligencia Militar (DGCIM)
+Type: Military Counterintelligence Agency
+Country: Venezuela
+HQ Location: Boleita, Petare, Miranda State
+Status: OFAC Sanctioned Entity (July 11, 2019)
+
+Parent Organization: Fuerza Armada Nacional Bolivariana (FANB)
+Function: Counter-espionage, military security, political repression
+
+DIGITAL PRESENCE
+============================================================
+Website: NONE FOUND (dgcim.gob.ve / dgcim.mil.ve - DNS not resolving)
+TikTok: @dgcimoficial (184.7K followers)
+Instagram: @oficialdgcim / @dgcimoficial
+
+============================================================
+CURRENT LEADERSHIP
+============================================================
+Director General: MG Javier Jose Marcano Tabata
+  - Appointed: October 2024
+  - Previous: Commander General, Bolivarian Militia
+  - Military Academy: 1991 (Rank 207 of 213 graduates)
+  - OFAC Sanctioned: November 2024
+
+Deputy Director: GD Carlos Ramon Enrique Carvallo Guevara
+
+============================================================
+FORMER DIRECTORS
+============================================================
+1. MG Ivan Rafael Hernandez Dala (Jan 2014 - Oct 2024)
+   - Also: Commander, Presidential Guard
+   - OFAC Sanctioned: February 15, 2019
+   - Status: Removed from position
+
+============================================================
+OFAC SANCTIONED OFFICIALS (with PII from crystal-vault)
+============================================================
+Entity Designation: July 11, 2019
+
+Individual Designations:
+
+0. Hugo Armando Carvajal Barrios (FORMER DGCIM HEAD)
+   OFAC ID: 11186
+   Rank: General
+   Position: Former Head of Military Intelligence (DGCIM)
+   DOB: 01 Apr 1960
+   POB: Puerto La Cruz, Venezuela
+   CEDULA: 8.352.301
+   NOTE: Facilitated Hezbollah meeting with El Aissami
+
+1. Ivan Rafael Hernandez Dala
+   OFAC ID: 26397
+   Rank: Major General
+   Position: Director General DGCIM (2014-2024)
+   DOB: 18 May 1966
+   CEDULA: 6961149
+   Sanctioned: February 15, 2019
+
+2. Rafael Ramon Blanco Marrero
+   OFAC ID: 27041
+   Rank: Division General
+   Position: Deputy Director DGCIM
+   DOB: 28 Feb 1968
+   CEDULA: 6250588
+   Sanctioned: July 2019
+
+3. Hannover Esteban Guerrero Mijares
+   OFAC ID: 27040
+   Rank: Colonel
+   Position: Director of Investigations, Boleita HQ
+   DOB: 14 Jan 1971
+   CEDULA: 10537738
+   Sanctioned: July 2019
+
+4. Alexander Enrique Granko Arteaga (alias "Barba")
+   OFAC ID: 27043
+   Rank: Major (promoted despite UN reports)
+   Position: Head, Special Affairs Unit (DAE)
+   DOB: 25 Mar 1981
+   CEDULA: 14970215
+   Sanctioned: July 2019
+
+5. Rafael Antonio Franco Quintero
+   OFAC ID: 27042
+   Rank: Colonel
+   Position: Former Director of Investigations
+   DOB: 14 Oct 1973
+   CEDULA: 11311672
+   Sanctioned: July 2019
+
+6. Javier Jose Marcano Tabata
+   OFAC ID: 51419
+   Rank: Major General
+   Position: Current Director General
+   DOB: 10 Mar 1969
+   POB: San Antonio, Venezuela
+   CEDULA: V10306352
+   Sanctioned: November 2024
+
+============================================================
+ICC/CPI ACCUSED OFFICIALS (Torture/Crimes Against Humanity)
+============================================================
+Filed by: Tamara Suju (CASLA Institute), Clooney Foundation
+
+1. Jonathan Becerra (alias "Pirana")
+   Rank: Captain
+   Accusations: Electric shocks, sexual violence with objects
+
+2. Jose Sanchez Castro
+   Rank: Major
+   Unit: Guardia Nacional Bolivariana (2002 graduate)
+
+3. Nestor Blanco Hurtado
+   Rank: Captain
+   Unit: Guardia Nacional Bolivariana
+
+4. Moises Saul Mendez Calderon (alias "Torturador #4")
+   Rank: Lieutenant/Captain
+   Unit: DAE (Special Affairs Directorate)
+   Status: Denounced to ICC since 2018
+
+5. Jesus Gerardo Cardenas (alias "Camaleon")
+   Rank: Captain
+
+6. Abel Angola (alias "Aureliano")
+   Rank: Navy Lieutenant
+
+7. Hannover Guerrero Mijares
+   Rank: Colonel
+   Position: Director of Investigations
+
+8. Keyler Chacon Bautista (alias "Gaviota")
+   Rank: Captain
+   Position: Cell Chief, Boleita
+
+9. Nairobi O'Connor Jackson
+   Rank: Major (promoted despite accusations)
+   Position: Deputy Director, Special Investigations
+   Specialty: Forensic Anthropologist - advised on torture methods
+   Status: Reportedly fled to Spain (Valencia) claiming persecution
+
+10. Yarumy Rafael Figueroa
+    Unit: DGCIM
+    Status: Charged with homicide (Juan Angel Pantoja Carreno case)
+
+11. Jose Carlos Flores Perez
+    Unit: DGCIM
+    Status: Charged with homicide, torture
+
+============================================================
+OTHER IDENTIFIED OFFICIALS
+============================================================
+- Cesar Mejias Camacaro (General, Aviation) - Detained Sept 2020
+- Teran Hurtado (Brigadier General) - DGCIM Tachira State Chief
+- Antonio Jose Benavides Torres (Major General)
+- Gustavo Enrique Gonzalez - Director, Special Affairs
+
+============================================================
+DETENTION FACILITIES
+============================================================
+Primary: DGCIM Boleita HQ, Caracas
+  - Administrative offices with detention cells
+  - Documented torture center
+
+Secret Detention Sites: 17+ covert locations identified by UN
+  - Used for interrogation under torture
+  - Located across Venezuela
+
+============================================================
+DOCUMENTED ABUSES (UN Fact-Finding Mission)
+============================================================
+- 122 documented victims detained by DGCIM
+- 77 subjected to torture, sexual violence, cruel treatment
+- 45+ officials directly responsible (names recorded)
+
+Torture Methods:
+- Stress positions
+- Asphyxiation (plastic bags)
+- Beatings with bats ("breastfeeding"/dar la teta)
+- Electric shocks (including genitals)
+- Cuts and mutilations (razor blades on feet)
+- Sexual violence and rape
+- Death threats
+- Psychological torture
+- Chemical substances
+
+Notable Deaths in Custody:
+- Captain Rafael Acosta Arevalo (Navy) - Died June 2019
+  Two DGCIM agents sentenced to 30 years
+- Juan Angel Pantoja Carreno - Agents charged
+
+============================================================
+SOURCES
+============================================================
+- US Treasury OFAC Press Releases (sm727, sm738, jy2730)
+- UN OHCHR Fact-Finding Mission Reports (2020, 2022)
+- CASLA Institute Reports
+- Clooney Foundation for Justice (The Docket)
+- Amnesty International
+- Voice of America
+- Infobae Venezuela
+- El Nacional
+- El Comercio Peru
+
+LOCAL DATA CROSS-REFERENCE:
+- C:\Users\Squir\Desktop\crystal-vault\OFAC_Sanctions\venezuela_sanctions.csv
+- C:\Users\Squir\Desktop\crystal-vault\intel\Margarita\MADURO_HUNT.txt
+- Cedula numbers and DOBs extracted from existing OFAC SDN database
+
+============================================================
+DGCIM CEDULA QUICK REFERENCE
+============================================================
+8352301  - Hugo Carvajal Barrios (Former DGCIM Head)
+6961149  - Ivan Hernandez Dala (Director 2014-2024)
+6250588  - Rafael Blanco Marrero (Deputy Director)
+10537738 - Hannover Guerrero Mijares (Dir. Investigations)
+14970215 - Alexander Granko Arteaga "Barba" (DAE Chief)
+11311672 - Rafael Franco Quintero (Former Dir. Investigations)
+10306352 - Javier Marcano Tabata (Current Director)
+
+============================================================
+END OF REPORT
+============================================================

@@ -1,0 +1,177 @@
+============================================================
+SEBIN - SERVICIO BOLIVARIANO DE INTELIGENCIA NACIONAL
+OSINT INTELLIGENCE REPORT
+Date: 2026-01-01
+============================================================
+
+ORGANIZATION OVERVIEW
+============================================================
+Name: Servicio Bolivariano de Inteligencia Nacional (SEBIN)
+Former Name: DISIP (Direccion de los Servicios de Inteligencia y Prevencion)
+Type: Civilian Intelligence Service
+Country: Venezuela
+Status: OFAC Sanctioned Entity
+
+Function: Political surveillance, opposition repression, intelligence gathering
+Transformed: By Hugo Chavez from DISIP, continued under Maduro
+
+============================================================
+DETENTION FACILITIES
+============================================================
+
+1. EL HELICOIDE (Primary)
+   Location: Roca Tarpeya, Caracas
+   Type: Former shopping center (1950s), converted to prison 2009
+   Status: Active torture/detention center since 2014
+   Capacity: Unknown - multiple floors
+   Notable: Modernist architecture, iconic spiral design
+
+2. LA TUMBA (The Tomb)
+   Location: Plaza Venezuela, Caracas (underground)
+   Type: Underground detention facility
+   Depth: 5 floors below ground
+   Cells: 2x3 meters, cement beds, 24/7 surveillance
+   Conditions: No natural light, extreme isolation
+
+============================================================
+CURRENT LEADERSHIP
+============================================================
+Director General: Alexis Jose Rodriguez Cabello
+  OFAC ID: 51390
+  DOB: 01 Oct 1965
+  POB: Venezuela
+  CEDULA: V8959785
+  Sanctioned: November 2024
+  NOTE: Cousin of Diosdado Cabello Rondon
+
+============================================================
+FORMER DIRECTORS
+============================================================
+
+1. Manuel Ricardo Cristopher Figuera (Oct 2018 - Apr 2019)
+   OFAC ID: Previously sanctioned, REMOVED
+   Position: Director General SEBIN
+   Previous: President, Strategic Center of Security and Protection
+   Status: DEFECTED April 2019 (Guaido uprising)
+   NOTE: Testified that Maduro personally decided who to torture
+   Sanctions: REMOVED after defection
+
+2. Gustavo Gonzalez Lopez (Mar 2015 - Oct 2018)
+   Sanctioned: March 9, 2015
+   Status: Removed after Fernando Alban death in custody (Oct 2018)
+
+============================================================
+OFAC SANCTIONED OFFICIALS (with PII from crystal-vault)
+============================================================
+
+1. Alexis Jose Rodriguez Cabello (Current Director)
+   OFAC ID: 51390
+   DOB: 01 Oct 1965
+   CEDULA: V8959785
+   Relation: Cousin of Diosdado Cabello
+
+2. Hildemaro Jose Rodriguez Mucura
+   OFAC ID: 26401
+   Rank: First Commissioner
+   DOB: 06 Jun 1977
+   CEDULA: 13432397
+   Sanctioned: February 2019
+   NOTE: Directed detention of Juan Guaido (Jan 11, 2019)
+
+3. Carlos Alberto Calderon Chirinos (HELICOIDE TORTURE CHIEF)
+   OFAC ID: 27724
+   Rank: General Commissioner
+   Position: Director of El Helicoide, Director of Strategic Investigations
+   Current: Deputy Director DAET (PNB)
+   DOB: 03 Jul 1970
+   CEDULA: 10352300
+   Program: VENEZUELA-EO13884
+   Sanctioned: UK, Canada, US
+   Accusations: Torture, sexual violence, illegal detentions
+
+4. Jose Ramon Figuera Valdez
+   OFAC ID: 52452
+   DOB: 13 Oct 1974
+   POB: Maturin, Venezuela
+   CEDULA: V-11344561
+
+============================================================
+"PITBULL GROUP" - SEBIN DEATH SQUAD
+============================================================
+Description: Elite unit for "dirty work"
+Function: Kidnapping, murder, extrajudicial operations
+Legal Status: Operates outside legal parameters
+Chain of Command: Reports to SEBIN Director and Diosdado Cabello
+
+============================================================
+SHADOW POWER STRUCTURE
+============================================================
+Diosdado Cabello Rondon
+  - No formal SEBIN position
+  - Functions as "power in the shadow"
+  - Gives orders directly to SEBIN Director
+  - Decides which opponents to detain/torture
+  - Maintains "his own prisoners" in El Helicoide
+  - OFAC ID: 24424
+  - CEDULA: 8370825
+  - DOB: 15 Apr 1963
+
+============================================================
+DOCUMENTED ABUSES (UN Fact-Finding Mission)
+============================================================
+- 93 documented detainees by SEBIN
+- 51+ subjected to torture
+- Methods: Beatings, asphyxiation, electric shocks, sexual violence
+
+Torture Methods (same as DGCIM):
+- Stress positions
+- Asphyxiation (plastic bags)
+- Electric shocks (including genitals)
+- Sexual violence and rape
+- Psychological torture
+- Solitary confinement in "La Tumba"
+
+============================================================
+NOTABLE POLITICAL PRISONERS (El Helicoide)
+============================================================
+- Americo De Grazia (Former Deputy)
+- Perkins Rocha (Legal advisor to Maria Corina Machado)
+- Rocio San Miguel (Human Rights Defender)
+- Javier Tarazona (Human Rights Defender)
+- Freddy Superlano (Former Deputy)
+- Dignora Hernandez (Vente Venezuela)
+- Henry Alviarez (Vente Venezuela)
+
+Notable Deaths in Custody:
+- Fernando Alban (Opposition Councilman) - Oct 2018
+  Fell from 10th floor of SEBIN building
+  Official: "Suicide" - Opposition: Murder
+  Led to removal of Director Gonzalez Lopez
+
+============================================================
+SEBIN CEDULA QUICK REFERENCE
+============================================================
+8959785  - Alexis Rodriguez Cabello (Current Director)
+13432397 - Hildemaro Rodriguez Mucura (First Commissioner)
+10352300 - Carlos Calderon Chirinos (Helicoide Chief)
+11344561 - Jose Figuera Valdez
+8370825  - Diosdado Cabello (Shadow Commander)
+
+============================================================
+SOURCES
+============================================================
+- US Treasury OFAC Press Releases (sm612, sm684, jy2730)
+- UN OHCHR Fact-Finding Mission Reports
+- UK Sanctions List
+- Canada Special Economic Measures (Venezuela) Regulations
+- OpenSanctions Database
+- Red Global Venezuela
+- The Objective (Spain)
+
+LOCAL DATA CROSS-REFERENCE:
+- C:\Users\Squir\Desktop\crystal-vault\OFAC_Sanctions\venezuela_sanctions.csv
+- C:\Users\Squir\Desktop\crystal-vault\intel\Margarita\MADURO_HUNT.txt
+
+============================================================
+END OF REPORT
+============================================================
