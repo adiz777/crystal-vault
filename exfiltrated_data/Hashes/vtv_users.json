@@ -1,0 +1,3 @@
+
+
+{"code":"rest_user_cannot_view","message":"Lo siento, no tienes permiso para listar usuarios.","data":{"status":401}}
