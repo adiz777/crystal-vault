@@ -1,0 +1,46 @@
+NEW INTEL - Venezuelan State Media APIs
+========================================
+Collected: 2026-01-01
+Sources NOT in crystal-vault dataset
+
+FILES:
+------
+telesur_users.json      - 92KB  - TeleSUR state TV journalists
+ultimasnoticias_users.json - 819KB - Ultimas Noticias newspaper staff
+patria_users.json       - 538B  - Carnet de la Patria admin
+
+HASH SUMMARY:
+-------------
+TeleSUR uses SHA256 Gravatar hashes (64 chars)
+Ultimas Noticias uses SHA256 Gravatar hashes (64 chars)
+Patria uses MD5 Gravatar hashes (32 chars)
+
+KEY TARGETS:
+------------
+PATRIA ADMIN:
+  ptrmaster | MD5: 1d2141ead3cf3d83b031be7b64ad9117
+
+TELESUR ADMIN:
+  admtlsur | SHA256: 90852d01328e9364c386f316f9190b7c08a968909d0accd640314ca07baed5d0
+
+HIGH-PROFILE ANALYSTS (TeleSUR):
+  Alfredo Jalife (Mexican analyst)    | 9fa84b5702cfe0352e79eb8993fe45011300f390603fa3724f52d4d99b1e3e9e
+  Atilio Boron (Argentine analyst)    | 2f0135c38d98ab47297cb33a7222668a08218c2f56b1db017c9ac26316427480
+  Angel Guerra (Cuban analyst)        | d8fa1b3ca64e07344441f23151b3e687aec300822412649be32e5056e9028a96
+  Fernando Buen Abad                  | e24248b5de5cfd2411937e2941e1071645fc03d7af16ff97ab713049299d9d3b
+  Carlos Aznarez                      | 8a24617fea8fa204231eb6e9ee356f090be534bd58aa9857ed1622e012a4f36b
+
+API ENDPOINTS USED:
+-------------------
+https://www.telesurtv.net/wp-json/wp/v2/users
+https://ultimasnoticias.com.ve/wp-json/wp/v2/users
+https://www.patria.org.ve/wp-json/wp/v2/users
+
+BLOCKED ENDPOINTS (for future):
+-------------------------------
+minci.gob.ve - DNS failure
+pdvsa.com - timeout
+vicepresidencia.gob.ve - SSL error
+conatel.gob.ve - empty response
+inces.gob.ve - 401 unauthorized
+radiomundial.com.ve - SSL error
