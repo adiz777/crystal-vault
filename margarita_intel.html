@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margarita Island Intelligence Report</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', monospace;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+
+        h1 {
+            text-align: center;
+            color: #CF142B;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(207,20,43,0.5);
+        }
+        h2.section-title {
+            color: #FFCC00;
+            border-bottom: 2px solid #FFCC00;
+            padding-bottom: 10px;
+            margin: 30px 0 20px 0;
+            font-size: 1.3rem;
+        }
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            border-left: 4px solid #CF142B;
+        }
+        .stat-card h3 { color: #CF142B; font-size: 1.8rem; }
+        .stat-card p { color: #888; font-size: 0.85rem; margin-top: 5px; }
+        .stat-card.yellow { border-left-color: #FFCC00; }
+        .stat-card.yellow h3 { color: #FFCC00; }
+        .stat-card.blue { border-left-color: #00BFFF; }
+        .stat-card.blue h3 { color: #00BFFF; }
+        .stat-card.green { border-left-color: #00FF00; }
+        .stat-card.green h3 { color: #00FF00; }
+        .stat-card.purple { border-left-color: #9932CC; }
+        .stat-card.purple h3 { color: #9932CC; }
+
+        .subject-card {
+            background: rgba(207,20,43,0.1);
+            border: 1px solid #CF142B;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .subject-card h3 { color: #CF142B; margin-bottom: 15px; }
+        .subject-card .label { color: #888; font-size: 0.85rem; }
+        .subject-card .value { color: #fff; margin-bottom: 10px; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background: rgba(0,0,0,0.3);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+        th { background: rgba(207,20,43,0.3); color: #fff; }
+        tr:hover { background: rgba(255,255,255,0.05); }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .badge-red { background: #CF142B; color: #fff; }
+        .badge-yellow { background: #FFCC00; color: #000; }
+        .badge-blue { background: #00BFFF; color: #000; }
+        .badge-green { background: #00FF00; color: #000; }
+        .badge-purple { background: #9932CC; color: #fff; }
+
+        a { color: #00BFFF; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        code {
+            background: rgba(0,0,0,0.5);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #4ecdc4;
+            font-size: 0.85rem;
+        }
+
+        .timeline {
+            border-left: 3px solid #FFCC00;
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #333;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: #FFCC00;
+            border-radius: 50%;
+        }
+        .timeline-date { color: #FFCC00; font-weight: bold; margin-bottom: 5px; }
+        .timeline-title { color: #fff; font-size: 1.1rem; margin-bottom: 5px; }
+        .timeline-desc { color: #888; font-size: 0.9rem; }
+
+        .map-link {
+            display: inline-block;
+            background: #CF142B;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+        .map-link:hover { background: #ff1a3d; text-decoration: none; }
+
+        .warning-box {
+            background: rgba(255,204,0,0.15);
+            border: 1px solid #FFCC00;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .warning-box h4 { color: #FFCC00; margin-bottom: 10px; }
+
+        .alert-box {
+            background: rgba(207,20,43,0.2);
+            border: 2px solid #CF142B;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .alert-box h4 { color: #CF142B; margin-bottom: 10px; }
+
+        .network-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .network-card {
+            background: rgba(0,191,255,0.1);
+            border: 1px solid #00BFFF;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .network-card h4 { color: #00BFFF; margin-bottom: 10px; }
+
+        .table-container { max-height: 400px; overflow-y: auto; }
+
+        .flight-table tr td:first-child { color: #FFCC00; font-weight: bold; }
+        .flight-table tr td:nth-child(2) { color: #CF142B; font-weight: bold; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MARGARITA ISLAND INTELLIGENCE</h1>
+        <p class="subtitle">Hezbollah Hub | Russian Operations | Maduro Network | Terrorist Training Infrastructure</p>
+
+        <!-- Stats Overview -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>$15M</h3>
+                <p>Maduro Reward</p>
+            </div>
+            <div class="stat-card yellow">
+                <h3>5,000+</h3>
+                <p>Russian "Tourists"</p>
+            </div>
+            <div class="stat-card blue">
+                <h3>400</h3>
+                <p>Hezbollah Commanders</p>
+            </div>
+            <div class="stat-card green">
+                <h3>470</h3>
+                <p>OFAC Sanctions</p>
+            </div>
+            <div class="stat-card purple">
+                <h3>210</h3>
+                <p>Cedulas Extracted</p>
+            </div>
+            <div class="stat-card">
+                <h3>6</h3>
+                <p>Open APIs Found</p>
+            </div>
+        </div>
+
+        <!-- CRITICAL ALERT: Russian Flights -->
+        <div class="alert-box">
+            <h4>CRITICAL: RUSSIAN "TOURIST" FLIGHTS TO HEZBOLLAH HUB</h4>
+            <p>Since August 2025, <strong>5,000+ Russian nationals</strong> have arrived at Margarita Island on charter flights. This coincides with:</p>
+            <ul style="margin-left:20px;margin-top:10px;color:#ccc;">
+                <li>Marshall Billingslea testimony: "400 Hezbollah commanders deployed to Venezuela since early 2025"</li>
+                <li>Israel's Lebanon campaign displacing Hezbollah leadership</li>
+                <li>ZEE La Guaira twinned with Yalta (Russian-occupied Crimea)</li>
+                <li>Iran thanking Venezuela for support (Dec 31, 2025)</li>
+            </ul>
+        </div>
+
+        <!-- Russian Flight Log -->
+        <h2 class="section-title" style="color:#CF142B;border-color:#CF142B;">RUSSIAN FLIGHT LOG - MARGARITA ISLAND</h2>
+        <table class="flight-table">
+            <tr><th>Date</th><th>Passengers</th><th>Route</th><th>Source</th></tr>
+            <tr><td>Dec 23, 2025</td><td>100</td><td>Moscow-Porlamar</td><td><a href="https://www.vtv.gob.ve/nuevos-100-turistas-rusos-visitan-isla-de-margarita/" target="_blank">VTV</a></td></tr>
+            <tr><td>Dec 9, 2025</td><td>100</td><td>Russia-Margarita</td><td><a href="https://www.vtv.gob.ve/turistas-rusos-isla-margarita/" target="_blank">VTV</a></td></tr>
+            <tr><td>Nov 25, 2025</td><td>100</td><td>Russia-Margarita</td><td><a href="https://www.vtv.gob.ve/arriban-100-nuevos-turistas-rusos-margarita/" target="_blank">VTV</a></td></tr>
+            <tr><td>Nov 21, 2025</td><td>468</td><td>Russia-Margarita</td><td><a href="https://www.vtv.gob.ve/arriba-vuelo-468-turistas-rusos-isla-margarita/" target="_blank">VTV</a></td></tr>
+            <tr><td>Nov 11, 2025</td><td>880</td><td>Russia+Poland</td><td><a href="https://www.vtv.gob.ve/turismo-receptivo-consolida-l880-visitantes-rusia-polonia/" target="_blank">VTV</a></td></tr>
+            <tr><td>Nov 2, 2025</td><td>468</td><td>Russia-Margarita</td><td><a href="https://www.vtv.gob.ve/turistas-rusos-arribado-venezuela/" target="_blank">VTV</a></td></tr>
+            <tr><td>Oct 21, 2025</td><td>493</td><td>Russia-Margarita</td><td><a href="https://www.vtv.gob.ve/nuevo-vuelo-turistas-rusos-isla-margarita/" target="_blank">VTV</a></td></tr>
+            <tr><td>Oct 15, 2025</td><td>599</td><td>Russia-Margarita</td><td><a href="https://www.vtv.gob.ve/arriban-mas-590-turistas-rusos-margarita/" target="_blank">VTV</a></td></tr>
+            <tr><td>Sep 29, 2025</td><td>500+</td><td>Russia-Margarita</td><td><a href="https://www.vtv.gob.ve/isla-margarita-recibe-nuevos-turistas-provenientes-rusia/" target="_blank">VTV</a></td></tr>
+            <tr><td>Sep 8, 2025</td><td>455</td><td>Moscow-Porlamar</td><td><a href="https://www.vtv.gob.ve/margarita-recibe-455turistas-rusos-operacion-moscu-porlamar/" target="_blank">VTV</a></td></tr>
+            <tr><td>Aug 18, 2025</td><td>551</td><td>Russia-Margarita</td><td><a href="https://www.vtv.gob.ve/margarita-abre-turismo-ruso-llegada-visitantes/" target="_blank">VTV</a></td></tr>
+        </table>
+
+        <!-- Maduro Network -->
+        <h2 class="section-title" style="color:#CF142B;border-color:#CF142B;">MADURO NETWORK - OFAC DATA</h2>
+        <div class="subject-card">
+            <h3>PRIMARY TARGET: NICOLAS MADURO MOROS</h3>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;">
+                <div>
+                    <p class="label">OFAC ID</p>
+                    <p class="value"><code>22790</code></p>
+                    <p class="label">Cedula</p>
+                    <p class="value"><code>5892464</code></p>
+                    <p class="label">DOB</p>
+                    <p class="value">23 Nov 1962</p>
+                </div>
+                <div>
+                    <p class="label">DOJ Indictment</p>
+                    <p class="value">March 2020 - Narco-terrorism</p>
+                    <p class="label">Reward</p>
+                    <p class="value"><span class="badge badge-red">$15,000,000 USD</span></p>
+                </div>
+                <div>
+                    <p class="label">Programs</p>
+                    <p class="value"><span class="badge badge-red">VENEZUELA</span> <span class="badge badge-purple">IRAN-CON-ARMS-EO</span></p>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <tr><th>Name</th><th>OFAC ID</th><th>Cedula</th><th>Relation/Role</th></tr>
+            <tr><td>Cilia Adela Flores de Maduro</td><td><code>25079</code></td><td><code>5315632</code></td><td>Wife</td></tr>
+            <tr><td>Nicolas Ernesto Maduro Guerra</td><td><code>26946</code></td><td><code>19398759</code></td><td>Son</td></tr>
+            <tr><td>Diosdado Cabello Rondon</td><td><code>24424</code></td><td><code>8370825</code></td><td>Interior Minister, PSUV VP</td></tr>
+            <tr><td>Delcy Eloina Rodriguez Gomez</td><td><code>25077</code></td><td><code>10353667</code></td><td>Vice President</td></tr>
+            <tr><td>Tareck El Aissami</td><td><code>20250</code></td><td><code>12354211</code></td><td>Former VP (Arrested 2024)</td></tr>
+            <tr><td>Alex Nain Saab Moran</td><td><code>26995</code></td><td><code>72180017</code></td><td>Minister of Industry</td></tr>
+            <tr><td>Hugo Armando Carvajal</td><td><code>11186</code></td><td><code>8352301</code></td><td>Former Intel Chief</td></tr>
+            <tr><td>Efrain Campo Flores</td><td><code>56484</code></td><td><code>18330183</code></td><td>Narco Nephew (Convicted)</td></tr>
+            <tr><td>Franqui Flores de Freitas</td><td><code>56485</code></td><td><code>17751244</code></td><td>Narco Nephew (Convicted)</td></tr>
+        </table>
+
+        <!-- Terrorist Training -->
+        <h2 class="section-title" style="color:#CF142B;border-color:#CF142B;">TERRORIST TRAINING INFRASTRUCTURE</h2>
+        <div class="warning-box">
+            <h4>CONGRESSIONAL TESTIMONY - October 2025</h4>
+            <p><strong>Source:</strong> Marshall Billingslea, Former Asst. Secretary for Terrorist Financing, US Treasury</p>
+            <p><strong>Venue:</strong> Senate Caucus on International Narcotics Control</p>
+            <ul style="margin-left:20px;margin-top:15px;color:#ccc;line-height:1.8;">
+                <li>"Under Hugo Chavez, Venezuela opened its doors to Hezbollah, allowing the group to establish a major footprint, including a <strong>PARAMILITARY TRAINING SITE</strong>, on Margarita Island."</li>
+                <li>"Hezbollah operates a wide range of companies on the island and also maintains <strong>SEVERAL TRAINING CAMPS</strong> there."</li>
+                <li>"Intelligence reports indicate approximately <strong>400 HEZBOLLAH COMMANDERS</strong> have been deployed to South America—primarily Venezuela—since early 2025."</li>
+                <li>"Venezuela permitted Hezbollah to establish a paramilitary training center on Margarita Island and awarded contracts to front companies linked to the group as early as 2001."</li>
+            </ul>
+        </div>
+
+        <!-- Nasr al-Din Clan -->
+        <h2 class="section-title" style="color:#9932CC;border-color:#9932CC;">NASR AL-DIN CLAN - HEZBOLLAH OPERATIVES</h2>
+        <table>
+            <tr><th>Name</th><th>Status</th><th>Location</th><th>Role</th></tr>
+            <tr>
+                <td><strong>Ghazi Nasr al-Din</strong></td>
+                <td><span class="badge badge-red">OFAC SANCTIONED (2008)</span></td>
+                <td>Venezuela</td>
+                <td>Hezbollah diplomatic fixer, former Charge d'Affaires Damascus</td>
+            </tr>
+            <tr>
+                <td><strong>Abdallah Nasr al-Din</strong></td>
+                <td><span class="badge badge-yellow">ACTIVE</span></td>
+                <td>Margarita Island</td>
+                <td>Money laundering operations</td>
+            </tr>
+            <tr>
+                <td><strong>Oday Nasr al-Din</strong></td>
+                <td><span class="badge badge-yellow">ACTIVE</span></td>
+                <td>Margarita Island</td>
+                <td>Recruitment, arranges Iran travel for training</td>
+            </tr>
+        </table>
+
+        <!-- Hezbollah OFAC Entries -->
+        <h2 class="section-title">HEZBOLLAH-LINKED OFAC ENTRIES (VENEZUELA)</h2>
+        <table>
+            <tr><th>OFAC ID</th><th>Name</th><th>Venezuela ID</th><th>Program</th></tr>
+            <tr><td><code>10892</code></td><td>Fawzi Mustafa Kan'an</td><td>Passport 0877677, ID V-6.919.272</td><td>SDGT (Hezbollah)</td></tr>
+            <tr><td><code>10894</code></td><td>Hilal Travel Agency</td><td>Business Reg 80074366</td><td>SDGT (Hezbollah)</td></tr>
+            <tr><td><code>12891</code></td><td>Abbas Hussein Harb</td><td>Passport 1368212, IDs 21495203/22465548</td><td>SDNTK</td></tr>
+            <tr><td><code>12892</code></td><td>Kassem Mohamad Saleh</td><td>ID 22075502</td><td>SDNTK</td></tr>
+            <tr><td><code>12893</code></td><td>Ali Houssein Harb</td><td>ID 26405022</td><td>SDNTK</td></tr>
+        </table>
+
+        <!-- Iran Connection -->
+        <h2 class="section-title" style="color:#00FF00;border-color:#00FF00;">IRAN-VENEZUELA AXIS (Dec 31, 2025)</h2>
+        <div class="subject-card" style="border-color:#00FF00;background:rgba(0,255,0,0.1);">
+            <h3 style="color:#00FF00;">FOREIGN MINISTER YVAN GIL STATEMENT</h3>
+            <blockquote style="border-left:3px solid #00FF00;padding-left:15px;margin:15px 0;color:#ccc;font-style:italic;">
+                "In the name of President Nicolas Maduro Moros and the Venezuelan people, we thank the support of the government and people of Iran and their firm determination in defense of international legality and the right of peoples to development..."
+            </blockquote>
+            <p class="label">Responding to Iranian FM Seyed Abbas Araghchi who stated Venezuela "will defend its sovereignty against illegal US measures."</p>
+            <a href="https://www.correodelorinoco.gob.ve/venezuela-agradece-respaldo-de-iran-en-defensa-de-la-soberania-frente-a-medidas-ilegales-de-ee-uu/" target="_blank" class="map-link" style="background:#00FF00;color:#000;">View Source</a>
+        </div>
+
+        <!-- Exposed Infrastructure -->
+        <h2 class="section-title" style="color:#00BFFF;border-color:#00BFFF;">EXPOSED CYBERSPACE INFRASTRUCTURE</h2>
+        <div class="network-grid">
+            <div class="network-card">
+                <h4>INTERNAL IPs LEAKED</h4>
+                <p><code>190.202.124.19</code> - Correo del Orinoco</p>
+                <p><code>201.243.95.29</code> - Website infrastructure</p>
+                <p style="color:#888;font-size:0.8rem;margin-top:10px;">Exposed in WordPress schema.org metadata</p>
+            </div>
+            <div class="network-card">
+                <h4>OPEN APIs (NO AUTH)</h4>
+                <p>vtv.gob.ve/wp-json/</p>
+                <p>correodelorinoco.gob.ve/wp-json/</p>
+                <p>saime.gob.ve/wp-json/geodir/</p>
+                <p>saren.gob.ve/wp-json/</p>
+            </div>
+            <div class="network-card">
+                <h4>STAFF EXPOSED (Gravatar)</h4>
+                <p>ana Maneiro brumlik</p>
+                <p>Freidder Alfonzo Lezama</p>
+                <p>jose miguel carrasquel</p>
+                <p>MARIA JOSE ARIAS</p>
+                <p>yorcellyz bastidas</p>
+            </div>
+        </div>
+
+        <!-- Alex Saab Network -->
+        <h2 class="section-title">ALEX SAAB NETWORK - MARGARITA OPERATIONS</h2>
+        <div class="subject-card">
+            <h3>OFAC-SANCTIONED VENEZUELAN MINISTER</h3>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;">
+                <div>
+                    <p class="label">Full Name</p>
+                    <p class="value">Alex Nain Saab Moran</p>
+                    <p class="label">OFAC ID</p>
+                    <p class="value"><code>26995</code></p>
+                    <p class="label">Cedula (Colombia)</p>
+                    <p class="value"><code>72180017</code></p>
+                </div>
+                <div>
+                    <p class="label">Current Position</p>
+                    <p class="value">Minister of Industries & Production</p>
+                    <p class="label">Key Activity</p>
+                    <p class="value" style="color:#FFCC00;">April 30, 2025: Met with Arab-Venezuelan community in Nueva Esparta ZEE</p>
+                </div>
+                <div>
+                    <p class="label">Passports</p>
+                    <p class="value"><code>PE085897</code> (Colombia)</p>
+                    <p class="value"><code>085635076</code> (Venezuela)</p>
+                    <p class="value"><code>D010302</code> (Antigua)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SAIME Offices GPS -->
+        <h2 class="section-title" style="color:#00FF00;border-color:#00FF00;">SAIME OFFICES - NUEVA ESPARTA (GPS)</h2>
+        <table>
+            <tr><th>Office</th><th>GPS Coordinates</th><th>Map</th></tr>
+            <tr>
+                <td><strong>Boca del Rio</strong></td>
+                <td><code>10.9516, -64.1850</code></td>
+                <td><a href="https://maps.google.com/?q=10.951577,-64.184985" target="_blank" class="map-link">Open Map</a></td>
+            </tr>
+            <tr>
+                <td><strong>Isla de Coche</strong></td>
+                <td><code>10.7805, -63.9982</code></td>
+                <td><a href="https://maps.google.com/?q=10.780516,-63.998213" target="_blank" class="map-link">Open Map</a></td>
+            </tr>
+            <tr>
+                <td><strong>Juan Griego</strong></td>
+                <td><code>11.0818, -63.9681</code></td>
+                <td><a href="https://maps.google.com/?q=11.081843,-63.968065" target="_blank" class="map-link">Open Map</a></td>
+            </tr>
+            <tr>
+                <td><strong>El Espinal</strong></td>
+                <td><code>10.9645, -63.9805</code></td>
+                <td><a href="https://maps.google.com/?q=10.964516,-63.980461" target="_blank" class="map-link">Open Map</a></td>
+            </tr>
+            <tr>
+                <td><strong>Frente Porlamar</strong></td>
+                <td><code>10.9669, -63.8407</code></td>
+                <td><a href="https://maps.google.com/?q=10.966883,-63.840701" target="_blank" class="map-link">Open Map</a></td>
+            </tr>
+        </table>
+
+        <!-- Foreign Investment -->
+        <h2 class="section-title" style="color:#00BFFF;border-color:#00BFFF;">SANCTIONS-EVADING INVESTMENT NETWORK</h2>
+        <div class="network-grid">
+            <div class="network-card">
+                <h4>RUSSIA</h4>
+                <p>5,000+ "tourists" since Aug 2025</p>
+                <p>ZEE La Guaira - Yalta sister city</p>
+                <p>Caracas-St Petersburg route</p>
+            </div>
+            <div class="network-card">
+                <h4>CHINA</h4>
+                <p>ZEE La Guaira-Shenzhen</p>
+                <p>Conviasa Venezuela-China-Russia</p>
+            </div>
+            <div class="network-card">
+                <h4>IRAN</h4>
+                <p>CGRI/IRGC presence suspected</p>
+                <p>Megasis Supermarket (Etka)</p>
+                <p>Dec 31 support acknowledgment</p>
+            </div>
+            <div class="network-card">
+                <h4>TURKEY</h4>
+                <p>Jan 2025 - ZEE visit</p>
+                <p>Culture/Tourism Minister</p>
+            </div>
+            <div class="network-card">
+                <h4>BELARUS</h4>
+                <p>Production/export cooperation</p>
+            </div>
+            <div class="network-card">
+                <h4>UAE</h4>
+                <p>Investment agenda advancement</p>
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <h2 class="section-title">ACTIVITY TIMELINE</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">December 31, 2025</div>
+                <div class="timeline-title">Iran Support Acknowledgment</div>
+                <div class="timeline-desc">FM Yvan Gil thanks Iran "in the name of Maduro" for support against US sanctions.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">October 2025</div>
+                <div class="timeline-title">Congressional Testimony</div>
+                <div class="timeline-desc">Billingslea testifies: 400 Hezbollah commanders deployed, training camps on Margarita.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">August-Dec 2025</div>
+                <div class="timeline-title">Russian Flight Operations</div>
+                <div class="timeline-desc">5,000+ Russian "tourists" arrive at Margarita Island on charter flights.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">July 8, 2025</div>
+                <div class="timeline-title">Magnesita Industrial Alliance</div>
+                <div class="timeline-desc">Strategic alliance for mineral exploitation signed in Nueva Esparta.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">April 30, 2025</div>
+                <div class="timeline-title">Arab-Venezuelan Community Meeting</div>
+                <div class="timeline-desc">Alex Saab meets with Arab-Venezuelan community and ZEE administrators.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">April 2024</div>
+                <div class="timeline-title">El Aissami Arrested</div>
+                <div class="timeline-desc">Former VP arrested for PDVSA-Cripto scandal. Tried at Terrorism Tribunal.</div>
+            </div>
+        </div>
+
+        <!-- Sources -->
+        <h2 class="section-title">DATA SOURCES</h2>
+        <table>
+            <tr><th>Source</th><th>Type</th><th>Data Extracted</th></tr>
+            <tr><td>OFAC SDN Database</td><td>US Treasury</td><td>470 entries, 210 cedulas</td></tr>
+            <tr><td>VTV WordPress API</td><td>State TV</td><td>News, photos, Russian flights</td></tr>
+            <tr><td>Correo del Orinoco API</td><td>State Paper</td><td>Staff accounts, internal IPs</td></tr>
+            <tr><td>SAIME GeoDirectory API</td><td>Immigration</td><td>100+ office GPS coords</td></tr>
+            <tr><td>Congressional Testimony</td><td>Senate</td><td>Training camp evidence</td></tr>
+            <tr><td>IranWire / Fox News</td><td>OSINT</td><td>Nasr al-Din clan intel</td></tr>
+        </table>
+
+        <p style="text-align:center;color:#666;margin-top:40px;padding:20px;border-top:1px solid #333;">
+            Generated: January 1, 2026 | Classification: OSINT | Project: Crystal Vault<br>
+            <span style="color:#CF142B;">MARGARITA ISLAND = HEZBOLLAH'S #1 WESTERN HEMISPHERE BASE</span>
+        </p>
+    </div>
+</body>
+</html>

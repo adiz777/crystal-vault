@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venezuela Operations Timeline 2025</title>
+    <title>Venezuela Operations Timeline 2024-2026</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -87,16 +87,7 @@
 
         .timeline {
             position: relative;
-            padding-left: 28px;
-        }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 6px;
-            top: 0;
-            width: 2px;
-            height: 100%;
-            background: #222;
+            padding-left: 0;
         }
 
         .month {
@@ -108,58 +99,48 @@
             margin: 40px 0 16px 0;
             position: relative;
         }
-        .month::before {
-            content: '';
-            position: absolute;
-            left: -25px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 10px;
-            height: 10px;
-            background: #FFCC00;
-            border-radius: 50%;
-        }
+
         .month:first-child { margin-top: 0; }
 
         .event {
             background: #111;
             padding: 18px 20px;
-            margin-bottom: 12px;
+            margin-bottom: 28px;
             border-radius: 6px;
             border-left: 3px solid #222;
             position: relative;
         }
-        .event::before {
-            content: '';
+        .event::after {
+            content: '▼';
             position: absolute;
-            left: -24px;
-            top: 22px;
-            width: 8px;
-            height: 8px;
-            background: #333;
-            border-radius: 50%;
+            left: 50%;
+            bottom: -20px;
+            transform: translateX(-50%);
+            color: #333;
+            font-size: 14px;
+            z-index: 1;
+        }
+        .event:last-child::after {
+            display: none;
         }
 
         .event.major {
             border-left-color: #CF142B;
             background: linear-gradient(90deg, rgba(207,20,43,0.1) 0%, #111 100%);
         }
-        .event.major::before { background: #CF142B; }
+        
 
         .event.surveillance { border-left-color: #FFCC00; }
-        .event.surveillance::before { background: #FFCC00; }
+        
 
         .event.military { border-left-color: #00247D; }
-        .event.military::before { background: #00247D; }
+        
 
         .event.current {
             border-left-color: #FFCC00;
             background: linear-gradient(90deg, rgba(255,204,0,0.08) 0%, #111 100%);
         }
-        .event.current::before {
-            background: #FFCC00;
-            box-shadow: 0 0 8px #FFCC00;
-        }
+
 
         .date {
             color: #666;
@@ -223,7 +204,7 @@
     <div class="container">
         <header>
             <h1>Venezuela Timeline</h1>
-            <p class="subtitle">From Stolen Election to Military Blockade | July 2024 - Present</p>
+            <p class="subtitle">From Stolen Election to Military Blockade | July 2024 - January 2026</p>
             <div class="flag-bar"></div>
         </header>
 
@@ -234,10 +215,10 @@
         </nav>
 
         <div class="stats">
-            <div class="stat"><div class="stat-num">107+</div><div class="stat-label">Killed</div></div>
-            <div class="stat"><div class="stat-num">30</div><div class="stat-label">Strikes</div></div>
+            <div class="stat"><div class="stat-num">107+</div><div class="stat-label">Killed in Strikes</div></div>
+            <div class="stat"><div class="stat-num">30+</div><div class="stat-label">US Operations</div></div>
             <div class="stat"><div class="stat-num">3</div><div class="stat-label">Tankers Seized</div></div>
-            <div class="stat"><div class="stat-num">15K</div><div class="stat-label">US Troops</div></div>
+            <div class="stat"><div class="stat-num">15K</div><div class="stat-label">Troops Deployed</div></div>
         </div>
 
         <div class="timeline">
@@ -254,8 +235,17 @@
             <div class="event">
                 <div class="date">July 29, 2024</div>
                 <div class="title">Protests and Crackdown Begin</div>
-                <div class="desc">Cacerolazos (pot-banging protests) across Caracas. Regime responds with mass arrests. Over 2,400 arrested, 28 killed, 200+ injured in following weeks.</div>
+                <div class="desc">Cacerolazos (pot-banging protests) across Caracas. Regime responds with mass arrests. Over 2,400 arrested in following weeks.</div>
                 <div class="tags"><span class="tag tag-escalation">Escalation</span></div>
+            </div>
+
+            <div class="event major">
+                <div class="date">July 29-August 2, 2024</div>
+                <div class="title">Student Massacre</div>
+                <div class="desc">Regime security forces and colectivos open fire on student protesters. At least 25 killed in first days, many teenagers. Bodies found with gunshot wounds to head and chest. Witnesses report executions. Total death toll reaches 28+ with 200+ injured. UN and human rights groups condemn "extrajudicial killings."</div>
+                <div class="tags">
+                    <span class="tag tag-escalation">Escalation</span>
+                </div>
             </div>
 
             <div class="month">August 2024</div>
@@ -264,6 +254,25 @@
                 <div class="date">August 2024</div>
                 <div class="title">Machado Goes Into Hiding</div>
                 <div class="desc">After threats to her life, Maria Corina Machado goes underground. Refuses to leave Venezuela. Inter-American Commission on Human Rights condemns regime's "state terrorism."</div>
+                <div class="tags"><span class="tag tag-intel">Intel</span></div>
+            </div>
+
+            <div class="month">September 2024</div>
+
+            <div class="event major">
+                <div class="date">September 7, 2024</div>
+                <div class="title">Edmundo González Flees to Spain</div>
+                <div class="desc">Opposition candidate Edmundo González Urrutia flees Venezuela after arrest warrant issued. Spanish government grants asylum. Maduro regime claims "victory" but international community recognizes González as legitimate president-elect.</div>
+                <div class="tags">
+                    <span class="tag tag-escalation">Escalation</span>
+                    <span class="tag tag-intel">Intel</span>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="date">September 2024</div>
+                <div class="title">International Recognition Grows</div>
+                <div class="desc">Multiple countries recognize González as president-elect. US, EU, and Latin American democracies refuse to acknowledge Maduro's fraudulent victory. Regime becomes increasingly isolated.</div>
                 <div class="tags"><span class="tag tag-intel">Intel</span></div>
             </div>
 
@@ -283,6 +292,22 @@
                 <div class="title">Maduro Inaugurated / Machado Detained</div>
                 <div class="desc">Maduro sworn in for fraudulent third term. Maria Corina Machado emerges from hiding to lead massive protest in Caracas. Security forces intercept her convoy after rally. Gunfire reported. Brief detention.</div>
                 <div class="tags"><span class="tag tag-escalation">Escalation</span></div>
+            </div>
+
+            <div class="event">
+                <div class="date">January 20, 2025</div>
+                <div class="title">Trump Inaugurated - New US Policy</div>
+                <div class="desc">Donald Trump sworn in as 47th US President. Immediately signals hardline Venezuela policy. Appoints Marco Rubio as Secretary of State - known hawk on Maduro regime.</div>
+                <div class="tags"><span class="tag tag-intel">Intel</span></div>
+            </div>
+
+            <div class="month">February-August 2025</div>
+
+            <div class="event">
+                <div class="date">Spring/Summer 2025</div>
+                <div class="title">Pressure Campaign Builds</div>
+                <div class="desc">Trump administration ratchets up sanctions. Naval assets repositioned to Caribbean. Intelligence operations intensify. Maduro regime increasingly isolated.</div>
+                <div class="tags"><span class="tag tag-intel">Intel</span></div>
             </div>
 
             <div class="month">September 2025</div>
@@ -385,7 +410,17 @@
             <div class="event major military">
                 <div class="date">December 20, 2025</div>
                 <div class="title">Tanker #2 Seized: Centuries</div>
-                <div class="desc">US seizes second tanker - NOT on any sanctions list. Bella 1 resists boarding, makes U-turn with Coast Guard in pursuit.</div>
+                <div class="desc">US seizes second tanker Centuries - NOT on any sanctions list. Demonstrates expanded scope of blockade operations beyond sanctioned vessels.</div>
+                <div class="tags">
+                    <span class="tag tag-military">Military</span>
+                    <span class="tag tag-escalation">Escalation</span>
+                </div>
+            </div>
+
+            <div class="event military">
+                <div class="date">December 21, 2025</div>
+                <div class="title">Bella 1 Chase</div>
+                <div class="desc">Tanker Bella 1 resists Coast Guard boarding, makes dramatic U-turn attempting to flee. High-speed pursuit in Caribbean waters. Eventually captured - becomes Tanker #3.</div>
                 <div class="tags">
                     <span class="tag tag-military">Military</span>
                     <span class="tag tag-escalation">Escalation</span>
@@ -434,6 +469,16 @@
             </div>
 
             <div class="event">
+                <div class="date">December 27, 2025</div>
+                <div class="title">Hezbollah-Venezuela Connection Intel</div>
+                <div class="desc">OSINT analysis reveals Margarita Island network connecting Alex Saab, Hezbollah operatives, and Iranian interests. GPS metadata from government phones shows regime staff travel to Spain and Uzbekistan.</div>
+                <div class="tags">
+                    <span class="tag tag-intel">Intel</span>
+                    <span class="tag tag-surveillance">Surveillance</span>
+                </div>
+            </div>
+
+            <div class="event">
                 <div class="date">December 26, 2025</div>
                 <div class="title">Trump Reveals Strike</div>
                 <div class="desc">Trump calls WABC radio: "We knocked out a big facility where the ships come from. We hit them very hard."</div>
@@ -447,9 +492,9 @@
                 <div class="tags"><span class="tag tag-intel">Intel</span></div>
             </div>
 
-            <div class="event current">
+            <div class="event">
                 <div class="date">December 30, 2025</div>
-                <div class="title">Current Situation</div>
+                <div class="title">Pacific Strikes Continue</div>
                 <div class="desc">US missiles kill 2 more in Pacific. Database centralization exposed. Total: 107+ killed in 30 strikes since September. Crystal Vault documentation project launched.</div>
                 <div class="tags">
                     <span class="tag tag-military">Military</span>
@@ -457,10 +502,30 @@
                 </div>
             </div>
 
+            <div class="event military">
+                <div class="date">December 31, 2025</div>
+                <div class="title">New Year's Eve - Blockade Holds</div>
+                <div class="desc">Naval blockade enters third week. No tankers breach the cordon. Regime oil exports effectively frozen. International observers warn of humanitarian implications.</div>
+                <div class="tags"><span class="tag tag-military">Military</span></div>
+            </div>
+
+            <div class="month">January 2026</div>
+
+            <div class="event current major">
+                <div class="date">January 1, 2026</div>
+                <div class="title">Current Situation</div>
+                <div class="desc">New Year begins with Venezuela under unprecedented military and economic pressure. Crystal Vault surveillance system operational. Machado safe in Oslo. González in Spain. Maduro regime isolated but defiant. 107+ killed in US operations. 3 tankers seized. 15,000 US troops in theater.</div>
+                <div class="tags">
+                    <span class="tag tag-military">Military</span>
+                    <span class="tag tag-surveillance">Surveillance</span>
+                    <span class="tag tag-escalation">Escalation</span>
+                </div>
+            </div>
+
         </div>
 
         <footer>
-            <div>Research compiled December 30, 2025</div>
+            <div>Research compiled January 1, 2026</div>
             <div>Sources: CNN, Al Jazeera, Bloomberg, NBC, The Hill, El Nacional, La Gran Aldea, VOA, CBS News</div>
             <div>La Boveda de Cristal investigation by Milagros Socorro</div>
             <div class="footer-links">

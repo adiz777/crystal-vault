@@ -2,8 +2,10 @@
 *.py
 
 # Local reports
-exfil/reports/EXIF_REPORT_FULL.json
+scraped_data/reports/EXIF_REPORT_FULL.json
 
 # System files
 .DS_Store
 Thumbs.db
+Scripts/
+

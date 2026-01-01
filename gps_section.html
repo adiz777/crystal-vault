@@ -1,0 +1,389 @@
+    <!-- Lightbox Modal -->
+    <div id="lightbox" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:9999;cursor:pointer;justify-content:center;align-items:center;">
+        <img id="lightbox-img" style="max-width:90%;max-height:90%;border:2px solid #CF142B;border-radius:8px;">
+        <div style="position:absolute;top:20px;right:30px;color:#fff;font-size:30px;cursor:pointer;">&times;</div>
+        <div id="lightbox-caption" style="position:absolute;bottom:20px;color:#fff;text-align:center;width:100%;font-size:14px;"></div>
+    </div>
+    <script>
+    function openPhoto(src, caption) {
+        var lb = document.getElementById('lightbox');
+        var img = document.getElementById('lightbox-img');
+        var cap = document.getElementById('lightbox-caption');
+        img.src = src;
+        cap.textContent = caption || '';
+        lb.style.display = 'flex';
+    }
+    </script>
+
+    <div id="gps-intel" class="content">
+        <h2 class="section-title" style="color:#CF142B;">STAFF PHONE GPS INTELLIGENCE</h2>
+        <p style="color:#CF142B;margin-bottom:15px;font-weight:bold;">42 GPS coordinates extracted from EXIF data in photos taken by Venezuelan government employees on personal phones.</p>
+
+        <div class="stats-grid">
+            <div class="stat-card" style="border-left-color:#CF142B;background:rgba(207,20,43,0.15);"><h3>42</h3><p>GPS Locations Found</p></div>
+            <div class="stat-card yellow"><h3>19</h3><p>Phone Models w/ GPS</p></div>
+            <div class="stat-card blue"><h3>8</h3><p>Agencies Scraped</p></div>
+            <div class="stat-card"><h3>2013-2025</h3><p>Date Range</p></div>
+        </div>
+
+        <h2 class="section-title">Phone Devices Identified (Top GPS-Tagged)</h2>
+        <table>
+            <tr><th>Device</th><th>Model</th><th>GPS Photos</th></tr>
+            <tr><td>Xiaomi</td><td>Redmi A3x</td><td>11</td></tr>
+            <tr><td>Xiaomi</td><td>M2101K6G</td><td>4</td></tr>
+            <tr><td>Xiaomi</td><td>M2006C3MG</td><td>3</td></tr>
+            <tr><td>Xiaomi</td><td>M2006C3LG</td><td>3</td></tr>
+            <tr><td>Xiaomi</td><td>M2004J19C</td><td>3</td></tr>
+            <tr><td>Xiaomi</td><td>MI 8 Lite</td><td>2</td></tr>
+            <tr><td>Xiaomi</td><td>2303ERA42L</td><td>2</td></tr>
+            <tr><td>Apple</td><td>iPhone 16</td><td>1</td></tr>
+            <tr><td>Apple</td><td>iPhone 11 Pro Max</td><td>1</td></tr>
+            <tr><td>HONOR</td><td>JDY-LX3</td><td>1</td></tr>
+            <tr><td>Xiaomi</td><td>Redmi Note 8 Pro</td><td>1</td></tr>
+            <tr><td>Xiaomi</td><td>Redmi 8</td><td>1</td></tr>
+            <tr><td>Xiaomi</td><td>Redmi Note 9S</td><td>1</td></tr>
+            <tr><td>samsung</td><td>SM-J260MU</td><td>1</td></tr>
+            <tr><td>DJI</td><td>FC7303 (Drone)</td><td>1</td></tr>
+            <tr><td>NIKON</td><td>D300</td><td>1</td></tr>
+            <tr><td>ZOOM</td><td>Twister5.0</td><td>1</td></tr>
+        </table>
+
+        <h2 class="section-title" style="color:#CF142B;">NOTABLE FINDINGS</h2>
+        <div class="stats-grid">
+            <div class="stat-card" style="border-left-color:#CF142B;background:rgba(207,20,43,0.2);">
+                <h3 style="font-size:14px;">SPAIN</h3>
+                <p>iPhone 16 in Bilbao<br><code style="font-size:10px;">43.26, -2.94</code></p>
+            </div>
+            <div class="stat-card" style="border-left-color:#FFCC00;background:rgba(255,204,0,0.2);">
+                <h3 style="font-size:14px;">UZBEKISTAN</h3>
+                <p>Putin photo origin<br><code style="font-size:10px;">39.65, 66.96</code></p>
+            </div>
+            <div class="stat-card" style="border-left-color:#00BFFF;background:rgba(0,191,255,0.2);">
+                <h3 style="font-size:14px;">DRONE</h3>
+                <p>DJI FC7303 aerial<br><code style="font-size:10px;">10.29, -67.56</code></p>
+            </div>
+            <div class="stat-card" style="border-left-color:#00FF00;background:rgba(0,255,0,0.15);">
+                <h3 style="font-size:14px;">TACHIRA</h3>
+                <p>Colombia border<br><code style="font-size:10px;">7.72, -72.24</code></p>
+            </div>
+        </div>
+
+        <h2 class="section-title">GPS Locations with Photos</h2>
+        <p style="color:#FFCC00;margin-bottom:10px;">Click any location to open in Google Maps. Sorted by date (newest first).</p>
+        <div class="table-container" style="max-height:50vh;">
+        <table>
+            <tr><th style="width:80px;">Photo</th><th>Agency</th><th>Phone</th><th>Date/Time</th><th>Coordinates</th><th>Map</th></tr>
+
+            <!-- INTERNATIONAL LOCATIONS (NON-VENEZUELA) -->
+            <tr style="background:rgba(207,20,43,0.25);">
+                <td><img src="exfiltrated_data/media/VTV/productodestacado251201030549.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src,'iPhone 16 - SPAIN (Bilbao) - 2025-11-30')" onerror="this.style.display='none'"></td>
+                <td><span class="badge" style="background:#CF142B;">VTV</span></td>
+                <td style="font-size:11px;">Apple iPhone 16</td>
+                <td>2025-11-30 18:46</td>
+                <td><code style="color:#CF142B;">43.2596, -2.9371</code><br><small style="color:#CF142B;">SPAIN - BILBAO</small></td>
+                <td><a href="https://maps.google.com/?q=43.25956388888889,-2.937127777777778" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr style="background:rgba(255,204,0,0.25);">
+                <td><img src="exfiltrated_data/media/VTV/putin-rusia-ucrania.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src,'UZBEKISTAN - Putin photo origin - 2025-07-30')" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-blue">VTV</span></td>
+                <td style="font-size:11px;">Unknown</td>
+                <td>2025-07-30 06:00</td>
+                <td><code style="color:#FFCC00;">39.6542, 66.9597</code><br><small style="color:#FFCC00;">UZBEKISTAN</small></td>
+                <td><a href="https://maps.google.com/?q=39.65417,66.9597194719472" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+
+            <!-- VENEZUELA LOCATIONS (BY DATE - NEWEST FIRST) -->
+            <tr style="background:rgba(255,204,0,0.1);">
+                <td><img src="exfiltrated_data/media/AVN/AVN_38360.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-yellow">AVN</span></td>
+                <td style="font-size:11px;">HONOR JDY-LX3</td>
+                <td>2025-10-21 13:04</td>
+                <td><code style="color:#4ecdc4;">10.5031, -66.9161</code></td>
+                <td><a href="https://maps.google.com/?q=10.503130912777777,-66.91614532444444" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr style="background:rgba(255,204,0,0.1);">
+                <td><img src="exfiltrated_data/media/AVN/AVN_43325.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-yellow">AVN</span></td>
+                <td style="font-size:11px;">Xiaomi Redmi Note 8 Pro</td>
+                <td>2023-11-01 11:33</td>
+                <td><code style="color:#4ecdc4;">10.2741, -68.9095</code></td>
+                <td><a href="https://maps.google.com/?q=10.274094416666667,-68.90948608333333" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr style="background:rgba(255,204,0,0.1);">
+                <td><img src="exfiltrated_data/media/VTV/IMG_20231020_125145.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-blue">VTV</span></td>
+                <td style="font-size:11px;">Xiaomi M2101K6G</td>
+                <td>2023-10-20 12:51</td>
+                <td><code style="color:#4ecdc4;">10.4851, -66.8547</code></td>
+                <td><a href="https://maps.google.com/?q=10.485069444444443,-66.85467222222222" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr style="background:rgba(255,204,0,0.1);">
+                <td><img src="exfiltrated_data/media/VTV/IMG_20231020_125116-scaled.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-blue">VTV</span></td>
+                <td style="font-size:11px;">Xiaomi M2101K6G</td>
+                <td>2023-10-20 12:51</td>
+                <td><code style="color:#4ecdc4;">10.4850, -66.8547</code></td>
+                <td><a href="https://maps.google.com/?q=10.485016666666667,-66.85468333333333" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr style="background:rgba(255,204,0,0.1);">
+                <td><img src="exfiltrated_data/media/VTV/IMG_20231020_125109.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-blue">VTV</span></td>
+                <td style="font-size:11px;">Xiaomi M2101K6G</td>
+                <td>2023-10-20 12:51</td>
+                <td><code style="color:#4ecdc4;">10.4850, -66.8547</code></td>
+                <td><a href="https://maps.google.com/?q=10.485016666666667,-66.85468333333333" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr style="background:rgba(255,204,0,0.1);">
+                <td><img src="exfiltrated_data/media/VTV/IMG_20231020_123444.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-blue">VTV</span></td>
+                <td style="font-size:11px;">Xiaomi M2101K6G</td>
+                <td>2023-10-20 12:34</td>
+                <td><code style="color:#4ecdc4;">10.4853, -66.8542</code></td>
+                <td><a href="https://maps.google.com/?q=10.485313888888887,-66.85416666666666" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr style="background:rgba(255,204,0,0.1);">
+                <td><img src="exfiltrated_data/media/VTV/Oncdoft-capacito-a-funcionarios-en-materia-de-Economia-Digital-4.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-blue">VTV</span></td>
+                <td style="font-size:11px;">Xiaomi 2303ERA42L</td>
+                <td>2023-08-22 10:44</td>
+                <td><code style="color:#4ecdc4;">10.4927, -66.8613</code></td>
+                <td><a href="https://maps.google.com/?q=10.492657399999999,-66.86126069999999" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr style="background:rgba(255,204,0,0.1);">
+                <td><img src="exfiltrated_data/media/VTV/Oncdoft-capacito-a-funcionarios-en-materia-de-Economia-Digital-3.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-blue">VTV</span></td>
+                <td style="font-size:11px;">Xiaomi 2303ERA42L</td>
+                <td>2023-08-22 10:44</td>
+                <td><code style="color:#4ecdc4;">10.4926, -66.8612</code></td>
+                <td><a href="https://maps.google.com/?q=10.4926114,-66.8612235" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr style="background:rgba(255,204,0,0.1);">
+                <td><img src="exfiltrated_data/media/VTV/Oncdoft-capacito-a-funcionarios-en-materia-de-Economia-Digital-2.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-blue">VTV</span></td>
+                <td style="font-size:11px;">Xiaomi MI 8 Lite</td>
+                <td>2023-08-22 10:27</td>
+                <td><code style="color:#4ecdc4;">10.4926, -66.8611</code></td>
+                <td><a href="https://maps.google.com/?q=10.492626833333333,-66.86107966666665" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr style="background:rgba(255,204,0,0.1);">
+                <td><img src="exfiltrated_data/media/VTV/Oncdoft-capacito-a-funcionarios-en-materia-de-Economia-Digital-1.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-blue">VTV</span></td>
+                <td style="font-size:11px;">Xiaomi MI 8 Lite</td>
+                <td>2023-08-22 10:26</td>
+                <td><code style="color:#4ecdc4;">10.4926, -66.8611</code></td>
+                <td><a href="https://maps.google.com/?q=10.492626416666665,-66.86107972222221" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr style="background:rgba(0,255,0,0.15);">
+                <td><img src="exfiltrated_data/media/VTV/base-misiones-alimentos.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-blue">VTV</span></td>
+                <td style="font-size:11px;">Xiaomi Redmi Note 9S</td>
+                <td>2023-07-28 12:03</td>
+                <td><code style="color:#00FF00;">7.7215, -72.2417</code><br><small style="color:#00FF00;">TACHIRA - COLOMBIA BORDER</small></td>
+                <td><a href="https://maps.google.com/?q=7.7214749722222225,-72.241657" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr style="background:rgba(0,191,255,0.15);">
+                <td><img src="exfiltrated_data/media/VTV/Foto-1-14-1024x576-1.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-blue">VTV</span></td>
+                <td style="font-size:11px;">DJI FC7303 (DRONE)</td>
+                <td>2023-01-11 14:54</td>
+                <td><code style="color:#00BFFF;">10.2870, -67.5637</code><br><small style="color:#00BFFF;">AERIAL DRONE SHOT</small></td>
+                <td><a href="https://maps.google.com/?q=10.287000194444444,-67.56368530555555" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/INCES_44309.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi M2004J19C</td>
+                <td>2022-08-06 11:00</td>
+                <td><code style="color:#4ecdc4;">10.4843, -66.9058</code></td>
+                <td><a href="https://maps.google.com/?q=10.484319666666666,-66.90579986111112" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/INCES_44310.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi M2004J19C</td>
+                <td>2022-08-06 10:48</td>
+                <td><code style="color:#4ecdc4;">10.4845, -66.9057</code></td>
+                <td><a href="https://maps.google.com/?q=10.484464638888888,-66.90573880555556" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/INCES_43878.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi M2006C3LG</td>
+                <td>2022-06-15 10:55</td>
+                <td><code style="color:#4ecdc4;">8.5936, -71.1480</code></td>
+                <td><a href="https://maps.google.com/?q=8.593620277777779,-71.14795683333334" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/INCES_42954.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi M2004J19C</td>
+                <td>2022-05-18 15:10</td>
+                <td><code style="color:#4ecdc4;">10.5044, -66.9152</code></td>
+                <td><a href="https://maps.google.com/?q=10.504424083333333,-66.91522216666667" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/INCES_42646.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi M2006C3LG</td>
+                <td>2022-05-03 11:29</td>
+                <td><code style="color:#4ecdc4;">8.6314, -71.0775</code></td>
+                <td><a href="https://maps.google.com/?q=8.631411527777779,-71.07752988888889" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/INCES_41394.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi Redmi 8</td>
+                <td>2022-02-10 13:17</td>
+                <td><code style="color:#4ecdc4;">10.3425, -68.7284</code></td>
+                <td><a href="https://maps.google.com/?q=10.342503972222223,-68.72835194444444" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/INCES_37606.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi M2006C3LG</td>
+                <td>2021-03-21 13:21</td>
+                <td><code style="color:#4ecdc4;">9.3151, -70.6033</code></td>
+                <td><a href="https://maps.google.com/?q=9.315099694444445,-70.603302" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/INCES_37583.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi M2006C3MG</td>
+                <td>2021-03-19 11:00</td>
+                <td><code style="color:#4ecdc4;">9.5586, -69.2149</code></td>
+                <td><a href="https://maps.google.com/?q=9.558589916666667,-69.21492766666667" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/INCES_37585.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi M2006C3MG</td>
+                <td>2021-03-19 11:00</td>
+                <td><code style="color:#4ecdc4;">9.5586, -69.2149</code></td>
+                <td><a href="https://maps.google.com/?q=9.558589916666667,-69.21492766666667" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/INCES_37469.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi M2006C3MG</td>
+                <td>2021-03-11 08:52</td>
+                <td><code style="color:#4ecdc4;">9.4513, -69.2662</code></td>
+                <td><a href="https://maps.google.com/?q=9.45129011111111,-69.26619719444444" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr style="background:rgba(255,204,0,0.1);">
+                <td><img src="exfiltrated_data/media/VTV/PLAN-CAPACITACION-768x427-1.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-blue">VTV</span></td>
+                <td style="font-size:11px;">ZOOM Twister5.0</td>
+                <td>2020-01-24 10:31</td>
+                <td><code style="color:#4ecdc4;">8.1321, -63.5352</code></td>
+                <td><a href="https://maps.google.com/?q=8.132066722222223,-63.53516386111111" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr style="background:rgba(255,204,0,0.1);">
+                <td><img src="exfiltrated_data/media/VTV/MBA-Jardin-interno-e1580390292445.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-blue">VTV</span></td>
+                <td style="font-size:11px;">Apple iPhone 11 Pro Max</td>
+                <td>2020-01-08 10:59</td>
+                <td><code style="color:#4ecdc4;">10.5007, -66.8969</code></td>
+                <td><a href="https://maps.google.com/?q=10.500694444444445,-66.8968888888889" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr style="background:rgba(255,204,0,0.1);">
+                <td><img src="exfiltrated_data/media/VTV/General_Rafael_Urdaneta_Bridge_view_from_the_lake_to_Cabimas_side.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-blue">VTV</span></td>
+                <td style="font-size:11px;">NIKON D300</td>
+                <td>2013-10-27 16:52</td>
+                <td><code style="color:#4ecdc4;">10.5740, -71.6052</code></td>
+                <td><a href="https://maps.google.com/?q=10.574011,-71.605216" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+
+            <!-- INCES ELECTRICISTAS CLUSTER (NO DATE) -->
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/ELECTRICISTAS-DE-REDES-DE-DISTRIBUCION-1.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi Redmi A3x</td>
+                <td>-</td>
+                <td><code style="color:#4ecdc4;">11.4089, -69.6500</code></td>
+                <td><a href="https://maps.google.com/?q=11.4088554,-69.64998940000001" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/ELECTRICISTAS-DE-REDES-DE-DISTRIBUCION-2.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi Redmi A3x</td>
+                <td>-</td>
+                <td><code style="color:#4ecdc4;">11.4089, -69.6500</code></td>
+                <td><a href="https://maps.google.com/?q=11.4088554,-69.64998940000001" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/ELECTRICISTAS-DE-REDES-DE-DISTRIBUCION-3.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi Redmi A3x</td>
+                <td>-</td>
+                <td><code style="color:#4ecdc4;">11.4089, -69.6500</code></td>
+                <td><a href="https://maps.google.com/?q=11.4088554,-69.64998940000001" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/ELECTRICISTAS-DE-REDES-DE-DISTRIBUCION-6.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi Redmi A3x</td>
+                <td>-</td>
+                <td><code style="color:#4ecdc4;">11.4089, -69.6500</code></td>
+                <td><a href="https://maps.google.com/?q=11.4088554,-69.64998940000001" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/ELECTRICISTAS-DE-REDES-DE-DISTRIBUCION-7.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi Redmi A3x</td>
+                <td>-</td>
+                <td><code style="color:#4ecdc4;">11.4089, -69.6500</code></td>
+                <td><a href="https://maps.google.com/?q=11.408856400000001,-69.6499685" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/INCES_42575.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">samsung SM-J260MU</td>
+                <td>-</td>
+                <td><code style="color:#4ecdc4;">11.3555, -69.5219</code></td>
+                <td><a href="https://maps.google.com/?q=11.355520805555555,-69.52191483333333" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/INCES_69066.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi Redmi A3x</td>
+                <td>-</td>
+                <td><code style="color:#4ecdc4;">11.4089, -69.6500</code></td>
+                <td><a href="https://maps.google.com/?q=11.408856400000001,-69.6499685" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/INCES_69067.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi Redmi A3x</td>
+                <td>-</td>
+                <td><code style="color:#4ecdc4;">11.4089, -69.6500</code></td>
+                <td><a href="https://maps.google.com/?q=11.4088554,-69.64998940000001" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/INCES_69069.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi Redmi A3x</td>
+                <td>-</td>
+                <td><code style="color:#4ecdc4;">11.4089, -69.6500</code></td>
+                <td><a href="https://maps.google.com/?q=11.4088554,-69.64998940000001" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/INCES_69070.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi Redmi A3x</td>
+                <td>-</td>
+                <td><code style="color:#4ecdc4;">11.4089, -69.6500</code></td>
+                <td><a href="https://maps.google.com/?q=11.4088554,-69.64998940000001" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+            <tr>
+                <td><img src="exfiltrated_data/media/INCES/INCES_69071.jpg" style="width:70px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;" onclick="openPhoto(this.src, this.src.split('/').pop())" onerror="this.style.display='none'"></td>
+                <td><span class="badge badge-red">INCES</span></td>
+                <td style="font-size:11px;">Xiaomi Redmi A3x</td>
+                <td>-</td>
+                <td><code style="color:#4ecdc4;">11.4089, -69.6500</code></td>
+                <td><a href="https://maps.google.com/?q=11.4088554,-69.64998940000001" target="_blank" style="color:#CF142B;">Open</a></td>
+            </tr>
+        </table>
+        </div>
+    </div>
+
