@@ -24,7 +24,7 @@
 
 Crystal Vault documents Venezuela's centralized surveillance database announced in December 2024. The system, built by Chinese company ZTE, merges citizen identity records, banking data, and social program participation for over 30 million Venezuelans.
 
-The regime exposed their infrastructure through unsecured WordPress REST APIs. Approximately **4.34 GB** of data was retrieved without authentication, including government office locations, staff GPS coordinates, and operational statistics.
+The regime exposed their infrastructure through unsecured WordPress REST APIs. Approximately **27.7 GB** of data was retrieved without authentication, including government office locations, staff GPS coordinates, and operational statistics.
 
 ---
 
@@ -32,13 +32,14 @@ The regime exposed their infrastructure through unsecured WordPress REST APIs. A
 
 | Metric | Count |
 |--------|-------|
-| Total Data Exfiltrated | 4.34 GB |
-| Media Files | 9,716 |
+| Total Repository Size | 30.6 GB |
+| Total Data Exfiltrated | 27.7 GB |
+| Media Files | 72,883 |
 | Images with EXIF Metadata | 13,209 |
 | Staff Phone GPS Locations | 345 |
-| OFAC Sanctioned Individuals | 210 |
+| OFAC Sanctioned Individuals | 470 |
 | Cracked Gravatar Emails | 35 |
-| CNE Intranet Routes Exposed | 78 |
+| CNE Intranet Routes Exposed | 154 |
 | Personnel Records | 1,550 |
 
 ---
@@ -48,7 +49,7 @@ The regime exposed their infrastructure through unsecured WordPress REST APIs. A
 ### Main Dashboard (`index.html`)
 - Overview with key statistics
 - Interactive map with 479 locations (134 SAIME offices + 345 GPS coordinates)
-- Media gallery with 9,716 files across government agencies
+- Media gallery with 72,883 files across government agencies
 - EXIF metadata analysis
 - GPS Intel tab with phone model and datetime extraction
 - Cracked Gravatar hashes (35 emails recovered)
@@ -115,7 +116,7 @@ crystal-vault/
 - WordPress REST API: `/wp-json/wp/v2/users`
 - Media endpoints: `/wp-json/wp/v2/media`
 - Geographic data: `/wp-json/` various routes
-- CNE Intranet: 78 exposed internal routes
+- CNE Intranet: 154 exposed internal routes
 
 ### EXIF Analysis
 - 13,209 images processed for metadata
