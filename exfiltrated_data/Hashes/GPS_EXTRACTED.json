@@ -1,0 +1,2395 @@
+[
+  {
+    "file": "AVN\\AVN_38360.jpg",
+    "agency": "AVN",
+    "lat": 10.503130912777777,
+    "lon": -66.91614532444444,
+    "altitude": 909.6
+  },
+  {
+    "file": "AVN\\AVN_43325.jpg",
+    "agency": "AVN",
+    "lat": 10.274094416666667,
+    "lon": -68.90948608333333
+  },
+  {
+    "file": "AVN\\Cafe-2.jpg",
+    "agency": "AVN",
+    "lat": 10.274094416666667,
+    "lon": -68.90948608333333
+  },
+  {
+    "file": "AVN\\IMG_20251021_130450-1536x1152-1.jpg",
+    "agency": "AVN",
+    "lat": 10.503130912777777,
+    "lon": -66.91614532444444,
+    "altitude": 909.6
+  },
+  {
+    "file": "Correo\\result_IVIC.jpg",
+    "agency": "Correo",
+    "lat": 10.398141666666666,
+    "lon": -66.97835833333333,
+    "altitude": 1636.4
+  },
+  {
+    "file": "INCES\\07-59-aniversario.jpg",
+    "agency": "INCES",
+    "lat": 10.496605666666666,
+    "lon": -66.93165144444446,
+    "altitude": 869.0
+  },
+  {
+    "file": "INCES\\1-alimento-alternativo.jpg",
+    "agency": "INCES",
+    "lat": 10.470277777777778,
+    "lon": -64.165,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\1-feria-productiva.jpg",
+    "agency": "INCES",
+    "lat": 10.496221722222222,
+    "lon": -66.93159402777778,
+    "altitude": 882.0
+  },
+  {
+    "file": "INCES\\1-formaci\u00f3n-y-certificaci\u00f3n-Inces.jpg",
+    "agency": "INCES",
+    "lat": 10.496401166666665,
+    "lon": -66.93179547222223,
+    "altitude": 863.292
+  },
+  {
+    "file": "INCES\\1-recuperaci\u00f3n-del-hospital.jpg",
+    "agency": "INCES",
+    "lat": 10.468071916666666,
+    "lon": -64.16156005555555,
+    "altitude": 7.0
+  },
+  {
+    "file": "INCES\\1-reina-del-deporte.jpg",
+    "agency": "INCES",
+    "lat": 7.760839388888889,
+    "lon": -72.23282458333334,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\1-Somos-Inces.jpg",
+    "agency": "INCES",
+    "lat": 10.507565597222221,
+    "lon": -66.9192117,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\159-aniversario.jpg",
+    "agency": "INCES",
+    "lat": 10.496885944444443,
+    "lon": -66.93172352777778,
+    "altitude": 958.0
+  },
+  {
+    "file": "INCES\\1alianzas-en-materia-productiva-.jpg",
+    "agency": "INCES",
+    "lat": 10.500768388888888,
+    "lon": -66.9047473888889,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\1atenci\u00f3n-integral-a-la-mujer.jpg",
+    "agency": "INCES",
+    "lat": 10.483897666666666,
+    "lon": -66.90581677777779,
+    "altitude": 878.0
+  },
+  {
+    "file": "INCES\\1certificaci\u00f3n.jpg",
+    "agency": "INCES",
+    "lat": 10.469566055555555,
+    "lon": -66.94615102777779,
+    "altitude": 898.0
+  },
+  {
+    "file": "INCES\\1conmemorar-el-Congreso-de-Angostura.jpg",
+    "agency": "INCES",
+    "lat": 10.4725,
+    "lon": -64.1563888888889,
+    "altitude": 22.0
+  },
+  {
+    "file": "INCES\\1Consejos-Estudiantiles.jpg",
+    "agency": "INCES",
+    "lat": 10.507563897222223,
+    "lon": -66.9192471,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\1convenio-con-el-MST-de-Brasil.jpg",
+    "agency": "INCES",
+    "lat": 10.5076003,
+    "lon": -66.9192045,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\1cuerpo-de-combatientes.jpg",
+    "agency": "INCES",
+    "lat": 10.470555555555556,
+    "lon": -64.16472222222222,
+    "altitude": 7.0
+  },
+  {
+    "file": "INCES\\1desde-Somos-Inces.jpg",
+    "agency": "INCES",
+    "lat": 10.507563897222223,
+    "lon": -66.91924897222222,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\1D\u00eda-de-la-Dignidad-Nacional.jpg",
+    "agency": "INCES",
+    "lat": 10.448611111111111,
+    "lon": -64.18055555555556,
+    "altitude": 23.0
+  },
+  {
+    "file": "INCES\\1Escuela-Pr\u00e1ctica-de-Agricultura.jpg",
+    "agency": "INCES",
+    "lat": 10.22861111111111,
+    "lon": -67.51555555555555
+  },
+  {
+    "file": "INCES\\1estudiantes.jpg",
+    "agency": "INCES",
+    "lat": 9.761741175833333,
+    "lon": -63.14846350277778,
+    "altitude": 65.85
+  },
+  {
+    "file": "INCES\\1Formaci\u00f3n-Profesional-.jpg",
+    "agency": "INCES",
+    "lat": 11.399582472222221,
+    "lon": -69.66546086111111,
+    "altitude": 13.493
+  },
+  {
+    "file": "INCES\\1formaci\u00f3n-y-autoformaci\u00f3n.jpg",
+    "agency": "INCES",
+    "lat": 10.484036111111111,
+    "lon": -66.90609722222223,
+    "altitude": 879.4961715160796
+  },
+  {
+    "file": "INCES\\1madrinas-y-padrinos-del-carnaval.jpg",
+    "agency": "INCES",
+    "lat": 10.496752638888887,
+    "lon": -66.92878069444446,
+    "altitude": 894.267
+  },
+  {
+    "file": "INCES\\1proyectos-productivos-.jpg",
+    "agency": "INCES",
+    "lat": 10.484431583333333,
+    "lon": -66.90574469444445,
+    "altitude": 871.099
+  },
+  {
+    "file": "INCES\\1Trabajadores-de-L\u00e1cteos.jpg",
+    "agency": "INCES",
+    "lat": 10.029444444444445,
+    "lon": -69.25361111111111
+  },
+  {
+    "file": "INCES\\2-alimento-alternativo.jpg",
+    "agency": "INCES",
+    "lat": 10.470277777777778,
+    "lon": -64.165,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\2-campa\u00f1a-de-acreditaci\u00f3n.jpg",
+    "agency": "INCES",
+    "lat": 9.3193175,
+    "lon": -70.59850555555555,
+    "altitude": 512.63
+  },
+  {
+    "file": "INCES\\2-feria-productiva.jpg",
+    "agency": "INCES",
+    "lat": 10.496221833333333,
+    "lon": -66.93159422222223,
+    "altitude": 882.0
+  },
+  {
+    "file": "INCES\\2-formaci\u00f3n-y-certificaci\u00f3n-Inces.jpg",
+    "agency": "INCES",
+    "lat": 10.498151888888888,
+    "lon": -66.9319728888889,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\2-recuperaci\u00f3n-del-hospital.jpg",
+    "agency": "INCES",
+    "lat": 10.46819875,
+    "lon": -64.16160583333334,
+    "altitude": 72.0
+  },
+  {
+    "file": "INCES\\2-Somos-Inces.jpg",
+    "agency": "INCES",
+    "lat": 10.5075798,
+    "lon": -66.91920779722223,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\2-Unexca-estrechan-alianza.jpg",
+    "agency": "INCES",
+    "lat": 10.495778805555554,
+    "lon": -66.84601513888889,
+    "altitude": 867.0
+  },
+  {
+    "file": "INCES\\20181018_103138.jpg",
+    "agency": "INCES",
+    "lat": 10.507547,
+    "lon": -66.91917547222222,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\20181018_103233.jpg",
+    "agency": "INCES",
+    "lat": 10.507562097222221,
+    "lon": -66.9192314,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\20181018_103541.jpg",
+    "agency": "INCES",
+    "lat": 10.5075467,
+    "lon": -66.9191754,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\20181018_104102.jpg",
+    "agency": "INCES",
+    "lat": 10.5075471,
+    "lon": -66.9191758,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\20181129_113029.jpg",
+    "agency": "INCES",
+    "lat": 10.261666666666667,
+    "lon": -67.46083333333334
+  },
+  {
+    "file": "INCES\\20181129_114505.jpg",
+    "agency": "INCES",
+    "lat": 10.261666666666667,
+    "lon": -67.46083333333334
+  },
+  {
+    "file": "INCES\\20181129_122108.jpg",
+    "agency": "INCES",
+    "lat": 10.261666666666667,
+    "lon": -67.46083333333334
+  },
+  {
+    "file": "INCES\\20181129_122419.jpg",
+    "agency": "INCES",
+    "lat": 10.261666666666667,
+    "lon": -67.46083333333334
+  },
+  {
+    "file": "INCES\\20181206_094442.jpg",
+    "agency": "INCES",
+    "lat": 10.22638888888889,
+    "lon": -67.51416666666667
+  },
+  {
+    "file": "INCES\\20181206_111240.jpg",
+    "agency": "INCES",
+    "lat": 10.22638888888889,
+    "lon": -67.515
+  },
+  {
+    "file": "INCES\\20181206_111328.jpg",
+    "agency": "INCES",
+    "lat": 10.22638888888889,
+    "lon": -67.51305555555555
+  },
+  {
+    "file": "INCES\\20181206_113458.jpg",
+    "agency": "INCES",
+    "lat": 10.225555555555555,
+    "lon": -67.5125
+  },
+  {
+    "file": "INCES\\20190814_100002.jpg",
+    "agency": "INCES",
+    "lat": 5.658160194444445,
+    "lon": -67.61465452777777,
+    "altitude": 77.0
+  },
+  {
+    "file": "INCES\\2alianza-estrat\u00e9gica.jpg",
+    "agency": "INCES",
+    "lat": 10.508657777777778,
+    "lon": -66.91408647222222,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\2alianzas-en-materia-productiva-.jpg",
+    "agency": "INCES",
+    "lat": 10.500768388888888,
+    "lon": -66.9047473888889,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\2certificaci\u00f3n.jpg",
+    "agency": "INCES",
+    "lat": 10.46956525,
+    "lon": -66.94615469444444,
+    "altitude": 898.0
+  },
+  {
+    "file": "INCES\\2conmemorar-el-Congreso-de-Angostura.jpg",
+    "agency": "INCES",
+    "lat": 10.472222222222223,
+    "lon": -64.15666666666667,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\2Consejos-Estudiantiles.jpg",
+    "agency": "INCES",
+    "lat": 10.507563897222223,
+    "lon": -66.9192471,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\2convenio-con-el-MST-de-Brasil.jpg",
+    "agency": "INCES",
+    "lat": 10.5075876,
+    "lon": -66.91919479722223,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\2cuerpo-de-combatientes.jpg",
+    "agency": "INCES",
+    "lat": 10.470277777777778,
+    "lon": -64.16472222222222,
+    "altitude": 11.0
+  },
+  {
+    "file": "INCES\\2desde-Somos-Inces.jpg",
+    "agency": "INCES",
+    "lat": 10.507563897222223,
+    "lon": -66.91924897222222,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\2D\u00eda-de-la-Dignidad-Nacional.jpg",
+    "agency": "INCES",
+    "lat": 10.448333333333334,
+    "lon": -64.18055555555556,
+    "altitude": 21.0
+  },
+  {
+    "file": "INCES\\2en-caso-de-violencia-.jpg",
+    "agency": "INCES",
+    "lat": 10.484116666666665,
+    "lon": -66.9061138888889,
+    "altitude": 881.5159474671669
+  },
+  {
+    "file": "INCES\\2Escuela-Pr\u00e1ctica-de-Agricultura.jpg",
+    "agency": "INCES",
+    "lat": 10.22861111111111,
+    "lon": -67.51555555555555
+  },
+  {
+    "file": "INCES\\2Formaci\u00f3n-Profesional-.jpg",
+    "agency": "INCES",
+    "lat": 11.399154083333332,
+    "lon": -69.66488227777778,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\2formaci\u00f3n-y-autoformaci\u00f3n.jpg",
+    "agency": "INCES",
+    "lat": 10.484108333333333,
+    "lon": -66.90609722222223,
+    "altitude": 879.2348195329087
+  },
+  {
+    "file": "INCES\\2madrinas-y-padrinos-del-carnaval.jpg",
+    "agency": "INCES",
+    "lat": 10.496941166666666,
+    "lon": -66.92865772222223,
+    "altitude": 914.813
+  },
+  {
+    "file": "INCES\\2Movimiento-Nacional-de-aprendices.jpg",
+    "agency": "INCES",
+    "lat": 10.507563897222223,
+    "lon": -66.91924869722223,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\2reina-del-deporte.jpg",
+    "agency": "INCES",
+    "lat": 7.7610393888888884,
+    "lon": -72.2327523888889,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\2Trabajadores-de-L\u00e1cteos.jpg",
+    "agency": "INCES",
+    "lat": 10.029216750000002,
+    "lon": -69.25324247222223,
+    "altitude": 414.0
+  },
+  {
+    "file": "INCES\\3-feria-productiva.jpg",
+    "agency": "INCES",
+    "lat": 10.496271333333333,
+    "lon": -66.93156502777778,
+    "altitude": 881.0
+  },
+  {
+    "file": "INCES\\3-formaci\u00f3n-y-certificaci\u00f3n-Inces.jpg",
+    "agency": "INCES",
+    "lat": 10.498107583333333,
+    "lon": -66.93569569444445,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\3-recuperaci\u00f3n-del-hospital.jpg",
+    "agency": "INCES",
+    "lat": 10.46814536111111,
+    "lon": -64.16166686111112,
+    "altitude": 69.0
+  },
+  {
+    "file": "INCES\\3-Unexca-estrechan-alianza.jpg",
+    "agency": "INCES",
+    "lat": 10.495301583333333,
+    "lon": -66.84536219444443,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\359-aniversario.jpg",
+    "agency": "INCES",
+    "lat": 10.496589499999999,
+    "lon": -66.93176588888889,
+    "altitude": 903.0
+  },
+  {
+    "file": "INCES\\3alianza-estrat\u00e9gica.jpg",
+    "agency": "INCES",
+    "lat": 10.510572277777777,
+    "lon": -66.91465308333333,
+    "altitude": 933.299
+  },
+  {
+    "file": "INCES\\3alianzas-en-materia-productiva-.jpg",
+    "agency": "INCES",
+    "lat": 10.500691333333334,
+    "lon": -66.90470061111111,
+    "altitude": 885.0
+  },
+  {
+    "file": "INCES\\3atenci\u00f3n-integral-a-la-mujer.jpg",
+    "agency": "INCES",
+    "lat": 10.483957166666666,
+    "lon": -66.905877,
+    "altitude": 868.0
+  },
+  {
+    "file": "INCES\\3certificaci\u00f3n.jpg",
+    "agency": "INCES",
+    "lat": 10.469570166666667,
+    "lon": -66.94612825,
+    "altitude": 899.0
+  },
+  {
+    "file": "INCES\\3conmemorar-el-Congreso-de-Angostura.jpg",
+    "agency": "INCES",
+    "lat": 10.4725,
+    "lon": -64.15666666666667,
+    "altitude": 32.0
+  },
+  {
+    "file": "INCES\\3Consejos-Estudiantiles.jpg",
+    "agency": "INCES",
+    "lat": 10.507564,
+    "lon": -66.91924889722223,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\3D\u00eda-de-la-Dignidad-Nacional.jpg",
+    "agency": "INCES",
+    "lat": 10.46361111111111,
+    "lon": -64.17333333333333,
+    "altitude": 12.0
+  },
+  {
+    "file": "INCES\\3estudiantes.jpg",
+    "agency": "INCES",
+    "lat": 9.761247433888888,
+    "lon": -63.147519755,
+    "altitude": 111.89
+  },
+  {
+    "file": "INCES\\3Formaci\u00f3n-Profesional-.jpg",
+    "agency": "INCES",
+    "lat": 11.399415777777778,
+    "lon": -69.6659535,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\3madrinas-y-padrinos-del-carnaval.jpg",
+    "agency": "INCES",
+    "lat": 10.496947055555555,
+    "lon": -66.92864194444445,
+    "altitude": 916.65
+  },
+  {
+    "file": "INCES\\3Movimiento-Nacional-de-aprendices.jpg",
+    "agency": "INCES",
+    "lat": 10.507563472222222,
+    "lon": -66.9191433,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\3Somos-Aprendices.jpg",
+    "agency": "INCES",
+    "lat": 10.21637939861111,
+    "lon": -67.57013787666666,
+    "altitude": 467.0
+  },
+  {
+    "file": "INCES\\4-feria-productiva.jpg",
+    "agency": "INCES",
+    "lat": 10.496207833333333,
+    "lon": -66.93175183333334,
+    "altitude": 891.0
+  },
+  {
+    "file": "INCES\\4-formaci\u00f3n-y-certificaci\u00f3n-Inces.jpg",
+    "agency": "INCES",
+    "lat": 10.498107583333333,
+    "lon": -66.93569569444445,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\4-Radio-.jpg",
+    "agency": "INCES",
+    "lat": 10.5075637,
+    "lon": -66.91924459722223,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\4alianza-estrat\u00e9gica.jpg",
+    "agency": "INCES",
+    "lat": 10.51057438888889,
+    "lon": -66.91483497222222,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\4convenio-con-el-MST-de-Brasil.jpg",
+    "agency": "INCES",
+    "lat": 10.5075876,
+    "lon": -66.91919479722223,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\4desde-Somos-Inces.jpg",
+    "agency": "INCES",
+    "lat": 10.507563797222222,
+    "lon": -66.9192481,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\4en-caso-de-violencia-.jpg",
+    "agency": "INCES",
+    "lat": 10.485494444444443,
+    "lon": -66.90584444444445,
+    "altitude": 892.6608280254777
+  },
+  {
+    "file": "INCES\\4Escuela-Pr\u00e1ctica-de-Agricultura.jpg",
+    "agency": "INCES",
+    "lat": 10.228333333333333,
+    "lon": -67.51555555555555
+  },
+  {
+    "file": "INCES\\4Somos-Aprendices.jpg",
+    "agency": "INCES",
+    "lat": 10.216162178333333,
+    "lon": -67.569336615,
+    "altitude": 343.0
+  },
+  {
+    "file": "INCES\\5-atenci\u00f3n-integral-a-la-mujer.jpg",
+    "agency": "INCES",
+    "lat": 10.483957166666666,
+    "lon": -66.905877,
+    "altitude": 868.0
+  },
+  {
+    "file": "INCES\\5-Unexca-estrechan-alianza.jpg",
+    "agency": "INCES",
+    "lat": 10.495780277777778,
+    "lon": -66.84529277777777,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\559-aniversario.jpg",
+    "agency": "INCES",
+    "lat": 10.496885944444443,
+    "lon": -66.93172352777778,
+    "altitude": 958.0
+  },
+  {
+    "file": "INCES\\5Bachillerato-con-Perfil-Productivo.jpg",
+    "agency": "INCES",
+    "lat": 10.510688527777777,
+    "lon": -66.91456291666667,
+    "altitude": 880.0
+  },
+  {
+    "file": "INCES\\5certificaci\u00f3n.jpg",
+    "agency": "INCES",
+    "lat": 10.469577777777777,
+    "lon": -66.94611227777779,
+    "altitude": 902.0
+  },
+  {
+    "file": "INCES\\5cuerpo-de-combatientes.jpg",
+    "agency": "INCES",
+    "lat": 10.470277777777778,
+    "lon": -64.16472222222222,
+    "altitude": 21.0
+  },
+  {
+    "file": "INCES\\5estudiantes.jpg",
+    "agency": "INCES",
+    "lat": 9.761734098888889,
+    "lon": -63.149998725555555,
+    "altitude": 350.84
+  },
+  {
+    "file": "INCES\\5Expo-Feria-Productiva.jpeg",
+    "agency": "INCES",
+    "lat": 10.469758333333333,
+    "lon": -64.16538333333334,
+    "altitude": 7.0
+  },
+  {
+    "file": "INCES\\5proyectos-productivos-.jpg",
+    "agency": "INCES",
+    "lat": 10.484431583333333,
+    "lon": -66.90574469444445,
+    "altitude": 871.099
+  },
+  {
+    "file": "INCES\\6-feria-productiva.jpg",
+    "agency": "INCES",
+    "lat": 10.49622161111111,
+    "lon": -66.93174300000001,
+    "altitude": 884.0
+  },
+  {
+    "file": "INCES\\6-Unexca-estrechan-alianza.jpg",
+    "agency": "INCES",
+    "lat": 10.496872277777777,
+    "lon": -66.84225719444444,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\659-aniversario.jpg",
+    "agency": "INCES",
+    "lat": 10.496582333333333,
+    "lon": -66.93160986111111,
+    "altitude": 887.0
+  },
+  {
+    "file": "INCES\\6atenci\u00f3n-integral-a-la-mujer.jpg",
+    "agency": "INCES",
+    "lat": 10.483886027777777,
+    "lon": -66.90590625,
+    "altitude": 852.0
+  },
+  {
+    "file": "INCES\\6certificaci\u00f3n.jpg",
+    "agency": "INCES",
+    "lat": 10.469592861111112,
+    "lon": -66.94618422222223,
+    "altitude": 914.0
+  },
+  {
+    "file": "INCES\\6conmemorar-el-Congreso-de-Angostura.jpg",
+    "agency": "INCES",
+    "lat": 10.4725,
+    "lon": -64.15666666666667,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\6desde-Somos-Inces.jpg",
+    "agency": "INCES",
+    "lat": 10.507563897222223,
+    "lon": -66.91924819722223,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\6Escuela-Pr\u00e1ctica-de-Agricultura.jpg",
+    "agency": "INCES",
+    "lat": 10.228333333333333,
+    "lon": -67.51555555555555
+  },
+  {
+    "file": "INCES\\6proyectos-productivos-.jpg",
+    "agency": "INCES",
+    "lat": 10.484454277777777,
+    "lon": -66.90580169444445,
+    "altitude": 871.099
+  },
+  {
+    "file": "INCES\\7-feria-productiva.jpg",
+    "agency": "INCES",
+    "lat": 10.496230694444444,
+    "lon": -66.93171952777779,
+    "altitude": 884.0
+  },
+  {
+    "file": "INCES\\7desde-Somos-Inces.jpg",
+    "agency": "INCES",
+    "lat": 10.5075602,
+    "lon": -66.91909579722223,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\8desde-Somos-Inces.jpg",
+    "agency": "INCES",
+    "lat": 10.507563897222223,
+    "lon": -66.91924919722223,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\CERTIFICACION-TABAY-7.jpg",
+    "agency": "INCES",
+    "lat": 8.631411527777779,
+    "lon": -71.07752988888889,
+    "altitude": 1694.0
+  },
+  {
+    "file": "INCES\\ELECTRICISTAS-DE-REDES-DE-DISTRIBUCION-1.jpg",
+    "agency": "INCES",
+    "lat": 11.4088554,
+    "lon": -69.64998940000001,
+    "altitude": 6.5
+  },
+  {
+    "file": "INCES\\ELECTRICISTAS-DE-REDES-DE-DISTRIBUCION-2.jpg",
+    "agency": "INCES",
+    "lat": 11.4088554,
+    "lon": -69.64998940000001,
+    "altitude": 6.5
+  },
+  {
+    "file": "INCES\\ELECTRICISTAS-DE-REDES-DE-DISTRIBUCION-3.jpg",
+    "agency": "INCES",
+    "lat": 11.4088554,
+    "lon": -69.64998940000001,
+    "altitude": 6.5
+  },
+  {
+    "file": "INCES\\ELECTRICISTAS-DE-REDES-DE-DISTRIBUCION-6.jpg",
+    "agency": "INCES",
+    "lat": 11.4088554,
+    "lon": -69.64998940000001,
+    "altitude": 6.5
+  },
+  {
+    "file": "INCES\\ELECTRICISTAS-DE-REDES-DE-DISTRIBUCION-7.jpg",
+    "agency": "INCES",
+    "lat": 11.408856400000001,
+    "lon": -69.6499685,
+    "altitude": 6.5
+  },
+  {
+    "file": "INCES\\Gerente-Inces.jpg",
+    "agency": "INCES",
+    "lat": 10.342503972222223,
+    "lon": -68.72835194444444,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\IMG_20180925_111214.jpg",
+    "agency": "INCES",
+    "lat": 10.46985625,
+    "lon": -64.16526794444445,
+    "altitude": 27.0
+  },
+  {
+    "file": "INCES\\IMG_20180925_111408.jpg",
+    "agency": "INCES",
+    "lat": 10.469938277777779,
+    "lon": -64.16526030555556,
+    "altitude": 27.0
+  },
+  {
+    "file": "INCES\\IMG_20180927_112208.jpg",
+    "agency": "INCES",
+    "lat": 10.340845083333335,
+    "lon": -64.08406066666666,
+    "altitude": 87.0
+  },
+  {
+    "file": "INCES\\IMG_20180927_112300.jpg",
+    "agency": "INCES",
+    "lat": 10.3408985,
+    "lon": -64.08403777777777,
+    "altitude": 86.0
+  },
+  {
+    "file": "INCES\\IMG_20190425_153020868.jpg",
+    "agency": "INCES",
+    "lat": 8.238909583333333,
+    "lon": -62.90680138888889,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\IMG_20190425_153349147.jpg",
+    "agency": "INCES",
+    "lat": 8.238909583333333,
+    "lon": -62.90680138888889,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\IMG_20190425_153423012.jpg",
+    "agency": "INCES",
+    "lat": 8.238909583333333,
+    "lon": -62.90680138888889,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\IMG_20220518_151057.jpg",
+    "agency": "INCES",
+    "lat": 10.504424083333333,
+    "lon": -66.91522216666667,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\IMG_20220806_104842.jpg",
+    "agency": "INCES",
+    "lat": 10.484464638888888,
+    "lon": -66.90573880555556,
+    "altitude": 874.0
+  },
+  {
+    "file": "INCES\\IMG_20220806_110034.jpg",
+    "agency": "INCES",
+    "lat": 10.484319666666666,
+    "lon": -66.90579986111112,
+    "altitude": 868.0
+  },
+  {
+    "file": "INCES\\IMG_20230224_112927.jpg",
+    "agency": "INCES",
+    "lat": 10.505575,
+    "lon": -66.914545,
+    "altitude": 950.955
+  },
+  {
+    "file": "INCES\\IMG_20230224_132121.jpg",
+    "agency": "INCES",
+    "lat": 10.505598,
+    "lon": -66.91449097222223,
+    "altitude": 912.056
+  },
+  {
+    "file": "INCES\\IMG_20230301_130221_4843.jpg",
+    "agency": "INCES",
+    "lat": 10.50493525,
+    "lon": -66.91506955555556,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\IMG_20240221_150707.jpg",
+    "agency": "INCES",
+    "lat": 5.658295166666667,
+    "lon": -67.6149978611111,
+    "altitude": 63.0
+  },
+  {
+    "file": "INCES\\IMG_20240620_105920.jpg",
+    "agency": "INCES",
+    "lat": 5.665731916666667,
+    "lon": -67.58846280555555,
+    "altitude": 68.0
+  },
+  {
+    "file": "INCES\\IMG_20240711_113617.jpg",
+    "agency": "INCES",
+    "lat": 10.258255555555555,
+    "lon": -67.58954166666666
+  },
+  {
+    "file": "INCES\\IMG_20240819_145212.jpg",
+    "agency": "INCES",
+    "lat": 5.658084861111112,
+    "lon": -67.61476133333333,
+    "altitude": 69.0
+  },
+  {
+    "file": "INCES\\Inces-0-30Mayo19.jpg",
+    "agency": "INCES",
+    "lat": 10.511321194444445,
+    "lon": -66.91373008333333,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-1-12Junio19.jpg",
+    "agency": "INCES",
+    "lat": 8.250453277777778,
+    "lon": -62.785013888888884,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-1-22Mayo2019-2.jpg",
+    "agency": "INCES",
+    "lat": 8.295923,
+    "lon": -62.724283194444446,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-1-4MAyo19-2.jpg",
+    "agency": "INCES",
+    "lat": 8.295922888888889,
+    "lon": -62.72428177777778,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-1-6Mayo19-1.jpg",
+    "agency": "INCES",
+    "lat": 10.082091305555556,
+    "lon": -69.3439636111111,
+    "altitude": 581.0
+  },
+  {
+    "file": "INCES\\Inces-1-Bachillerato-Perfil-Productivo-.jpg",
+    "agency": "INCES",
+    "lat": 10.511321194444445,
+    "lon": -66.91373008333333,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-1-espacios-pol\u00edtica-ideol\u00f3gica-.jpg",
+    "agency": "INCES",
+    "lat": 10.470363888888889,
+    "lon": -64.16506944444446,
+    "altitude": 15.499682942295498
+  },
+  {
+    "file": "INCES\\Inces-1-mi-Escuela-.jpg",
+    "agency": "INCES",
+    "lat": 8.28641938888889,
+    "lon": -62.713099972222224,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-2-12Junio19.jpg",
+    "agency": "INCES",
+    "lat": 8.275082472222223,
+    "lon": -62.760083083333335,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-2-22Mayo2019-2.jpg",
+    "agency": "INCES",
+    "lat": 8.296469888888888,
+    "lon": -62.72338688888889,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-2-5MAyo19.jpg",
+    "agency": "INCES",
+    "lat": 10.19733888888889,
+    "lon": -67.56923611111111,
+    "altitude": 424.27572059751736
+  },
+  {
+    "file": "INCES\\Inces-2-espacios-pol\u00edtica-ideol\u00f3gica-.jpg",
+    "agency": "INCES",
+    "lat": 10.470366666666667,
+    "lon": -64.1647638888889,
+    "altitude": 21.0
+  },
+  {
+    "file": "INCES\\Inces-2-mi-Escuela-.jpg",
+    "agency": "INCES",
+    "lat": 8.285826972222223,
+    "lon": -62.713467388888894,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-20-5-2019-1-nivel-de-su-formaci\u00f3n..jpg",
+    "agency": "INCES",
+    "lat": 10.255787277777777,
+    "lon": -67.61015538888888,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-20-5-2019-2-nivel-de-su-formaci\u00f3n..jpg",
+    "agency": "INCES",
+    "lat": 10.255787277777777,
+    "lon": -67.61015538888888,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-3-4Mayo19-1.jpg",
+    "agency": "INCES",
+    "lat": 8.295923,
+    "lon": -62.724283166666666,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-3-5MAyo19.jpg",
+    "agency": "INCES",
+    "lat": 10.197352777777779,
+    "lon": -67.56922222222222,
+    "altitude": 427.4737187910644
+  },
+  {
+    "file": "INCES\\Inces-3-6Mayo19-1.jpg",
+    "agency": "INCES",
+    "lat": 10.082068416666667,
+    "lon": -69.34368133333332,
+    "altitude": 574.0
+  },
+  {
+    "file": "INCES\\Inces-3-mi-Escuela-.jpg",
+    "agency": "INCES",
+    "lat": 8.288614694444444,
+    "lon": -62.713467388888894,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-4-22Mayo2019.jpg",
+    "agency": "INCES",
+    "lat": 8.295729777777778,
+    "lon": -62.725958694444444,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-4-5Mayo19.jpg",
+    "agency": "INCES",
+    "lat": 10.639491999999999,
+    "lon": -71.60968199999999,
+    "altitude": 18.252
+  },
+  {
+    "file": "INCES\\Inces-4-6Mayo19.jpg",
+    "agency": "INCES",
+    "lat": 10.082187638888888,
+    "lon": -69.34366605555554,
+    "altitude": 575.0
+  },
+  {
+    "file": "INCES\\Inces-4-acreditaciones-formaciones-y-producci\u00f3n.jpg",
+    "agency": "INCES",
+    "lat": 10.261666666666667,
+    "lon": -67.46083333333334
+  },
+  {
+    "file": "INCES\\Inces-4-espacios-pol\u00edtica-ideol\u00f3gica-.jpg",
+    "agency": "INCES",
+    "lat": 10.470805555555556,
+    "lon": -64.16511666666668,
+    "altitude": 13.474903474903474
+  },
+  {
+    "file": "INCES\\Inces-6Mayo19.jpg",
+    "agency": "INCES",
+    "lat": 10.082107527777778,
+    "lon": -69.34407805555556,
+    "altitude": 559.0
+  },
+  {
+    "file": "INCES\\Inces-acreditaci\u00f3n-2-.jpeg",
+    "agency": "INCES",
+    "lat": 8.286074472222221,
+    "lon": -62.72157327777778,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-Agroecolog\u00eda-1-.jpg",
+    "agency": "INCES",
+    "lat": 10.945107444444444,
+    "lon": -63.966670972222225,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-Agroecolog\u00eda-2-.jpg",
+    "agency": "INCES",
+    "lat": 10.945118888888889,
+    "lon": -63.96665191666667,
+    "altitude": 2.0
+  },
+  {
+    "file": "INCES\\Inces-alianzas-interinstitucionales-en-la-regi\u00f3n3-.jpg",
+    "agency": "INCES",
+    "lat": 10.608968722222222,
+    "lon": -66.88051602777777,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-alianzas-interinstitucionales-en-la-regi\u00f3n5-.jpg",
+    "agency": "INCES",
+    "lat": 10.608968722222222,
+    "lon": -66.88051602777777,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-aprenden-de-reposter\u00eda-1-.jpg",
+    "agency": "INCES",
+    "lat": 10.469310760277779,
+    "lon": -64.16279602027778,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-bachillerato-productivo1-.jpg",
+    "agency": "INCES",
+    "lat": 10.60937975,
+    "lon": -66.8741531111111,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES-Brigadas-Productivas-reparan.1.jpg",
+    "agency": "INCES",
+    "lat": 10.609458916666666,
+    "lon": -66.87397002777777,
+    "altitude": 16.0
+  },
+  {
+    "file": "INCES\\INCES-Brigadas-Productivas-reparan.2.jpg",
+    "agency": "INCES",
+    "lat": 10.609458916666666,
+    "lon": -66.87400052777777,
+    "altitude": 18.0
+  },
+  {
+    "file": "INCES\\INCES-Brigadas-Productivas-reparan.3.jpg",
+    "agency": "INCES",
+    "lat": 10.609339694444444,
+    "lon": -66.87384030555555,
+    "altitude": 12.0
+  },
+  {
+    "file": "INCES\\Inces-censo-personas-con-discapacidad1-.jpg",
+    "agency": "INCES",
+    "lat": 10.60937975,
+    "lon": -66.8741531111111,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-censo-personas-con-discapacidad6-.jpg",
+    "agency": "INCES",
+    "lat": 10.60937975,
+    "lon": -66.8741531111111,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-Cocina-B\u00e1sica4-.jpeg",
+    "agency": "INCES",
+    "lat": 8.315907194444446,
+    "lon": -62.7212565,
+    "altitude": 41.399
+  },
+  {
+    "file": "INCES\\Inces-Consejo-de-Innovadores-5-.jpg",
+    "agency": "INCES",
+    "lat": 10.600881555555555,
+    "lon": -66.96665952777778,
+    "altitude": 11.0
+  },
+  {
+    "file": "INCES\\Inces-convenio-Unexca-1-.jpg",
+    "agency": "INCES",
+    "lat": 10.61746213888889,
+    "lon": -66.85868072222222,
+    "altitude": 4294967290.0
+  },
+  {
+    "file": "INCES\\Inces-convenio-Unexca-2-.jpg",
+    "agency": "INCES",
+    "lat": 10.617465000000001,
+    "lon": -66.85877227777777,
+    "altitude": 5.0
+  },
+  {
+    "file": "INCES\\Inces-convenio-Unexca-4-.jpg",
+    "agency": "INCES",
+    "lat": 10.617470722222222,
+    "lon": -66.85878752777778,
+    "altitude": 9.0
+  },
+  {
+    "file": "INCES\\Inces-Curso-de-Panificaci\u00f3n-1-.jpg",
+    "agency": "INCES",
+    "lat": 10.276522222222223,
+    "lon": -67.6183861111111,
+    "altitude": 451.95174790743476
+  },
+  {
+    "file": "INCES\\Inces-Curso-de-Panificaci\u00f3n-3-.jpg",
+    "agency": "INCES",
+    "lat": 10.27651388888889,
+    "lon": -67.61833888888889,
+    "altitude": 452.4594383775351
+  },
+  {
+    "file": "INCES\\Inces-Curso-de-Panificaci\u00f3n-4-.jpg",
+    "agency": "INCES",
+    "lat": 10.276608333333334,
+    "lon": -67.61834722222221,
+    "altitude": 458.18917441224716
+  },
+  {
+    "file": "INCES\\Inces-Curso-de-Panificaci\u00f3n-5-.jpg",
+    "agency": "INCES",
+    "lat": 10.2765,
+    "lon": -67.61836944444444,
+    "altitude": 447.60177236222654
+  },
+  {
+    "file": "INCES\\INCES-elaborar-Pan-de-Jam\u00f3n-1-.jpg",
+    "agency": "INCES",
+    "lat": 8.274802083333334,
+    "lon": -62.77850408333333,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES-elaborar-Pan-de-Jam\u00f3n-3-.jpg",
+    "agency": "INCES",
+    "lat": 8.311807777777778,
+    "lon": -62.70869147222223,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES-elaborar-Pan-de-Jam\u00f3n-4-.jpg",
+    "agency": "INCES",
+    "lat": 8.25604188888889,
+    "lon": -62.78486038888889,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES-en-la-calle-.jpg",
+    "agency": "INCES",
+    "lat": 10.600429527777777,
+    "lon": -66.96654508333333,
+    "altitude": 76.0
+  },
+  {
+    "file": "INCES\\INCES-en-la-calle5.jpg",
+    "agency": "INCES",
+    "lat": 10.600569722222222,
+    "lon": -66.96594236111112,
+    "altitude": 27.0
+  },
+  {
+    "file": "INCES\\INCES-en-la-calle6.jpg",
+    "agency": "INCES",
+    "lat": 10.600499138888889,
+    "lon": -66.96597288888888,
+    "altitude": 13.0
+  },
+  {
+    "file": "INCES\\INCES-excelencia-humana1-.jpg",
+    "agency": "INCES",
+    "lat": 10.252990722222222,
+    "lon": -67.61672972222222,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES-excelencia-humana2-.jpg",
+    "agency": "INCES",
+    "lat": 10.252990722222222,
+    "lon": -67.61672972222222,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES-excelencia-humana4-.jpg",
+    "agency": "INCES",
+    "lat": 10.252990722222222,
+    "lon": -67.61672972222222,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES-excelencia-humana6-.jpg",
+    "agency": "INCES",
+    "lat": 10.256719583333334,
+    "lon": -67.60941038888889,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-forma-sector-Praderas-de-Valle-Verde-1-.jpg",
+    "agency": "INCES",
+    "lat": 10.945040694444444,
+    "lon": -63.966678611111114,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-forma-sector-Praderas-de-Valle-Verde-2-.jpg",
+    "agency": "INCES",
+    "lat": 10.945025444444445,
+    "lon": -63.96669386111111,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-forma-sector-Praderas-de-Valle-Verde-4-.jpg",
+    "agency": "INCES",
+    "lat": 10.945107444444444,
+    "lon": -63.966670972222225,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-forma-talentos-1.jpg",
+    "agency": "INCES",
+    "lat": 10.640570972222221,
+    "lon": -63.26225516666667,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-formaci\u00f3n-de-Dulcer\u00eda-Criolla-1-.jpg",
+    "agency": "INCES",
+    "lat": 8.306741972222223,
+    "lon": -62.707222,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-formaci\u00f3n-de-Dulcer\u00eda-Criolla-3-.jpg",
+    "agency": "INCES",
+    "lat": 8.296012583333333,
+    "lon": -62.72559127777778,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-formaci\u00f3n-de-Dulcer\u00eda-Criolla-4-.jpg",
+    "agency": "INCES",
+    "lat": 8.296012583333333,
+    "lon": -62.72559127777778,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-formaci\u00f3n-de-Dulcer\u00eda-Criolla-5-.jpg",
+    "agency": "INCES",
+    "lat": 8.296012583333333,
+    "lon": -62.72559127777778,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-formaci\u00f3n-de-Dulcer\u00eda-Criolla-6-.jpg",
+    "agency": "INCES",
+    "lat": 8.306741972222223,
+    "lon": -62.707222,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES-formaci\u00f3n-en-M\u00e9c\u00e1nica-B\u00e1sica-4-.jpg",
+    "agency": "INCES",
+    "lat": 8.295749583333333,
+    "lon": -62.724903194444444,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES-formaci\u00f3n-en-M\u00e9c\u00e1nica-B\u00e1sica1-.jpg",
+    "agency": "INCES",
+    "lat": 8.295749583333333,
+    "lon": -62.724903194444444,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES-formaci\u00f3n-en-M\u00e9c\u00e1nica-B\u00e1sica2.jpg",
+    "agency": "INCES",
+    "lat": 8.295749583333333,
+    "lon": -62.724903194444444,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES-INTI-4.jpg",
+    "agency": "INCES",
+    "lat": 11.355520805555555,
+    "lon": -69.52191483333333,
+    "altitude": 100.556
+  },
+  {
+    "file": "INCES\\Inces-jornada-de-salud-1-.jpg",
+    "agency": "INCES",
+    "lat": 8.295756777777777,
+    "lon": -62.72632608333333,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-jornada-de-salud-2-.jpg",
+    "agency": "INCES",
+    "lat": 8.296578083333333,
+    "lon": -62.7248565,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-jornada-de-salud-4-.jpg",
+    "agency": "INCES",
+    "lat": 8.295756777777777,
+    "lon": -62.72632608333333,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-Mercado-agroecol\u00f3gico3-.jpg",
+    "agency": "INCES",
+    "lat": 5.6584604,
+    "lon": -67.6150741
+  },
+  {
+    "file": "INCES\\Inces-Mercado-agroecol\u00f3gico4-.jpg",
+    "agency": "INCES",
+    "lat": 5.658163799722223,
+    "lon": -67.61491839972221
+  },
+  {
+    "file": "INCES\\Inces-Mercado-agroecol\u00f3gico5-.jpg",
+    "agency": "INCES",
+    "lat": 5.658004899722223,
+    "lon": -67.61493409972222
+  },
+  {
+    "file": "INCES\\Inces-nueva-plataforma-tecnol\u00f3gica-1-.jpg",
+    "agency": "INCES",
+    "lat": 8.295922388888888,
+    "lon": -62.724243,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-patrimonio-cultural1-.jpg",
+    "agency": "INCES",
+    "lat": 10.609166138888888,
+    "lon": -66.8796005,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-patrimonio-cultural2-.jpg",
+    "agency": "INCES",
+    "lat": 10.609166138888888,
+    "lon": -66.8796005,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-Plan-Convite-Hallaquero1-.jpg",
+    "agency": "INCES",
+    "lat": 10.608956333333333,
+    "lon": -66.88064575,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-Plan-Convite-Hallaquero2-.jpg",
+    "agency": "INCES",
+    "lat": 10.608956333333333,
+    "lon": -66.88064575,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-plan-formativo1-.jpg",
+    "agency": "INCES",
+    "lat": 10.622870444444445,
+    "lon": -66.51152036111111,
+    "altitude": 135.0
+  },
+  {
+    "file": "INCES\\Inces-plan-formativo2-.jpg",
+    "agency": "INCES",
+    "lat": 10.622891416666667,
+    "lon": -66.51158902777777,
+    "altitude": 176.0
+  },
+  {
+    "file": "INCES\\Inces-plan-formativo4-.jpg",
+    "agency": "INCES",
+    "lat": 10.623196583333334,
+    "lon": -66.51161191666667,
+    "altitude": 155.0
+  },
+  {
+    "file": "INCES\\Inces-plan-formativo6-.jpg",
+    "agency": "INCES",
+    "lat": 10.623413083333334,
+    "lon": -66.51123044444445,
+    "altitude": 4294967287.0
+  },
+  {
+    "file": "INCES\\Inces-plan-formativo7-.jpg",
+    "agency": "INCES",
+    "lat": 10.6235485,
+    "lon": -66.51122283333333,
+    "altitude": 12.0
+  },
+  {
+    "file": "INCES\\Inces-recibe-atenci\u00f3n-terap\u00e9utica1-.jpg",
+    "agency": "INCES",
+    "lat": 10.495816399999999,
+    "lon": -66.84560739999999,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-recibe-atenci\u00f3n-terap\u00e9utica3-.jpg",
+    "agency": "INCES",
+    "lat": 10.495816399999999,
+    "lon": -66.84560739999999,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-recibe-atenci\u00f3n-terap\u00e9utica6-.jpg",
+    "agency": "INCES",
+    "lat": 10.495816399999999,
+    "lon": -66.84560739999999,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Inces-rueda-prensa-marco-de-60-aniversario4-.jpg",
+    "agency": "INCES",
+    "lat": 10.228452777777777,
+    "lon": -67.59842777777777,
+    "altitude": 435.847293814433
+  },
+  {
+    "file": "INCES\\INCES-Trabajadores-aprenden-a-sonre\u00edr-1-.jpg",
+    "agency": "INCES",
+    "lat": 8.29585588888889,
+    "lon": -62.725526,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES-Trabajadores-aprenden-a-sonre\u00edr-2-.jpg",
+    "agency": "INCES",
+    "lat": 8.295704277777778,
+    "lon": -62.72479838888889,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES-Trabajadores-aprenden-a-sonre\u00edr-4-.jpg",
+    "agency": "INCES",
+    "lat": 8.295704277777778,
+    "lon": -62.72479838888889,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES_37469.jpg",
+    "agency": "INCES",
+    "lat": 9.45129011111111,
+    "lon": -69.26619719444444,
+    "altitude": 189.0
+  },
+  {
+    "file": "INCES\\INCES_37583.jpg",
+    "agency": "INCES",
+    "lat": 9.558589916666667,
+    "lon": -69.21492766666667,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES_37585.jpg",
+    "agency": "INCES",
+    "lat": 9.558589916666667,
+    "lon": -69.21492766666667,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES_37606.jpg",
+    "agency": "INCES",
+    "lat": 9.315099694444445,
+    "lon": -70.603302,
+    "altitude": 535.0
+  },
+  {
+    "file": "INCES\\INCES_41394.jpg",
+    "agency": "INCES",
+    "lat": 10.342503972222223,
+    "lon": -68.72835194444444,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES_42575.jpg",
+    "agency": "INCES",
+    "lat": 11.355520805555555,
+    "lon": -69.52191483333333,
+    "altitude": 100.556
+  },
+  {
+    "file": "INCES\\INCES_42646.jpg",
+    "agency": "INCES",
+    "lat": 8.631411527777779,
+    "lon": -71.07752988888889,
+    "altitude": 1694.0
+  },
+  {
+    "file": "INCES\\INCES_42954.jpg",
+    "agency": "INCES",
+    "lat": 10.504424083333333,
+    "lon": -66.91522216666667,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\INCES_43878.jpg",
+    "agency": "INCES",
+    "lat": 8.593620277777779,
+    "lon": -71.14795683333334,
+    "altitude": 1590.0
+  },
+  {
+    "file": "INCES\\INCES_44309.jpg",
+    "agency": "INCES",
+    "lat": 10.484319666666666,
+    "lon": -66.90579986111112,
+    "altitude": 868.0
+  },
+  {
+    "file": "INCES\\INCES_44310.jpg",
+    "agency": "INCES",
+    "lat": 10.484464638888888,
+    "lon": -66.90573880555556,
+    "altitude": 874.0
+  },
+  {
+    "file": "INCES\\INCES_69066.jpg",
+    "agency": "INCES",
+    "lat": 11.408856400000001,
+    "lon": -69.6499685,
+    "altitude": 6.5
+  },
+  {
+    "file": "INCES\\INCES_69067.jpg",
+    "agency": "INCES",
+    "lat": 11.4088554,
+    "lon": -69.64998940000001,
+    "altitude": 6.5
+  },
+  {
+    "file": "INCES\\INCES_69069.jpg",
+    "agency": "INCES",
+    "lat": 11.4088554,
+    "lon": -69.64998940000001,
+    "altitude": 6.5
+  },
+  {
+    "file": "INCES\\INCES_69070.jpg",
+    "agency": "INCES",
+    "lat": 11.4088554,
+    "lon": -69.64998940000001,
+    "altitude": 6.5
+  },
+  {
+    "file": "INCES\\INCES_69071.jpg",
+    "agency": "INCES",
+    "lat": 11.4088554,
+    "lon": -69.64998940000001,
+    "altitude": 6.5
+  },
+  {
+    "file": "INCES\\inces_portuguesa-1.jpg",
+    "agency": "INCES",
+    "lat": 9.558589916666667,
+    "lon": -69.21492766666667,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\inces_portuguesa.jpg",
+    "agency": "INCES",
+    "lat": 9.558589916666667,
+    "lon": -69.21492766666667,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\inces_portuguesa_cria_cerdos.jpg",
+    "agency": "INCES",
+    "lat": 9.45129011111111,
+    "lon": -69.26619719444444,
+    "altitude": 189.0
+  },
+  {
+    "file": "INCES\\libertador-3.jpg",
+    "agency": "INCES",
+    "lat": 8.593620277777779,
+    "lon": -71.14795683333334,
+    "altitude": 1590.0
+  },
+  {
+    "file": "INCES\\movimiento-0001-.jpg",
+    "agency": "INCES",
+    "lat": 10.23306111111111,
+    "lon": -67.58668333333333
+  },
+  {
+    "file": "INCES\\nces-1-gatos-y-perros.jpg",
+    "agency": "INCES",
+    "lat": 8.295815694444444,
+    "lon": -62.72450277777778,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Plan-vacacional-inces-.jpg",
+    "agency": "INCES",
+    "lat": 9.061361111111111,
+    "lon": -62.05732777777777,
+    "altitude": 23.5
+  },
+  {
+    "file": "INCES\\primera-cohorte-de-coaching-4-.jpg",
+    "agency": "INCES",
+    "lat": 8.580190638888888,
+    "lon": -71.1747436388889,
+    "altitude": 0.0
+  },
+  {
+    "file": "INCES\\Sucre001.jpg",
+    "agency": "INCES",
+    "lat": 10.470603916666667,
+    "lon": -64.16400144444445,
+    "altitude": 0.0
+  },
+  {
+    "file": "MinCultura\\IMG_1029-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500125,
+    "lon": -66.898475,
+    "altitude": 878.5271807838179
+  },
+  {
+    "file": "MinCultura\\IMG_1029-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500125,
+    "lon": -66.898475,
+    "altitude": 878.5271807838179
+  },
+  {
+    "file": "MinCultura\\IMG_1029-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500125,
+    "lon": -66.898475,
+    "altitude": 878.5271807838179
+  },
+  {
+    "file": "MinCultura\\IMG_1032-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500091666666666,
+    "lon": -66.89849166666667,
+    "altitude": 879.6046966731898
+  },
+  {
+    "file": "MinCultura\\IMG_1032-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500091666666666,
+    "lon": -66.89849166666667,
+    "altitude": 879.6046966731898
+  },
+  {
+    "file": "MinCultura\\IMG_1032-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500091666666666,
+    "lon": -66.89849166666667,
+    "altitude": 879.6046966731898
+  },
+  {
+    "file": "MinCultura\\IMG_1035-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500105555555555,
+    "lon": -66.89849166666667,
+    "altitude": 877.8037354562156
+  },
+  {
+    "file": "MinCultura\\IMG_1035-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500105555555555,
+    "lon": -66.89849166666667,
+    "altitude": 877.8037354562156
+  },
+  {
+    "file": "MinCultura\\IMG_1035-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500105555555555,
+    "lon": -66.89849166666667,
+    "altitude": 877.8037354562156
+  },
+  {
+    "file": "MinCultura\\IMG_1037-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500144444444445,
+    "lon": -66.89835277777779,
+    "altitude": 877.4553903345725
+  },
+  {
+    "file": "MinCultura\\IMG_1037-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500144444444445,
+    "lon": -66.89835277777779,
+    "altitude": 877.4553903345725
+  },
+  {
+    "file": "MinCultura\\IMG_1037-3-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500144444444445,
+    "lon": -66.89835277777779,
+    "altitude": 877.4553903345725
+  },
+  {
+    "file": "MinCultura\\IMG_1037-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500144444444445,
+    "lon": -66.89835277777779,
+    "altitude": 877.4553903345725
+  },
+  {
+    "file": "MinCultura\\IMG_1038-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.50015,
+    "lon": -66.89836944444446,
+    "altitude": 883.5657418576599
+  },
+  {
+    "file": "MinCultura\\IMG_1038-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.50015,
+    "lon": -66.89836944444446,
+    "altitude": 883.5657418576599
+  },
+  {
+    "file": "MinCultura\\IMG_1038-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.50015,
+    "lon": -66.89836944444446,
+    "altitude": 883.5657418576599
+  },
+  {
+    "file": "MinCultura\\IMG_1040-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500086111111111,
+    "lon": -66.89833055555556,
+    "altitude": 900.1052934407364
+  },
+  {
+    "file": "MinCultura\\IMG_1040-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500086111111111,
+    "lon": -66.89833055555556,
+    "altitude": 900.1052934407364
+  },
+  {
+    "file": "MinCultura\\IMG_1040-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500086111111111,
+    "lon": -66.89833055555556,
+    "altitude": 900.1052934407364
+  },
+  {
+    "file": "MinCultura\\IMG_1046-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500033333333333,
+    "lon": -66.89830833333335,
+    "altitude": 903.294136092819
+  },
+  {
+    "file": "MinCultura\\IMG_1046-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500033333333333,
+    "lon": -66.89830833333335,
+    "altitude": 903.294136092819
+  },
+  {
+    "file": "MinCultura\\IMG_1046-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500033333333333,
+    "lon": -66.89830833333335,
+    "altitude": 903.294136092819
+  },
+  {
+    "file": "MinCultura\\IMG_1048-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500297222222223,
+    "lon": -66.89840833333334,
+    "altitude": 877.829347826087
+  },
+  {
+    "file": "MinCultura\\IMG_1048-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500297222222223,
+    "lon": -66.89840833333334,
+    "altitude": 877.829347826087
+  },
+  {
+    "file": "MinCultura\\IMG_1048-3-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500297222222223,
+    "lon": -66.89840833333334,
+    "altitude": 877.829347826087
+  },
+  {
+    "file": "MinCultura\\IMG_1048-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500297222222223,
+    "lon": -66.89840833333334,
+    "altitude": 877.829347826087
+  },
+  {
+    "file": "MinCultura\\IMG_1051-1.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500627777777778,
+    "lon": -66.89825555555556,
+    "altitude": 916.8996515679443
+  },
+  {
+    "file": "MinCultura\\IMG_1051-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500627777777778,
+    "lon": -66.89825555555556,
+    "altitude": 916.8996515679443
+  },
+  {
+    "file": "MinCultura\\IMG_1051-3-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500627777777778,
+    "lon": -66.89825555555556,
+    "altitude": 916.8996515679443
+  },
+  {
+    "file": "MinCultura\\IMG_1051-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500627777777778,
+    "lon": -66.89825555555556,
+    "altitude": 916.8996515679443
+  },
+  {
+    "file": "MinCultura\\IMG_1052-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.499813888888887,
+    "lon": -66.89811666666667,
+    "altitude": 878.745205479452
+  },
+  {
+    "file": "MinCultura\\IMG_1052-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.499813888888887,
+    "lon": -66.89811666666667,
+    "altitude": 878.745205479452
+  },
+  {
+    "file": "MinCultura\\IMG_1052-3-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.499813888888887,
+    "lon": -66.89811666666667,
+    "altitude": 878.745205479452
+  },
+  {
+    "file": "MinCultura\\IMG_1052-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.499813888888887,
+    "lon": -66.89811666666667,
+    "altitude": 878.745205479452
+  },
+  {
+    "file": "MinCultura\\IMG_1055-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500233333333334,
+    "lon": -66.89843888888889,
+    "altitude": 880.3427217688866
+  },
+  {
+    "file": "MinCultura\\IMG_1055-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500233333333334,
+    "lon": -66.89843888888889,
+    "altitude": 880.3427217688866
+  },
+  {
+    "file": "MinCultura\\IMG_1055-3-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500233333333334,
+    "lon": -66.89843888888889,
+    "altitude": 880.3427217688866
+  },
+  {
+    "file": "MinCultura\\IMG_1055-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500233333333334,
+    "lon": -66.89843888888889,
+    "altitude": 880.3427217688866
+  },
+  {
+    "file": "MinCultura\\IMG_1064-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500175,
+    "lon": -66.89844444444445,
+    "altitude": 892.6878320935175
+  },
+  {
+    "file": "MinCultura\\IMG_1064-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500175,
+    "lon": -66.89844444444445,
+    "altitude": 892.6878320935175
+  },
+  {
+    "file": "MinCultura\\IMG_1064-3-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500175,
+    "lon": -66.89844444444445,
+    "altitude": 892.6878320935175
+  },
+  {
+    "file": "MinCultura\\IMG_1064-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500175,
+    "lon": -66.89844444444445,
+    "altitude": 892.6878320935175
+  },
+  {
+    "file": "MinCultura\\IMG_1066-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.50015,
+    "lon": -66.89838333333334,
+    "altitude": 899.7141785446362
+  },
+  {
+    "file": "MinCultura\\IMG_1066-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.50015,
+    "lon": -66.89838333333334,
+    "altitude": 899.7141785446362
+  },
+  {
+    "file": "MinCultura\\IMG_1066-3-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.50015,
+    "lon": -66.89838333333334,
+    "altitude": 899.7141785446362
+  },
+  {
+    "file": "MinCultura\\IMG_1066-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.50015,
+    "lon": -66.89838333333334,
+    "altitude": 899.7141785446362
+  },
+  {
+    "file": "MinCultura\\IMG_1070-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.5002,
+    "lon": -66.89836111111111,
+    "altitude": 883.9836723002005
+  },
+  {
+    "file": "MinCultura\\IMG_1070-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.5002,
+    "lon": -66.89836111111111,
+    "altitude": 883.9836723002005
+  },
+  {
+    "file": "MinCultura\\IMG_1070-3-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.5002,
+    "lon": -66.89836111111111,
+    "altitude": 883.9836723002005
+  },
+  {
+    "file": "MinCultura\\IMG_1070-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.5002,
+    "lon": -66.89836111111111,
+    "altitude": 883.9836723002005
+  },
+  {
+    "file": "MinCultura\\IMG_1076-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500230555555556,
+    "lon": -66.89842222222222,
+    "altitude": 886.3821039903265
+  },
+  {
+    "file": "MinCultura\\IMG_1076-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500230555555556,
+    "lon": -66.89842222222222,
+    "altitude": 886.3821039903265
+  },
+  {
+    "file": "MinCultura\\IMG_1076-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500230555555556,
+    "lon": -66.89842222222222,
+    "altitude": 886.3821039903265
+  },
+  {
+    "file": "MinCultura\\IMG_1080-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500177777777777,
+    "lon": -66.89834722222223,
+    "altitude": 890.0044817927171
+  },
+  {
+    "file": "MinCultura\\IMG_1080-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500177777777777,
+    "lon": -66.89834722222223,
+    "altitude": 890.0044817927171
+  },
+  {
+    "file": "MinCultura\\IMG_1080-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500177777777777,
+    "lon": -66.89834722222223,
+    "altitude": 890.0044817927171
+  },
+  {
+    "file": "MinCultura\\IMG_1082-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500158333333333,
+    "lon": -66.8984138888889,
+    "altitude": 879.4694214876033
+  },
+  {
+    "file": "MinCultura\\IMG_1082-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500158333333333,
+    "lon": -66.8984138888889,
+    "altitude": 879.4694214876033
+  },
+  {
+    "file": "MinCultura\\IMG_1082-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500158333333333,
+    "lon": -66.8984138888889,
+    "altitude": 879.4694214876033
+  },
+  {
+    "file": "MinCultura\\IMG_1087-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500269444444445,
+    "lon": -66.89837777777778,
+    "altitude": 878.6149614961496
+  },
+  {
+    "file": "MinCultura\\IMG_1087-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500269444444445,
+    "lon": -66.89837777777778,
+    "altitude": 878.6149614961496
+  },
+  {
+    "file": "MinCultura\\IMG_1087-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500269444444445,
+    "lon": -66.89837777777778,
+    "altitude": 878.6149614961496
+  },
+  {
+    "file": "MinCultura\\IMG_1091-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500113888888889,
+    "lon": -66.8983,
+    "altitude": 882.4960396039604
+  },
+  {
+    "file": "MinCultura\\IMG_1094-1-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500205555555555,
+    "lon": -66.89826111111111,
+    "altitude": 878.4334181509754
+  },
+  {
+    "file": "MinCultura\\IMG_1094-2-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500205555555555,
+    "lon": -66.89826111111111,
+    "altitude": 878.4334181509754
+  },
+  {
+    "file": "MinCultura\\IMG_1094-3-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500205555555555,
+    "lon": -66.89826111111111,
+    "altitude": 878.4334181509754
+  },
+  {
+    "file": "MinCultura\\IMG_1094.jpg",
+    "agency": "MinCultura",
+    "lat": 10.500205555555555,
+    "lon": -66.89826111111111,
+    "altitude": 878.4334181509754
+  },
+  {
+    "file": "MinCultura\\IMG_20250712_152503-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.5008004,
+    "lon": -66.90251040000001,
+    "altitude": 862.5999
+  },
+  {
+    "file": "MinCultura\\IMG_20250712_152544-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.5007076,
+    "lon": -66.90250730000001,
+    "altitude": 862.0999
+  },
+  {
+    "file": "MinCultura\\IMG_20250712_160508-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.5007019,
+    "lon": -66.9025333,
+    "altitude": 862.0999
+  },
+  {
+    "file": "MinCultura\\IMG_20250712_163821-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.5006929,
+    "lon": -66.9025139,
+    "altitude": 862.0999
+  },
+  {
+    "file": "MinCultura\\IMG_20251009_142611-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.502845763888889,
+    "lon": -66.91670227027778,
+    "altitude": 892.0
+  },
+  {
+    "file": "MinCultura\\IMG_20251021_102239-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.502858161666667,
+    "lon": -66.91599273666667,
+    "altitude": 968.1
+  },
+  {
+    "file": "MinCultura\\IMG_20251021_130450-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.503130912777777,
+    "lon": -66.91614532444444,
+    "altitude": 909.6
+  },
+  {
+    "file": "MinCultura\\IMG_20251023_125418-scaled.jpg",
+    "agency": "MinCultura",
+    "lat": 10.503156661944445,
+    "lon": -66.91611480694445,
+    "altitude": 906.8
+  },
+  {
+    "file": "VTV\\base-misiones-alimentos.jpg",
+    "agency": "VTV",
+    "lat": 7.7214749722222225,
+    "lon": -72.241657,
+    "altitude": 360.799
+  },
+  {
+    "file": "VTV\\Foto-1-14-1024x576-1.jpg",
+    "agency": "VTV",
+    "lat": 10.287000194444444,
+    "lon": -67.56368530555555,
+    "altitude": 518.202
+  },
+  {
+    "file": "VTV\\General_Rafael_Urdaneta_Bridge_view_from_the_lake_to_Cabimas_side.jpg",
+    "agency": "VTV",
+    "lat": 10.574011,
+    "lon": -71.605216,
+    "altitude": 0.0
+  },
+  {
+    "file": "VTV\\IMG_20231020_123444.jpg",
+    "agency": "VTV",
+    "lat": 10.485313888888887,
+    "lon": -66.85416666666666,
+    "altitude": 0.0
+  },
+  {
+    "file": "VTV\\IMG_20231020_125109.jpg",
+    "agency": "VTV",
+    "lat": 10.485016666666667,
+    "lon": -66.85468333333333,
+    "altitude": 844.8
+  },
+  {
+    "file": "VTV\\IMG_20231020_125116-scaled.jpg",
+    "agency": "VTV",
+    "lat": 10.485016666666667,
+    "lon": -66.85468333333333,
+    "altitude": 844.8
+  },
+  {
+    "file": "VTV\\IMG_20231020_125145.jpg",
+    "agency": "VTV",
+    "lat": 10.485069444444443,
+    "lon": -66.85467222222222,
+    "altitude": 844.8
+  },
+  {
+    "file": "VTV\\isla-Escudo-de-Veraguas-en-Panama.jpg",
+    "agency": "VTV",
+    "lat": 9.09966925,
+    "lon": -81.54734858333333,
+    "altitude": 55.755
+  },
+  {
+    "file": "VTV\\MBA-Jardin-interno-e1580390292445.jpg",
+    "agency": "VTV",
+    "lat": 10.500694444444445,
+    "lon": -66.8968888888889,
+    "altitude": 876.4898958971219
+  },
+  {
+    "file": "VTV\\Oncdoft-capacito-a-funcionarios-en-materia-de-Economia-Digital-1.jpg",
+    "agency": "VTV",
+    "lat": 10.492626416666665,
+    "lon": -66.86107972222221,
+    "altitude": 903.386
+  },
+  {
+    "file": "VTV\\Oncdoft-capacito-a-funcionarios-en-materia-de-Economia-Digital-2.jpg",
+    "agency": "VTV",
+    "lat": 10.492626833333333,
+    "lon": -66.86107966666665,
+    "altitude": 893.1
+  },
+  {
+    "file": "VTV\\Oncdoft-capacito-a-funcionarios-en-materia-de-Economia-Digital-3.jpg",
+    "agency": "VTV",
+    "lat": 10.4926114,
+    "lon": -66.8612235,
+    "altitude": 903.7
+  },
+  {
+    "file": "VTV\\Oncdoft-capacito-a-funcionarios-en-materia-de-Economia-Digital-4.jpg",
+    "agency": "VTV",
+    "lat": 10.492657399999999,
+    "lon": -66.86126069999999,
+    "altitude": 871.5
+  },
+  {
+    "file": "VTV\\PLAN-CAPACITACION-768x427-1.jpg",
+    "agency": "VTV",
+    "lat": 8.132066722222223,
+    "lon": -63.53516386111111,
+    "altitude": 0.0
+  },
+  {
+    "file": "VTV\\productodestacado251201030549.jpg",
+    "agency": "VTV",
+    "lat": 43.25956388888889,
+    "lon": -2.937127777777778,
+    "altitude": 30.393477421844846
+  },
+  {
+    "file": "VTV\\putin-rusia-ucrania.jpg",
+    "agency": "VTV",
+    "lat": 39.65417,
+    "lon": 66.9597194719472
+  }
+]
