@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Error de solicitud</title>
+    <link rel="preload" as="style" href="https://www.mpprijp.gob.ve/build/assets/app-gDp_LgZA.css" /><link rel="modulepreload" href="https://www.mpprijp.gob.ve/build/assets/app-CSxaon1U.js" /><link rel="stylesheet" href="https://www.mpprijp.gob.ve/build/assets/app-gDp_LgZA.css" /><script type="module" src="https://www.mpprijp.gob.ve/build/assets/app-CSxaon1U.js"></script></head>
+<body class="bg-light">
+    <div class="container min-vh-100 d-flex flex-column justify-content-center align-items-center">
+        <div class="text-center">
+            <h1 class="display-1 fw-bold text-danger">404</h1>
+            <h2 class="fs-1 mb-3">¡Ups! Página no encontrada.</h2>
+            <p class="fs-5 text-muted mb-4">Lo sentimos, la página que estás buscando no existe o ha sido movida.</p>
+        </div>
+    </div>
+</body>
+</html>
