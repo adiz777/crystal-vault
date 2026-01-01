@@ -1,0 +1,807 @@
+SAIME Office GPS Coordinates
+==================================================
+
+6. Barquisimeto II &#8211; EL Ujano
+  GPS: 10.084358083961684, -69.2758332732111
+  Address: Avenida Hernan Garmendia. Sector El Ujano.
+  City: Barquisimeto, Estado Lara
+  Maps: https://maps.google.com/?q=10.084358083961684,-69.2758332732111
+
+154. Jacinto Lara
+  GPS: 10.065392281990071, -69.29310217470979
+  Address: Avenida Lara con Avenida Bracamonte. Barquisimeto Estado Lara.
+  City: Barquisimeto, Estado Lara
+  Maps: https://maps.google.com/?q=10.065392281990071,-69.29310217470979
+
+130. Catia La Mar
+  GPS: 10.600627149963803, -67.04069043052708
+  Address: Av. El Ejercito. Centro Comercial Paseo La Marina. terminal de pasajero LA Zorra. PB.
+  City: Catia La Mar, Estado La Güaira
+  Maps: https://maps.google.com/?q=10.600627149963803,-67.04069043052708
+
+166. Caraballeda
+  GPS: 10.618286992032592, -66.85237463052698
+  Address: Av. La Costanera entre Caraballeda y La Calle Osorio Antigua CANTV.
+  City: Caraballeda, Estado La Güaira
+  Maps: https://maps.google.com/?q=10.618286992032592,-66.85237463052698
+
+002. La Güaira &#8211; Vargas I
+  GPS: 10.594923133562613, -66.95157140005884
+  Address: Terminal de pasajero Carua. 2do Piso.
+  City: La Güaira, Estado La Güaira
+  Maps: https://maps.google.com/?q=10.594923133562613,-66.95157140005884
+
+020. Valle de la PasCúa
+  GPS: 9.210427324447629, -66.00655884587916
+  Address: Calle Las Flores Cruce con calle martillo. Casco Central. Edificio Maria Alejandra 2do. Piso.
+  City: Valle de la PasCúa, 
+  Maps: https://maps.google.com/?q=9.210427324447629,-66.00655884587916
+
+189. Tucupido
+  GPS: 9.278881236807178, -65.77557933053562
+  Address: Calle Gabante Sector Mandilito / Antigua sede del Hospital.
+  City: Tucupido, 
+  Maps: https://maps.google.com/?q=9.278881236807178,-65.77557933053562
+
+102. Calabozo
+  GPS: 8.925928070427439, -67.42851730355228
+  Address: Calle 13 entre Carrera 11/12 diagonal al Banco BicentenaRío.
+  City: Calabozo, 
+  Maps: https://maps.google.com/?q=8.925928070427439,-67.42851730355228
+
+101. Zaraza
+  GPS: 9.348744390161722, -65.32219950355008
+  Address: Calle Troconis con calle Higuerote. Centro Comercial La Tarragona Local 1.
+  City: Zaraza, 
+  Maps: https://maps.google.com/?q=9.348744390161722,-65.32219950355008
+
+026.. San Juan de Los Morros
+  GPS: 9.915484279079996, -67.37370295936755
+  Address: Av. Fuerzas Armadas al frente del destacamento 28 de la GNB. Edificio Saime.
+  City: San Juan de los Morros, 
+  Maps: https://maps.google.com/?q=9.915484279079996,-67.37370295936755
+
+172. Mene de Mauroa
+  GPS: 10.681460591193153, -71.03615531703393
+  Address: Av.Principal de Mene Mauroa Frente a la Plaza Bol ívar.
+  City: Mene de Mauroa, 
+  Maps: https://maps.google.com/?q=10.681460591193153,-71.03615531703393
+
+195. Dabajuro
+  GPS: 11.02360506843693, -70.68176774771781
+  Address: Calle Victor Marin Camacho. Con Prolongacion Calle Creole. al lado del estadio municipal.
+  City: Dabajuro, 
+  Maps: https://maps.google.com/?q=11.02360506843693,-70.68176774771781
+
+210. Tucacas
+  GPS: 10.757508614617828, -68.32499619004808
+  Address: 
+  City: Tucacas, 
+  Maps: https://maps.google.com/?q=10.757508614617828,-68.32499619004808
+
+79. Mercado Turistico
+  GPS: 11.717892217079683, -70.18959880949973
+  Address: Av. Principal del Antiguo Aeropuerto. Centro Comercial Mercado Turistico. Municipio Carirubana.
+  City: Punto Fijo, 
+  Maps: https://maps.google.com/?q=11.717892217079683,-70.18959880949973
+
+14. La Vela de Coro
+  GPS: 11.454137465112114, -69.57495687655015
+  Address: Av. Generalisimo Francisco de -miranda. Paseo Las Banderas. Sector Leon Colina.
+  City: La Vela de Coro, 
+  Maps: https://maps.google.com/?q=11.454137465112114,-69.57495687655015
+
+204. IPSFA
+  GPS: 10.47363212588266, -66.89555285695668
+  Address: 
+  City: Caracas, Distrito Capital
+  Maps: https://maps.google.com/?q=10.47363212588266,-66.89555285695668
+
+165. TSJ
+  GPS: 10.517479877686151, -66.91518506827983
+  Address: Final Avenida Baralt. Esquina "Dos Pilitas". Edif. Tribunal Supremo de Justicia. Caracas. Distrito Capital.
+  City: Caracas, Distrito Capital
+  Maps: https://maps.google.com/?q=10.517479877686151,-66.91518506827983
+
+184. GNB El Paraíso
+  GPS: 10.493713677616853, -66.9295722170352
+  Address: 
+  City: Caracas, Distrito Capital
+  Maps: https://maps.google.com/?q=10.493713677616853,-66.9295722170352
+
+053. Coche
+  GPS: 10.448090661577018, -66.9239681323787
+  Address: Edif. Anzoátegui. C.C. Coche. Piso 3. a la salida de la Est. del Metro. Av. Intercomunal de El Valle. Caracas.
+  City: Caracas, Distrito Capital
+  Maps: https://maps.google.com/?q=10.448090661577018,-66.9239681323787
+
+072. 23 de Enero
+  GPS: 10.509160069309688, -66.93115281888564
+  Address: 
+  City: Caracas, Distrito Capital
+  Maps: https://maps.google.com/?q=10.509160069309688,-66.93115281888564
+
+071. CariCúao
+  GPS: 10.43271036768719, -66.96618544772195
+  Address: Av. La Hacienda. UD 5. Parque Zoologico de CariCúao. Caracas. Distrito Capital.
+  City: Caracas, Distrito Capital
+  Maps: https://maps.google.com/?q=10.43271036768719,-66.96618544772195
+
+084. Defensa Pública
+  GPS: 10.509619707888067, -66.91371228638357
+  Address: Av. Norte del boulevard Pantenón. EDF Defensa Pública. Caracas. Distrito Capital.
+  City: Caracas, Distrito Capital
+  Maps: https://maps.google.com/?q=10.509619707888067,-66.91371228638357
+
+025. Catia
+  GPS: 10.510311567376213, -66.9481560077147
+  Address: Av. 5 entre Calle Argentina y Colombia. Catia. Caracas. Distrito Capital.
+  City: Caracas, Distrito Capital
+  Maps: https://maps.google.com/?q=10.510311567376213,-66.9481560077147
+
+037. Propatria
+  GPS: 10.503866584409636, -66.9528336000589
+  Address: Av. Principal de Propatria. CC Propatria. Nivel 3. Local B-5. Propatria. Caracas. Distrito Capital.
+  City: Caracas, Distrito Capital
+  Maps: https://maps.google.com/?q=10.503866584409636,-66.9528336000589
+
+077. IND
+  GPS: 10.474296441322087, -66.94771590539334
+  Address: Av Teheran. Montalban. Edificio Instituto Nacional de Deporte. Caracas 1020. Distrito Capital.
+  City: Caracas, Distrito Capital
+  Maps: https://maps.google.com/?q=10.474296441322087,-66.94771590539334
+
+216. Simon Bol ívar
+  GPS: 10.50363252364934, -66.91774407470677
+  Address: Av. Baralt Centro Simon Bol ívar
+  City: Caracas, Distrito Capital
+  Maps: https://maps.google.com/?q=10.50363252364934,-66.91774407470677
+
+065. Fuerte Tiuna
+  GPS: 10.460796776789927, -66.90010312318446
+  Address: Av. Los Proceres. FuerteTiuna. Parroquia El Valle. Caracas. Distrito Capital. MinisteRío e la defensa
+  City: Caracas, Distrito Capital
+  Maps: https://maps.google.com/?q=10.460796776789927,-66.90010312318446
+
+067. Parque Central
+  GPS: 10.498114722368374, -66.89974237687005
+  Address: 
+  City: Caracas, Distrito Capital
+  Maps: https://maps.google.com/?q=10.498114722368374,-66.89974237687005
+
+090. Cotiza
+  GPS: 10.514837205782216, -66.90743527994486
+  Address: Avenida Fuerzas Armadas. Esquina San José. Edificio gubernamental. Caracas.Distrito Capital.
+  City: Caracas, Distrito Capital
+  Maps: https://maps.google.com/?q=10.514837205782216,-66.90743527994486
+
+054. San Bernardino
+  GPS: 10.50883070544218, -66.90183891124798
+  Address: Residencias Parque Estrella. PB. Local PB-1. Av. Gamboa. Caracas.Distrito Capital.
+  City: Caracas, Distrito Capital
+  Maps: https://maps.google.com/?q=10.50883070544218,-66.90183891124798
+
+152. Plaza Caracas
+  GPS: 10.503128800865792, -66.91589639327717
+  Address: 
+  City: Caracas, Distrito Capital
+  Maps: https://maps.google.com/?q=10.503128800865792,-66.91589639327717
+
+146. Tucupita
+  GPS: 9.051648352786286, -62.04217422105656
+  Address: Terminal de pasajero. av. 19 de abril.
+  City: Tucupita, Delta Amacuro
+  Maps: https://maps.google.com/?q=9.051648352786286,-62.04217422105656
+
+137. Tinaquillo
+  GPS: 9.920361543939247, -68.29008679091025
+  Address: Zona Industrial de Tinaquillo al lado del Comando de la Guardia.
+  City: Tinaquillo, Estado Cojedes
+  Maps: https://maps.google.com/?q=9.920361543939247,-68.29008679091025
+
+007. San Carlos
+  GPS: 9.673234698812935, -68.58039479093829
+  Address: Av. Universidad. sector Los Mangos. al lado de la aldea Bol ívariana
+  City: San Carlos, Estado Cojedes
+  Maps: https://maps.google.com/?q=9.673234698812935,-68.58039479093829
+
+099. La Noria
+  GPS: 10.470119056375482, -68.01872932946974
+  Address: 
+  City: Puerto Cabello, Estado Carabobo
+  Maps: https://maps.google.com/?q=10.470119056375482,-68.01872932946974
+
+085. Los Guayos
+  GPS: 10.188774134315196, -67.94232519881733
+  Address: Av. Bolívar . Edificio Mencey. PB. Los Guayos.
+  City: Los Guayos, Estado Carabobo
+  Maps: https://maps.google.com/?q=10.188774134315196,-67.94232519881733
+
+105. Vicente Salias
+  GPS: 10.221607755390966, -68.00965366812625
+  Address: Municipio Valmore Rodríguez. Parroquia La Victoria. Av. Principal frente al terminal de pasajero del municipio.
+  City: Valencia, Estado Carabobo
+  Maps: https://maps.google.com/?q=10.221607755390966,-68.00965366812625
+
+023. Valencia I &#8211; Los Colorados
+  GPS: 10.19357534163234, -68.00770740622151
+  Address: Av. Carabobo con Montilla. Edificio HCH. Municipio San José.
+  City: Valencia, Estado Carabobo
+  Maps: https://maps.google.com/?q=10.19357534163234,-68.00770740622151
+
+209. Mariara
+  GPS: 10.29153098652762, -67.71840991414837
+  Address: Av. Carabobo. Sector La Haciendita. calle Santos Michelena.
+  City: Mariara, Estado Carabobo
+  Maps: https://maps.google.com/?q=10.29153098652762,-67.71840991414837
+
+106. Arturo Michelena
+  GPS: 10.474196260426908, -67.970629339686
+  Address: C.C Big Low Center. Nave H. Local 7 y 8. Parroquia San Blas.
+  City: Valencia, Estado Carabobo
+  Maps: https://maps.google.com/?q=10.474196260426908,-67.970629339686
+
+126. Ciudad Bolívar
+  GPS: 8.107546508099343, -63.5328197910899
+  Address: Av. Circunvalacion. Edificio Centro Cultural Bol ívar. Vista Hermosa.
+  City: Ciudad Bol ívar, Estado Bol ívar
+  Maps: https://maps.google.com/?q=8.107546508099343,-63.5328197910899
+
+083. Guasipati
+  GPS: 7.480826232690667, -61.895587845107364
+  Address: Av. Urdaneta al lado del Juzgado. Municipio Roscio.
+  City: Guasipati, Estado Bol ívar
+  Maps: https://maps.google.com/?q=7.480826232690667,-61.895587845107364
+
+113. Puerto Ordaz
+  GPS: 8.28226671145213, -62.77444954155732
+  Address: 
+  City: Puerto Ordaz, Estado Bol ívar
+  Maps: https://maps.google.com/?q=8.28226671145213,-62.77444954155732
+
+012. San Félix
+  GPS: 8.342631669902751, -62.680029645039454
+  Address: Avenida Dalla Costa. Centro Comercial Icabaru. PB.
+  City: San Félix, Estado Bol ívar
+  Maps: https://maps.google.com/?q=8.342631669902751,-62.680029645039454
+
+082. Upata
+  GPS: 8.01130140356775, -62.39943879109778
+  Address: Calle Ruiz Pineda S/N frente Bloquera El Patio.
+  City: Upata, Estado Bol ívar
+  Maps: https://maps.google.com/?q=8.01130140356775,-62.39943879109778
+
+183. Socopo
+  GPS: 8.23330538405597, -70.818055889632
+  Address: Sector Barrio Obrero calle 11 entre 5 y 6.
+  City: Socopo, Estado Barinas
+  Maps: https://maps.google.com/?q=8.23330538405597,-70.818055889632
+
+223. Santa BÁrbara
+  GPS: 7.822328225319658, -71.1867463297386
+  Address: 
+  City: Santa BÁrbara, Estado Barinas
+  Maps: https://maps.google.com/?q=7.822328225319658,-71.1867463297386
+
+187. Barinas II
+  GPS: 8.655642234809617, -70.24709442172905
+  Address: 
+  City: Barinas, Estado Barinas
+  Maps: https://maps.google.com/?q=8.655642234809617,-70.24709442172905
+
+192. Cagua II
+  GPS: 10.187263754234086, -67.46189450195922
+  Address: Centro Comercial Multicentro. 2do Piso. Local 40.41.42. calle Bolívar Cruce con Rondon. Frente Casa de la Cultura.
+  City: Cagua, Estado Aragua
+  Maps: https://maps.google.com/?q=10.187263754234086,-67.46189450195922
+
+125. José Félix Ribas
+  GPS: 10.18729890159254, -67.46196369262576
+  Address: La Victoria- Calle Dr Carias. Condominio La Fuente. Local L4 PB.
+  City: La Victoria, Estado Aragua
+  Maps: https://maps.google.com/?q=10.18729890159254,-67.46196369262576
+
+145. San Sebastián de los Reyes
+  GPS: 10.2304801336677, -67.3367497216184
+  Address: Calle Bolívar cruce con Guaicaipuro. Antigua sede de la Biblioteca Virtual.
+  City: San Sebastián, Estado Aragua
+  Maps: https://maps.google.com/?q=10.2304801336677,-67.3367497216184
+
+117. Santa Rita
+  GPS: 10.19732351500025, -67.5735114654003
+  Address: Av. Generalísimo Francisco de Miranda. Sector Santa Rita. Sede de la Alcaldía Francisco Linares Alcántara.
+  City: Santa Rita, Estado Aragua
+  Maps: https://maps.google.com/?q=10.19732351500025,-67.5735114654003
+
+039. La Victoria
+  GPS: 10.2273010593607, -67.3237961129536
+  Address: Av. Victoria. Centro Comercial El Cilento. Piso 03. Oficina 36.
+  City: La Victoria, Estado Aragua
+  Maps: https://maps.google.com/?q=10.2273010593607,-67.3237961129536
+
+149. José Antonio Anzoátegui
+  GPS: 10.219089345432, -64.6369300767739
+  Address: Calle Guaraguao. Edificio Puerto Oriental.
+  City: Puerto La Cruz, Estado Anzoátegui
+  Maps: https://maps.google.com/?q=10.219089345432,-64.6369300767739
+
+207. Guanipa
+  GPS: 8.896093447858, -64.1759880138265
+  Address: Av. Roma. Sector Vista al Sol.
+  City: El Tigre, Estado Anzoátegui
+  Maps: https://maps.google.com/?q=8.896093447858,-64.1759880138265
+
+169. Trailer Barcelona
+  GPS: 10.143351248186, -64.6853976067611
+  Address: Parroquia San Cristóbal. Cisrcunscripción Militar Zodi 51.
+  City: Barcelona, Estado Anzoátegui
+  Maps: https://maps.google.com/?q=10.143351248186,-64.6853976067611
+
+160. Anaco
+  GPS: 9.43392045063011, -64.4637245830843
+  Address: Av. José Antonio Anzoátegui. Centro Comercial Anaco.
+  City: Anaco, Estado Anzoátegui
+  Maps: https://maps.google.com/?q=9.43392045063011,-64.4637245830843
+
+114. Puerto Ayacucho
+  GPS: 5.665564312401557, -67.63149837589266
+  Address: Av. Aguerrevere. Barrio Luisa Caseres. Frente a la escuela Gabriela Mistral.
+  City: Puerto Ayacucho, Estado Amazonas
+  Maps: https://maps.google.com/?q=5.665564312401557,-67.63149837589266
+
+213. Tumeremo
+  GPS: 7.306753521601759, -61.50400804464402
+  Address: Avenida Carabobo, Edif. La Prefectura PB, Frente a la Plaza Bolivar.
+  City: Caicara, Bolívar
+  Maps: https://maps.google.com/?q=7.306753521601759,-61.50400804464402
+
+206. Sabaneta
+  GPS: 8.757686832141575, -69.93524838262316
+  Address: Urb. El Rosario, calle 1, con callejon 2, edificio SAIME.
+  City: Sabaneta, Barinas
+  Maps: https://maps.google.com/?q=8.757686832141575,-69.93524838262316
+
+005. Maracay. El Limón
+  GPS: 10.285129380263857, -67.6219532443634
+  Address: Av.Universidad - El Limón, al lado del INTT
+  City: Maracay, Aragua
+  Maps: https://maps.google.com/?q=10.285129380263857,-67.6219532443634
+
+35. San Fernando
+  GPS: 7.884530778370422, -67.47052022925833
+  Address: Edif. Carrusel, Piso 2, frente a la Estatua de San Fernando
+  City: San Fernando de Apure, Apure
+  Maps: https://maps.google.com/?q=7.884530778370422,-67.47052022925833
+
+147-Píritu.
+  GPS: 10.040056247579647, -65.03042865180028
+  Address: Calle Bolivar, Centro Civico Doña Calea Mata.
+  City: Píritu, Estado Anzoátegui
+  Maps: https://maps.google.com/?q=10.040056247579647,-65.03042865180028
+
+017. Juan Antonio Sotillo
+  GPS: 10.219173788630684, -64.6369300977821
+  Address: Av. 5 de Julio, Edf. Oriente, Piso 2, Casco Central.
+  City: Puerto La Cruz, Anzoategui
+  Maps: https://maps.google.com/?q=10.219173788630684,-64.6369300977821
+
+222. El Tigre
+  GPS: 8.87909316308627, -64.24809340565872
+  Address: Av. Rotaria, Sector Campo Oficina
+  City: El Tigre, Estado Anzoátegui
+  Maps: https://maps.google.com/?q=8.87909316308627,-64.24809340565872
+
+121. MERCABAR
+  GPS: 10.068973318358964, -69.3897581236062
+  Address: Zona III. ENTRE AV LAS INDUSTRIAS GIFFONI
+  City: Barquisimeto, Estado Lara
+  Maps: https://maps.google.com/?q=10.068973318358964,-69.3897581236062
+
+115. Duaca
+  GPS: 10.287340440727412, -69.15763875971653
+  Address: Carrera 7 entre calles 15 y 16 mucipio Crespo.
+  City: Duaca, Estado Lara
+  Maps: https://maps.google.com/?q=10.287340440727412,-69.15763875971653
+
+034. El Tocuyo
+  GPS: 9.785732090506368, -69.79490879040559
+  Address: Esquina Calle 15 entre av. Fraternidad y Av. Lisandro Alvarado municipio Moran.
+  City: El Tocuyo, Estado Lara
+  Maps: https://maps.google.com/?q=9.785732090506368,-69.79490879040559
+
+194. Siquisique
+  GPS: 10.570453944988316, -69.70263715240576
+  Address: Calle 7 entre Av. Urdaneta y Av. Comercio.
+  City: Siquisique, Estado Lara
+  Maps: https://maps.google.com/?q=10.570453944988316,-69.70263715240576
+
+108. Carora
+  GPS: 10.180649248571912, -70.08531601923836
+  Address: Calle Monagas entre Bolívar y Torres. Centro Comercial Don Cherra. locales 12. 13. 14.
+  City: Carora, Estado Lara
+  Maps: https://maps.google.com/?q=10.180649248571912,-70.08531601923836
+
+112. Quibor
+  GPS: 9.929017418942788, -69.61097731197262
+  Address: Estacion de Servicio Shell via Cubiro Sector la Piolin. Parroquia Coronel Mariano Peraza.
+  City: Quibor, Estado Lara
+  Maps: https://maps.google.com/?q=9.929017418942788,-69.61097731197262
+
+64. Estadio Metropolitano
+  GPS: 8.555088571239574, -71.21861856157791
+  Address: Municipio Libertador. Parroquia Juan Rodríguez Suarez. Sector Zumba. Estadio Metropolitano 5 Aguilas Blancas Tribuna Oeste.
+  City: , 
+  Maps: https://maps.google.com/?q=8.555088571239574,-71.21861856157791
+
+163. Santa Cruz de Mora
+  GPS: 8.397816809094794, -71.64084377322214
+  Address: Av. Antonio Pinto Salinas al ladode PDVAL. Parroquia Santa Cruz de Mora. Municipio Antonio Pinto Salinas.
+  City: Santa Cruz de Mora, 
+  Maps: https://maps.google.com/?q=8.397816809094794,-71.64084377322214
+
+98. Pueblo Llano
+  GPS: 8.916473548840768, -70.66007079484649
+  Address: Casa de la cultara (ATENEO) Calle Ayaucucho. Pueblo Llano.
+  City: Pueblo Llano, 
+  Maps: https://maps.google.com/?q=8.916473548840768,-70.66007079484649
+
+89. Campo Elias
+  GPS: 8.546534292138476, -71.24274106441781
+  Address: Av. Bolívar . Edf. Municipal.Municipio Campo Elias. Parroquia Matriz.
+  City: , 
+  Maps: https://maps.google.com/?q=8.546534292138476,-71.24274106441781
+
+104. Santa Elena de Arenales
+  GPS: 8.822234327401963, -71.46625981924761
+  Address: Municipio Obispo Ramos de Lora. Sector Santa Elena Centro Calle Cristo Rey Frente a la Plaza Bol ívar.
+  City: Santa Elena de Arenales, 
+  Maps: https://maps.google.com/?q=8.822234327401963,-71.46625981924761
+
+76. Tovar
+  GPS: 8.337236200749794, -71.7479374462364
+  Address: Sector Las Acacias Calle Principal casa comunal Juan Ozuna Paredes.
+  City: Tovar, 
+  Maps: https://maps.google.com/?q=8.337236200749794,-71.7479374462364
+
+179. El Vigia
+  GPS: 8.614295829561021, -71.65736544467836
+  Address: Av. 15 Sector BarRío Bolívar. Centro Comercial Mayorca. PB Local 1 y 2 antiguo edificio Banco Progreso.
+  City: El Vigia, 
+  Maps: https://maps.google.com/?q=8.614295829561021,-71.65736544467836
+
+004. Los Ruices
+  GPS: 10.487959533516172, -66.82982327690729
+  Address: Av. Diego CisneroCentro Empresarial Los Ruices PB. LOCAL B
+  City: Caracas, Estado Miranda
+  Maps: https://maps.google.com/?q=10.487959533516172,-66.82982327690729
+
+024. Los Teques I &#8211; Super Lider
+  GPS: 10.350707360257944, -67.01451422117077
+  Address: Carretera Panamericana KM21. Centro Comercial Super Lider. LOS TEQUES.
+  City: Los Teques, Estado Miranda
+  Maps: https://maps.google.com/?q=10.350707360257944,-67.01451422117077
+
+111. Guarenas
+  GPS: 10.468819396065006, -66.610005546222
+  Address: 
+  City: Guarenas, Estado Miranda
+  Maps: https://maps.google.com/?q=10.468819396065006,-66.610005546222
+
+097. Higuerote
+  GPS: 10.477893412257963, -66.09975011193353
+  Address: 
+  City: Higuerote, Estado Miranda
+  Maps: https://maps.google.com/?q=10.477893412257963,-66.09975011193353
+
+131. San José de Barlovento
+  GPS: 10.303187262382913, -65.9947475615661
+  Address: Esquina Calle Junincon Malabar. San José de Barlovento.
+  City: Río Chico, Estado Miranda
+  Maps: https://maps.google.com/?q=10.303187262382913,-65.9947475615661
+
+047. Caucagua
+  GPS: 10.291195783310137, -66.37687586156609
+  Address: 
+  City: Caucagua, Estado Miranda
+  Maps: https://maps.google.com/?q=10.291195783310137,-66.37687586156609
+
+033. Ocumare del Tuy
+  GPS: 10.120470642309794, -66.77329029040322
+  Address: Ocumare del Tuy Calle Urdaneta. Residencia Parque Central. LOCAL 29
+  City: Ocumare del Tuy, Estado Miranda
+  Maps: https://maps.google.com/?q=10.120470642309794,-66.77329029040322
+
+091. Santa Teresa del Tuy
+  GPS: 10.232993171641168, -66.66891887505975
+  Address: 
+  City: Santa Teresa del Tuy, Estado Miranda
+  Maps: https://maps.google.com/?q=10.232993171641168,-66.66891887505975
+
+095. San Francisco de Yare
+  GPS: 10.17877458374027, -66.7459059696262
+  Address: 
+  City: San Francisco de Yare, Estado Miranda
+  Maps: https://maps.google.com/?q=10.17877458374027,-66.7459059696262
+
+050. Los Teques II &#8211; Guaicaipuro
+  GPS: 10.342748393974551, -67.03952951484973
+  Address: Calle Carabobo con Boyaca. Edf. Centro Maracaibo. Frente del Hotal El Gran Casino.
+  City: Los Teques, Estado Miranda
+  Maps: https://maps.google.com/?q=10.342748393974551,-67.03952951484973
+
+075. IFE &#8211; Cúa
+  GPS: 10.154040788273367, -66.8745453750603
+  Address: Estacion Ferrocarriles Ezequiel Zamora. Oficina 04.
+  City: Cúa, Estado Miranda
+  Maps: https://maps.google.com/?q=10.154040788273367,-66.8745453750603
+
+003. La Trinidad
+  GPS: 10.442065954659157, -66.86547490204417
+  Address: Calle San Rafael. CC Plaza La Trinidad. Caracas 1080. Miranda.
+  City: Caracas, Estado Miranda
+  Maps: https://maps.google.com/?q=10.442065954659157,-66.86547490204417
+
+055. Las Mercedes
+  GPS: 10.478941637562638, -66.85755963087938
+  Address: Edif. La Hacienda. Av. Veracruz. Las Mercedes. Caracas 1080. Miranda.
+  City: Caracas, Estado Miranda
+  Maps: https://maps.google.com/?q=10.478941637562638,-66.85755963087938
+
+056. La Urbina
+  GPS: 10.485244733047432, -66.80800293087941
+  Address: Calle 4. Cruce con Calle 13. La Urbina. Caracas.
+  City: Caracas, Estado Miranda
+  Maps: https://maps.google.com/?q=10.485244733047432,-66.80800293087941
+
+074. IFE &#8211; Charallave Sur
+  GPS: 10.237203538076072, -66.85691553273097
+  Address: Estacion Terminal de Ferrocarril Generalisimo Francisco de Miranda. Municipio Cristóbal Rojas.
+  City: Charallave, Estado Miranda
+  Maps: https://maps.google.com/?q=10.237203538076072,-66.85691553273097
+
+31. Maturín
+  GPS: 9.751748361624305, -63.15709615107922
+  Address: Av. José Tadeo Monagas. Edif. SAIME. Entrada del Aeropurto. Parroquia Las Cocuiza. Municipio Maturín.
+  City: Maturín, Estado Monagas
+  Maps: https://maps.google.com/?q=9.751748361624305,-63.15709615107922
+
+138. Punta de Mata
+  GPS: 9.691879432507049, -63.62032885692116
+  Address: Final Av. Bol ívar. al lado del destacamento 512 de GNB. Municipio Ezequiel Zamora. Parroquia Punta de Mata.
+  City: Punta de Mata, Estado Monagas
+  Maps: https://maps.google.com/?q=9.691879432507049,-63.62032885692116
+
+088. Boca del Río
+  GPS: 10.951577417117644, -64.18498498034344
+  Address: 
+  City: Margarita, Estado Nueva Esparta
+  Maps: https://maps.google.com/?q=10.951577417117644,-64.18498498034344
+
+164. Isla de Coche
+  GPS: 10.780516203131336, -63.99821322324059
+  Address: Calle Independencia Sector Tumba Onda Cruce Con Callejon Via El Progreso.
+  City: Isla de Coche, Estado Nueva Esparta
+  Maps: https://maps.google.com/?q=10.780516203131336,-63.99821322324059
+
+202. Juan Griego
+  GPS: 11.081842911237878, -63.96806483809276
+  Address: Av. 3 De Mayo. A 300Mtrs Del Terminal De Pasajeros. Juan Griego Municipio Marcano
+  City: Margarita, Estado Nueva Esparta
+  Maps: https://maps.google.com/?q=11.081842911237878,-63.96806483809276
+
+205. El Espinal
+  GPS: 10.964515791092403, -63.98046139994139
+  Address: 
+  City: Margarita, Estado Nueva Esparta
+  Maps: https://maps.google.com/?q=10.964515791092403,-63.98046139994139
+
+123. Fente Porlamar
+  GPS: 10.966883357119494, -63.84070142020747
+  Address: Av 4 De Mayo. Centro Comercial Galeria Fente. Piso 1. Locales G11-G12.
+  City: Margarita, Estado Nueva Esparta
+  Maps: https://maps.google.com/?q=10.966883357119494,-63.84070142020747
+
+181. Turen
+  GPS: 9.326597260977739, -69.11845334582242
+  Address: Barrio El Cauchal Calle 13 y 14. Municipio Turen. Parroquia Bruzual.
+  City: Turen, Estado Portuguesa
+  Maps: https://maps.google.com/?q=9.326597260977739,-69.11845334582242
+
+29. Acarigua
+  GPS: 9.558177182281046, -69.21249854827525
+  Address: Av. 32 con Av. 3. Sector Banco Obrero. Al lado de MRW. Diagonal a la panaderia EL Trebol. Municipio Paez. Parroquia Acarigua.
+  City: Acarigua, Estado Portuguesa
+  Maps: https://maps.google.com/?q=9.558177182281046,-69.21249854827525
+
+18. CumanÁ
+  GPS: 10.450513483175024, -64.18444606986704
+  Address: Av. Universidad al lado del consencionaRío Noel Motores. Parroquia Ayacucho.
+  City: CumanÁ, Estado Sucre
+  Maps: https://maps.google.com/?q=10.450513483175024,-64.18444606986704
+
+224. Carúpano
+  GPS: 10.666747628031994, -63.25132602544464
+  Address: Calle San Félix con Colombia a una Cúadra del Liceo Simon Rodríguez
+  City: Carúpano, Estado Sucre
+  Maps: https://maps.google.com/?q=10.666747628031994,-63.25132602544464
+
+119. Trailer Güiria
+  GPS: 10.575515528605177, -62.30002350837465
+  Address: Calle Bol ívar. Edif. SAIME. Frente a Banesco. Municipio Valdez.
+  City: Güiria, Estado Sucre
+  Maps: https://maps.google.com/?q=10.575515528605177,-62.30002350837465
+
+032. San Cristóbal
+  GPS: 7.750247647595205, -72.22648755368643
+  Address: Av. Principal La Castra. Antigua Sede Foncafe. Parroquia La Concordia.
+  City: San Cristóbal, 
+  Maps: https://maps.google.com/?q=7.750247647595205,-72.22648755368643
+
+069. San Antonio
+  GPS: 7.8141075372262225, -72.44407658900293
+  Address: 
+  City: San Antonio del Tachira, 
+  Maps: https://maps.google.com/?q=7.8141075372262225,-72.44407658900293
+
+036. La Grita
+  GPS: 8.130453672888136, -71.98100896489512
+  Address: Sv. Francisco de Caseres Casa numero#12-124 al lado del Supermercado Pekin.
+  City: La Grita, 
+  Maps: https://maps.google.com/?q=8.130453672888136,-71.98100896489512
+
+198. San Juan de Colón
+  GPS: 8.02791400632777, -72.25767683575424
+  Address: Barrio Topon. Carretera 13 con calle 4 esquina. Municipio Ayacucho San Juan de Colón.
+  City: San Juan de Colón, 
+  Maps: https://maps.google.com/?q=8.02791400632777,-72.25767683575424
+
+061. Rubio
+  GPS: 7.703816347666042, -72.35618615036309
+  Address: Av. 7 con calles# 7-21 Rubio-Tachira.
+  City: Rubio, 
+  Maps: https://maps.google.com/?q=7.703816347666042,-72.35618615036309
+
+118. La Fría
+  GPS: 8.218101057562551, -72.25058346028396
+  Address: Calle 2 entre carreras 15 y 16. sector casco centra. La Fria.
+  City: La Fría, 
+  Maps: https://maps.google.com/?q=8.218101057562551,-72.25058346028396
+
+151. El Dividive
+  GPS: 9.475400662994536, -70.74004367879915
+  Address: Municipio Miranda.Parroquia El Dividive. Calle Panamericana. Sector 12 de Octubre. Terminalde Pasajeros Francisco de Miranda.
+  City: El Dividive, Estado Trujillo
+  Maps: https://maps.google.com/?q=9.475400662994536,-70.74004367879915
+
+009. Trujillo
+  GPS: 9.381351199462838, -70.42997100563232
+  Address: Municipio Trujillo. Parroquia Cristóbal Mendoza. Av. Laudelino Mejia. Edificio Saime.al lado del circuito judicial penal.
+  City: Trujillo, Estado Trujillo
+  Maps: https://maps.google.com/?q=9.381351199462838,-70.42997100563232
+
+013. Valera
+  GPS: 9.301035752856926, -70.61270844137121
+  Address: Municipio Valera. Parroquia Juan Ignacio Montilla. Sector La Plata. Quinta Fiorella.
+  City: Valera, Estado Trujillo
+  Maps: https://maps.google.com/?q=9.301035752856926,-70.61270844137121
+
+139. Trailer Monay
+  GPS: 9.539036814523053, -70.4634169785485
+  Address: Municipio PamPAm. Parroquia La Paz. Monay. Calle El Cine. Diagonal a la escuela Joséfina Pimentel.
+  City: Monay, Estado Trujillo
+  Maps: https://maps.google.com/?q=9.539036814523053,-70.4634169785485
+
+049. Boconó
+  GPS: 9.243615291662543, -70.27141464922624
+  Address: Municipio Bocono. Parroquia Bocono. Calle Sucre. Entre Calle Jauregui y Andres Bello. Edificio Barazarte. Piso 1.
+  City: Boconó, Estado Trujillo
+  Maps: https://maps.google.com/?q=9.243615291662543,-70.27141464922624
+
+010. San Felipe
+  GPS: 10.34123927840836, -68.73718201009115
+  Address: Municipio Independencia. 5ta Avenida con esquina calle 24.
+  City: San Felipe, Estado Yaracuy
+  Maps: https://maps.google.com/?q=10.34123927840836,-68.73718201009115
+
+092. Aroa
+  GPS: 10.450485161906435, -68.89492035757382
+  Address: Calle Principal entrada Aroa. Frente al Comando de GNB. Edif. Alcaldia.
+  City: Aroa, Estado Yaracuy
+  Maps: https://maps.google.com/?q=10.450485161906435,-68.89492035757382
+
+176. Cocorote
+  GPS: 10.32290636660153, -68.78143610791459
+  Address: Av. Bolívar con calle4. Instalaciones de la alcaldia de Cocorote.
+  City: Cocorote, Estado Yaracuy
+  Maps: https://maps.google.com/?q=10.32290636660153,-68.78143610791459
+
+094. Nirgua
+  GPS: 10.14910526911017, -68.57025980170425
+  Address: 
+  City: Nirgua, Estado Yaracuy
+  Maps: https://maps.google.com/?q=10.14910526911017,-68.57025980170425
+
+093. Yaritagua
+  GPS: 10.080289048700253, -69.13009857620499
+  Address: Calle 20 entre Carrera 09 y 11
+  City: Yaritagua, Estado Yaracuy
+  Maps: https://maps.google.com/?q=10.080289048700253,-69.13009857620499
+
+219. Chivacoa
+  GPS: 10.155964574845285, -68.88960586290781
+  Address: 
+  City: Chivacoa, Estado Yaracuy
+  Maps: https://maps.google.com/?q=10.155964574845285,-68.88960586290781
+
+041. Maracaibo &#8211; Valle Frío
+  GPS: 10.666204839088861, -71.6011862207839
+  Address: Calle 78 Dr. Portillo. Av. 3D. Maracaibo.
+  City: Maracaibo, Estado Zulia
+  Maps: https://maps.google.com/?q=10.666204839088861,-71.6011862207839
+
+080. Machiques
+  GPS: 10.062274521585492, -72.53750504921783
+  Address: 
+  City: Machiques, Estado Zulia
+  Maps: https://maps.google.com/?q=10.062274521585492,-72.53750504921783
+
+028. Ciudad Ojeda
+  GPS: 10.196188847692165, -71.3102110896973
+  Address: Boulevar Sucre local 88 casa central Ciudad Ojeda
+  City: Ciudad Ojeda, Estado Zulia
+  Maps: https://maps.google.com/?q=10.196188847692165,-71.3102110896973
+
+027. Santa Rita
+  GPS: 10.672084869918377, -71.5142098196703
+  Address: sector los andes. av. Pedro lucas urribarri. diagonal a la estacion de servivio la principal municipio santa rita.
+  City: Santa Rita, Estado Zulia
+  Maps: https://maps.google.com/?q=10.672084869918377,-71.5142098196703
+
+220. Caja Seca
+  GPS: 9.149881214355636, -71.07921276476046
+  Address: Caja Seca Calle Pedro Hernandez Edif. "SOL" Piso 1. Local 6.
+  City: Caja Seca, Estado Zulia
+  Maps: https://maps.google.com/?q=9.149881214355636,-71.07921276476046
+
+059. Cabimas
+  GPS: 10.391515029869824, -71.4772224933914
+  Address: Centro Civico. Edificio Rental Planta alta local 39.
+  City: Cabimas, Estado Zulia
+  Maps: https://maps.google.com/?q=10.391515029869824,-71.4772224933914
+
+122. Bachaquero / Valmore Rodríguez
+  GPS: 9.956469975167963, -71.12029958969981
+  Address: Municipio Valmore Rodríguez. Parroquia La Victoria. Av. Principal frente al terminal de pasajero del municipio.
+  City: Bachaquero, Estado Zulia
+  Maps: https://maps.google.com/?q=9.956469975167963,-71.12029958969981
+
+109. Domitila Flores
+  GPS: 10.564166729339636, -71.66938960688307
+  Address: Barrio El Callao. Av. 50. Carretera a Perija Complejo recreacional Zumaque Km 7.
+  City: Maracaibo, Estado Zulia
+  Maps: https://maps.google.com/?q=10.564166729339636,-71.66938960688307
+
+043. Sabaneta
+  GPS: 10.636138921600052, -71.6295710287906
+  Address: Av 100 Sector San Trino. Parroquia Cristo de Aranza. Al lado del estacionamiento de los expresos Occidente y frente a la estacion Urdaneta del Metro de Maracaibo.
+  City: Maracaibo, Estado Zulia
+  Maps: https://maps.google.com/?q=10.636138921600052,-71.6295710287906
+
+103. El Moján
+  GPS: 10.964153253379463, -71.73265129079097
+  Address: Av 3 . con calle 23 y 24 . frente al mercado guajiro municipio Mara . parroquia San Rafael del Moján
+  City: San Rafael del Moján, Estado Zulia
+  Maps: https://maps.google.com/?q=10.964153253379463,-71.73265129079097
+
+221. Sinamaica
+  GPS: 11.08473796193626, -71.85287550687673
+  Address: 
+  City: Sinamaica, Estado Zulia
+  Maps: https://maps.google.com/?q=11.08473796193626,-71.85287550687673
+
+156. Puertos de Altagracia
+  GPS: 10.712152185013966, -71.52613759394387
+  Address: Casco Central entre calle 10 y 11 al ado de la alcaldia de Mirandina.
+  City: Los Puertos de Altagracia, Estado Zulia
+  Maps: https://maps.google.com/?q=10.712152185013966,-71.52613759394387
+
