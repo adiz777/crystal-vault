@@ -1,0 +1,66 @@
+======================================================================
+ORGANIZATION API DISCOVERY REPORT
+Date: 2026-01-01
+Method: Tor-proxied probes + WebFetch + WebSearch
+======================================================================
+
+SITES UNREACHABLE (Blocking external/Tor or SSL issues)
+----------------------------------------------------------------------
+| Organization | URL | Issue |
+|--------------|-----|-------|
+| PDVSA | www.pdvsa.com | No response |
+| CICPC | www.cicpc.gob.ve | No response |
+| SENIAT | www.seniat.gob.ve | No response |
+| TSJ | www.tsj.gob.ve | SSL cert error |
+| BCV | www.bcv.org.ve | SSL cert error |
+| INE | www.ine.gob.ve | Connection reset |
+| INEA | www.inea.gob.ve | No response |
+| CAVIM | www.cavim.gob.ve | No response |
+| Min Publico | ministeriopublico.gob.ve | No response |
+| Min Cultura | mincultura.gob.ve | No response |
+
+ENDPOINTS DISCOVERED (via WebSearch - not directly accessible)
+----------------------------------------------------------------------
+
+TSJ (Tribunal Supremo de Justicia):
+- http://www.tsj.gob.ve/decisiones - Decisions database
+- http://www.tsj.gob.ve/buscador - Search portal
+- http://www.tsj.gob.ve/juriprudencias - Case law
+- http://www.tsj.gob.ve/casos-en-linea - Online cases
+- http://historico.tsj.gob.ve/decisiones/ - Historical decisions
+- Regional: sucre.tsj.gob.ve, apure.tsj.gob.ve, aragua.tsj.gob.ve
+
+BCV (Banco Central de Venezuela):
+- https://www.bcv.org.ve/estadisticas/[month]-2024 - Monthly stats
+- https://www.bcv.org.ve/estadisticas/ano-2024-trimestre-[I-IV] - Quarterly
+- Exchange rates found: Jan 334.40, Jun 314.38, Dec 261.16
+
+INE (Instituto Nacional de Estadistica):
+- https://ine.gob.ve/censos/ - 2024 Census data
+- https://ine.gob.ve/demograficos/ - Demographics
+- PDF: ine.gob.ve/documentos/Demografia/CensodePoblacionyVivienda/pdf/nacional.pdf
+- PDF: ine.gob.ve/wp-content/uploads/2024/09/DISTRITO-CAPITAL.pdf
+
+CICPC:
+- https://estadistica.cicpc.gob.ve/ - Statistics subdomain (DNS not resolving)
+
+ASSESSMENT
+----------------------------------------------------------------------
+Most Venezuelan government sites are:
+1. Blocking Tor exit nodes
+2. Blocking non-Venezuelan IPs
+3. Have SSL certificate issues
+4. Running legacy systems (ASP, Liferay)
+
+RECOMMENDATION: Access from Venezuelan IP or VPN endpoint in Venezuela
+
+ALREADY SCRAPED (from previous sessions)
+----------------------------------------------------------------------
+- VTV, AVN, Correo del Orinoco (WordPress APIs - working)
+- CNE (election data)
+- SAIME (immigration API)
+- SAREN (business registry)
+- CANTV, INCES, Patria (WordPress APIs)
+- TeleSUR, Ultimas Noticias (news - 200k+ posts available)
+
+======================================================================
