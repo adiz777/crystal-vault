@@ -1,0 +1,62 @@
+avn|https://avn.info.ve/wp-content/uploads/2025/12/Presidente-Maduro3-scaled.jpg|Canon EOS 5D Mark III|1766948462
+avn|https://avn.info.ve/wp-content/uploads/2025/12/Presidente-Maduro4-scaled.jpg|Canon EOS R5 C|1756711143
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/25IMG_3429_P-1-scaled-1-1.jpg|Canon EOS R5 C|1767303584
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/38IMG_3522_P-scaled-1.jpg|Canon EOS R5 C|1767303684
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/25IMG_3429_P-1-scaled-1.jpg|Canon EOS R5 C|1767303584
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/35IMG_3512_P-scaled-1.jpg|Canon EOS R5 C|1767303681
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/12MILA9815_P-scaled-1.jpg|Canon EOS R5 C|1754603236
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/14IMG_2691_P-scaled-1.jpg|Canon EOS R5 C|1767216988
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/16IMG_2753_P-scaled-1.jpg|Canon EOS R5 C|1767217082
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/01MG_L8340_P-scaled-1.jpg|Canon EOS 5D Mark IV|1767078892
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/14MILA9827_P-scaled-1.jpg|Canon EOS R5 C|1754603283
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/10IMG_2604_P-1536x1025-2.jpg|Canon EOS R5 C|1767216776
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/10IMG_2604_P-1536x1025-1.jpg|Canon EOS R5 C|1767216776
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/Clima-fue-cada-vez-mas-extremo-en-2025.jpg||1512051272
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/18IMG_2113_P-scaled-1.jpg|Canon EOS R5 C|1767131269
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/20_JZ_L4415_P-1536x1024-1.jpg|Canon EOS R5 C|1767046702
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/01_JZ_L3836_P-scaled-1.jpg|Canon EOS R5 C|1767045169
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/13IMG_2027_P-scaled-1.jpg|Canon EOS R5 C|1767130976
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/07_ZC__4586_P-scaled-1.jpg|Canon EOS R5|1766798445
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/04WO_L2153_P-1536x1024-1.jpg|Canon EOS R5 C|1759178091
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/12_WOL3545_P-scaled-1.jpg|Canon EOS 7D Mark II|1766768335
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/06EG__6718_P-1024x686-1.jpg|Canon EOS 5D Mark III|1766605269
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/03EG__6491_P-scaled-1.jpg|Canon EOS 5D Mark III|1766604575
+correo|https://www.correodelorinoco.gob.ve/wp-content/uploads/2025/12/20_ZC_L4081_P-1-scaled-1.jpg|Canon EOS 5D Mark IV|1766536310
+saime|https://www.saime.gob.ve/wp-content/uploads/2025/11/noticia-1.jpg|ILCE-6700|1761220712
+saime|https://www.saime.gob.ve/wp-content/uploads/2025/11/IMG_20251105_163401_290.jpg|ILCE-6700|1762255858
+telesur|https://ikona.telesurtv.net/content/uploads/2026/01/maduro-mensaje-fin-2025-2026.jpg.webp|Canon EOS R5 C|1767285584
+telesur|https://ikona.telesurtv.net/content/uploads/2026/01/fin-2025-nueva-york.jpg.webp||1767223807
+telesur|https://ikona.telesurtv.net/content/uploads/2026/01/fin-2025-vaticano.jpg.webp||1767199798
+telesur|https://ikona.telesurtv.net/content/uploads/2026/01/fin-2025-atenas.jpg.webp||1767222161
+telesur|https://ikona.telesurtv.net/content/uploads/2026/01/fin-2025-berlin.jpg.webp||1767220350
+telesur|https://ikona.telesurtv.net/content/uploads/2026/01/fin-2025-londres.jpg.webp||1767226116
+telesur|https://ikona.telesurtv.net/content/uploads/2026/01/fin-2025-paris.jpg.webp||1767218260
+telesur|https://ikona.telesurtv.net/content/uploads/2026/01/fin-2025-madrid.jpg.webp||1767217148
+telesur|https://ikona.telesurtv.net/content/uploads/2026/01/fin-2025-moscu.jpg.webp||1767215015
+telesur|https://ikona.telesurtv.net/content/uploads/2026/01/fin-2025-pakistan.jpg.webp||1767228786
+telesur|https://ikona.telesurtv.net/content/uploads/2026/01/fin-2025-seul.jpg.webp||1767193513
+telesur|https://ikona.telesurtv.net/content/uploads/2026/01/fin-2025-beijing.jpg.webp||1767111625
+telesur|https://ikona.telesurtv.net/content/uploads/2026/01/fin-2025-sidney.jpg.webp||1767175523
+telesur|https://ikona.telesurtv.net/content/uploads/2026/01/southcom-lancha-31dic2025.jpg.webp||1767210841
+telesur|https://ikona.telesurtv.net/content/uploads/2026/01/8022786519001w.jpg.webp||1746689380
+telesur|https://ikona.telesurtv.net/content/uploads/2025/12/primazol-presidente-siu-dic2025.jpg.webp||1767195904
+telesur|https://ikona.telesurtv.net/content/uploads/2025/12/89dceaf318f13719e7fb1eb9465d42748255d000p.jpg.webp||1766984400
+telesur|https://ikona.telesurtv.net/content/uploads/2025/12/e78533becf30fe27841a18f81f445dd7e0614173w.jpg.webp||1767031245
+telesur|https://ikona.telesurtv.net/content/uploads/2025/12/2706bd3bfbbdfb5388a1be13f0d4f54cb92dec8dw.jpg.webp||1767032942
+telesur|https://ikona.telesurtv.net/content/uploads/2025/12/0d320ac271bb4b84adb3d0d511e60a6533407648w-1.jpg.webp||1766984400
+telesur|https://ikona.telesurtv.net/content/uploads/2025/12/maduro-escuela-mujer-30dic2025-empoderamiento.jpg.webp|Canon EOS R5 C|1767199082
+telesur|https://ikona.telesurtv.net/content/uploads/2025/12/8022557609001w.jpg.webp||1737729761
+telesur|https://ikona.telesurtv.net/content/uploads/2025/12/unrwa.jpg.webp||1738163235
+telesur|https://ikona.telesurtv.net/content/uploads/2025/12/8d66a0a6a0c20ea249014e03c4bfd2e4f895a486w.jpg.webp||1767110401
+telesur|https://ikona.telesurtv.net/content/uploads/2025/12/8023224815001w.jpg.webp||1765843465
+telesur|https://ikona.telesurtv.net/content/uploads/2025/12/8022985762001w.jpg.webp||1753779345
+telesur|https://ikona.telesurtv.net/content/uploads/2025/12/8a2646f1ed015868b45de431519cf4ddaa2e731ew.jpg.webp||1743033600
+telesur|https://ikona.telesurtv.net/content/uploads/2025/12/9a335d669963cdd19948087fdce19598c80bc789w-1.jpg.webp||1766984400
+ultimasnoticias|https://ultimasnoticias.com.ve/wp-content/uploads/2025/12/agrotiendas.jpg||1767190221
+ultimasnoticias|https://ultimasnoticias.com.ve/wp-content/uploads/2025/12/gil.jpg||1767185086
+ultimasnoticias|https://ultimasnoticias.com.ve/wp-content/uploads/2025/12/Maduro-Mujeres-scaled.jpg|Canon EOS R5 C|1754603283
+ultimasnoticias|https://ultimasnoticias.com.ve/wp-content/uploads/2025/12/Maduro-Castaneda-scaled.jpg|Canon EOS R5 C|1767216776
+ultimasnoticias|https://ultimasnoticias.com.ve/wp-content/uploads/2025/12/Maduro-2-scaled.jpg|Canon EOS R5 C|1767216988
+ultimasnoticias|https://ultimasnoticias.com.ve/wp-content/uploads/2025/12/Plan-de-asfaltado-ha-llegado-a-diferentes-sectores-de-la-entidad.jpg|NIC-LX3|1767108841
+ultimasnoticias|https://ultimasnoticias.com.ve/wp-content/uploads/2025/12/Labores-incluyen-limpieza-y-desmalezado-en-la-ARC.jpg|NIC-LX3|1767108877
+ultimasnoticias|https://ultimasnoticias.com.ve/wp-content/uploads/2025/12/Este-30-de-diciembre-continuan-trabajos-previo-a-la-inauguracion-de-la-Av.-Cagigal-en-Cagua.jpg|NIC-LX3|1767108820
