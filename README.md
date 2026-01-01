@@ -1,5 +1,7 @@
 # Crystal Vault
 
+![Wanted Poster](assets/Wanted%20Poster.PNG)
+
 Venezuela OSINT Intelligence Dashboard documenting the regime's centralized surveillance infrastructure and exposed government systems.
 
 **Live Dashboard:** [https://ringmast4r.github.io/crystal-vault/](https://ringmast4r.github.io/crystal-vault/)
