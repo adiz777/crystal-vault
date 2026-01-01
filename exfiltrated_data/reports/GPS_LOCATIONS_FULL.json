@@ -1,0 +1,426 @@
+{
+  "generated": "2026-01-01T02:03:15.034779",
+  "total_gps_locations": 42,
+  "locations": [
+    {
+      "file": "AVN\\AVN_38360.jpg",
+      "agency": "AVN",
+      "latitude": 10.503130912777777,
+      "longitude": -66.91614532444444,
+      "camera_make": "HONOR",
+      "camera_model": "JDY-LX3",
+      "datetime": "2025:10:21 13:04:53",
+      "google_maps": "https://maps.google.com/?q=10.503130912777777,-66.91614532444444"
+    },
+    {
+      "file": "AVN\\AVN_43325.jpg",
+      "agency": "AVN",
+      "latitude": 10.274094416666667,
+      "longitude": -68.90948608333333,
+      "camera_make": "Xiaomi",
+      "camera_model": "Redmi Note 8 Pro",
+      "datetime": "2023:11:01 11:33:42",
+      "google_maps": "https://maps.google.com/?q=10.274094416666667,-68.90948608333333"
+    },
+    {
+      "file": "INCES\\ELECTRICISTAS-DE-REDES-DE-DISTRIBUCION-1.jpg",
+      "agency": "INCES",
+      "latitude": 11.4088554,
+      "longitude": -69.64998940000001,
+      "camera_make": "Xiaomi",
+      "camera_model": "Redmi A3x",
+      "datetime": "",
+      "google_maps": "https://maps.google.com/?q=11.4088554,-69.64998940000001"
+    },
+    {
+      "file": "INCES\\ELECTRICISTAS-DE-REDES-DE-DISTRIBUCION-2.jpg",
+      "agency": "INCES",
+      "latitude": 11.4088554,
+      "longitude": -69.64998940000001,
+      "camera_make": "Xiaomi",
+      "camera_model": "Redmi A3x",
+      "datetime": "",
+      "google_maps": "https://maps.google.com/?q=11.4088554,-69.64998940000001"
+    },
+    {
+      "file": "INCES\\ELECTRICISTAS-DE-REDES-DE-DISTRIBUCION-3.jpg",
+      "agency": "INCES",
+      "latitude": 11.4088554,
+      "longitude": -69.64998940000001,
+      "camera_make": "Xiaomi",
+      "camera_model": "Redmi A3x",
+      "datetime": "",
+      "google_maps": "https://maps.google.com/?q=11.4088554,-69.64998940000001"
+    },
+    {
+      "file": "INCES\\ELECTRICISTAS-DE-REDES-DE-DISTRIBUCION-6.jpg",
+      "agency": "INCES",
+      "latitude": 11.4088554,
+      "longitude": -69.64998940000001,
+      "camera_make": "Xiaomi",
+      "camera_model": "Redmi A3x",
+      "datetime": "",
+      "google_maps": "https://maps.google.com/?q=11.4088554,-69.64998940000001"
+    },
+    {
+      "file": "INCES\\ELECTRICISTAS-DE-REDES-DE-DISTRIBUCION-7.jpg",
+      "agency": "INCES",
+      "latitude": 11.408856400000001,
+      "longitude": -69.6499685,
+      "camera_make": "Xiaomi",
+      "camera_model": "Redmi A3x",
+      "datetime": "",
+      "google_maps": "https://maps.google.com/?q=11.408856400000001,-69.6499685"
+    },
+    {
+      "file": "INCES\\INCES_37469.jpg",
+      "agency": "INCES",
+      "latitude": 9.45129011111111,
+      "longitude": -69.26619719444444,
+      "camera_make": "Xiaomi\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "camera_model": "M2006C3MG\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "datetime": "2021:03:11 08:52:52",
+      "google_maps": "https://maps.google.com/?q=9.45129011111111,-69.26619719444444"
+    },
+    {
+      "file": "INCES\\INCES_37583.jpg",
+      "agency": "INCES",
+      "latitude": 9.558589916666667,
+      "longitude": -69.21492766666667,
+      "camera_make": "Xiaomi\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "camera_model": "M2006C3MG\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "datetime": "2021:03:19 11:00:26",
+      "google_maps": "https://maps.google.com/?q=9.558589916666667,-69.21492766666667"
+    },
+    {
+      "file": "INCES\\INCES_37585.jpg",
+      "agency": "INCES",
+      "latitude": 9.558589916666667,
+      "longitude": -69.21492766666667,
+      "camera_make": "Xiaomi\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "camera_model": "M2006C3MG\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "datetime": "2021:03:19 11:00:26",
+      "google_maps": "https://maps.google.com/?q=9.558589916666667,-69.21492766666667"
+    },
+    {
+      "file": "INCES\\INCES_37606.jpg",
+      "agency": "INCES",
+      "latitude": 9.315099694444445,
+      "longitude": -70.603302,
+      "camera_make": "Xiaomi\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "camera_model": "M2006C3LG\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "datetime": "2021:03:21 13:21:59",
+      "google_maps": "https://maps.google.com/?q=9.315099694444445,-70.603302"
+    },
+    {
+      "file": "INCES\\INCES_38075.jpg",
+      "agency": "INCES",
+      "latitude": 0.0,
+      "longitude": 0.0,
+      "camera_make": "--",
+      "camera_model": "--",
+      "datetime": "2021:04:26 07:30:07",
+      "google_maps": "https://maps.google.com/?q=0.0,0.0"
+    },
+    {
+      "file": "INCES\\INCES_41394.jpg",
+      "agency": "INCES",
+      "latitude": 10.342503972222223,
+      "longitude": -68.72835194444444,
+      "camera_make": "Xiaomi",
+      "camera_model": "Redmi 8",
+      "datetime": "2022:02:10 13:17:23",
+      "google_maps": "https://maps.google.com/?q=10.342503972222223,-68.72835194444444"
+    },
+    {
+      "file": "INCES\\INCES_42575.jpg",
+      "agency": "INCES",
+      "latitude": 11.355520805555555,
+      "longitude": -69.52191483333333,
+      "camera_make": "samsung",
+      "camera_model": "SM-J260MU",
+      "datetime": "",
+      "google_maps": "https://maps.google.com/?q=11.355520805555555,-69.52191483333333"
+    },
+    {
+      "file": "INCES\\INCES_42646.jpg",
+      "agency": "INCES",
+      "latitude": 8.631411527777779,
+      "longitude": -71.07752988888889,
+      "camera_make": "Xiaomi\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "camera_model": "M2006C3LG\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "datetime": "2022:05:03 11:29:51",
+      "google_maps": "https://maps.google.com/?q=8.631411527777779,-71.07752988888889"
+    },
+    {
+      "file": "INCES\\INCES_42944.jpg",
+      "agency": "INCES",
+      "latitude": 0.0,
+      "longitude": 0.0,
+      "camera_make": "--",
+      "camera_model": "--",
+      "datetime": "2022:05:11 13:25:31",
+      "google_maps": "https://maps.google.com/?q=0.0,0.0"
+    },
+    {
+      "file": "INCES\\INCES_42945.jpg",
+      "agency": "INCES",
+      "latitude": 0.0,
+      "longitude": 0.0,
+      "camera_make": "--",
+      "camera_model": "--",
+      "datetime": "2022:05:10 10:17:12",
+      "google_maps": "https://maps.google.com/?q=0.0,0.0"
+    },
+    {
+      "file": "INCES\\INCES_42954.jpg",
+      "agency": "INCES",
+      "latitude": 10.504424083333333,
+      "longitude": -66.91522216666667,
+      "camera_make": "Xiaomi",
+      "camera_model": "M2004J19C",
+      "datetime": "2022:05:18 15:10:59",
+      "google_maps": "https://maps.google.com/?q=10.504424083333333,-66.91522216666667"
+    },
+    {
+      "file": "INCES\\INCES_43878.jpg",
+      "agency": "INCES",
+      "latitude": 8.593620277777779,
+      "longitude": -71.14795683333334,
+      "camera_make": "Xiaomi\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "camera_model": "M2006C3LG\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "datetime": "2022:06:15 10:55:42",
+      "google_maps": "https://maps.google.com/?q=8.593620277777779,-71.14795683333334"
+    },
+    {
+      "file": "INCES\\INCES_44107.jpg",
+      "agency": "INCES",
+      "latitude": 0.0,
+      "longitude": 0.0,
+      "camera_make": "--",
+      "camera_model": "--",
+      "datetime": "2022:07:14 09:31:03",
+      "google_maps": "https://maps.google.com/?q=0.0,0.0"
+    },
+    {
+      "file": "INCES\\INCES_44309.jpg",
+      "agency": "INCES",
+      "latitude": 10.484319666666666,
+      "longitude": -66.90579986111112,
+      "camera_make": "Xiaomi",
+      "camera_model": "M2004J19C",
+      "datetime": "2022:08:06 11:00:35",
+      "google_maps": "https://maps.google.com/?q=10.484319666666666,-66.90579986111112"
+    },
+    {
+      "file": "INCES\\INCES_44310.jpg",
+      "agency": "INCES",
+      "latitude": 10.484464638888888,
+      "longitude": -66.90573880555556,
+      "camera_make": "Xiaomi",
+      "camera_model": "M2004J19C",
+      "datetime": "2022:08:06 10:48:43",
+      "google_maps": "https://maps.google.com/?q=10.484464638888888,-66.90573880555556"
+    },
+    {
+      "file": "INCES\\INCES_69066.jpg",
+      "agency": "INCES",
+      "latitude": 11.408856400000001,
+      "longitude": -69.6499685,
+      "camera_make": "Xiaomi",
+      "camera_model": "Redmi A3x",
+      "datetime": "",
+      "google_maps": "https://maps.google.com/?q=11.408856400000001,-69.6499685"
+    },
+    {
+      "file": "INCES\\INCES_69067.jpg",
+      "agency": "INCES",
+      "latitude": 11.4088554,
+      "longitude": -69.64998940000001,
+      "camera_make": "Xiaomi",
+      "camera_model": "Redmi A3x",
+      "datetime": "",
+      "google_maps": "https://maps.google.com/?q=11.4088554,-69.64998940000001"
+    },
+    {
+      "file": "INCES\\INCES_69069.jpg",
+      "agency": "INCES",
+      "latitude": 11.4088554,
+      "longitude": -69.64998940000001,
+      "camera_make": "Xiaomi",
+      "camera_model": "Redmi A3x",
+      "datetime": "",
+      "google_maps": "https://maps.google.com/?q=11.4088554,-69.64998940000001"
+    },
+    {
+      "file": "INCES\\INCES_69070.jpg",
+      "agency": "INCES",
+      "latitude": 11.4088554,
+      "longitude": -69.64998940000001,
+      "camera_make": "Xiaomi",
+      "camera_model": "Redmi A3x",
+      "datetime": "",
+      "google_maps": "https://maps.google.com/?q=11.4088554,-69.64998940000001"
+    },
+    {
+      "file": "INCES\\INCES_69071.jpg",
+      "agency": "INCES",
+      "latitude": 11.4088554,
+      "longitude": -69.64998940000001,
+      "camera_make": "Xiaomi",
+      "camera_model": "Redmi A3x",
+      "datetime": "",
+      "google_maps": "https://maps.google.com/?q=11.4088554,-69.64998940000001"
+    },
+    {
+      "file": "VTV\\base-misiones-alimentos.jpg",
+      "agency": "VTV",
+      "latitude": 7.7214749722222225,
+      "longitude": -72.241657,
+      "camera_make": "Xiaomi",
+      "camera_model": "Redmi Note 9S",
+      "datetime": "2023:07:28 12:03:17",
+      "google_maps": "https://maps.google.com/?q=7.7214749722222225,-72.241657"
+    },
+    {
+      "file": "VTV\\Foto-1-14-1024x576-1.jpg",
+      "agency": "VTV",
+      "latitude": 10.287000194444444,
+      "longitude": -67.56368530555555,
+      "camera_make": "DJI\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "camera_model": "FC7303\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "datetime": "2023:01:11 14:54:09",
+      "google_maps": "https://maps.google.com/?q=10.287000194444444,-67.56368530555555"
+    },
+    {
+      "file": "VTV\\General_Rafael_Urdaneta_Bridge_view_from_the_lake_to_Cabimas_side.jpg",
+      "agency": "VTV",
+      "latitude": 10.574011,
+      "longitude": -71.605216,
+      "camera_make": "NIKON CORPORATION",
+      "camera_model": "NIKON D300",
+      "datetime": "2013:10:27 16:52:25",
+      "google_maps": "https://maps.google.com/?q=10.574011,-71.605216"
+    },
+    {
+      "file": "VTV\\IMG_20231020_123444.jpg",
+      "agency": "VTV",
+      "latitude": 10.485313888888887,
+      "longitude": -66.85416666666666,
+      "camera_make": "Xiaomi",
+      "camera_model": "M2101K6G",
+      "datetime": "2023:10:20 12:34:45",
+      "google_maps": "https://maps.google.com/?q=10.485313888888887,-66.85416666666666"
+    },
+    {
+      "file": "VTV\\IMG_20231020_125109.jpg",
+      "agency": "VTV",
+      "latitude": 10.485016666666667,
+      "longitude": -66.85468333333333,
+      "camera_make": "Xiaomi",
+      "camera_model": "M2101K6G",
+      "datetime": "2023:10:20 12:51:09",
+      "google_maps": "https://maps.google.com/?q=10.485016666666667,-66.85468333333333"
+    },
+    {
+      "file": "VTV\\IMG_20231020_125116-scaled.jpg",
+      "agency": "VTV",
+      "latitude": 10.485016666666667,
+      "longitude": -66.85468333333333,
+      "camera_make": "Xiaomi",
+      "camera_model": "M2101K6G",
+      "datetime": "2023:10:20 12:51:16",
+      "google_maps": "https://maps.google.com/?q=10.485016666666667,-66.85468333333333"
+    },
+    {
+      "file": "VTV\\IMG_20231020_125145.jpg",
+      "agency": "VTV",
+      "latitude": 10.485069444444443,
+      "longitude": -66.85467222222222,
+      "camera_make": "Xiaomi",
+      "camera_model": "M2101K6G",
+      "datetime": "2023:10:20 12:51:45",
+      "google_maps": "https://maps.google.com/?q=10.485069444444443,-66.85467222222222"
+    },
+    {
+      "file": "VTV\\MBA-Jardin-interno-e1580390292445.jpg",
+      "agency": "VTV",
+      "latitude": 10.500694444444445,
+      "longitude": -66.8968888888889,
+      "camera_make": "Apple",
+      "camera_model": "iPhone 11 Pro Max",
+      "datetime": "2020:01:08 10:59:57",
+      "google_maps": "https://maps.google.com/?q=10.500694444444445,-66.8968888888889"
+    },
+    {
+      "file": "VTV\\Oncdoft-capacito-a-funcionarios-en-materia-de-Economia-Digital-1.jpg",
+      "agency": "VTV",
+      "latitude": 10.492626416666665,
+      "longitude": -66.86107972222221,
+      "camera_make": "Xiaomi",
+      "camera_model": "MI 8 Lite",
+      "datetime": "2023:08:22 10:26:52",
+      "google_maps": "https://maps.google.com/?q=10.492626416666665,-66.86107972222221"
+    },
+    {
+      "file": "VTV\\Oncdoft-capacito-a-funcionarios-en-materia-de-Economia-Digital-2.jpg",
+      "agency": "VTV",
+      "latitude": 10.492626833333333,
+      "longitude": -66.86107966666665,
+      "camera_make": "Xiaomi",
+      "camera_model": "MI 8 Lite",
+      "datetime": "2023:08:22 10:27:35",
+      "google_maps": "https://maps.google.com/?q=10.492626833333333,-66.86107966666665"
+    },
+    {
+      "file": "VTV\\Oncdoft-capacito-a-funcionarios-en-materia-de-Economia-Digital-3.jpg",
+      "agency": "VTV",
+      "latitude": 10.4926114,
+      "longitude": -66.8612235,
+      "camera_make": "Xiaomi",
+      "camera_model": "2303ERA42L",
+      "datetime": "2023:08:22 10:44:38",
+      "google_maps": "https://maps.google.com/?q=10.4926114,-66.8612235"
+    },
+    {
+      "file": "VTV\\Oncdoft-capacito-a-funcionarios-en-materia-de-Economia-Digital-4.jpg",
+      "agency": "VTV",
+      "latitude": 10.492657399999999,
+      "longitude": -66.86126069999999,
+      "camera_make": "Xiaomi",
+      "camera_model": "2303ERA42L",
+      "datetime": "2023:08:22 10:44:57",
+      "google_maps": "https://maps.google.com/?q=10.492657399999999,-66.86126069999999"
+    },
+    {
+      "file": "VTV\\PLAN-CAPACITACION-768x427-1.jpg",
+      "agency": "VTV",
+      "latitude": 8.132066722222223,
+      "longitude": -63.53516386111111,
+      "camera_make": "ZOOM\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "camera_model": "Twister5.0\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "datetime": "2020:01:24 10:31:45",
+      "google_maps": "https://maps.google.com/?q=8.132066722222223,-63.53516386111111"
+    },
+    {
+      "file": "VTV\\productodestacado251201030549.jpg",
+      "agency": "VTV",
+      "latitude": 43.25956388888889,
+      "longitude": -2.937127777777778,
+      "camera_make": "Apple",
+      "camera_model": "iPhone 16",
+      "datetime": "2025:11:30 18:46:31",
+      "google_maps": "https://maps.google.com/?q=43.25956388888889,-2.937127777777778"
+    },
+    {
+      "file": "VTV\\putin-rusia-ucrania.jpg",
+      "agency": "VTV",
+      "latitude": 39.65417,
+      "longitude": 66.9597194719472,
+      "camera_make": "",
+      "camera_model": "",
+      "datetime": "2025:07:30 06:00:58",
+      "google_maps": "https://maps.google.com/?q=39.65417,66.9597194719472"
+    }
+  ]
+}
