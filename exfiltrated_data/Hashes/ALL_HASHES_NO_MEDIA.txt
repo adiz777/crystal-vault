@@ -1,0 +1,86 @@
+VENEZUELA OSINT HASH COLLECTION - MEDIA REDACTED
+================================================================================
+Total: 51 users (media organizations removed to protect journalists)
+Date: 2026-01-02
+================================================================================
+
+SOURCE|NAME|USERNAME|GRAVATAR_HASH
+--------------------------------------------------------------------------------
+
+=== PATRIA (government system - 1 user) ===
+PATRIA|ptrmaster|ptrmaster|1d2141ead3cf3d83b031be7b64ad9117
+
+=== POLITICAL PARTIES (4 users) ===
+--- Voluntad Popular (opposition) ---
+VP|User 1|user1|bf78051547fdb8a6d9e9cda3f3d6de7649b3731ef00eda4c4669d4a63d48a3dd
+VP|vpweb|vpweb|3694e9808a6028c3c3a61ef656f638c594f9fff50e4b23a4137bc378b1b7535b
+--- COPEI ---
+COPEI|Prensa COPEI|copei|fb72ee4481b5f1aeef36ec86e625726c
+COPEI|Prensa COPEI|prensacopei|45708115c770a445c5dac1505d9b4fec
+
+=== CIVIL SOCIETY ORGANIZATIONS ===
+--- CEDICE (think tank - 22 users) ---
+CEDICE|admin|admin|46e7e6661d8dd6d80c780ad6736e6fdd09e228020289043f7d88587f8b0d0324
+CEDICE|Alanys Duque|alanysduque|c3247d3c46d41f4b6d66718e322724959ed9efadc97c62643a6453ccc91a2e53
+CEDICE|Anderson Ayala|anderson-ayala|6e96d53ee1758536cdee45024974d842f43c77dbeeb35530efcb9bea74accdae
+CEDICE|Andrea Rondón|andrea-rondon|8df395e05a571a149804fd3f7b6bec6062838718dcd2b0aa16a819080988eb42
+CEDICE|Andrés Guevara|andres-guevara|489ed197c1f8ac3a847b76d53bc246040462535983507b566a0ada9bf1c5d1ae
+CEDICE|Antonio Canova|acanova|e87035d7b1143362bff1e6c0444e6b6aec3d6555cbaa7ccfb03ddf0ad94b4e89
+CEDICE|Aurelio Concheso|aurelio-concheso|6e05aa865569d9fac7522dbb98f01b3be97712cb8b834001a3d05718a80a5155
+CEDICE|Carlos Alberto Montaner|carlos-alberto-montaner|bf5f679bca4c635721b2d1f1d80944dcb08118c84cd850d1b9f36accd3c1bdb3
+CEDICE|Dennys Montoto|dennys-montoto|e883d164454a2450ce2185ba0a0f14633be778e97ce509cda5c2b1e5e9207e6d
+CEDICE|Enrique González|enrique-gonzalez|c181e2bbba16dd3b15ddb1302b8a2e8b8f76e3b01b69de85f056c60c2d77ad69
+CEDICE|Gabriel Gasave|ggasave|60445a04785417b7a6f83260d1c8f289f632039737fe3ee9bd125abb3041cdab
+CEDICE|George Youkhadar Allis|george-youkhadar-allis|972b175a97dfa93da939d0639875f5504eb3af1a9795450979568d6231708cd9
+CEDICE|Giannina Raffo|giannina|d991af02f156b86aa7d329eb40b3604d7f74e637d362aa9d2ed344067263c468
+CEDICE|Guillermo Rodríguez González|grodrigon|cdaf2140bda0ed2706e6547fe6b60af6cf51fe778eec2ed65a929cf3cc7e5d94
+CEDICE|Ian Vásquez|iav|08987ec925ce811e794c4b7c32cb93edc935c08540ceaf3f5b35f018b05caf6c
+CEDICE|Isabel Pereira|isabel-pereira|de73550b3ad649de55480ed830831d65818261c642a535afbbfee3f5f1c869c5
+CEDICE|Jesús A. Renzullo|jesus-renzullo|d47e05d7ed3fa52f83ed2a8b824b58c5a59f2e321ddb9ba46bed2e9ecef46e84
+CEDICE|Lenin Navas|lenin-navas|a1bf6eab073dfd4aabc6dc54999b04f278666785356979e494ace531e8759e7e
+CEDICE|Nasly Ustáriz Forero|nuf|62381bfa70082a0f0f2aa161b466614bafd149f94ebb5476c813ad87176c7c7e
+CEDICE|Prensa Cedice|prensa-cedice|3539c7c0d64329325765c0cf3d133aa523defa81748a787282d90adfdb8dd2dd
+CEDICE|Roberto Casanova|robertocasanovacedice|555bf2c69991f3fafbfca2d8433c71cee47aeb915d66af5199df33d2d9c6c5b5
+CEDICE|Trino Márquez|trino-marquez|f019ec0b0722967a8c928fe14c78e7343dd35cd20c00b42dad59ecbbace027e7
+--- PROVEA (human rights - 9 users) ---
+PROVEA|diloweb.co|diloweb-co|1f27f0e45f7daf634a626e63d931c018c53bd8216ba4d513c4dd6791e3c6088b
+PROVEA|Gabriela Buada|gabriela|1862362c929d747f8486181a16882025f8cd6d70ab1fe5692895cdfc7f53c287
+PROVEA|Ignacio Abasolo|ignatz|be80a9484b7c460c5d63d77ef571645971b3922babfc9451d47b9f9d25178dc5
+PROVEA|Lissette González|lissette-gonzalez|5ddbd9823a9aab47777079661bc797228ff4911b98684767d73ee7f6b7d98770
+PROVEA|Marino Alvarado|investigacion|Marino-Alvarado.jpg
+PROVEA|Medios|jennifer|03a9ace81dd15e62206011d768d08aad0b06bf0fcd1dff8afa1f6b46f7e7c1b9
+PROVEA|Óscar Calles|oscar|06-Logos-base-Provea-baseblanca-fondoazul-logoblanco-sinbordetxt.png
+PROVEA|Red Radial|redradial|65e11127940456a19b5a237ff10a7d291cf1b6f374b1392a3f1f0db45fb33b05
+PROVEA|webmaster|jenny|b8b1d7b3d35796df32acda8666f728ce845edf7adade0960ad7e2c1b77dddb69
+--- COFAVIC (victims rights - 3 users) ---
+COFAVIC|admin|admin|5edfa2692bdacc5e6ee805c626c50cb44cebb065f092d9a1067d89f74dacd326
+COFAVIC|Administrador COFAVIC|cofavic_admin|c017c76d13b76c4ac689e31e52d4298432f15285023e9f58b7a2250e7a65d11b
+COFAVIC|Gabriel Vásquez|temporal_1|96ba51059260e42085728a02c950d04e56860fe9f3a73775c9f0f3cdb06f5cc7
+
+=== UNIMET (private university - 4 users) ===
+UNIMET|mlander@unimet.edu.ve|mlanderunimet-edu-ve|f2a211a9ff46b4987273bbabce25fb323c05bc6388a2fc1431c4c27b341bd92b
+UNIMET|njimenez@unimet.edu.ve|njimenezunimet-edu-ve|fef3e0ac57d2e761202b070bf682726d2c6bbbf735a80fc8ecb696dc032e9229
+UNIMET|roberto.upasoft|roberto-upasoft|2fbe385b6925b6da57ddcc0230087fdc16dc81f522a43f1ca054bd748b6ea80d
+UNIMET|webflow@multiproconsulting.com|webflowmultiproconsulting-com|90a256ed5838ccbe29ca5866cb0e0bc6d0e131804e039c715c41de990f80a3aa
+
+=== BANCO DE VENEZUELA (state bank - 4 users) ===
+BDV|bdvadmin|bdvadmin|b3f0c037bcc54e563de4d3b625045eb3
+BDV|Karen Palma|ct24909|7698196b6dd513a206a5e9a11b09fd1b
+BDV|Shira Mendoza|nm42196|eb93a9528c85d897d6840b5767ea3052
+BDV|Urimar Teran|nm42204|40b6e3228501a51768aaf0cdbc20c5e9
+
+=== SAREN (civil registry - 3 users) ===
+SAREN|Christiam Cáceres|ccaceres|7f055fd77b1fbc7e9ffc4fedacce89e9c460289dfc0e38a3907ba1f4308a0c0e
+SAREN|Sarabi Blanco|sblanco|3448c3494f89acf8438b7775382133e74e60974d9c0ed2ffa83c1a4bdfcf2621
+SAREN|soporte|soporte|9661500674a503b166f0b4c3e07008e2ab8af5553d6c838b952b54430ad09205
+
+=== GOBERNACION LARA (state government - 2 users) ===
+GOB_LARA|admin|admin|58303383ee69239aa3d782167e7fe55966136b10cc1837994365c789a424f46a
+GOB_LARA|Prensa|prensa|27feb0d6fbc5d8a9ba2616ca5f4c4e06c7118ccab04da4a2b55271a4e535b94d
+
+================================================================================
+REDACTED SOURCES (to protect journalists):
+- TeleSUR, Ultimas Noticias, El Pitazo, Contrapunto, La Razon
+- Diario de los Andes, Nuevo Pais, Prensa Latina, Reporte Confidencial
+- Correo del Orinoco, VT Actual, ALBA TV
+================================================================================
