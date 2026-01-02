@@ -1,0 +1,3929 @@
+{
+  "total": 436,
+  "locations": [
+    {
+      "file": "AVN/AVN_1267.jpg",
+      "agency": "AVN",
+      "lat": 10.506328,
+      "lon": -66.914825,
+      "make": "Apple",
+      "model": "iPhone 6",
+      "dt": "2015:08:21 12:15:24"
+    },
+    {
+      "file": "AVN/AVN_15265.jpg",
+      "agency": "AVN",
+      "lat": 9.315092,
+      "lon": -70.601921,
+      "make": "BLU",
+      "model": "G5",
+      "dt": "2025:04:29 10:35:44"
+    },
+    {
+      "file": "AVN/AVN_28164.jpg",
+      "agency": "AVN",
+      "lat": 10.506328,
+      "lon": -66.914825,
+      "make": "Apple",
+      "model": "iPhone 6",
+      "dt": "2015:08:21 12:15:24"
+    },
+    {
+      "file": "AVN/AVN_30884.jpg",
+      "agency": "AVN",
+      "lat": 8.370869,
+      "lon": -62.665453,
+      "make": "Apple",
+      "model": "iPhone 11 Pro Max",
+      "dt": "2022:04:24 08:28:57"
+    },
+    {
+      "file": "AVN/AVN_38360.jpg",
+      "agency": "AVN",
+      "lat": 10.503131,
+      "lon": -66.916145,
+      "make": "HONOR",
+      "model": "JDY-LX3",
+      "dt": "2025:10:21 13:04:53"
+    },
+    {
+      "file": "AVN/AVN_43325.jpg",
+      "agency": "AVN",
+      "lat": 10.274094,
+      "lon": -68.909486,
+      "make": "Xiaomi",
+      "model": "Redmi Note 8 Pro",
+      "dt": "2023:11:01 11:33:42"
+    },
+    {
+      "file": "AVN/AVN_6190.jpg",
+      "agency": "AVN",
+      "lat": 23.145,
+      "lon": -82.348085,
+      "make": "Canon",
+      "model": "Canon EOS 5D Mark IV",
+      "dt": "2017:11:05 16:09:06"
+    },
+    {
+      "file": "AVN/AVN_788.jpg",
+      "agency": "AVN",
+      "lat": 38.298659,
+      "lon": -0.574606,
+      "make": "",
+      "model": "",
+      "dt": ""
+    },
+    {
+      "file": "Comunas/Comunas_11942.jpg",
+      "agency": "Comunas",
+      "lat": 10.326983,
+      "lon": -68.691072,
+      "make": "Xiaomi",
+      "model": "Redmi Note 8 Pro",
+      "dt": "2024:05:31 11:59:45"
+    },
+    {
+      "file": "Comunas/Comunas_4236.jpg",
+      "agency": "Comunas",
+      "lat": 10.14505,
+      "lon": -66.785788,
+      "make": "Canon",
+      "model": "Canon EOS 5D Mark IV",
+      "dt": "2023:05:29 05:20:20"
+    },
+    {
+      "file": "Comunas/Comunas_4233.jpg",
+      "agency": "Comunas",
+      "lat": 10.146117,
+      "lon": -66.786343,
+      "make": "Canon",
+      "model": "Canon EOS 5D Mark IV",
+      "dt": "2023:05:29 05:27:20"
+    },
+    {
+      "file": "Comunas/Comunas_6724.jpg",
+      "agency": "Comunas",
+      "lat": 11.104245,
+      "lon": -63.859684,
+      "make": "Xiaomi",
+      "model": "M2006C3LG",
+      "dt": "2023:06:10 10:50:01"
+    },
+    {
+      "file": "Comunas/Comunas_6725.jpg",
+      "agency": "Comunas",
+      "lat": 11.104245,
+      "lon": -63.859684,
+      "make": "Xiaomi",
+      "model": "M2006C3LG",
+      "dt": "2023:06:10 10:50:01"
+    },
+    {
+      "file": "Comunas/Comunas_6728.jpg",
+      "agency": "Comunas",
+      "lat": 11.104242,
+      "lon": -63.859638,
+      "make": "Xiaomi",
+      "model": "M2006C3LG",
+      "dt": "2023:06:10 11:12:24"
+    },
+    {
+      "file": "Comunas/Comunas_6726.jpg",
+      "agency": "Comunas",
+      "lat": 11.104245,
+      "lon": -63.859684,
+      "make": "Xiaomi",
+      "model": "M2006C3LG",
+      "dt": "2023:06:10 10:50:01"
+    },
+    {
+      "file": "Comunas/Comunas_6823.jpg",
+      "agency": "Comunas",
+      "lat": 11.08316,
+      "lon": -63.968555,
+      "make": "Xiaomi",
+      "model": "M2006C3LG",
+      "dt": "2023:06:19 10:17:11"
+    },
+    {
+      "file": "Correo/Correo_14926.jpg",
+      "agency": "Correo",
+      "lat": 10.134025,
+      "lon": -67.980478,
+      "make": "DJI",
+      "model": "FC3582",
+      "dt": "2024:12:14 16:18:08"
+    },
+    {
+      "file": "Correo/Correo_16724.jpg",
+      "agency": "Correo",
+      "lat": 10.491202,
+      "lon": -66.854639,
+      "make": "Xiaomi",
+      "model": "Redmi 7A",
+      "dt": "2022:08:04 15:11:34"
+    },
+    {
+      "file": "Correo/Correo_18806.jpg",
+      "agency": "Correo",
+      "lat": 10.491765,
+      "lon": -66.928634,
+      "make": "samsung",
+      "model": "Galaxy A55 5G",
+      "dt": "2025:02:17 17:46:42"
+    },
+    {
+      "file": "Correo/Correo_20194.jpg",
+      "agency": "Correo",
+      "lat": -33.464683,
+      "lon": -70.610683,
+      "make": "Canon",
+      "model": "Canon EOS R3",
+      "dt": "2023:10:31 13:41:17"
+    },
+    {
+      "file": "Correo/Correo_30909.jpg",
+      "agency": "Correo",
+      "lat": 10.398142,
+      "lon": -66.978358,
+      "make": "Xiaomi",
+      "model": "220333QL",
+      "dt": "2025:07:22 10:18:49"
+    },
+    {
+      "file": "Correo/Correo_32727.jpg",
+      "agency": "Correo",
+      "lat": 10.506328,
+      "lon": -66.914825,
+      "make": "Apple",
+      "model": "iPhone 6",
+      "dt": "2015:08:21 12:15:24"
+    },
+    {
+      "file": "Correo/Correo_6407.jpg",
+      "agency": "Correo",
+      "lat": 10.506328,
+      "lon": -66.914825,
+      "make": "Apple",
+      "model": "iPhone 6",
+      "dt": "2015:08:21 12:15:24"
+    },
+    {
+      "file": "GobLara/GobLara_14009.jpeg",
+      "agency": "GobLara",
+      "lat": 10.550819,
+      "lon": -69.232942,
+      "make": "Apple",
+      "model": "iPhone 11",
+      "dt": "2023:03:16 11:24:41"
+    },
+    {
+      "file": "GobLara/GobLara_14011.jpeg",
+      "agency": "GobLara",
+      "lat": 10.550775,
+      "lon": -69.232903,
+      "make": "Apple",
+      "model": "iPhone 11",
+      "dt": "2023:03:16 11:24:33"
+    },
+    {
+      "file": "GobLara/GobLara_14012.jpeg",
+      "agency": "GobLara",
+      "lat": 10.550825,
+      "lon": -69.232972,
+      "make": "Apple",
+      "model": "iPhone 11",
+      "dt": "2023:03:16 11:24:51"
+    },
+    {
+      "file": "GobLara/GobLara_14014.jpeg",
+      "agency": "GobLara",
+      "lat": 10.550833,
+      "lon": -69.232994,
+      "make": "Apple",
+      "model": "iPhone 11",
+      "dt": "2023:03:16 11:24:57"
+    },
+    {
+      "file": "GobLara/GobLara_14504.jpeg",
+      "agency": "GobLara",
+      "lat": 10.056961,
+      "lon": -69.339706,
+      "make": "Apple",
+      "model": "iPhone 11",
+      "dt": "2023:04:03 14:52:04"
+    },
+    {
+      "file": "GobLara/GobLara_14508.jpeg",
+      "agency": "GobLara",
+      "lat": 10.056961,
+      "lon": -69.339706,
+      "make": "Apple",
+      "model": "iPhone 11",
+      "dt": "2023:04:03 14:52:57"
+    },
+    {
+      "file": "GobLara/GobLara_14509.jpeg",
+      "agency": "GobLara",
+      "lat": 10.057017,
+      "lon": -69.339722,
+      "make": "Apple",
+      "model": "iPhone 11",
+      "dt": "2023:04:03 14:59:21"
+    },
+    {
+      "file": "GobLara/GobLara_14512.jpeg",
+      "agency": "GobLara",
+      "lat": 10.057036,
+      "lon": -69.339828,
+      "make": "Apple",
+      "model": "iPhone 11",
+      "dt": "2023:04:03 14:53:17"
+    },
+    {
+      "file": "GobLara/GobLara_21929.jpeg",
+      "agency": "GobLara",
+      "lat": 10.086636,
+      "lon": -69.323528,
+      "make": "DJI",
+      "model": "FC7303",
+      "dt": "2023:11:14 19:15:53"
+    },
+    {
+      "file": "GobLara/GobLara_34206.jpeg",
+      "agency": "GobLara",
+      "lat": 10.0334,
+      "lon": -69.453308,
+      "make": "Arashi Vision",
+      "model": "Insta360 X4",
+      "dt": ""
+    },
+    {
+      "file": "GobLara/GobLara_34201.jpeg",
+      "agency": "GobLara",
+      "lat": 10.0334,
+      "lon": -69.453308,
+      "make": "Arashi Vision",
+      "model": "Insta360 X4",
+      "dt": ""
+    },
+    {
+      "file": "GobLara/GobLara_76.jpg",
+      "agency": "GobLara",
+      "lat": 10.061418,
+      "lon": -69.288222,
+      "make": "Xiaomi",
+      "model": "Redmi Note 9S",
+      "dt": "2021:06:18 12:08:47"
+    },
+    {
+      "file": "GobLara/GobLara_77.jpg",
+      "agency": "GobLara",
+      "lat": 10.06142,
+      "lon": -69.288227,
+      "make": "Xiaomi",
+      "model": "Redmi Note 9S",
+      "dt": "2021:06:18 12:08:24"
+    },
+    {
+      "file": "GobLara/GobLara_78.jpg",
+      "agency": "GobLara",
+      "lat": 10.061415,
+      "lon": -69.288209,
+      "make": "Xiaomi",
+      "model": "Redmi Note 9S",
+      "dt": "2021:06:18 12:04:54"
+    },
+    {
+      "file": "INCES/INCES_19490.jpg",
+      "agency": "INCES",
+      "lat": 10.507548,
+      "lon": -66.919196,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:08:30 11:00:33"
+    },
+    {
+      "file": "INCES/INCES_19488.jpg",
+      "agency": "INCES",
+      "lat": 10.507548,
+      "lon": -66.919198,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:08:30 10:44:00"
+    },
+    {
+      "file": "INCES/INCES_19489.jpg",
+      "agency": "INCES",
+      "lat": 10.507548,
+      "lon": -66.919197,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:08:30 11:04:13"
+    },
+    {
+      "file": "INCES/INCES_19491.jpg",
+      "agency": "INCES",
+      "lat": 10.507548,
+      "lon": -66.919198,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:08:30 10:43:20"
+    },
+    {
+      "file": "INCES/INCES_19506.jpg",
+      "agency": "INCES",
+      "lat": 11.399582,
+      "lon": -69.665461,
+      "make": "motorola",
+      "model": "Moto E (4)",
+      "dt": ""
+    },
+    {
+      "file": "INCES/INCES_19671.jpg",
+      "agency": "INCES",
+      "lat": 10.483898,
+      "lon": -66.905817,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:09:03 10:28:18"
+    },
+    {
+      "file": "INCES/INCES_19670.jpg",
+      "agency": "INCES",
+      "lat": 10.483957,
+      "lon": -66.905877,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:09:03 10:30:59"
+    },
+    {
+      "file": "INCES/INCES_19669.jpg",
+      "agency": "INCES",
+      "lat": 10.483957,
+      "lon": -66.905877,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:09:03 10:31:25"
+    },
+    {
+      "file": "INCES/INCES_19668.jpg",
+      "agency": "INCES",
+      "lat": 10.483886,
+      "lon": -66.905906,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:09:03 11:57:54"
+    },
+    {
+      "file": "INCES/INCES_19754.jpg",
+      "agency": "INCES",
+      "lat": 10.496582,
+      "lon": -66.93161,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:08:31 17:29:05"
+    },
+    {
+      "file": "INCES/INCES_19763.jpg",
+      "agency": "INCES",
+      "lat": 10.496606,
+      "lon": -66.931651,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:08:31 17:37:26"
+    },
+    {
+      "file": "INCES/INCES_19757.jpg",
+      "agency": "INCES",
+      "lat": 10.496886,
+      "lon": -66.931724,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:08:31 15:35:02"
+    },
+    {
+      "file": "INCES/INCES_19756.jpg",
+      "agency": "INCES",
+      "lat": 10.496589,
+      "lon": -66.931766,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:08:31 15:42:15"
+    },
+    {
+      "file": "INCES/INCES_19755.jpg",
+      "agency": "INCES",
+      "lat": 10.496886,
+      "lon": -66.931724,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:08:31 15:35:02"
+    },
+    {
+      "file": "INCES/INCES_19823.jpg",
+      "agency": "INCES",
+      "lat": 11.399154,
+      "lon": -69.664882,
+      "make": "motorola",
+      "model": "Moto E (4)",
+      "dt": ""
+    },
+    {
+      "file": "INCES/INCES_19822.jpg",
+      "agency": "INCES",
+      "lat": 11.399416,
+      "lon": -69.665954,
+      "make": "motorola",
+      "model": "Moto E (4)",
+      "dt": ""
+    },
+    {
+      "file": "INCES/INCES_19824.jpg",
+      "agency": "INCES",
+      "lat": 11.399582,
+      "lon": -69.665461,
+      "make": "motorola",
+      "model": "Moto E (4)",
+      "dt": ""
+    },
+    {
+      "file": "INCES/INCES_19964.jpg",
+      "agency": "INCES",
+      "lat": 10.469578,
+      "lon": -66.946112,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:09:06 14:47:56"
+    },
+    {
+      "file": "INCES/INCES_19965.jpg",
+      "agency": "INCES",
+      "lat": 10.46957,
+      "lon": -66.946128,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:09:06 14:44:51"
+    },
+    {
+      "file": "INCES/INCES_19967.jpg",
+      "agency": "INCES",
+      "lat": 10.469566,
+      "lon": -66.946151,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:09:06 14:41:07"
+    },
+    {
+      "file": "INCES/INCES_19966.jpg",
+      "agency": "INCES",
+      "lat": 10.469565,
+      "lon": -66.946155,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:09:06 14:39:45"
+    },
+    {
+      "file": "INCES/INCES_19963.jpg",
+      "agency": "INCES",
+      "lat": 10.469593,
+      "lon": -66.946184,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:09:06 14:56:17"
+    },
+    {
+      "file": "INCES/INCES_20111.jpg",
+      "agency": "INCES",
+      "lat": 10.484025,
+      "lon": -66.906217,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:09:13 14:37:50"
+    },
+    {
+      "file": "INCES/INCES_20110.jpg",
+      "agency": "INCES",
+      "lat": 10.485352,
+      "lon": -66.9067,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:09:13 15:37:56"
+    },
+    {
+      "file": "INCES/INCES_20109.jpg",
+      "agency": "INCES",
+      "lat": 10.485287,
+      "lon": -66.906081,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:09:13 15:44:20"
+    },
+    {
+      "file": "INCES/INCES_20112.jpg",
+      "agency": "INCES",
+      "lat": 10.483959,
+      "lon": -66.906328,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:09:13 15:45:08"
+    },
+    {
+      "file": "INCES/INCES_20436.jpg",
+      "agency": "INCES",
+      "lat": 10.469938,
+      "lon": -64.16526,
+      "make": "HUAWEI",
+      "model": "HUAWEI LUA-L03",
+      "dt": "2018:09:25 11:14:09"
+    },
+    {
+      "file": "INCES/INCES_20435.jpg",
+      "agency": "INCES",
+      "lat": 10.469856,
+      "lon": -64.165268,
+      "make": "HUAWEI",
+      "model": "HUAWEI LUA-L03",
+      "dt": "2018:09:25 11:12:15"
+    },
+    {
+      "file": "INCES/INCES_20511.jpg",
+      "agency": "INCES",
+      "lat": 10.340898,
+      "lon": -64.084038,
+      "make": "HUAWEI",
+      "model": "HUAWEI LUA-L03",
+      "dt": "2018:09:27 11:23:01"
+    },
+    {
+      "file": "INCES/INCES_20510.jpg",
+      "agency": "INCES",
+      "lat": 10.340845,
+      "lon": -64.084061,
+      "make": "HUAWEI",
+      "model": "HUAWEI LUA-L03",
+      "dt": "2018:09:27 11:22:09"
+    },
+    {
+      "file": "INCES/INCES_20902.jpg",
+      "agency": "INCES",
+      "lat": 10.50758,
+      "lon": -66.919208,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:10:04 10:42:27"
+    },
+    {
+      "file": "INCES/INCES_20903.jpg",
+      "agency": "INCES",
+      "lat": 10.507566,
+      "lon": -66.919212,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:10:04 10:57:57"
+    },
+    {
+      "file": "INCES/INCES_21015.jpg",
+      "agency": "INCES",
+      "lat": 10.507588,
+      "lon": -66.919195,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:10:11 11:11:05"
+    },
+    {
+      "file": "INCES/INCES_21014.jpg",
+      "agency": "INCES",
+      "lat": 10.507588,
+      "lon": -66.919195,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:10:11 11:11:23"
+    },
+    {
+      "file": "INCES/INCES_21016.jpg",
+      "agency": "INCES",
+      "lat": 10.5076,
+      "lon": -66.919205,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:10:11 10:35:42"
+    },
+    {
+      "file": "INCES/INCES_21083.jpg",
+      "agency": "INCES",
+      "lat": 9.761247,
+      "lon": -63.14752,
+      "make": "HUAWEI",
+      "model": "ALE-L23",
+      "dt": "2018:10:05 09:42:56"
+    },
+    {
+      "file": "INCES/INCES_21092.jpg",
+      "agency": "INCES",
+      "lat": 10.485494,
+      "lon": -66.905844,
+      "make": "Apple",
+      "model": "iPhone 6s",
+      "dt": "2018:10:11 10:39:36"
+    },
+    {
+      "file": "INCES/INCES_21084.jpg",
+      "agency": "INCES",
+      "lat": 9.761741,
+      "lon": -63.148464,
+      "make": "HUAWEI",
+      "model": "ALE-L23",
+      "dt": "2018:10:05 09:59:55"
+    },
+    {
+      "file": "INCES/INCES_21082.jpg",
+      "agency": "INCES",
+      "lat": 9.761734,
+      "lon": -63.149999,
+      "make": "HUAWEI",
+      "model": "ALE-L23",
+      "dt": "2018:10:05 09:45:11"
+    },
+    {
+      "file": "INCES/INCES_21093.jpg",
+      "agency": "INCES",
+      "lat": 10.484117,
+      "lon": -66.906114,
+      "make": "Apple",
+      "model": "iPhone 6s",
+      "dt": "2018:10:11 10:17:44"
+    },
+    {
+      "file": "INCES/INCES_21179.jpg",
+      "agency": "INCES",
+      "lat": 10.507562,
+      "lon": -66.919231,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:10:18 10:32:33"
+    },
+    {
+      "file": "INCES/INCES_21177.jpg",
+      "agency": "INCES",
+      "lat": 10.507547,
+      "lon": -66.919175,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:10:18 10:35:40"
+    },
+    {
+      "file": "INCES/INCES_21180.jpg",
+      "agency": "INCES",
+      "lat": 10.507547,
+      "lon": -66.919175,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:10:18 10:31:38"
+    },
+    {
+      "file": "INCES/INCES_21178.jpg",
+      "agency": "INCES",
+      "lat": 10.507547,
+      "lon": -66.919176,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:10:18 10:41:02"
+    },
+    {
+      "file": "INCES/INCES_21259.jpg",
+      "agency": "INCES",
+      "lat": 10.468072,
+      "lon": -64.16156,
+      "make": "HUAWEI",
+      "model": "HUAWEI LUA-L03",
+      "dt": "2018:09:28 10:19:51"
+    },
+    {
+      "file": "INCES/INCES_21257.jpg",
+      "agency": "INCES",
+      "lat": 10.468145,
+      "lon": -64.161667,
+      "make": "HUAWEI",
+      "model": "HUAWEI LUA-L03",
+      "dt": "2018:10:01 11:36:35"
+    },
+    {
+      "file": "INCES/INCES_21258.jpg",
+      "agency": "INCES",
+      "lat": 10.468199,
+      "lon": -64.161606,
+      "make": "HUAWEI",
+      "model": "HUAWEI LUA-L03",
+      "dt": "2018:10:01 11:36:00"
+    },
+    {
+      "file": "INCES/INCES_21415.jpg",
+      "agency": "INCES",
+      "lat": 10.507563,
+      "lon": -66.919143,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:10:25 10:58:20"
+    },
+    {
+      "file": "INCES/INCES_21416.jpg",
+      "agency": "INCES",
+      "lat": 10.507564,
+      "lon": -66.919249,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:10:25 10:46:32"
+    },
+    {
+      "file": "INCES/INCES_21414.jpg",
+      "agency": "INCES",
+      "lat": 10.507564,
+      "lon": -66.919245,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:10:25 10:09:00"
+    },
+    {
+      "file": "INCES/INCES_21675.jpg",
+      "agency": "INCES",
+      "lat": 10.500768,
+      "lon": -66.904747,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:10:29 14:21:42"
+    },
+    {
+      "file": "INCES/INCES_21676.jpg",
+      "agency": "INCES",
+      "lat": 10.500768,
+      "lon": -66.904747,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:10:29 14:05:58"
+    },
+    {
+      "file": "INCES/INCES_21674.jpg",
+      "agency": "INCES",
+      "lat": 10.500691,
+      "lon": -66.904701,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:10:29 14:02:54"
+    },
+    {
+      "file": "INCES/INCES_21778.jpg",
+      "agency": "INCES",
+      "lat": 10.507564,
+      "lon": -66.919249,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:11:01 10:57:47"
+    },
+    {
+      "file": "INCES/INCES_21774.jpg",
+      "agency": "INCES",
+      "lat": 10.507564,
+      "lon": -66.919249,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:11:01 10:29:19"
+    },
+    {
+      "file": "INCES/INCES_21777.jpg",
+      "agency": "INCES",
+      "lat": 10.507564,
+      "lon": -66.919248,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:11:01 10:55:50"
+    },
+    {
+      "file": "INCES/INCES_21776.jpg",
+      "agency": "INCES",
+      "lat": 10.507564,
+      "lon": -66.919248,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:11:01 10:53:57"
+    },
+    {
+      "file": "INCES/INCES_21779.jpg",
+      "agency": "INCES",
+      "lat": 10.507564,
+      "lon": -66.919249,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:11:01 11:01:06"
+    },
+    {
+      "file": "INCES/INCES_21782.jpg",
+      "agency": "INCES",
+      "lat": 10.50756,
+      "lon": -66.919096,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:11:01 10:31:03"
+    },
+    {
+      "file": "INCES/INCES_21882.jpg",
+      "agency": "INCES",
+      "lat": 10.484432,
+      "lon": -66.905745,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:10:24 12:02:20"
+    },
+    {
+      "file": "INCES/INCES_21884.jpg",
+      "agency": "INCES",
+      "lat": 10.484432,
+      "lon": -66.905745,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:10:24 12:01:45"
+    },
+    {
+      "file": "INCES/INCES_21885.jpg",
+      "agency": "INCES",
+      "lat": 10.484432,
+      "lon": -66.905745,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:10:24 12:02:08"
+    },
+    {
+      "file": "INCES/INCES_21881.jpg",
+      "agency": "INCES",
+      "lat": 10.484454,
+      "lon": -66.905802,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:10:24 12:02:31"
+    },
+    {
+      "file": "INCES/INCES_22065.jpg",
+      "agency": "INCES",
+      "lat": 10.507564,
+      "lon": -66.919247,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:11:08 09:35:42"
+    },
+    {
+      "file": "INCES/INCES_22063.jpg",
+      "agency": "INCES",
+      "lat": 10.507564,
+      "lon": -66.919249,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:11:08 09:02:41"
+    },
+    {
+      "file": "INCES/INCES_22064.jpg",
+      "agency": "INCES",
+      "lat": 10.507564,
+      "lon": -66.919247,
+      "make": "samsung",
+      "model": "SM-T280",
+      "dt": "2018:11:08 09:34:12"
+    },
+    {
+      "file": "INCES/INCES_22246.jpg",
+      "agency": "INCES",
+      "lat": 10.484108,
+      "lon": -66.906097,
+      "make": "Apple",
+      "model": "iPhone 6s",
+      "dt": "2018:11:02 10:04:11"
+    },
+    {
+      "file": "INCES/INCES_22247.jpg",
+      "agency": "INCES",
+      "lat": 10.484036,
+      "lon": -66.906097,
+      "make": "Apple",
+      "model": "iPhone 6s",
+      "dt": "2018:11:02 10:04:17"
+    },
+    {
+      "file": "INCES/INCES_22268.jpg",
+      "agency": "INCES",
+      "lat": 10.510574,
+      "lon": -66.914835,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:11:07 14:14:19"
+    },
+    {
+      "file": "INCES/INCES_22269.jpg",
+      "agency": "INCES",
+      "lat": 10.510572,
+      "lon": -66.914653,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:11:07 14:14:32"
+    },
+    {
+      "file": "INCES/INCES_22270.jpg",
+      "agency": "INCES",
+      "lat": 10.508658,
+      "lon": -66.914086,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:11:08 14:35:31"
+    },
+    {
+      "file": "INCES/INCES_22314.jpg",
+      "agency": "INCES",
+      "lat": 10.216379,
+      "lon": -67.570138,
+      "make": "samsung",
+      "model": "SM-J320FN",
+      "dt": "2018:11:09 11:20:45"
+    },
+    {
+      "file": "INCES/INCES_22313.jpg",
+      "agency": "INCES",
+      "lat": 10.216162,
+      "lon": -67.569337,
+      "make": "samsung",
+      "model": "SM-J320FN",
+      "dt": "2018:11:09 11:33:25"
+    },
+    {
+      "file": "INCES/INCES_22442.jpg",
+      "agency": "INCES",
+      "lat": 10.495779,
+      "lon": -66.846015,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:11:15 16:53:51"
+    },
+    {
+      "file": "INCES/INCES_22443.jpg",
+      "agency": "INCES",
+      "lat": 10.496872,
+      "lon": -66.842257,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:11:15 11:05:13"
+    },
+    {
+      "file": "INCES/INCES_22441.jpg",
+      "agency": "INCES",
+      "lat": 10.495302,
+      "lon": -66.845362,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:11:15 11:03:28"
+    },
+    {
+      "file": "INCES/INCES_22440.jpg",
+      "agency": "INCES",
+      "lat": 10.49578,
+      "lon": -66.845293,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:11:15 10:58:24"
+    },
+    {
+      "file": "INCES/INCES_22730.jpg",
+      "agency": "INCES",
+      "lat": 10.228333,
+      "lon": -67.515556,
+      "make": "samsung",
+      "model": "SM-T555",
+      "dt": "2018:11:22 09:18:15"
+    },
+    {
+      "file": "INCES/INCES_22731.jpg",
+      "agency": "INCES",
+      "lat": 10.228333,
+      "lon": -67.515556,
+      "make": "samsung",
+      "model": "SM-T555",
+      "dt": "2018:11:22 09:27:53"
+    },
+    {
+      "file": "INCES/INCES_22732.jpg",
+      "agency": "INCES",
+      "lat": 10.228611,
+      "lon": -67.515556,
+      "make": "samsung",
+      "model": "SM-T555",
+      "dt": "2018:11:22 10:04:09"
+    },
+    {
+      "file": "INCES/INCES_22733.jpg",
+      "agency": "INCES",
+      "lat": 10.228611,
+      "lon": -67.515556,
+      "make": "samsung",
+      "model": "SM-T555",
+      "dt": "2018:11:22 10:01:12"
+    },
+    {
+      "file": "INCES/INCES_22768.jpeg",
+      "agency": "INCES",
+      "lat": 10.469758,
+      "lon": -64.165383,
+      "make": "Apple",
+      "model": "iPhone 4S",
+      "dt": "2018:11:22 11:45:25"
+    },
+    {
+      "file": "INCES/INCES_23156.jpg",
+      "agency": "INCES",
+      "lat": 10.496222,
+      "lon": -66.931594,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:11:30 11:38:42"
+    },
+    {
+      "file": "INCES/INCES_23155.jpg",
+      "agency": "INCES",
+      "lat": 10.496271,
+      "lon": -66.931565,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:11:30 11:36:07"
+    },
+    {
+      "file": "INCES/INCES_23152.jpg",
+      "agency": "INCES",
+      "lat": 10.496231,
+      "lon": -66.93172,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:11:30 11:42:14"
+    },
+    {
+      "file": "INCES/INCES_23157.jpg",
+      "agency": "INCES",
+      "lat": 10.496222,
+      "lon": -66.931594,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:11:30 11:39:03"
+    },
+    {
+      "file": "INCES/INCES_23154.jpg",
+      "agency": "INCES",
+      "lat": 10.496208,
+      "lon": -66.931752,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:11:30 12:32:12"
+    },
+    {
+      "file": "INCES/INCES_23153.jpg",
+      "agency": "INCES",
+      "lat": 10.496222,
+      "lon": -66.931743,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:11:30 12:40:33"
+    },
+    {
+      "file": "INCES/INCES_23277.jpg",
+      "agency": "INCES",
+      "lat": 10.261667,
+      "lon": -67.460833,
+      "make": "samsung",
+      "model": "SM-T555",
+      "dt": "2018:11:29 11:30:29"
+    },
+    {
+      "file": "INCES/INCES_23280.jpg",
+      "agency": "INCES",
+      "lat": 10.261667,
+      "lon": -67.460833,
+      "make": "samsung",
+      "model": "SM-T555",
+      "dt": "2018:11:29 12:24:19"
+    },
+    {
+      "file": "INCES/INCES_23278.jpg",
+      "agency": "INCES",
+      "lat": 10.261667,
+      "lon": -67.460833,
+      "make": "samsung",
+      "model": "SM-T555",
+      "dt": "2018:11:29 11:45:05"
+    },
+    {
+      "file": "INCES/INCES_23279.jpg",
+      "agency": "INCES",
+      "lat": 10.261667,
+      "lon": -67.460833,
+      "make": "samsung",
+      "model": "SM-T555",
+      "dt": "2018:11:29 12:21:08"
+    },
+    {
+      "file": "INCES/INCES_23366.jpg",
+      "agency": "INCES",
+      "lat": 10.226389,
+      "lon": -67.514167,
+      "make": "samsung",
+      "model": "SM-T555",
+      "dt": "2018:12:06 09:44:42"
+    },
+    {
+      "file": "INCES/INCES_23363.jpg",
+      "agency": "INCES",
+      "lat": 10.226389,
+      "lon": -67.515,
+      "make": "samsung",
+      "model": "SM-T555",
+      "dt": "2018:12:06 11:12:40"
+    },
+    {
+      "file": "INCES/INCES_23368.jpg",
+      "agency": "INCES",
+      "lat": 10.226389,
+      "lon": -67.513056,
+      "make": "samsung",
+      "model": "SM-T555",
+      "dt": "2018:12:06 11:13:28"
+    },
+    {
+      "file": "INCES/INCES_23367.jpg",
+      "agency": "INCES",
+      "lat": 10.225556,
+      "lon": -67.5125,
+      "make": "samsung",
+      "model": "SM-T555",
+      "dt": "2018:12:06 11:34:58"
+    },
+    {
+      "file": "INCES/INCES_24069.jpg",
+      "agency": "INCES",
+      "lat": 7.760839,
+      "lon": -72.232825,
+      "make": "ZTE",
+      "model": "ZTE BLADE V8 MINI",
+      "dt": "2019:01:28 12:01:09"
+    },
+    {
+      "file": "INCES/INCES_24061.jpg",
+      "agency": "INCES",
+      "lat": 7.761039,
+      "lon": -72.232752,
+      "make": "ZTE",
+      "model": "ZTE BLADE V8 MINI",
+      "dt": "2019:01:28 11:39:25"
+    },
+    {
+      "file": "INCES/INCES_24216.jpg",
+      "agency": "INCES",
+      "lat": 10.470278,
+      "lon": -64.165,
+      "make": "samsung",
+      "model": "SM-J400M",
+      "dt": "2019:01:30 14:03:04"
+    },
+    {
+      "file": "INCES/INCES_24217.jpg",
+      "agency": "INCES",
+      "lat": 10.470278,
+      "lon": -64.165,
+      "make": "samsung",
+      "model": "SM-J400M",
+      "dt": "2019:01:30 14:03:14"
+    },
+    {
+      "file": "INCES/INCES_24246.jpg",
+      "agency": "INCES",
+      "lat": 10.448333,
+      "lon": -64.180556,
+      "make": "samsung",
+      "model": "SM-J400M",
+      "dt": "2019:02:04 10:17:41"
+    },
+    {
+      "file": "INCES/INCES_24247.jpg",
+      "agency": "INCES",
+      "lat": 10.448611,
+      "lon": -64.180556,
+      "make": "samsung",
+      "model": "SM-J400M",
+      "dt": "2019:02:04 10:18:16"
+    },
+    {
+      "file": "INCES/INCES_24245.jpg",
+      "agency": "INCES",
+      "lat": 10.463611,
+      "lon": -64.173333,
+      "make": "samsung",
+      "model": "SM-J400M",
+      "dt": "2019:02:04 11:07:00"
+    },
+    {
+      "file": "INCES/INCES_24362.jpg",
+      "agency": "INCES",
+      "lat": 10.029217,
+      "lon": -69.253242,
+      "make": "samsung",
+      "model": "SM-G532M",
+      "dt": "2019:02:05 15:05:10"
+    },
+    {
+      "file": "INCES/INCES_24363.jpg",
+      "agency": "INCES",
+      "lat": 10.029444,
+      "lon": -69.253611,
+      "make": "samsung",
+      "model": "SM-G532M",
+      "dt": "2019:02:05 15:06:09"
+    },
+    {
+      "file": "INCES/INCES_24738.jpg",
+      "agency": "INCES",
+      "lat": 10.4725,
+      "lon": -64.156667,
+      "make": "samsung",
+      "model": "SM-J400M",
+      "dt": "2019:02:15 10:50:21"
+    },
+    {
+      "file": "INCES/INCES_24739.jpg",
+      "agency": "INCES",
+      "lat": 10.472222,
+      "lon": -64.156667,
+      "make": "samsung",
+      "model": "SM-J400M",
+      "dt": "2019:02:15 10:48:49"
+    },
+    {
+      "file": "INCES/INCES_24737.jpg",
+      "agency": "INCES",
+      "lat": 10.4725,
+      "lon": -64.156667,
+      "make": "samsung",
+      "model": "SM-J400M",
+      "dt": "2019:02:15 10:50:00"
+    },
+    {
+      "file": "INCES/INCES_24740.jpg",
+      "agency": "INCES",
+      "lat": 10.4725,
+      "lon": -64.156389,
+      "make": "samsung",
+      "model": "SM-J400M",
+      "dt": "2019:02:15 10:49:38"
+    },
+    {
+      "file": "INCES/INCES_24773.jpg",
+      "agency": "INCES",
+      "lat": 10.510689,
+      "lon": -66.914563,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:07:04 12:55:03"
+    },
+    {
+      "file": "INCES/INCES_24881.jpg",
+      "agency": "INCES",
+      "lat": 9.319318,
+      "lon": -70.598506,
+      "make": "SONY",
+      "model": "HDR-TD20V",
+      "dt": "2018:10:25 08:59:58"
+    },
+    {
+      "file": "INCES/INCES_25231.jpg",
+      "agency": "INCES",
+      "lat": 10.498108,
+      "lon": -66.935696,
+      "make": "Xiaomi",
+      "model": "Mi A2",
+      "dt": "2019:02:22 11:01:17"
+    },
+    {
+      "file": "INCES/INCES_25232.jpg",
+      "agency": "INCES",
+      "lat": 10.498152,
+      "lon": -66.931973,
+      "make": "Xiaomi",
+      "model": "Mi A2",
+      "dt": "2019:02:22 10:56:46"
+    },
+    {
+      "file": "INCES/INCES_25230.jpg",
+      "agency": "INCES",
+      "lat": 10.498108,
+      "lon": -66.935696,
+      "make": "Xiaomi",
+      "model": "Mi A2",
+      "dt": "2019:02:22 11:04:19"
+    },
+    {
+      "file": "INCES/INCES_25250.jpg",
+      "agency": "INCES",
+      "lat": 10.496947,
+      "lon": -66.928642,
+      "make": "Xiaomi",
+      "model": "Mi A2",
+      "dt": "2019:02:21 14:56:14"
+    },
+    {
+      "file": "INCES/INCES_25233.jpg",
+      "agency": "INCES",
+      "lat": 10.496401,
+      "lon": -66.931795,
+      "make": "Xiaomi",
+      "model": "Mi A2",
+      "dt": "2019:02:22 10:42:54"
+    },
+    {
+      "file": "INCES/INCES_25251.jpg",
+      "agency": "INCES",
+      "lat": 10.496941,
+      "lon": -66.928658,
+      "make": "Xiaomi",
+      "model": "Mi A2",
+      "dt": "2019:02:21 14:56:30"
+    },
+    {
+      "file": "INCES/INCES_25252.jpg",
+      "agency": "INCES",
+      "lat": 10.496753,
+      "lon": -66.928781,
+      "make": "Xiaomi",
+      "model": "Mi A2",
+      "dt": "2019:02:21 14:57:23"
+    },
+    {
+      "file": "INCES/INCES_26019.jpg",
+      "agency": "INCES",
+      "lat": 10.470556,
+      "lon": -64.164722,
+      "make": "samsung",
+      "model": "SM-J400M",
+      "dt": "2019:04:02 10:24:52"
+    },
+    {
+      "file": "INCES/INCES_26017.jpg",
+      "agency": "INCES",
+      "lat": 10.470278,
+      "lon": -64.164722,
+      "make": "samsung",
+      "model": "SM-J400M",
+      "dt": "2019:04:02 10:02:29"
+    },
+    {
+      "file": "INCES/INCES_26018.jpg",
+      "agency": "INCES",
+      "lat": 10.470278,
+      "lon": -64.164722,
+      "make": "samsung",
+      "model": "SM-J400M",
+      "dt": "2019:04:02 10:03:28"
+    },
+    {
+      "file": "INCES/INCES_26699.jpg",
+      "agency": "INCES",
+      "lat": 10.470806,
+      "lon": -64.165117,
+      "make": "Apple",
+      "model": "iPhone 4S",
+      "dt": "2019:04:10 10:59:35"
+    },
+    {
+      "file": "INCES/INCES_26698.jpg",
+      "agency": "INCES",
+      "lat": 10.470364,
+      "lon": -64.165069,
+      "make": "Apple",
+      "model": "iPhone 4S",
+      "dt": "2019:04:10 10:59:16"
+    },
+    {
+      "file": "INCES/INCES_26697.jpg",
+      "agency": "INCES",
+      "lat": 10.470367,
+      "lon": -64.164764,
+      "make": "Apple",
+      "model": "iPhone 4S",
+      "dt": "2019:04:10 10:57:52"
+    },
+    {
+      "file": "INCES/INCES_26878.jpg",
+      "agency": "INCES",
+      "lat": 8.23891,
+      "lon": -62.906801,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:04:25 15:34:22"
+    },
+    {
+      "file": "INCES/INCES_26876.jpg",
+      "agency": "INCES",
+      "lat": 8.23891,
+      "lon": -62.906801,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:04:25 15:33:49"
+    },
+    {
+      "file": "INCES/INCES_26877.jpg",
+      "agency": "INCES",
+      "lat": 8.23891,
+      "lon": -62.906801,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:04:25 15:30:20"
+    },
+    {
+      "file": "INCES/INCES_27092.jpg",
+      "agency": "INCES",
+      "lat": 10.511321,
+      "lon": -66.91373,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:07:04 12:04:28"
+    },
+    {
+      "file": "INCES/INCES_27203.jpg",
+      "agency": "INCES",
+      "lat": 8.288615,
+      "lon": -62.713467,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:04:30 09:29:26"
+    },
+    {
+      "file": "INCES/INCES_27204.jpg",
+      "agency": "INCES",
+      "lat": 8.286419,
+      "lon": -62.7131,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:04:30 10:38:38"
+    },
+    {
+      "file": "INCES/INCES_27205.jpg",
+      "agency": "INCES",
+      "lat": 8.285827,
+      "lon": -62.713467,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:04:30 10:46:12"
+    },
+    {
+      "file": "INCES/INCES_27491.jpg",
+      "agency": "INCES",
+      "lat": 8.295816,
+      "lon": -62.724503,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:05:04 11:17:20"
+    },
+    {
+      "file": "INCES/INCES_28079.jpg",
+      "agency": "INCES",
+      "lat": 10.261667,
+      "lon": -67.460833,
+      "make": "samsung",
+      "model": "SM-T555",
+      "dt": "2018:11:29 12:24:19"
+    },
+    {
+      "file": "INCES/INCES_28108.jpg",
+      "agency": "INCES",
+      "lat": 10.255787,
+      "lon": -67.610155,
+      "make": "ZTE",
+      "model": "Z978",
+      "dt": "2019:05:16 10:41:51"
+    },
+    {
+      "file": "INCES/INCES_28109.jpg",
+      "agency": "INCES",
+      "lat": 10.255787,
+      "lon": -67.610155,
+      "make": "ZTE",
+      "model": "Z978",
+      "dt": "2019:05:16 10:41:11"
+    },
+    {
+      "file": "INCES/INCES_28240.jpg",
+      "agency": "INCES",
+      "lat": 8.297736,
+      "lon": -62.723754,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:05:14 10:06:02"
+    },
+    {
+      "file": "INCES/INCES_28241.jpg",
+      "agency": "INCES",
+      "lat": 8.29647,
+      "lon": -62.723387,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:05:14 10:11:11"
+    },
+    {
+      "file": "INCES/INCES_28239.jpg",
+      "agency": "INCES",
+      "lat": 8.29573,
+      "lon": -62.725959,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:05:14 09:45:57"
+    },
+    {
+      "file": "INCES/INCES_28242.jpg",
+      "agency": "INCES",
+      "lat": 8.295923,
+      "lon": -62.724283,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:05:14 11:32:47"
+    },
+    {
+      "file": "INCES/INCES_28759.jpg",
+      "agency": "INCES",
+      "lat": 10.511321,
+      "lon": -66.91373,
+      "make": "Xiaomi",
+      "model": "Mi A1",
+      "dt": "2018:07:04 12:04:28"
+    },
+    {
+      "file": "INCES/INCES_28864.jpg",
+      "agency": "INCES",
+      "lat": 8.295923,
+      "lon": -62.724282,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:05:27 22:54:48"
+    },
+    {
+      "file": "INCES/INCES_28863.jpg",
+      "agency": "INCES",
+      "lat": 8.295923,
+      "lon": -62.724282,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:05:27 22:55:24"
+    },
+    {
+      "file": "INCES/INCES_28862.jpg",
+      "agency": "INCES",
+      "lat": 8.295923,
+      "lon": -62.724283,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:05:08 10:26:07"
+    },
+    {
+      "file": "INCES/INCES_28911.jpg",
+      "agency": "INCES",
+      "lat": 10.197353,
+      "lon": -67.569222,
+      "make": "Apple",
+      "model": "iPhone SE",
+      "dt": "2019:05:30 13:03:04"
+    },
+    {
+      "file": "INCES/INCES_28913.jpg",
+      "agency": "INCES",
+      "lat": 10.197339,
+      "lon": -67.569236,
+      "make": "Apple",
+      "model": "iPhone SE",
+      "dt": "2019:05:30 13:37:11"
+    },
+    {
+      "file": "INCES/INCES_28925.jpg",
+      "agency": "INCES",
+      "lat": 10.639492,
+      "lon": -71.609682,
+      "make": "samsung",
+      "model": "SM-G9650",
+      "dt": "2019:06:02 13:26:30"
+    },
+    {
+      "file": "INCES/INCES_28926.jpg",
+      "agency": "INCES",
+      "lat": 10.639284,
+      "lon": -71.609602,
+      "make": "samsung",
+      "model": "SM-G9650",
+      "dt": "2019:06:02 14:04:31"
+    },
+    {
+      "file": "INCES/INCES_28924.jpg",
+      "agency": "INCES",
+      "lat": 10.639284,
+      "lon": -71.609602,
+      "make": "samsung",
+      "model": "SM-G9650",
+      "dt": "2019:06:02 14:02:29"
+    },
+    {
+      "file": "INCES/INCES_28988.jpg",
+      "agency": "INCES",
+      "lat": 10.082188,
+      "lon": -69.343666,
+      "make": "Rocket",
+      "model": "Rocket",
+      "dt": "2019:05:31 10:17:09"
+    },
+    {
+      "file": "INCES/INCES_28990.jpg",
+      "agency": "INCES",
+      "lat": 10.082091,
+      "lon": -69.343964,
+      "make": "Rocket",
+      "model": "Rocket",
+      "dt": "2019:05:31 10:09:49"
+    },
+    {
+      "file": "INCES/INCES_28989.jpg",
+      "agency": "INCES",
+      "lat": 10.082068,
+      "lon": -69.343681,
+      "make": "Rocket",
+      "model": "Rocket",
+      "dt": "2019:05:31 10:16:02"
+    },
+    {
+      "file": "INCES/INCES_28987.jpg",
+      "agency": "INCES",
+      "lat": 10.082108,
+      "lon": -69.344078,
+      "make": "Rocket",
+      "model": "Rocket",
+      "dt": "2019:05:31 09:39:23"
+    },
+    {
+      "file": "INCES/INCES_29044.jpg",
+      "agency": "INCES",
+      "lat": 10.470604,
+      "lon": -64.164001,
+      "make": "motorola",
+      "model": "Moto C Plus",
+      "dt": "2019:06:05 09:14:45"
+    },
+    {
+      "file": "INCES/INCES_29126.jpg",
+      "agency": "INCES",
+      "lat": 8.250453,
+      "lon": -62.785014,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:06:06 10:27:00"
+    },
+    {
+      "file": "INCES/INCES_29125.jpg",
+      "agency": "INCES",
+      "lat": 8.275082,
+      "lon": -62.760083,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:06:06 09:51:26"
+    },
+    {
+      "file": "INCES/INCES_29374.jpg",
+      "agency": "INCES",
+      "lat": 10.469311,
+      "lon": -64.162796,
+      "make": "HUAWEI",
+      "model": "BND-L24",
+      "dt": "2019:07:03 10:35:13"
+    },
+    {
+      "file": "INCES/INCES_29621.jpeg",
+      "agency": "INCES",
+      "lat": 8.315907,
+      "lon": -62.721257,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:07:12 10:47:42"
+    },
+    {
+      "file": "INCES/INCES_29656.jpeg",
+      "agency": "INCES",
+      "lat": 8.286074,
+      "lon": -62.721573,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:07:18 09:53:38"
+    },
+    {
+      "file": "INCES/INCES_29681.jpg",
+      "agency": "INCES",
+      "lat": 10.640571,
+      "lon": -63.262255,
+      "make": "Xiaomi",
+      "model": "Redmi Go",
+      "dt": "2019:06:18 15:47:28"
+    },
+    {
+      "file": "INCES/INCES_29883.jpg",
+      "agency": "INCES",
+      "lat": 10.276522,
+      "lon": -67.618386,
+      "make": "Apple",
+      "model": "iPhone SE",
+      "dt": "2019:07:25 11:42:00"
+    },
+    {
+      "file": "INCES/INCES_29882.jpg",
+      "agency": "INCES",
+      "lat": 10.276514,
+      "lon": -67.618339,
+      "make": "Apple",
+      "model": "iPhone SE",
+      "dt": "2019:07:25 11:56:34"
+    },
+    {
+      "file": "INCES/INCES_29880.jpg",
+      "agency": "INCES",
+      "lat": 10.2765,
+      "lon": -67.618369,
+      "make": "Apple",
+      "model": "iPhone SE",
+      "dt": "2019:07:25 14:53:40"
+    },
+    {
+      "file": "INCES/INCES_29881.jpg",
+      "agency": "INCES",
+      "lat": 10.276608,
+      "lon": -67.618347,
+      "make": "Apple",
+      "model": "iPhone SE",
+      "dt": "2019:07:25 12:19:18"
+    },
+    {
+      "file": "INCES/INCES_30429.jpg",
+      "agency": "INCES",
+      "lat": 5.65816,
+      "lon": -67.614655,
+      "make": "samsung",
+      "model": "SM-G532M",
+      "dt": "2019:08:14 10:00:02"
+    },
+    {
+      "file": "INCES/INCES_30533.jpg",
+      "agency": "INCES",
+      "lat": 10.228453,
+      "lon": -67.598428,
+      "make": "Apple",
+      "model": "iPhone SE",
+      "dt": "2019:08:14 10:50:27"
+    },
+    {
+      "file": "INCES/INCES_31029.jpg",
+      "agency": "INCES",
+      "lat": 10.608969,
+      "lon": -66.880516,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:09:03 13:45:42"
+    },
+    {
+      "file": "INCES/INCES_31030.jpg",
+      "agency": "INCES",
+      "lat": 10.608969,
+      "lon": -66.880516,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:09:03 13:01:00"
+    },
+    {
+      "file": "INCES/INCES_31183.jpg",
+      "agency": "INCES",
+      "lat": 8.291257,
+      "lon": -62.724122,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:09:12 09:18:52"
+    },
+    {
+      "file": "INCES/INCES_31184.jpg",
+      "agency": "INCES",
+      "lat": 8.293561,
+      "lon": -62.725959,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:09:12 09:29:44"
+    },
+    {
+      "file": "INCES/INCES_31195.jpg",
+      "agency": "INCES",
+      "lat": 10.600882,
+      "lon": -66.96666,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:09:13 10:17:02"
+    },
+    {
+      "file": "INCES/INCES_31348.jpg",
+      "agency": "INCES",
+      "lat": 10.609459,
+      "lon": -66.87397,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:09:19 11:06:22"
+    },
+    {
+      "file": "INCES/INCES_31347.jpg",
+      "agency": "INCES",
+      "lat": 10.609459,
+      "lon": -66.874001,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:09:19 11:06:15"
+    },
+    {
+      "file": "INCES/INCES_31346.jpg",
+      "agency": "INCES",
+      "lat": 10.60934,
+      "lon": -66.87384,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:09:19 11:07:22"
+    },
+    {
+      "file": "INCES/INCES_31444.jpg",
+      "agency": "INCES",
+      "lat": 10.252991,
+      "lon": -67.61673,
+      "make": "ZTE",
+      "model": "Z978",
+      "dt": "2019:09:19 09:58:54"
+    },
+    {
+      "file": "INCES/INCES_31442.jpg",
+      "agency": "INCES",
+      "lat": 10.252991,
+      "lon": -67.61673,
+      "make": "ZTE",
+      "model": "Z978",
+      "dt": "2019:09:19 09:14:44"
+    },
+    {
+      "file": "INCES/INCES_31441.jpg",
+      "agency": "INCES",
+      "lat": 10.25672,
+      "lon": -67.60941,
+      "make": "ZTE",
+      "model": "Z978",
+      "dt": "2019:09:19 09:13:18"
+    },
+    {
+      "file": "INCES/INCES_31443.jpg",
+      "agency": "INCES",
+      "lat": 10.252991,
+      "lon": -67.61673,
+      "make": "ZTE",
+      "model": "Z978",
+      "dt": "2019:09:19 09:58:42"
+    },
+    {
+      "file": "INCES/INCES_31510.jpg",
+      "agency": "INCES",
+      "lat": 8.29575,
+      "lon": -62.724903,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:09:24 09:27:25"
+    },
+    {
+      "file": "INCES/INCES_31509.jpg",
+      "agency": "INCES",
+      "lat": 8.29575,
+      "lon": -62.724903,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:09:24 09:27:25"
+    },
+    {
+      "file": "INCES/INCES_31511.jpg",
+      "agency": "INCES",
+      "lat": 8.29575,
+      "lon": -62.724903,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:09:24 09:26:46"
+    },
+    {
+      "file": "INCES/INCES_31556.jpg",
+      "agency": "INCES",
+      "lat": 8.306742,
+      "lon": -62.707222,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:09:21 09:22:55"
+    },
+    {
+      "file": "INCES/INCES_31557.jpg",
+      "agency": "INCES",
+      "lat": 8.296013,
+      "lon": -62.725591,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:09:21 09:24:15"
+    },
+    {
+      "file": "INCES/INCES_31559.jpg",
+      "agency": "INCES",
+      "lat": 8.296013,
+      "lon": -62.725591,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:09:21 09:34:29"
+    },
+    {
+      "file": "INCES/INCES_31558.jpg",
+      "agency": "INCES",
+      "lat": 8.296013,
+      "lon": -62.725591,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:09:21 09:28:10"
+    },
+    {
+      "file": "INCES/INCES_31560.jpg",
+      "agency": "INCES",
+      "lat": 8.306742,
+      "lon": -62.707222,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:09:21 09:54:45"
+    },
+    {
+      "file": "INCES/INCES_31818.jpg",
+      "agency": "INCES",
+      "lat": 10.60938,
+      "lon": -66.874153,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:10:01 23:50:46"
+    },
+    {
+      "file": "INCES/INCES_31844.jpg",
+      "agency": "INCES",
+      "lat": 10.495816,
+      "lon": -66.845607,
+      "make": "HUAWEI",
+      "model": "ATU-L22",
+      "dt": "2019:09:28 11:19:21"
+    },
+    {
+      "file": "INCES/INCES_31827.jpg",
+      "agency": "INCES",
+      "lat": 10.608956,
+      "lon": -66.880646,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:09:27 13:42:14"
+    },
+    {
+      "file": "INCES/INCES_31821.jpg",
+      "agency": "INCES",
+      "lat": 10.60938,
+      "lon": -66.874153,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:09:27 09:29:42"
+    },
+    {
+      "file": "INCES/INCES_31826.jpg",
+      "agency": "INCES",
+      "lat": 10.608956,
+      "lon": -66.880646,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:09:27 13:42:24"
+    },
+    {
+      "file": "INCES/INCES_31845.jpg",
+      "agency": "INCES",
+      "lat": 10.495816,
+      "lon": -66.845607,
+      "make": "HUAWEI",
+      "model": "ATU-L22",
+      "dt": "2019:09:28 10:54:49"
+    },
+    {
+      "file": "INCES/INCES_31846.jpg",
+      "agency": "INCES",
+      "lat": 10.495816,
+      "lon": -66.845607,
+      "make": "HUAWEI",
+      "model": "ATU-L22",
+      "dt": "2019:09:28 10:52:20"
+    },
+    {
+      "file": "INCES/INCES_31947.jpg",
+      "agency": "INCES",
+      "lat": 10.62287,
+      "lon": -66.51152,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:09:18 12:03:22"
+    },
+    {
+      "file": "INCES/INCES_31943.jpg",
+      "agency": "INCES",
+      "lat": 10.623549,
+      "lon": -66.511223,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:09:18 15:00:48"
+    },
+    {
+      "file": "INCES/INCES_31946.jpg",
+      "agency": "INCES",
+      "lat": 10.622891,
+      "lon": -66.511589,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:09:18 12:03:59"
+    },
+    {
+      "file": "INCES/INCES_31944.jpg",
+      "agency": "INCES",
+      "lat": 10.623413,
+      "lon": -66.51123,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:09:18 12:52:17"
+    },
+    {
+      "file": "INCES/INCES_31945.jpg",
+      "agency": "INCES",
+      "lat": 10.623197,
+      "lon": -66.511612,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:09:18 12:04:54"
+    },
+    {
+      "file": "INCES/INCES_31988.jpg",
+      "agency": "INCES",
+      "lat": 10.600499,
+      "lon": -66.965973,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:09:24 14:31:19"
+    },
+    {
+      "file": "INCES/INCES_31987.jpg",
+      "agency": "INCES",
+      "lat": 10.60057,
+      "lon": -66.965942,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:09:24 14:31:52"
+    },
+    {
+      "file": "INCES/INCES_31989.jpg",
+      "agency": "INCES",
+      "lat": 10.60043,
+      "lon": -66.966545,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:09:24 14:30:13"
+    },
+    {
+      "file": "INCES/INCES_32183.jpg",
+      "agency": "INCES",
+      "lat": 8.311808,
+      "lon": -62.708691,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:09:22 15:13:16"
+    },
+    {
+      "file": "INCES/INCES_32182.jpg",
+      "agency": "INCES",
+      "lat": 8.256042,
+      "lon": -62.78486,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:09:30 15:14:28"
+    },
+    {
+      "file": "INCES/INCES_32184.jpg",
+      "agency": "INCES",
+      "lat": 8.274802,
+      "lon": -62.778504,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:09:13 17:04:31"
+    },
+    {
+      "file": "INCES/INCES_32312.jpg",
+      "agency": "INCES",
+      "lat": 5.65846,
+      "lon": -67.615074,
+      "make": "samsung",
+      "model": "SM-A105M",
+      "dt": "2019:10:11 08:49:47"
+    },
+    {
+      "file": "INCES/INCES_32310.jpg",
+      "agency": "INCES",
+      "lat": 5.658005,
+      "lon": -67.614934,
+      "make": "samsung",
+      "model": "SM-A105M",
+      "dt": "2019:10:11 11:34:01"
+    },
+    {
+      "file": "INCES/INCES_32311.jpg",
+      "agency": "INCES",
+      "lat": 5.658164,
+      "lon": -67.614918,
+      "make": "samsung",
+      "model": "SM-A105M",
+      "dt": "2019:10:11 12:03:08"
+    },
+    {
+      "file": "INCES/INCES_32388.jpg",
+      "agency": "INCES",
+      "lat": 8.295704,
+      "lon": -62.724798,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:10:04 07:31:57"
+    },
+    {
+      "file": "INCES/INCES_32391.jpg",
+      "agency": "INCES",
+      "lat": 8.295704,
+      "lon": -62.724798,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:10:04 07:55:35"
+    },
+    {
+      "file": "INCES/INCES_32411.jpg",
+      "agency": "INCES",
+      "lat": 8.295922,
+      "lon": -62.724243,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:10:13 18:47:27"
+    },
+    {
+      "file": "INCES/INCES_32389.jpg",
+      "agency": "INCES",
+      "lat": 8.295856,
+      "lon": -62.725526,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:10:04 06:45:42"
+    },
+    {
+      "file": "INCES/INCES_32483.jpg",
+      "agency": "INCES",
+      "lat": 10.945107,
+      "lon": -63.966671,
+      "make": "KRIP",
+      "model": "K5",
+      "dt": "2019:10:18 10:33:01"
+    },
+    {
+      "file": "INCES/INCES_32491.jpg",
+      "agency": "INCES",
+      "lat": 10.945119,
+      "lon": -63.966652,
+      "make": "KRIP",
+      "model": "K5",
+      "dt": "2019:10:18 10:33:34"
+    },
+    {
+      "file": "INCES/INCES_32484.jpg",
+      "agency": "INCES",
+      "lat": 10.945025,
+      "lon": -63.966694,
+      "make": "KRIP",
+      "model": "K5",
+      "dt": "2019:10:18 10:50:31"
+    },
+    {
+      "file": "INCES/INCES_32492.jpg",
+      "agency": "INCES",
+      "lat": 10.945107,
+      "lon": -63.966671,
+      "make": "KRIP",
+      "model": "K5",
+      "dt": "2019:10:18 10:33:01"
+    },
+    {
+      "file": "INCES/INCES_32485.jpg",
+      "agency": "INCES",
+      "lat": 10.945041,
+      "lon": -63.966679,
+      "make": "KRIP",
+      "model": "K5",
+      "dt": "2019:10:18 10:52:12"
+    },
+    {
+      "file": "INCES/INCES_32557.jpg",
+      "agency": "INCES",
+      "lat": 10.60938,
+      "lon": -66.874153,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:10:02 01:51:12"
+    },
+    {
+      "file": "INCES/INCES_32575.jpg",
+      "agency": "INCES",
+      "lat": 10.609166,
+      "lon": -66.8796,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:10:14 10:11:48"
+    },
+    {
+      "file": "INCES/INCES_32576.jpg",
+      "agency": "INCES",
+      "lat": 10.609166,
+      "lon": -66.8796,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:10:14 09:23:29"
+    },
+    {
+      "file": "INCES/INCES_32558.jpg",
+      "agency": "INCES",
+      "lat": 10.60938,
+      "lon": -66.874153,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:10:02 01:51:23"
+    },
+    {
+      "file": "INCES/INCES_32586.jpg",
+      "agency": "INCES",
+      "lat": 10.617462,
+      "lon": -66.858681,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:10:15 10:57:15"
+    },
+    {
+      "file": "INCES/INCES_32585.jpg",
+      "agency": "INCES",
+      "lat": 10.617465,
+      "lon": -66.858772,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:10:15 10:33:45"
+    },
+    {
+      "file": "INCES/INCES_32584.jpg",
+      "agency": "INCES",
+      "lat": 10.617471,
+      "lon": -66.858788,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:10:15 10:31:06"
+    },
+    {
+      "file": "INCES/INCES_32678.jpg",
+      "agency": "INCES",
+      "lat": 8.295757,
+      "lon": -62.726326,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:10:24 09:31:07"
+    },
+    {
+      "file": "INCES/INCES_32679.jpg",
+      "agency": "INCES",
+      "lat": 8.296578,
+      "lon": -62.724857,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:10:24 09:42:07"
+    },
+    {
+      "file": "INCES/INCES_32680.jpg",
+      "agency": "INCES",
+      "lat": 8.295757,
+      "lon": -62.726326,
+      "make": "motorola",
+      "model": "moto e5 play",
+      "dt": "2019:10:24 09:43:30"
+    },
+    {
+      "file": "INCES/INCES_37469.jpg",
+      "agency": "INCES",
+      "lat": 9.45129,
+      "lon": -69.266197,
+      "make": "Xiaomi",
+      "model": "M2006C3MG",
+      "dt": "2021:03:09 10:35:02"
+    },
+    {
+      "file": "INCES/INCES_37585.jpg",
+      "agency": "INCES",
+      "lat": 9.55859,
+      "lon": -69.214928,
+      "make": "Xiaomi",
+      "model": "M2006C3MG",
+      "dt": "2021:03:12 10:48:11"
+    },
+    {
+      "file": "INCES/INCES_37583.jpg",
+      "agency": "INCES",
+      "lat": 9.55859,
+      "lon": -69.214928,
+      "make": "Xiaomi",
+      "model": "M2006C3MG",
+      "dt": "2021:03:12 10:48:11"
+    },
+    {
+      "file": "INCES/INCES_37606.jpg",
+      "agency": "INCES",
+      "lat": 9.3151,
+      "lon": -70.603302,
+      "make": "Xiaomi",
+      "model": "M2006C3LG",
+      "dt": "2021:03:03 10:21:18"
+    },
+    {
+      "file": "INCES/INCES_41394.jpg",
+      "agency": "INCES",
+      "lat": 10.342504,
+      "lon": -68.728352,
+      "make": "Xiaomi",
+      "model": "Redmi 8",
+      "dt": "2022:02:10 13:39:18"
+    },
+    {
+      "file": "INCES/INCES_42575.jpg",
+      "agency": "INCES",
+      "lat": 11.355521,
+      "lon": -69.521915,
+      "make": "samsung",
+      "model": "SM-J260MU",
+      "dt": ""
+    },
+    {
+      "file": "INCES/INCES_42646.jpg",
+      "agency": "INCES",
+      "lat": 8.631412,
+      "lon": -71.07753,
+      "make": "Xiaomi",
+      "model": "M2006C3LG",
+      "dt": "2022:05:03 11:29:51"
+    },
+    {
+      "file": "INCES/INCES_42954.jpg",
+      "agency": "INCES",
+      "lat": 10.504424,
+      "lon": -66.915222,
+      "make": "Xiaomi",
+      "model": "M2004J19C",
+      "dt": "2022:05:18 15:10:59"
+    },
+    {
+      "file": "INCES/INCES_43878.jpg",
+      "agency": "INCES",
+      "lat": 8.59362,
+      "lon": -71.147957,
+      "make": "Xiaomi",
+      "model": "M2006C3LG",
+      "dt": "2022:06:15 10:55:42"
+    },
+    {
+      "file": "INCES/INCES_44310.jpg",
+      "agency": "INCES",
+      "lat": 10.484465,
+      "lon": -66.905739,
+      "make": "Xiaomi",
+      "model": "M2004J19C",
+      "dt": "2022:08:06 10:48:43"
+    },
+    {
+      "file": "INCES/INCES_44309.jpg",
+      "agency": "INCES",
+      "lat": 10.48432,
+      "lon": -66.9058,
+      "make": "Xiaomi",
+      "model": "M2004J19C",
+      "dt": "2022:08:06 11:00:35"
+    },
+    {
+      "file": "INCES/INCES_47756.jpg",
+      "agency": "INCES",
+      "lat": 8.580191,
+      "lon": -71.174744,
+      "make": "Xiaomi",
+      "model": "M2006C3LG",
+      "dt": "2022:07:28 09:52:49"
+    },
+    {
+      "file": "INCES/INCES_49496.jpg",
+      "agency": "INCES",
+      "lat": 10.505575,
+      "lon": -66.914545,
+      "make": "Xiaomi",
+      "model": "M2102J20SG",
+      "dt": "2023:02:24 11:29:28"
+    },
+    {
+      "file": "INCES/INCES_49493.jpg",
+      "agency": "INCES",
+      "lat": 10.505598,
+      "lon": -66.914491,
+      "make": "Xiaomi",
+      "model": "M2102J20SG",
+      "dt": "2023:02:24 13:21:23"
+    },
+    {
+      "file": "INCES/INCES_49709.jpg",
+      "agency": "INCES",
+      "lat": 10.504935,
+      "lon": -66.91507,
+      "make": "INFINIX MOBILITY LIMITED",
+      "model": "Infinix X688B",
+      "dt": "2023:03:01 13:02:21"
+    },
+    {
+      "file": "INCES/INCES_54046.jpg",
+      "agency": "INCES",
+      "lat": 9.061361,
+      "lon": -62.057328,
+      "make": "Xiaomi",
+      "model": "M2101K6G",
+      "dt": "2023:09:04 09:40:41"
+    },
+    {
+      "file": "INCES/INCES_55356.jpg",
+      "agency": "INCES",
+      "lat": 10.233061,
+      "lon": -67.586683,
+      "make": "Xiaomi",
+      "model": "21121119SG",
+      "dt": "2023:10:27 16:36:35"
+    },
+    {
+      "file": "INCES/INCES_57157.jpg",
+      "agency": "INCES",
+      "lat": 5.658295,
+      "lon": -67.614998,
+      "make": "Xiaomi",
+      "model": "M2006C3LG",
+      "dt": "2024:02:21 15:07:07"
+    },
+    {
+      "file": "INCES/INCES_58899.jpg",
+      "agency": "INCES",
+      "lat": 5.665732,
+      "lon": -67.588463,
+      "make": "Xiaomi",
+      "model": "M2006C3LG",
+      "dt": "2024:06:20 10:59:20"
+    },
+    {
+      "file": "INCES/INCES_59158.jpg",
+      "agency": "INCES",
+      "lat": 10.258256,
+      "lon": -67.589542,
+      "make": "Xiaomi",
+      "model": "21121119SG",
+      "dt": "2024:07:10 09:46:04"
+    },
+    {
+      "file": "INCES/INCES_59686.jpg",
+      "agency": "INCES",
+      "lat": 5.658085,
+      "lon": -67.614761,
+      "make": "Xiaomi",
+      "model": "M2006C3LG",
+      "dt": "2024:08:19 14:52:12"
+    },
+    {
+      "file": "INCES/INCES_69071.jpg",
+      "agency": "INCES",
+      "lat": 11.408855,
+      "lon": -69.649989,
+      "make": "Xiaomi",
+      "model": "Redmi A3x",
+      "dt": ""
+    },
+    {
+      "file": "INCES/INCES_69070.jpg",
+      "agency": "INCES",
+      "lat": 11.408855,
+      "lon": -69.649989,
+      "make": "Xiaomi",
+      "model": "Redmi A3x",
+      "dt": ""
+    },
+    {
+      "file": "INCES/INCES_69066.jpg",
+      "agency": "INCES",
+      "lat": 11.408856,
+      "lon": -69.649968,
+      "make": "Xiaomi",
+      "model": "Redmi A3x",
+      "dt": ""
+    },
+    {
+      "file": "INCES/INCES_69067.jpg",
+      "agency": "INCES",
+      "lat": 11.408855,
+      "lon": -69.649989,
+      "make": "Xiaomi",
+      "model": "Redmi A3x",
+      "dt": ""
+    },
+    {
+      "file": "INCES/INCES_69069.jpg",
+      "agency": "INCES",
+      "lat": 11.408855,
+      "lon": -69.649989,
+      "make": "Xiaomi",
+      "model": "Redmi A3x",
+      "dt": ""
+    },
+    {
+      "file": "LaIguana/LaIguana_1099136.jpg",
+      "agency": "LaIguana",
+      "lat": 10.491856,
+      "lon": -66.877998,
+      "make": "Alcatel",
+      "model": "5041C",
+      "dt": "2022:11:16 07:44:20"
+    },
+    {
+      "file": "LaIguana/LaIguana_1099139.jpg",
+      "agency": "LaIguana",
+      "lat": 10.491856,
+      "lon": -66.877998,
+      "make": "Alcatel",
+      "model": "5041C",
+      "dt": "2022:11:16 07:44:20"
+    },
+    {
+      "file": "LaIguana/LaIguana_1273063.jpg",
+      "agency": "LaIguana",
+      "lat": 48.93333,
+      "lon": 2.36667,
+      "make": "SONY",
+      "model": "ILCE-1",
+      "dt": "2024:08:11 22:15:43"
+    },
+    {
+      "file": "LaIguana/LaIguana_1273068.jpg",
+      "agency": "LaIguana",
+      "lat": 48.93333,
+      "lon": 2.36667,
+      "make": "NIKON CORPORATION",
+      "model": "NIKON Z 9",
+      "dt": "2024:08:11 22:50:45"
+    },
+    {
+      "file": "LaIguana/LaIguana_1273064.jpg",
+      "agency": "LaIguana",
+      "lat": 48.93333,
+      "lon": 2.36667,
+      "make": "NIKON CORPORATION",
+      "model": "NIKON Z 6_2",
+      "dt": "2024:08:11 17:18:21"
+    },
+    {
+      "file": "LaIguana/LaIguana_1273066.jpg",
+      "agency": "LaIguana",
+      "lat": 48.93333,
+      "lon": 2.36667,
+      "make": "SONY",
+      "model": "ILCE-1",
+      "dt": "2024:08:11 22:27:20"
+    },
+    {
+      "file": "LaIguana/LaIguana_1273067.jpg",
+      "agency": "LaIguana",
+      "lat": 48.93333,
+      "lon": 2.36667,
+      "make": "NIKON CORPORATION",
+      "model": "NIKON Z 9",
+      "dt": "2024:08:11 22:38:31"
+    },
+    {
+      "file": "LaIguana/LaIguana_1273065.jpg",
+      "agency": "LaIguana",
+      "lat": 48.93333,
+      "lon": 2.36667,
+      "make": "SONY",
+      "model": "ILCE-9M3",
+      "dt": "2024:08:11 22:38:27"
+    },
+    {
+      "file": "LaIguana/LaIguana_1439388.jpg",
+      "agency": "LaIguana",
+      "lat": 43.262756,
+      "lon": -2.924844,
+      "make": "Apple",
+      "model": "iPhone 16",
+      "dt": "2025:12:10 19:14:31"
+    },
+    {
+      "file": "LaIguana/LaIguana_628121.jpg",
+      "agency": "LaIguana",
+      "lat": 10.237587,
+      "lon": -67.589275,
+      "make": "Xiaomi",
+      "model": "POCOPHONE F1",
+      "dt": "2019:12:23 20:47:06"
+    },
+    {
+      "file": "LaIguana/LaIguana_628124.jpg",
+      "agency": "LaIguana",
+      "lat": 10.237587,
+      "lon": -67.589275,
+      "make": "Xiaomi",
+      "model": "POCOPHONE F1",
+      "dt": "2019:12:23 20:47:11"
+    },
+    {
+      "file": "LaIguana/LaIguana_754142.jpg",
+      "agency": "LaIguana",
+      "lat": 7.817661,
+      "lon": -72.449781,
+      "make": "motorola",
+      "model": "Moto G (5S)",
+      "dt": "2019:02:20 16:16:48"
+    },
+    {
+      "file": "LaIguana/LaIguana_772643.jpg",
+      "agency": "LaIguana",
+      "lat": 10.504935,
+      "lon": -66.915064,
+      "make": "Xiaomi",
+      "model": "POCOPHONE F1",
+      "dt": "2020:07:25 19:35:13"
+    },
+    {
+      "file": "LaIguana/LaIguana_862828.jpg",
+      "agency": "LaIguana",
+      "lat": 8.288499,
+      "lon": -62.806247,
+      "make": "ZTE",
+      "model": "ZTE Blade A5 2020",
+      "dt": "2020:12:04 10:42:36"
+    },
+    {
+      "file": "LaIguana/LaIguana_862827.jpg",
+      "agency": "LaIguana",
+      "lat": 8.288291,
+      "lon": -62.806117,
+      "make": "ZTE",
+      "model": "ZTE Blade A5 2020",
+      "dt": "2020:12:04 12:13:00"
+    },
+    {
+      "file": "MPPS/MPPS_1897.jpg",
+      "agency": "MPPS",
+      "lat": 9.908072,
+      "lon": -67.354746,
+      "make": "TCL",
+      "model": "5002E",
+      "dt": "2022:04:27 09:35:54"
+    },
+    {
+      "file": "MPPS/MPPS_22121.jpg",
+      "agency": "MPPS",
+      "lat": 10.467788,
+      "lon": -66.97208,
+      "make": "DJI",
+      "model": "FC2204",
+      "dt": "2023:08:11 23:31:13"
+    },
+    {
+      "file": "MPPS/MPPS_27515.jpg",
+      "agency": "MPPS",
+      "lat": 9.921279,
+      "lon": -67.3517,
+      "make": "Xiaomi",
+      "model": "M2003J15SC",
+      "dt": "2023:10:30 11:00:33"
+    },
+    {
+      "file": "MPPS/MPPS_27514.jpg",
+      "agency": "MPPS",
+      "lat": 9.921082,
+      "lon": -67.351639,
+      "make": "Xiaomi",
+      "model": "M2003J15SC",
+      "dt": "2023:10:30 11:00:18"
+    },
+    {
+      "file": "MPPS/MPPS_37202.jpg",
+      "agency": "MPPS",
+      "lat": 9.317827,
+      "lon": -70.610275,
+      "make": "Xiaomi",
+      "model": "M2006C3MG",
+      "dt": "2024:03:10 12:36:14"
+    },
+    {
+      "file": "MPPS/MPPS_37204.jpg",
+      "agency": "MPPS",
+      "lat": 9.317868,
+      "lon": -70.610245,
+      "make": "Xiaomi",
+      "model": "M2006C3MG",
+      "dt": "2024:03:10 10:42:01"
+    },
+    {
+      "file": "MPPS/MPPS_37203.jpg",
+      "agency": "MPPS",
+      "lat": 9.317868,
+      "lon": -70.610237,
+      "make": "Xiaomi",
+      "model": "M2006C3MG",
+      "dt": "2024:03:10 10:49:11"
+    },
+    {
+      "file": "MPPS/MPPS_772.jpg",
+      "agency": "MPPS",
+      "lat": 10.501202,
+      "lon": -66.915297,
+      "make": "samsung",
+      "model": "SM-A525M",
+      "dt": "2022:09:15 09:43:26"
+    },
+    {
+      "file": "MPPS/MPPS_773.jpg",
+      "agency": "MPPS",
+      "lat": 10.502133,
+      "lon": -66.916286,
+      "make": "samsung",
+      "model": "SM-A525M",
+      "dt": "2022:09:15 09:52:09"
+    },
+    {
+      "file": "MPPS/MPPS_774.jpg",
+      "agency": "MPPS",
+      "lat": 10.502471,
+      "lon": -66.916427,
+      "make": "samsung",
+      "model": "SM-A525M",
+      "dt": "2022:09:15 09:28:30"
+    },
+    {
+      "file": "MPPS/MPPS_865.jpg",
+      "agency": "MPPS",
+      "lat": 10.50237,
+      "lon": -66.917257,
+      "make": "samsung",
+      "model": "SM-A525M",
+      "dt": "2022:09:16 09:42:15"
+    },
+    {
+      "file": "MPPS/MPPS_866.jpg",
+      "agency": "MPPS",
+      "lat": 10.502546,
+      "lon": -66.917058,
+      "make": "samsung",
+      "model": "SM-A525M",
+      "dt": "2022:09:16 09:48:21"
+    },
+    {
+      "file": "MPPS/MPPS_867.jpg",
+      "agency": "MPPS",
+      "lat": 10.502597,
+      "lon": -66.917212,
+      "make": "samsung",
+      "model": "SM-A525M",
+      "dt": "2022:09:16 09:46:36"
+    },
+    {
+      "file": "MinCultura/MinCultura_25764.jpg",
+      "agency": "MinCultura",
+      "lat": 10.481744,
+      "lon": -66.835231,
+      "make": "Xiaomi",
+      "model": "220333QAG",
+      "dt": "2024:10:10 12:06:50"
+    },
+    {
+      "file": "MinCultura/MinCultura_25763.jpg",
+      "agency": "MinCultura",
+      "lat": 10.481747,
+      "lon": -66.835308,
+      "make": "Xiaomi",
+      "model": "220333QAG",
+      "dt": "2024:10:10 12:17:23"
+    },
+    {
+      "file": "MinCultura/MinCultura_25760.jpg",
+      "agency": "MinCultura",
+      "lat": 10.481744,
+      "lon": -66.835231,
+      "make": "Xiaomi",
+      "model": "220333QAG",
+      "dt": "2024:10:10 12:06:38"
+    },
+    {
+      "file": "MinCultura/MinCultura_25762.jpg",
+      "agency": "MinCultura",
+      "lat": 10.481747,
+      "lon": -66.835308,
+      "make": "Xiaomi",
+      "model": "220333QAG",
+      "dt": "2024:10:10 12:17:23"
+    },
+    {
+      "file": "MinCultura/MinCultura_26000.jpg",
+      "agency": "MinCultura",
+      "lat": 10.335193,
+      "lon": -68.735286,
+      "make": "samsung",
+      "model": "SM-A032M",
+      "dt": "2024:10:16 13:06:11"
+    },
+    {
+      "file": "MinCultura/MinCultura_26185.jpg",
+      "agency": "MinCultura",
+      "lat": 9.667392,
+      "lon": -68.5797,
+      "make": "Xiaomi",
+      "model": "2201117TL",
+      "dt": "2024:10:22 14:39:04"
+    },
+    {
+      "file": "MinCultura/MinCultura_26186.jpg",
+      "agency": "MinCultura",
+      "lat": 9.667419,
+      "lon": -68.579697,
+      "make": "Xiaomi",
+      "model": "2201117TL",
+      "dt": "2024:10:22 14:38:39"
+    },
+    {
+      "file": "MinCultura/MinCultura_26183.jpg",
+      "agency": "MinCultura",
+      "lat": 9.667425,
+      "lon": -68.579678,
+      "make": "Xiaomi",
+      "model": "2201117TL",
+      "dt": "2024:10:22 16:06:37"
+    },
+    {
+      "file": "MinCultura/MinCultura_26184.jpg",
+      "agency": "MinCultura",
+      "lat": 9.667422,
+      "lon": -68.5797,
+      "make": "Xiaomi",
+      "model": "2201117TL",
+      "dt": "2024:10:22 14:28:05"
+    },
+    {
+      "file": "MinCultura/MinCultura_28110.jpg",
+      "agency": "MinCultura",
+      "lat": 10.512093,
+      "lon": -66.912831,
+      "make": "HONOR",
+      "model": "LLY-LX3",
+      "dt": "2024:12:03 11:29:12"
+    },
+    {
+      "file": "MinCultura/MinCultura_28111.jpg",
+      "agency": "MinCultura",
+      "lat": 10.512092,
+      "lon": -66.91284,
+      "make": "HONOR",
+      "model": "LLY-LX3",
+      "dt": "2024:12:03 11:26:54"
+    },
+    {
+      "file": "MinCultura/MinCultura_30593.jpg",
+      "agency": "MinCultura",
+      "lat": 23.088703,
+      "lon": -82.454033,
+      "make": "Xiaomi",
+      "model": "220333QAG",
+      "dt": "2025:01:29 13:32:05"
+    },
+    {
+      "file": "MinCultura/MinCultura_32361.jpg",
+      "agency": "MinCultura",
+      "lat": 10.252847,
+      "lon": -67.595507,
+      "make": "Xiaomi",
+      "model": "23100RN82L",
+      "dt": "2025:02:25 09:55:04"
+    },
+    {
+      "file": "MinCultura/MinCultura_32860.jpg",
+      "agency": "MinCultura",
+      "lat": 9.666686,
+      "lon": -68.579378,
+      "make": "samsung",
+      "model": "Galaxy A06",
+      "dt": "2025:03:11 15:07:08"
+    },
+    {
+      "file": "MinCultura/MinCultura_43466.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500708,
+      "lon": -66.902507,
+      "make": "Xiaomi",
+      "model": "23117RA68G",
+      "dt": "2025:07:12 15:25:44"
+    },
+    {
+      "file": "MinCultura/MinCultura_43464.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500702,
+      "lon": -66.902533,
+      "make": "Xiaomi",
+      "model": "23117RA68G",
+      "dt": "2025:07:12 16:05:08"
+    },
+    {
+      "file": "MinCultura/MinCultura_43465.jpg",
+      "agency": "MinCultura",
+      "lat": 10.5008,
+      "lon": -66.90251,
+      "make": "Xiaomi",
+      "model": "23117RA68G",
+      "dt": "2025:07:12 15:25:03"
+    },
+    {
+      "file": "MinCultura/MinCultura_43467.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500693,
+      "lon": -66.902514,
+      "make": "Xiaomi",
+      "model": "23117RA68G",
+      "dt": "2025:07:12 16:38:21"
+    },
+    {
+      "file": "MinCultura/MinCultura_54590.jpg",
+      "agency": "MinCultura",
+      "lat": 10.503157,
+      "lon": -66.916115,
+      "make": "HONOR",
+      "model": "JDY-LX3",
+      "dt": "2025:10:23 12:54:22"
+    },
+    {
+      "file": "MinCultura/MinCultura_54588.jpg",
+      "agency": "MinCultura",
+      "lat": 10.503131,
+      "lon": -66.916145,
+      "make": "HONOR",
+      "model": "JDY-LX3",
+      "dt": "2025:10:21 13:04:53"
+    },
+    {
+      "file": "MinCultura/MinCultura_54591.jpg",
+      "agency": "MinCultura",
+      "lat": 10.502846,
+      "lon": -66.916702,
+      "make": "HONOR",
+      "model": "JDY-LX3",
+      "dt": "2025:10:09 14:26:13"
+    },
+    {
+      "file": "MinCultura/MinCultura_54592.jpg",
+      "agency": "MinCultura",
+      "lat": 10.502858,
+      "lon": -66.915993,
+      "make": "HONOR",
+      "model": "JDY-LX3",
+      "dt": "2025:10:21 10:22:42"
+    },
+    {
+      "file": "MinCultura/MinCultura_55626.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500175,
+      "lon": -66.898444,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:18:19"
+    },
+    {
+      "file": "MinCultura/MinCultura_55619.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500114,
+      "lon": -66.8983,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:28:20"
+    },
+    {
+      "file": "MinCultura/MinCultura_55621.jpg",
+      "agency": "MinCultura",
+      "lat": 10.50015,
+      "lon": -66.898383,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:18:53"
+    },
+    {
+      "file": "MinCultura/MinCultura_55631.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500092,
+      "lon": -66.898492,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:44:02"
+    },
+    {
+      "file": "MinCultura/MinCultura_55624.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500231,
+      "lon": -66.898422,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:21:00"
+    },
+    {
+      "file": "MinCultura/MinCultura_55629.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500144,
+      "lon": -66.898353,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:57:47"
+    },
+    {
+      "file": "MinCultura/MinCultura_55628.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500269,
+      "lon": -66.898378,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:25:44"
+    },
+    {
+      "file": "MinCultura/MinCultura_55622.jpg",
+      "agency": "MinCultura",
+      "lat": 10.499814,
+      "lon": -66.898117,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:13:14"
+    },
+    {
+      "file": "MinCultura/MinCultura_55630.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500206,
+      "lon": -66.898261,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:28:40"
+    },
+    {
+      "file": "MinCultura/MinCultura_55627.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500125,
+      "lon": -66.898475,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:42:45"
+    },
+    {
+      "file": "MinCultura/MinCultura_55639.jpg",
+      "agency": "MinCultura",
+      "lat": 10.5002,
+      "lon": -66.898361,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:19:27"
+    },
+    {
+      "file": "MinCultura/MinCultura_55620.jpg",
+      "agency": "MinCultura",
+      "lat": 10.5002,
+      "lon": -66.898361,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:19:27"
+    },
+    {
+      "file": "MinCultura/MinCultura_55634.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500628,
+      "lon": -66.898256,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:05:04"
+    },
+    {
+      "file": "MinCultura/MinCultura_55638.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500033,
+      "lon": -66.898308,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:59:30"
+    },
+    {
+      "file": "MinCultura/MinCultura_55625.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500106,
+      "lon": -66.898492,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:46:37"
+    },
+    {
+      "file": "MinCultura/MinCultura_55623.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500086,
+      "lon": -66.898331,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:58:15"
+    },
+    {
+      "file": "MinCultura/MinCultura_55646.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500144,
+      "lon": -66.898353,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:57:47"
+    },
+    {
+      "file": "MinCultura/MinCultura_55640.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500106,
+      "lon": -66.898492,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:46:37"
+    },
+    {
+      "file": "MinCultura/MinCultura_55645.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500125,
+      "lon": -66.898475,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:42:45"
+    },
+    {
+      "file": "MinCultura/MinCultura_55643.jpg",
+      "agency": "MinCultura",
+      "lat": 10.50015,
+      "lon": -66.898383,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:18:53"
+    },
+    {
+      "file": "MinCultura/MinCultura_55635.jpg",
+      "agency": "MinCultura",
+      "lat": 10.50015,
+      "lon": -66.898369,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:57:55"
+    },
+    {
+      "file": "MinCultura/MinCultura_55633.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500297,
+      "lon": -66.898408,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:59:58"
+    },
+    {
+      "file": "MinCultura/MinCultura_55642.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500086,
+      "lon": -66.898331,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:58:15"
+    },
+    {
+      "file": "MinCultura/MinCultura_55637.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500178,
+      "lon": -66.898347,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:24:07"
+    },
+    {
+      "file": "MinCultura/MinCultura_55644.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500206,
+      "lon": -66.898261,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:28:40"
+    },
+    {
+      "file": "MinCultura/MinCultura_55632.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500158,
+      "lon": -66.898414,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:24:36"
+    },
+    {
+      "file": "MinCultura/MinCultura_55651.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500628,
+      "lon": -66.898256,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:05:04"
+    },
+    {
+      "file": "MinCultura/MinCultura_55636.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500233,
+      "lon": -66.898439,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:14:21"
+    },
+    {
+      "file": "MinCultura/MinCultura_55655.jpg",
+      "agency": "MinCultura",
+      "lat": 10.50015,
+      "lon": -66.898369,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:57:55"
+    },
+    {
+      "file": "MinCultura/MinCultura_55641.jpg",
+      "agency": "MinCultura",
+      "lat": 10.499814,
+      "lon": -66.898117,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:13:14"
+    },
+    {
+      "file": "MinCultura/MinCultura_55664.jpg",
+      "agency": "MinCultura",
+      "lat": 10.5002,
+      "lon": -66.898361,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:19:27"
+    },
+    {
+      "file": "MinCultura/MinCultura_55659.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500206,
+      "lon": -66.898261,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:28:40"
+    },
+    {
+      "file": "MinCultura/MinCultura_55660.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500269,
+      "lon": -66.898378,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:25:44"
+    },
+    {
+      "file": "MinCultura/MinCultura_55649.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500092,
+      "lon": -66.898492,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:44:02"
+    },
+    {
+      "file": "MinCultura/MinCultura_55654.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500233,
+      "lon": -66.898439,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:14:21"
+    },
+    {
+      "file": "MinCultura/MinCultura_55662.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500178,
+      "lon": -66.898347,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:24:07"
+    },
+    {
+      "file": "MinCultura/MinCultura_55652.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500297,
+      "lon": -66.898408,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:59:58"
+    },
+    {
+      "file": "MinCultura/MinCultura_55648.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500231,
+      "lon": -66.898422,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:21:00"
+    },
+    {
+      "file": "MinCultura/MinCultura_55657.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500178,
+      "lon": -66.898347,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:24:07"
+    },
+    {
+      "file": "MinCultura/MinCultura_55650.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500269,
+      "lon": -66.898378,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:25:44"
+    },
+    {
+      "file": "MinCultura/MinCultura_55668.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500628,
+      "lon": -66.898256,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:05:04"
+    },
+    {
+      "file": "MinCultura/MinCultura_55674.jpg",
+      "agency": "MinCultura",
+      "lat": 10.499814,
+      "lon": -66.898117,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:13:14"
+    },
+    {
+      "file": "MinCultura/MinCultura_55647.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500175,
+      "lon": -66.898444,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:18:19"
+    },
+    {
+      "file": "MinCultura/MinCultura_55656.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500158,
+      "lon": -66.898414,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:24:36"
+    },
+    {
+      "file": "MinCultura/MinCultura_55666.jpg",
+      "agency": "MinCultura",
+      "lat": 10.50015,
+      "lon": -66.898383,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:18:53"
+    },
+    {
+      "file": "MinCultura/MinCultura_55665.jpg",
+      "agency": "MinCultura",
+      "lat": 10.499814,
+      "lon": -66.898117,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:13:14"
+    },
+    {
+      "file": "MinCultura/MinCultura_55680.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500086,
+      "lon": -66.898331,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:58:15"
+    },
+    {
+      "file": "MinCultura/MinCultura_55669.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500297,
+      "lon": -66.898408,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:59:58"
+    },
+    {
+      "file": "MinCultura/MinCultura_55675.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500175,
+      "lon": -66.898444,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:18:19"
+    },
+    {
+      "file": "MinCultura/MinCultura_55653.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500033,
+      "lon": -66.898308,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:59:30"
+    },
+    {
+      "file": "MinCultura/MinCultura_55678.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500233,
+      "lon": -66.898439,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:14:21"
+    },
+    {
+      "file": "MinCultura/MinCultura_55661.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500158,
+      "lon": -66.898414,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:24:36"
+    },
+    {
+      "file": "MinCultura/MinCultura_55672.jpg",
+      "agency": "MinCultura",
+      "lat": 10.5002,
+      "lon": -66.898361,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:19:27"
+    },
+    {
+      "file": "MinCultura/MinCultura_55673.jpg",
+      "agency": "MinCultura",
+      "lat": 10.50015,
+      "lon": -66.898383,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:18:53"
+    },
+    {
+      "file": "MinCultura/MinCultura_55658.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500231,
+      "lon": -66.898422,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:21:00"
+    },
+    {
+      "file": "MinCultura/MinCultura_55670.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500233,
+      "lon": -66.898439,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:14:21"
+    },
+    {
+      "file": "MinCultura/MinCultura_55681.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500125,
+      "lon": -66.898475,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:42:45"
+    },
+    {
+      "file": "MinCultura/MinCultura_55667.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500175,
+      "lon": -66.898444,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:18:19"
+    },
+    {
+      "file": "MinCultura/MinCultura_55684.jpg",
+      "agency": "MinCultura",
+      "lat": 10.50015,
+      "lon": -66.898369,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:57:55"
+    },
+    {
+      "file": "MinCultura/MinCultura_55676.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500297,
+      "lon": -66.898408,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:59:58"
+    },
+    {
+      "file": "MinCultura/MinCultura_55679.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500106,
+      "lon": -66.898492,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:46:37"
+    },
+    {
+      "file": "MinCultura/MinCultura_55685.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500033,
+      "lon": -66.898308,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:59:30"
+    },
+    {
+      "file": "MinCultura/MinCultura_55686.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500144,
+      "lon": -66.898353,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:57:47"
+    },
+    {
+      "file": "MinCultura/MinCultura_55663.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500206,
+      "lon": -66.898261,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:28:40"
+    },
+    {
+      "file": "MinCultura/MinCultura_55682.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500144,
+      "lon": -66.898353,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:57:47"
+    },
+    {
+      "file": "MinCultura/MinCultura_55677.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500628,
+      "lon": -66.898256,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 15:05:04"
+    },
+    {
+      "file": "MinCultura/MinCultura_55683.jpg",
+      "agency": "MinCultura",
+      "lat": 10.500092,
+      "lon": -66.898492,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:11:14 14:44:02"
+    },
+    {
+      "file": "VTV/VTV_1005189.jpg",
+      "agency": "VTV",
+      "lat": 10.506328,
+      "lon": -66.914825,
+      "make": "Apple",
+      "model": "iPhone 6",
+      "dt": "2015:08:21 12:15:24"
+    },
+    {
+      "file": "VTV/VTV_1009994.jpg",
+      "agency": "VTV",
+      "lat": 10.472281,
+      "lon": -66.947714,
+      "make": "Apple",
+      "model": "iPhone 11",
+      "dt": "2025:01:20 10:33:15"
+    },
+    {
+      "file": "VTV/VTV_1017064.jpg",
+      "agency": "VTV",
+      "lat": 40.756857,
+      "lon": -73.846178,
+      "make": "NIKON CORPORATION",
+      "model": "NIKON Z 9",
+      "dt": "2024:03:29 14:00:37"
+    },
+    {
+      "file": "VTV/VTV_1028966.jpg",
+      "agency": "VTV",
+      "lat": 10.472447,
+      "lon": -66.948281,
+      "make": "Apple",
+      "model": "iPhone 11",
+      "dt": "2025:02:25 16:25:07"
+    },
+    {
+      "file": "VTV/VTV_1029555.jpg",
+      "agency": "VTV",
+      "lat": 10.252847,
+      "lon": -67.595507,
+      "make": "Xiaomi",
+      "model": "23100RN82L",
+      "dt": "2025:02:25 09:55:04"
+    },
+    {
+      "file": "VTV/VTV_1038484.jpg",
+      "agency": "VTV",
+      "lat": 9.308028,
+      "lon": -70.601742,
+      "make": "Xiaomi",
+      "model": "M2101K7AG",
+      "dt": "2025:02:27 15:11:42"
+    },
+    {
+      "file": "VTV/VTV_1043774.jpg",
+      "agency": "VTV",
+      "lat": 10.345808,
+      "lon": -67.117628,
+      "make": "samsung",
+      "model": "Galaxy S23",
+      "dt": "2025:02:04 15:35:20"
+    },
+    {
+      "file": "VTV/VTV_1043916.jpg",
+      "agency": "VTV",
+      "lat": 10.345808,
+      "lon": -67.117628,
+      "make": "samsung",
+      "model": "Galaxy S23",
+      "dt": "2025:02:04 15:35:20"
+    },
+    {
+      "file": "VTV/VTV_1048134.jpg",
+      "agency": "VTV",
+      "lat": 8.617314,
+      "lon": -71.145919,
+      "make": "Apple",
+      "model": "iPhone 13",
+      "dt": "2025:03:27 10:44:13"
+    },
+    {
+      "file": "VTV/VTV_1062111.jpg",
+      "agency": "VTV",
+      "lat": 13.53333,
+      "lon": -88.78333,
+      "make": "NIKON CORPORATION",
+      "model": "NIKON Z 9",
+      "dt": "2025:01:27 11:55:00"
+    },
+    {
+      "file": "VTV/VTV_1084828.jpg",
+      "agency": "VTV",
+      "lat": 47.06667,
+      "lon": 15.45,
+      "make": "",
+      "model": "",
+      "dt": "2025:06:10 00:00:00"
+    },
+    {
+      "file": "VTV/VTV_1087733.jpg",
+      "agency": "VTV",
+      "lat": 10.542082,
+      "lon": -66.87476,
+      "make": "samsung",
+      "model": "Galaxy S24 Ultra",
+      "dt": "2025:06:14 15:54:08"
+    },
+    {
+      "file": "VTV/VTV_1103890.jpg",
+      "agency": "VTV",
+      "lat": 35.853119,
+      "lon": 35.948253,
+      "make": "DJI",
+      "model": "FC3682",
+      "dt": "2025:07:09 18:09:57"
+    },
+    {
+      "file": "VTV/VTV_1103893.jpg",
+      "agency": "VTV",
+      "lat": 35.849214,
+      "lon": 35.970626,
+      "make": "DJI",
+      "model": "FC3682",
+      "dt": "2025:07:09 17:21:10"
+    },
+    {
+      "file": "VTV/VTV_1105677.jpg",
+      "agency": "VTV",
+      "lat": 10.500708,
+      "lon": -66.902507,
+      "make": "Xiaomi",
+      "model": "23117RA68G",
+      "dt": "2025:07:12 15:25:44"
+    },
+    {
+      "file": "VTV/VTV_1114637.jpg",
+      "agency": "VTV",
+      "lat": 10.275217,
+      "lon": -67.589692,
+      "make": "Apple",
+      "model": "iPhone 13 Pro",
+      "dt": "2025:07:24 13:57:22"
+    },
+    {
+      "file": "VTV/VTV_1119048.jpg",
+      "agency": "VTV",
+      "lat": 39.65417,
+      "lon": 66.959719,
+      "make": "",
+      "model": "",
+      "dt": "2025:07:11 13:42:20"
+    },
+    {
+      "file": "VTV/VTV_1127986.jpg",
+      "agency": "VTV",
+      "lat": 10.506328,
+      "lon": -66.914825,
+      "make": "Apple",
+      "model": "iPhone 6",
+      "dt": "2015:08:21 12:15:24"
+    },
+    {
+      "file": "VTV/VTV_1156437.jpg",
+      "agency": "VTV",
+      "lat": 10.149156,
+      "lon": -67.993478,
+      "make": "Apple",
+      "model": "iPhone 16 Pro Max",
+      "dt": "2025:09:26 10:42:13"
+    },
+    {
+      "file": "VTV/VTV_1172312.jpg",
+      "agency": "VTV",
+      "lat": -4.283078,
+      "lon": 15.261594,
+      "make": "Apple",
+      "model": "iPhone 14 Pro Max",
+      "dt": "2025:10:16 13:55:03"
+    },
+    {
+      "file": "VTV/VTV_1186412.jpg",
+      "agency": "VTV",
+      "lat": 9.099669,
+      "lon": -81.547349,
+      "make": "DJI",
+      "model": "FC8482",
+      "dt": "2024:09:22 08:58:49"
+    },
+    {
+      "file": "VTV/VTV_1197785.jpg",
+      "agency": "VTV",
+      "lat": 43.259564,
+      "lon": -2.937128,
+      "make": "Apple",
+      "model": "iPhone 16",
+      "dt": "2025:11:30 18:46:31"
+    },
+    {
+      "file": "VTV/VTV_1209055.jpg",
+      "agency": "VTV",
+      "lat": 39.65417,
+      "lon": 66.959719,
+      "make": "",
+      "model": "",
+      "dt": "2025:07:11 13:42:20"
+    },
+    {
+      "file": "VTV/VTV_947764.jpg",
+      "agency": "VTV",
+      "lat": 10.500564,
+      "lon": -66.895783,
+      "make": "Apple",
+      "model": "iPhone 6",
+      "dt": "2016:07:24 12:39:12"
+    },
+    {
+      "file": "VTV/VTV_959361.jpg",
+      "agency": "VTV",
+      "lat": 8.786417,
+      "lon": -70.871217,
+      "make": "Xiaomi",
+      "model": "220333QAG",
+      "dt": "2024:01:25 13:52:51"
+    },
+    {
+      "file": "VTV/VTV_962773.jpg",
+      "agency": "VTV",
+      "lat": 10.255123,
+      "lon": -63.919922,
+      "make": "samsung",
+      "model": "Galaxy S23 Ultra",
+      "dt": "2024:10:23 12:51:38"
+    },
+    {
+      "file": "VTV/VTV_962776.jpg",
+      "agency": "VTV",
+      "lat": 10.255505,
+      "lon": -63.920158,
+      "make": "samsung",
+      "model": "Galaxy S23 Ultra",
+      "dt": "2024:10:23 13:06:56"
+    },
+    {
+      "file": "VTV/VTV_962774.jpg",
+      "agency": "VTV",
+      "lat": 10.255143,
+      "lon": -63.919976,
+      "make": "samsung",
+      "model": "Galaxy S23 Ultra",
+      "dt": "2024:10:23 12:55:13"
+    },
+    {
+      "file": "VTV/VTV_967392.jpg",
+      "agency": "VTV",
+      "lat": 10.60938,
+      "lon": -66.874153,
+      "make": "Akua",
+      "model": "MK5",
+      "dt": "2019:10:01 23:50:46"
+    },
+    {
+      "file": "VTV/VTV_986565.jpg",
+      "agency": "VTV",
+      "lat": 7.057864,
+      "lon": -73.092475,
+      "make": "Apple",
+      "model": "iPhone 11",
+      "dt": "2024:12:04 17:26:38"
+    },
+    {
+      "file": "VTV/VTV_991174.jpg",
+      "agency": "VTV",
+      "lat": 10.134025,
+      "lon": -67.980478,
+      "make": "DJI",
+      "model": "FC3582",
+      "dt": "2024:12:14 16:18:08"
+    }
+  ]
+}

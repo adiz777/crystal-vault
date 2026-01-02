@@ -1,0 +1,112 @@
+================================================================================
+BANDES (BANCO DE DESARROLLO ECONOMICO Y SOCIAL) - API PROBE RESULTS
+================================================================================
+Date: 2026-01-01
+Target: www.bandes.gob.ve
+Method: Tor SOCKS5 proxy + curl
+
+================================================================================
+SITE INFORMATION
+================================================================================
+
+Organization: Banco de Desarrollo Economico y Social de Venezuela (BANDES)
+             Venezuelan Development Bank
+URL: https://www.bandes.gob.ve
+Type: State-owned development bank
+
+================================================================================
+API STATUS: NO OPEN API - LARAVEL FRAMEWORK
+================================================================================
+
+Server: Apache
+Framework: Laravel (PHP)
+Evidence:
+- XSRF-TOKEN cookie present
+- laravel_session cookie present
+- Laravel-style error pages
+
+WordPress API: NOT AVAILABLE
+- /wp-json/ returns Laravel 404 page
+
+================================================================================
+SECURITY HEADERS
+================================================================================
+
+X-Frame-Options: SAMEORIGIN
+X-Permitted-Cross-Domain-Policies: none
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=15768000; includeSubDomains
+Referrer-Policy: no-referrer
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Clear-Site-Data: cache,cookies,storage
+
+ASSESSMENT: Well-configured security headers
+
+================================================================================
+OFAC SANCTIONS CONNECTION
+================================================================================
+
+RELATED ENTITY IN OFAC DATABASE:
+
+BANCO BANDES URUGUAY S.A.
+- OFAC ID: 26588
+- SWIFT: CFACUYMM
+- Link: BANCO DE DESARROLLO ECONOMICO Y SOCIAL DE VENEZUELA
+- Purpose: Used for Venezuela sanctions evasion
+- Program: VENEZUELA-EO13850
+
+This is a SUBSIDIARY of BANDES Venezuela
+
+================================================================================
+ALTERNATIVE COLLECTION METHODS
+================================================================================
+
+Since no API is available:
+
+1. WEB SCRAPING
+   - Parse HTML pages for news/announcements
+   - Extract leadership information
+   - Document organizational structure
+
+2. PUBLIC DOCUMENTS
+   - Annual reports
+   - Financial statements
+   - Press releases
+
+3. RELATED APIS
+   - Check for mobile app APIs
+   - Look for subdomain APIs
+
+================================================================================
+TESTED ENDPOINTS (ALL FAILED)
+================================================================================
+
+/wp-json/         -> Laravel 404
+/api/             -> Not tested
+/rest/            -> Not tested
+/graphql          -> Not tested
+
+================================================================================
+INTELLIGENCE VALUE
+================================================================================
+
+MEDIUM-HIGH VALUE:
+- State development bank
+- Linked to OFAC-sanctioned Uruguay subsidiary
+- Potential sanctions evasion vehicle
+- Financial data would be valuable
+
+COLLECTION PRIORITY: MEDIUM (requires web scraping)
+
+================================================================================
+NOTES
+================================================================================
+
+- Modern Laravel implementation
+- Good security configuration
+- No exposed API endpoints found
+- May require authenticated access for data
+
+================================================================================
+END PROBE RESULTS
+================================================================================

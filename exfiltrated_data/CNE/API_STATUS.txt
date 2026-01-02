@@ -1,0 +1,15 @@
+CNE - Consejo Nacional Electoral
+=================================
+Status: CONNECTION BLOCKED/DNS FAILURE
+
+Tested Endpoints:
+- https://www.cne.gob.ve/wp-json/wp/v2/media - DNS failure
+- http://www.cne.gob.ve/wp-json/wp/v2/media - DNS failure
+- Via Tor: DNS failure
+
+Notes:
+- Electoral council website not accessible
+- Domain may require Venezuelan DNS or VPN
+- HIGH VALUE TARGET - worth retrying with VE proxy
+
+Last tested: 2026-01-01

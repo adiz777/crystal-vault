@@ -1,0 +1,15 @@
+Movilnet - State Mobile Carrier
+================================
+Status: API RETURNS ERROR PAGES
+
+Tested Endpoints:
+- http://www.movilnet.com.ve/wp-json/wp/v2/media - Returns HTML error page
+- https://movilnet.com.ve/wp-json/wp/v2/media - Connection issues
+
+Notes:
+- CANTV subsidiary (state mobile carrier)
+- API endpoint exists but returns non-JSON error pages
+- Possible maintenance or API disabled
+- Main script attempted 8000+ pages - all errors
+
+Last tested: 2026-01-01

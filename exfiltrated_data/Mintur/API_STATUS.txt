@@ -1,0 +1,14 @@
+Mintur - Ministerio del Poder Popular para el Turismo
+======================================================
+Status: NO WORDPRESS API FOUND
+
+Tested Endpoints:
+- https://www.mintur.gob.ve/wp-json/wp/v2/media - 404
+- http://mintur.gob.ve/wp-json/wp/v2/media - 404
+- Via Tor: 404
+
+Notes:
+- Tourism Ministry website has no WordPress REST API
+- May use different CMS
+
+Last tested: 2026-01-01

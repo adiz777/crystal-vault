@@ -1,0 +1,90 @@
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Ministerio del Poder Popular para la Educación MPPE</title>
+	<meta name="title" content="Ministerio del Poder Popular para la Educación, MPPE">
+	<meta property="og:url" content="https://www.mppe.gob.ve/">
+	<meta name="url" content="https://www.mppe.gob.ve/" />
+	<meta property="og:title" content="Ministerio del Poder Popular para la Educación MPPE">
+	<meta property="og:type" content="website">
+	<meta name="google-site-verification" content="cYYq-wfW8Idl_sUZj12_cHviKZmxytALexX5b-D0hkA" />
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Sitio web oficial del Ministerio del Poder Popular para la Educación de la República Bolivariana de Venezuela MPPE">
+	<meta name="author" content="Ministerio de Educación, MPPE">
+	<meta name="audience" content="all">
+	<meta http-equiv="Content-Language" content="es-ve" /> 
+	<meta name="keywords" content="Ministerio del Poder Popular para la Educación, Venezuela, MPPE, ME, MPPE.GOB.VE, educación, portal educacion venezuela,">
+	<meta name="DC.format" content="text/html" /> 
+	<meta name="DC.language" content="es-VE" /> 
+	<meta name="geo.region" content="VE-G" />
+	<meta name="geo.placename" content="Caracas" /> 
+	<meta name="revisit-after" content="1 days" /> 
+	<meta name="rating" content="General" /> 
+	<meta name="distribution" content="Global" /> 
+	<meta name="country" content="Venezuela" /> 
+	<meta name="REVISIT" content="7 days" /> 
+	<meta name="NOW" content="2024-11-06 11:00" /> 
+	<meta name="REVIEW" content="2024-11-12" /> 
+	<meta name="revisit-after" content="1 days">
+	<meta http-equiv="Reply-to" content="" /> 
+	<meta http-equiv="Pragma" content="cache"/>  
+	<meta name="generator" content="" />
+	<meta name="url" content="" /> 
+	<meta name="page-topic" content="." /> 
+	<meta name="GOOGLEBOT" content="INDEX,FOLLOW" />
+	<meta name="robots" content="ALL,INDEX,FOLLOW,ARCHIVE,Cache" /> 
+	<meta name="author" content="OTIC MPPE">
+	<meta name="rights" content="Derechos Reservados del contenido y diseño web"/>
+	<!--Favicons-->
+	<link rel="apple-touch-icon" href="static/mppeweb/images/logo/LOGOBANDRA.ico">
+	<link rel="icon" href="static/mppeweb/images/logo/LOGOBANDRA.ico">
+  
+    <meta name="msapplication-TileColor"  content="#0054a6">
+    <meta name="theme-color"              content="#0054a6">
+    <meta name="HandheldFriendly"         content="True">
+    <meta name="MobileOptimized"          content="320">
+    <meta name="description"              content="paguina de error 404">
+    <!-- CSS files -->
+    
+
+
+    <link rel="stylesheet" href="/static/mppeweb/css/tabler.min.css">
+   
+    <style>
+      @import url('https://rsms.me/inter/inter.css');
+      :root {
+      	--tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+      }
+      body {
+      	font-feature-settings: "cv03", "cv04", "cv11";
+      }
+    </style>
+  </head>
+  
+  <body class=" border-top-wide border-primary d-flex flex-column">
+
+    <div class="page page-center">
+      <div class="container-tight py-4">
+        <div class="empty">
+          <div class="empty-header">Error 404</div>
+          <p class="empty-title">La página que has solicitado no está disponible</p>
+          <div class="empty-action">
+            <a href="/" class="btn btn-primary">
+              <!-- Download SVG icon from http://tabler-icons.io/i/arrow-left -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M5 12l6 6"></path><path d="M5 12l6 -6"></path></svg>
+              Regresame al Inicio
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/mppeweb/js/tabler.min.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,22 @@
+================================================================================
+GOBLARA (Lara State Government) - TECH STACK
+================================================================================
+Date: 2026-01-01
+URL: https://lara.gob.ve
+
+PLATFORM: UNKNOWN (Timeout)
+- Site does not respond via Tor
+- Possible geo-blocking or server issues
+
+API STATUS: TIMEOUT / NO RESPONSE
+- Cannot determine platform
+- May have WordPress API when accessible
+
+NOTES:
+- Lara state government (capital: Barquisimeto)
+- Intelligence value: Regional government data
+- Oday Nassereddine recruits via Circulos Bolivarianos here
+
+COLLECTION: Requires VPN or retry later
+
+================================================================================

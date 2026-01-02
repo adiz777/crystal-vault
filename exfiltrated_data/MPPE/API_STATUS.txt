@@ -1,0 +1,16 @@
+MPPE - Ministry of Popular Power for Education
+===============================================
+Status: CONNECTION TIMEOUT
+
+Tested Endpoints:
+- https://mppe.gob.ve/wp-json/wp/v2/media - Timeout
+- https://mppe.gob.ve/?rest_route=/wp/v2/media - Timeout
+- http://mppe.gob.ve/wp-json/wp/v2/media - Timeout
+
+Notes:
+- Education Ministry website not responding
+- All connection attempts result in timeout
+- May require Venezuelan network access or be geo-blocked
+- Server may be overloaded or under maintenance
+
+Last tested: 2026-01-01

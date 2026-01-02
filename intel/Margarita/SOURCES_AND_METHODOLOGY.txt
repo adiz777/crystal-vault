@@ -1,0 +1,245 @@
+================================================================================
+ISLA DE MARGARITA TRAINING CAMP OSINT COLLECTION
+SOURCES AND METHODOLOGY
+================================================================================
+Date: January 1, 2026
+Project: Crystal Vault - Margarita Training Camp Research
+
+================================================================================
+COLLECTION METHODOLOGY
+================================================================================
+
+1. NETWORK ANONYMIZATION
+   - All data collection performed via Tor SOCKS5 proxy
+   - Proxy: socks5h://127.0.0.1:9050
+   - Tor Expert Bundle installed at C:\Users\Desktop\tor\
+   - Purpose: Mask collection origin, avoid rate limiting/blocking
+
+2. API EXPLOITATION
+   - Targeted WordPress REST API endpoints on Venezuelan government sites
+   - Endpoint pattern: /wp-json/wp/v2/posts?search={keyword}
+   - Also used: /wp-json/wp/v2/media for media enumeration
+   - No authentication required (public APIs)
+
+3. KEYWORD SEARCH METHODOLOGY
+   - Primary targets: Training camps, military exercises, foreign nationals
+   - Spanish language variants used (entrenamiento, campo, campamento, etc.)
+   - Geographic: Margarita, Nueva Esparta, Porlamar, Pampatar
+   - Entity searches: FANB, Russian military, Hezbollah operatives
+   - Activity: turismo militar, ejercicios, cooperacion
+
+================================================================================
+PRIMARY SOURCES
+================================================================================
+
+1. VTV (Venezolana de Television)
+   URL: https://www.vtv.gob.ve
+   Type: State television, official government mouthpiece
+   API: /wp-json/wp/v2/posts
+   Status: Pending collection
+
+2. CORREO DEL ORINOCO
+   URL: https://www.correodelorinoco.gob.ve
+   Type: State newspaper
+   API: /wp-json/wp/v2/posts
+   Status: Pending collection
+
+3. NUEVA ESPARTA STATE MEDIA
+   - Local government sites for Margarita region
+   - Tourism ministry announcements
+   - Military cooperation statements
+
+4. FLIGHT DATA (EXTERNAL)
+   - Russian airline passenger manifests
+   - Estimated 5,000 "tourists" identified
+   - Arrival patterns suggesting non-tourist activity
+   - Charter flight analysis
+
+5. SATELLITE IMAGERY (PENDING)
+   - Training facility identification
+   - Before/after comparisons
+   - Vehicle/equipment staging areas
+
+================================================================================
+INTELLIGENCE FOCUS AREAS
+================================================================================
+
+1. RUSSIAN "TOURIST" ANOMALIES
+   - 5,000+ arrivals from Russian flight logs
+   - Demographics inconsistent with tourism (military-age males)
+   - Extended stays beyond typical tourism
+   - Pattern analysis suggests training rotations
+   - Possible Spetsnaz, Wagner Group, or IRGC Quds Force
+
+2. TRAINING CAMP INDICATORS
+   - Remote facilities on Margarita island
+   - Military-style construction
+   - Restricted access zones
+   - Local reports of weapons fire/exercises
+   - Equipment deliveries
+
+3. HEZBOLLAH CONNECTION (LINKED TO HEZ PROJECT)
+   - Lebanese diaspora presence on Margarita
+   - Family clan business operations
+   - Financial networks
+   - Cross-reference with Hez project findings
+
+4. IRANIAN INVOLVEMENT
+   - IRGC Quds Force personnel
+   - Drone technology transfer
+   - Joint exercises with FANB
+   - Infrastructure projects (cover operations)
+
+5. CUBAN INTELLIGENCE PRESENCE
+   - G2 operatives
+   - Training coordination
+   - FANB integration
+
+================================================================================
+KEYWORD MATRIX
+================================================================================
+
+LOCATION TERMS (Spanish):
+- Isla de Margarita
+- Nueva Esparta
+- Porlamar
+- Pampatar
+- La Asuncion
+- Juangriego
+- Macanao
+
+TRAINING TERMS (Spanish):
+- Entrenamiento militar
+- Campo de entrenamiento
+- Ejercicios militares
+- Cooperacion militar
+- Fuerzas especiales
+- Operaciones especiales
+
+FOREIGN ACTOR TERMS:
+- Rusia / Rusos / Ruso
+- Iran / Irani / Iraníes
+- Cuba / Cubano
+- Hezbola / Hizbola
+- Wagner
+- Spetsnaz
+- IRGC / Guardianes de la Revolucion
+
+MILITARY TERMS:
+- FANB (Fuerza Armada Nacional Bolivariana)
+- GNB (Guardia Nacional Bolivariana)
+- CEOFANB
+- Comandos
+- Francotiradores
+- Armas
+
+COVER OPERATION TERMS:
+- Turismo
+- Cooperacion cultural
+- Intercambio
+- Asesores
+- Tecnicos
+
+================================================================================
+DATA TO COLLECT
+================================================================================
+
+FILE                                    TARGET      DESCRIPTION
+--------------------------------------------------------------------------------
+VTV_margarita_posts.json               400         General Margarita coverage
+VTV_entrenamiento_posts.json           200         Military training mentions
+VTV_rusia_posts.json                   400         Russia-Venezuela relations
+VTV_ejercicios_posts.json              200         Military exercises
+VTV_nueva_esparta_posts.json           300         Nueva Esparta state coverage
+
+Correo_margarita_posts.json            100         Margarita in Correo
+Correo_rusia_posts.json                100         Russia mentions
+Correo_fanb_posts.json                 100         Military articles
+
+FLIGHT_LOG_ANALYSIS.json               N/A         Russian flight data
+SATELLITE_IMAGERY_LOG.json             N/A         Facility identification
+
+================================================================================
+KNOWN INTELLIGENCE (EXTERNAL SOURCES)
+================================================================================
+
+1. RUSSIAN FLIGHT LOGS
+   - Approximately 5,000 "tourists" arrived
+   - Arrival patterns inconsistent with tourism
+   - Extended duration stays
+   - Male-dominated demographics
+   - Possible military personnel traveling under tourist cover
+
+2. HISTORICAL CONTEXT
+   - Margarita has been used for clandestine operations
+   - Free trade zone status enables import/export cover
+   - Remote areas suitable for training
+   - Previous reports of Hezbollah financing operations
+
+3. KNOWN HEZBOLLAH PRESENCE
+   - Lebanese families operating businesses
+   - Cross-reference with Nasr al Din, Rada, Saleh clans
+   - Financial network suspected
+   - Link to Tri-Border Area operations
+
+================================================================================
+COLLECTION SCRIPTS
+================================================================================
+
+Primary script: collect_margarita.py
+Analysis script: analyze_intel.py
+
+Both scripts use same methodology as Hez project:
+- Tor proxy for anonymization
+- WordPress REST API enumeration
+- JSON storage format
+- Python-based analysis
+
+================================================================================
+TOOLS USED
+================================================================================
+
+- Python 3.x with requests library
+- Tor Expert Bundle (SOCKS5 proxy)
+- WordPress REST API enumeration
+- JSON data storage
+- Claude Code for automation and analysis
+- Flight data analysis tools (external)
+- OSINT geolocation tools
+
+================================================================================
+LEGAL NOTICE
+================================================================================
+
+All data collected from publicly accessible government APIs.
+No authentication bypassed. No unauthorized access.
+Collection performed for OSINT research purposes.
+
+================================================================================
+CROSS-REFERENCES
+================================================================================
+
+This project links to:
+- C:\Users\Squir\Desktop\crystal-vault\intel\Hez\
+  (Hezbollah-Iran-Venezuela research)
+
+Shared intelligence:
+- El Aissami network (disrupted April 2024)
+- Alex Saab operations (active)
+- Hezbollah family clans
+- Iranian state cooperation
+
+================================================================================
+ONGOING COLLECTION
+================================================================================
+
+Status: PENDING
+
+Next steps:
+1. Execute WordPress API collection for Margarita keywords
+2. Analyze Russian flight log data (5,000 tourists)
+3. Cross-reference with satellite imagery
+4. Identify training facility locations
+5. Map personnel networks
+
+================================================================================

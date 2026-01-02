@@ -1,0 +1,399 @@
+{
+  "total": 21,
+  "by_country": {
+    "CUBA": [
+      {
+        "country": "CUBA",
+        "lat": 23.145,
+        "lon": -82.348085,
+        "file": "AVN/AVN_6190.jpg",
+        "agency": "AVN",
+        "device": "Canon Canon EOS 5D Mark IV",
+        "date": "2017:11:05 16:09:06"
+      },
+      {
+        "country": "CUBA",
+        "lat": 23.088703,
+        "lon": -82.454033,
+        "file": "MinCultura/MinCultura_30593.jpg",
+        "agency": "MinCultura",
+        "device": "Xiaomi 220333QAG",
+        "date": "2025:01:29 13:32:05"
+      }
+    ],
+    "SPAIN": [
+      {
+        "country": "SPAIN",
+        "lat": 38.298659,
+        "lon": -0.574606,
+        "file": "AVN/AVN_788.jpg",
+        "agency": "AVN",
+        "device": "",
+        "date": ""
+      },
+      {
+        "country": "SPAIN",
+        "lat": 43.262756,
+        "lon": -2.924844,
+        "file": "LaIguana/LaIguana_1439388.jpg",
+        "agency": "LaIguana",
+        "device": "Apple iPhone 16",
+        "date": "2025:12:10 19:14:31"
+      },
+      {
+        "country": "SPAIN",
+        "lat": 43.259564,
+        "lon": -2.937128,
+        "file": "VTV/VTV_1197785.jpg",
+        "agency": "VTV",
+        "device": "Apple iPhone 16",
+        "date": "2025:11:30 18:46:31"
+      }
+    ],
+    "CHILE": [
+      {
+        "country": "CHILE",
+        "lat": -33.464683,
+        "lon": -70.610683,
+        "file": "Correo/Correo_20194.jpg",
+        "agency": "Correo",
+        "device": "Canon Canon EOS R3",
+        "date": "2023:10:31 13:41:17"
+      }
+    ],
+    "UNKNOWN INTERNATIONAL": [
+      {
+        "country": "UNKNOWN INTERNATIONAL",
+        "lat": 48.93333,
+        "lon": 2.36667,
+        "file": "LaIguana/LaIguana_1273063.jpg",
+        "agency": "LaIguana",
+        "device": "SONY ILCE-1",
+        "date": "2024:08:11 22:15:43"
+      },
+      {
+        "country": "UNKNOWN INTERNATIONAL",
+        "lat": 48.93333,
+        "lon": 2.36667,
+        "file": "LaIguana/LaIguana_1273068.jpg",
+        "agency": "LaIguana",
+        "device": "NIKON CORPORATION NIKON Z 9",
+        "date": "2024:08:11 22:50:45"
+      },
+      {
+        "country": "UNKNOWN INTERNATIONAL",
+        "lat": 48.93333,
+        "lon": 2.36667,
+        "file": "LaIguana/LaIguana_1273064.jpg",
+        "agency": "LaIguana",
+        "device": "NIKON CORPORATION NIKON Z 6_2",
+        "date": "2024:08:11 17:18:21"
+      },
+      {
+        "country": "UNKNOWN INTERNATIONAL",
+        "lat": 48.93333,
+        "lon": 2.36667,
+        "file": "LaIguana/LaIguana_1273066.jpg",
+        "agency": "LaIguana",
+        "device": "SONY ILCE-1",
+        "date": "2024:08:11 22:27:20"
+      },
+      {
+        "country": "UNKNOWN INTERNATIONAL",
+        "lat": 48.93333,
+        "lon": 2.36667,
+        "file": "LaIguana/LaIguana_1273067.jpg",
+        "agency": "LaIguana",
+        "device": "NIKON CORPORATION NIKON Z 9",
+        "date": "2024:08:11 22:38:31"
+      },
+      {
+        "country": "UNKNOWN INTERNATIONAL",
+        "lat": 48.93333,
+        "lon": 2.36667,
+        "file": "LaIguana/LaIguana_1273065.jpg",
+        "agency": "LaIguana",
+        "device": "SONY ILCE-9M3",
+        "date": "2024:08:11 22:38:27"
+      },
+      {
+        "country": "UNKNOWN INTERNATIONAL",
+        "lat": 13.53333,
+        "lon": -88.78333,
+        "file": "VTV/VTV_1062111.jpg",
+        "agency": "VTV",
+        "device": "NIKON CORPORATION NIKON Z 9",
+        "date": "2025:01:27 11:55:00"
+      },
+      {
+        "country": "UNKNOWN INTERNATIONAL",
+        "lat": 47.06667,
+        "lon": 15.45,
+        "file": "VTV/VTV_1084828.jpg",
+        "agency": "VTV",
+        "device": "",
+        "date": "2025:06:10 00:00:00"
+      },
+      {
+        "country": "UNKNOWN INTERNATIONAL",
+        "lat": 35.853119,
+        "lon": 35.948253,
+        "file": "VTV/VTV_1103890.jpg",
+        "agency": "VTV",
+        "device": "DJI FC3682",
+        "date": "2025:07:09 18:09:57"
+      },
+      {
+        "country": "UNKNOWN INTERNATIONAL",
+        "lat": 35.849214,
+        "lon": 35.970626,
+        "file": "VTV/VTV_1103893.jpg",
+        "agency": "VTV",
+        "device": "DJI FC3682",
+        "date": "2025:07:09 17:21:10"
+      },
+      {
+        "country": "UNKNOWN INTERNATIONAL",
+        "lat": -4.283078,
+        "lon": 15.261594,
+        "file": "VTV/VTV_1172312.jpg",
+        "agency": "VTV",
+        "device": "Apple iPhone 14 Pro Max",
+        "date": "2025:10:16 13:55:03"
+      }
+    ],
+    "USA": [
+      {
+        "country": "USA",
+        "lat": 40.756857,
+        "lon": -73.846178,
+        "file": "VTV/VTV_1017064.jpg",
+        "agency": "VTV",
+        "device": "NIKON CORPORATION NIKON Z 9",
+        "date": "2024:03:29 14:00:37"
+      }
+    ],
+    "UZBEKISTAN/CENTRAL ASIA": [
+      {
+        "country": "UZBEKISTAN/CENTRAL ASIA",
+        "lat": 39.65417,
+        "lon": 66.959719,
+        "file": "VTV/VTV_1119048.jpg",
+        "agency": "VTV",
+        "device": "",
+        "date": "2025:07:11 13:42:20"
+      },
+      {
+        "country": "UZBEKISTAN/CENTRAL ASIA",
+        "lat": 39.65417,
+        "lon": 66.959719,
+        "file": "VTV/VTV_1209055.jpg",
+        "agency": "VTV",
+        "device": "",
+        "date": "2025:07:11 13:42:20"
+      }
+    ],
+    "COLOMBIA": [
+      {
+        "country": "COLOMBIA",
+        "lat": 9.099669,
+        "lon": -81.547349,
+        "file": "VTV/VTV_1186412.jpg",
+        "agency": "VTV",
+        "device": "DJI FC8482",
+        "date": "2024:09:22 08:58:49"
+      }
+    ]
+  },
+  "locations": [
+    {
+      "country": "CUBA",
+      "lat": 23.145,
+      "lon": -82.348085,
+      "file": "AVN/AVN_6190.jpg",
+      "agency": "AVN",
+      "device": "Canon Canon EOS 5D Mark IV",
+      "date": "2017:11:05 16:09:06"
+    },
+    {
+      "country": "SPAIN",
+      "lat": 38.298659,
+      "lon": -0.574606,
+      "file": "AVN/AVN_788.jpg",
+      "agency": "AVN",
+      "device": "",
+      "date": ""
+    },
+    {
+      "country": "CHILE",
+      "lat": -33.464683,
+      "lon": -70.610683,
+      "file": "Correo/Correo_20194.jpg",
+      "agency": "Correo",
+      "device": "Canon Canon EOS R3",
+      "date": "2023:10:31 13:41:17"
+    },
+    {
+      "country": "UNKNOWN INTERNATIONAL",
+      "lat": 48.93333,
+      "lon": 2.36667,
+      "file": "LaIguana/LaIguana_1273063.jpg",
+      "agency": "LaIguana",
+      "device": "SONY ILCE-1",
+      "date": "2024:08:11 22:15:43"
+    },
+    {
+      "country": "UNKNOWN INTERNATIONAL",
+      "lat": 48.93333,
+      "lon": 2.36667,
+      "file": "LaIguana/LaIguana_1273068.jpg",
+      "agency": "LaIguana",
+      "device": "NIKON CORPORATION NIKON Z 9",
+      "date": "2024:08:11 22:50:45"
+    },
+    {
+      "country": "UNKNOWN INTERNATIONAL",
+      "lat": 48.93333,
+      "lon": 2.36667,
+      "file": "LaIguana/LaIguana_1273064.jpg",
+      "agency": "LaIguana",
+      "device": "NIKON CORPORATION NIKON Z 6_2",
+      "date": "2024:08:11 17:18:21"
+    },
+    {
+      "country": "UNKNOWN INTERNATIONAL",
+      "lat": 48.93333,
+      "lon": 2.36667,
+      "file": "LaIguana/LaIguana_1273066.jpg",
+      "agency": "LaIguana",
+      "device": "SONY ILCE-1",
+      "date": "2024:08:11 22:27:20"
+    },
+    {
+      "country": "UNKNOWN INTERNATIONAL",
+      "lat": 48.93333,
+      "lon": 2.36667,
+      "file": "LaIguana/LaIguana_1273067.jpg",
+      "agency": "LaIguana",
+      "device": "NIKON CORPORATION NIKON Z 9",
+      "date": "2024:08:11 22:38:31"
+    },
+    {
+      "country": "UNKNOWN INTERNATIONAL",
+      "lat": 48.93333,
+      "lon": 2.36667,
+      "file": "LaIguana/LaIguana_1273065.jpg",
+      "agency": "LaIguana",
+      "device": "SONY ILCE-9M3",
+      "date": "2024:08:11 22:38:27"
+    },
+    {
+      "country": "SPAIN",
+      "lat": 43.262756,
+      "lon": -2.924844,
+      "file": "LaIguana/LaIguana_1439388.jpg",
+      "agency": "LaIguana",
+      "device": "Apple iPhone 16",
+      "date": "2025:12:10 19:14:31"
+    },
+    {
+      "country": "CUBA",
+      "lat": 23.088703,
+      "lon": -82.454033,
+      "file": "MinCultura/MinCultura_30593.jpg",
+      "agency": "MinCultura",
+      "device": "Xiaomi 220333QAG",
+      "date": "2025:01:29 13:32:05"
+    },
+    {
+      "country": "USA",
+      "lat": 40.756857,
+      "lon": -73.846178,
+      "file": "VTV/VTV_1017064.jpg",
+      "agency": "VTV",
+      "device": "NIKON CORPORATION NIKON Z 9",
+      "date": "2024:03:29 14:00:37"
+    },
+    {
+      "country": "UNKNOWN INTERNATIONAL",
+      "lat": 13.53333,
+      "lon": -88.78333,
+      "file": "VTV/VTV_1062111.jpg",
+      "agency": "VTV",
+      "device": "NIKON CORPORATION NIKON Z 9",
+      "date": "2025:01:27 11:55:00"
+    },
+    {
+      "country": "UNKNOWN INTERNATIONAL",
+      "lat": 47.06667,
+      "lon": 15.45,
+      "file": "VTV/VTV_1084828.jpg",
+      "agency": "VTV",
+      "device": "",
+      "date": "2025:06:10 00:00:00"
+    },
+    {
+      "country": "UNKNOWN INTERNATIONAL",
+      "lat": 35.853119,
+      "lon": 35.948253,
+      "file": "VTV/VTV_1103890.jpg",
+      "agency": "VTV",
+      "device": "DJI FC3682",
+      "date": "2025:07:09 18:09:57"
+    },
+    {
+      "country": "UNKNOWN INTERNATIONAL",
+      "lat": 35.849214,
+      "lon": 35.970626,
+      "file": "VTV/VTV_1103893.jpg",
+      "agency": "VTV",
+      "device": "DJI FC3682",
+      "date": "2025:07:09 17:21:10"
+    },
+    {
+      "country": "UZBEKISTAN/CENTRAL ASIA",
+      "lat": 39.65417,
+      "lon": 66.959719,
+      "file": "VTV/VTV_1119048.jpg",
+      "agency": "VTV",
+      "device": "",
+      "date": "2025:07:11 13:42:20"
+    },
+    {
+      "country": "UNKNOWN INTERNATIONAL",
+      "lat": -4.283078,
+      "lon": 15.261594,
+      "file": "VTV/VTV_1172312.jpg",
+      "agency": "VTV",
+      "device": "Apple iPhone 14 Pro Max",
+      "date": "2025:10:16 13:55:03"
+    },
+    {
+      "country": "COLOMBIA",
+      "lat": 9.099669,
+      "lon": -81.547349,
+      "file": "VTV/VTV_1186412.jpg",
+      "agency": "VTV",
+      "device": "DJI FC8482",
+      "date": "2024:09:22 08:58:49"
+    },
+    {
+      "country": "SPAIN",
+      "lat": 43.259564,
+      "lon": -2.937128,
+      "file": "VTV/VTV_1197785.jpg",
+      "agency": "VTV",
+      "device": "Apple iPhone 16",
+      "date": "2025:11:30 18:46:31"
+    },
+    {
+      "country": "UZBEKISTAN/CENTRAL ASIA",
+      "lat": 39.65417,
+      "lon": 66.959719,
+      "file": "VTV/VTV_1209055.jpg",
+      "agency": "VTV",
+      "device": "",
+      "date": "2025:07:11 13:42:20"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+================================================================================
+MOVILNET (Mobile Carrier) - TECH STACK
+================================================================================
+Date: 2026-01-01
+URL: https://www.movilnet.com.ve
+
+PLATFORM: UNKNOWN (Timeout)
+- Site times out from US
+- State mobile carrier
+
+API STATUS: TIMEOUT
+- Cannot probe endpoints
+- Likely geo-restricted
+
+NOTES:
+- Venezuelan state mobile carrier
+- Subsidiary of CANTV
+- User/subscriber data potential
+
+COLLECTION: Requires VPN or alternative access
+
+================================================================================

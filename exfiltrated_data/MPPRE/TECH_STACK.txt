@@ -1,0 +1,15 @@
+================================================================================
+MPPRE (Ministerio de Relaciones Exteriores) - TECH STACK
+================================================================================
+Date: 2026-01-01
+URL: https://mppre.gob.ve
+
+PLATFORM: LARAVEL
+- PHP Laravel framework detected
+- /wp-json/ returns Laravel 404 page
+- No WordPress API available
+
+API STATUS: NO WORDPRESS API
+COLLECTION: Requires web scraping
+
+================================================================================

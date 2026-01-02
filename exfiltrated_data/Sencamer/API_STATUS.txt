@@ -1,0 +1,14 @@
+Sencamer - Servicio Autonomo Nacional de Normalizacion
+=======================================================
+Status: SERVER ERROR (503)
+
+Tested Endpoints:
+- https://www.sencamer.gob.ve/wp-json/wp/v2/media - 503 Service Unavailable
+- http://sencamer.gob.ve/wp-json/wp/v2/media - 503
+
+Notes:
+- Standards and certification agency
+- Server returning 503 errors
+- May be under maintenance or overloaded
+
+Last tested: 2026-01-01

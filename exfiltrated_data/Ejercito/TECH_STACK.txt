@@ -1,0 +1,20 @@
+================================================================================
+EJERCITO (Venezuelan Army) - TECH STACK
+================================================================================
+Date: 2026-01-01
+URL: https://www.ejercito.mil.ve
+
+PLATFORM: UNKNOWN (Blocked)
+- All requests return 403 Forbidden
+- Actively blocks Tor exit nodes
+- May block non-Venezuelan IPs
+
+API STATUS: BLOCKED (403)
+- /wp-json/ returns 403
+- / returns 403
+- Stricter security than other military sites
+
+SECURITY: High - requires VPN from permitted region
+COLLECTION: Currently inaccessible
+
+================================================================================

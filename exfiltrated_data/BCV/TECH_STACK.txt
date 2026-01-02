@@ -1,0 +1,15 @@
+================================================================================
+BCV (Banco Central de Venezuela) - TECH STACK
+================================================================================
+Date: 2026-01-01
+URL: https://www.bcv.org.ve
+
+PLATFORM: DRUPAL
+- RDF prefixes detected in HTML
+- No WordPress API available
+- /wp-json/ returns Drupal HTML page
+
+API STATUS: NO WORDPRESS API
+COLLECTION: Requires Drupal-specific scraping
+
+================================================================================

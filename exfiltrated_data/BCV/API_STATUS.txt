@@ -1,0 +1,15 @@
+BCV - Banco Central de Venezuela
+================================
+Status: NO WORDPRESS API FOUND
+
+Tested Endpoints:
+- https://bcv.org.ve/wp-json/wp/v2/media - 404
+- http://www.bcv.org.ve/wp-json/wp/v2/media - 404
+- https://bcv.org.ve/?rest_route=/wp/v2/media - 404
+
+Notes:
+- Central Bank website does not use WordPress REST API
+- May use different CMS or custom backend
+- Site appears operational but no media API exposed
+
+Last tested: 2026-01-01

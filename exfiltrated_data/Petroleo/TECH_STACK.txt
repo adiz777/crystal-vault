@@ -1,0 +1,21 @@
+================================================================================
+PETROLEO (Oil Ministry) - TECH STACK
+================================================================================
+Date: 2026-01-01
+URL: Unknown - needs verification
+
+PLATFORM: UNKNOWN
+- Ministry of Petroleum
+- URL not confirmed
+
+API STATUS: NOT PROBED
+- Need to identify correct URL first
+
+NOTES:
+- Venezuelan Ministry of Petroleum
+- Related to PDVSA
+- High value if accessible
+
+COLLECTION: Need to verify correct domain
+
+================================================================================

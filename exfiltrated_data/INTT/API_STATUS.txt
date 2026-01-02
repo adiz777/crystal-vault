@@ -1,0 +1,15 @@
+INTT - Instituto Nacional de Transporte Terrestre
+==================================================
+Status: NO WORDPRESS API FOUND
+
+Tested Endpoints:
+- https://www.intt.gob.ve/wp-json/wp/v2/media - 404
+- http://intt.gob.ve/wp-json/wp/v2/media - 404
+- Via Tor: 404
+
+Notes:
+- Vehicle registration/driver licensing agency
+- No WordPress REST API on their site
+- May use different CMS
+
+Last tested: 2026-01-01

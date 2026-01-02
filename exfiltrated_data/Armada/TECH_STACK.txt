@@ -1,0 +1,19 @@
+================================================================================
+ARMADA (Venezuelan Navy) - TECH STACK
+================================================================================
+Date: 2026-01-01
+URL: https://www.armada.mil.ve
+
+PLATFORM: CUSTOM NGINX
+- Server header: "ArmadaBolivariana" (custom)
+- /wp-json/ returns 404 Not Found
+- Not WordPress - custom military server
+
+API STATUS: NO OPEN API
+- All standard endpoints return 404
+- Tested: /admin/, /intranet/, /api/, /robots.txt
+
+SECURITY: Locked down military site
+COLLECTION: Requires web scraping only
+
+================================================================================

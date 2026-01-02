@@ -1,0 +1,23 @@
+================================================================================
+BDV (Banco de Venezuela) - TECH STACK
+================================================================================
+Date: 2026-01-01
+URL: https://www.bdv.com.ve
+
+PLATFORM: UNKNOWN
+- Banking website
+- Likely custom secure platform
+- No WordPress expected
+
+API STATUS: UNKNOWN
+- Not probed yet
+- Banking sites typically secured
+
+NOTES:
+- Major Venezuelan state bank
+- Sanctioned entity
+- 4 user hashes already collected in Hashes folder
+
+COLLECTION: Requires careful approach - banking site
+
+================================================================================

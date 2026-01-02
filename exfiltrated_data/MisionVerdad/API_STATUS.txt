@@ -1,0 +1,15 @@
+MisionVerdad - Mision Verdad
+============================
+Status: NO WORDPRESS API FOUND
+
+Tested Endpoints:
+- https://misionverdad.com/wp-json/wp/v2/media - 404
+- https://www.misionverdad.com/wp-json/wp/v2/media - 404
+- http://misionverdad.com/wp-json/ - 404
+
+Notes:
+- Pro-government analysis website
+- No WordPress REST API exposed
+- May have API disabled or use different CMS
+
+Last tested: 2026-01-01

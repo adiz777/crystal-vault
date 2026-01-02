@@ -1,0 +1,235 @@
+================================================================================
+ARMADA AND MILITARY/GOVERNMENT API PROBE RESULTS
+================================================================================
+Date: 2026-01-01
+Method: Tor SOCKS5 proxy + curl
+Target: Venezuelan military and government sites
+
+================================================================================
+MILITARY SITES - NO WORDPRESS API
+================================================================================
+
+ARMADA (Navy) - armada.mil.ve
+-----------------------------
+Status: NO OPEN API
+Server: "ArmadaBolivariana" (custom)
+WP-JSON: 404 Not Found (nginx)
+Notes: Custom server, not WordPress
+
+AVIACION (Air Force) - aviacion.mil.ve
+--------------------------------------
+Status: NO OPEN API
+Server: Apache/2.4.57 (Ubuntu)
+WP-JSON: 404 Not Found
+Notes: Not WordPress
+
+EJERCITO (Army) - ejercito.mil.ve
+---------------------------------
+Status: NO OPEN API
+WP-JSON: 403 Forbidden
+Notes: Access denied, may have API but blocked
+
+MILICIA - milicia.mil.ve
+------------------------
+Status: NO OPEN API
+Server: Apache/2.4.52 (Ubuntu)
+WP-JSON: 404 Not Found
+Notes: Not WordPress
+
+FANB - fanb.mil.ve
+------------------
+Status: NO RESPONSE / TIMEOUT
+Notes: May be offline or blocking Tor
+
+CEOFANB - ceofanb.mil.ve
+------------------------
+Status: NO RESPONSE / TIMEOUT
+Notes: May be offline or blocking Tor
+
+GDC (Comando Defensa) - gdc.mil.ve
+----------------------------------
+Status: NO RESPONSE / TIMEOUT
+Notes: May be offline or blocking Tor
+
+GNB (National Guard) - gnb.gob.ve
+---------------------------------
+Status: NO RESPONSE / TIMEOUT
+Notes: May be offline or blocking Tor
+
+================================================================================
+OPEN WORDPRESS APIs FOUND
+================================================================================
+
+COMUNAS - comunas.gob.ve
+------------------------
+Status: OPEN API CONFIRMED
+URL: https://www.comunas.gob.ve/wp-json/
+Site Name: "Comunas, Movimientos Sociales y Agricultura Urbana"
+Description: "Ministerio del Poder Popular para las Comunas"
+Timezone: America/Caracas (GMT-4)
+
+AVAILABLE NAMESPACES:
+- oembed/1.0
+- akismet/v1
+- gutenverse-client/v1
+- jetpack/v4             <-- JETPACK INSTALLED
+- redirection/v1
+- yoast/v1
+- wptelegram-bot/v1      <-- TELEGRAM BOT!
+- wpcom/v2
+- jetpack/v4/stats-app
+- wpcom/v3
+- pods/v1                <-- PODS CMS!
+- wptelegram/v1          <-- TELEGRAM INTEGRATION
+- jetpack-boost/v1
+- my-jetpack/v1
+- google-site-kit/v1     <-- GOOGLE SITE KIT
+- wp/v2                  <-- STANDARD WP API
+- wp-site-health/v1
+- wp-block-editor/v1
+
+COLLECTION PRIORITY: HIGH
+- Standard endpoints: /wp-json/wp/v2/posts, /media, /users
+- Telegram integration could leak bot tokens
+- Jetpack stats may expose traffic data
+
+FOGADE - fogade.gob.ve
+----------------------
+Status: OPEN API CONFIRMED
+URL: https://www.fogade.gob.ve/wp-json/
+Site Name: "Portal Web FOGADE"
+Type: Deposit Guarantee Fund (banking)
+
+AVAILABLE NAMESPACES:
+- oembed/1.0
+- depicter/v1
+- presto-player/v1
+- wordfence/v1           <-- SECURITY PLUGIN (may have logs)
+- divi/v1
+- wp/v2                  <-- STANDARD WP API
+- wp-site-health/v1
+- wp-block-editor/v1
+
+COLLECTION PRIORITY: MEDIUM-HIGH
+- Financial institution
+- Standard endpoints available
+- Wordfence may expose security info
+
+================================================================================
+LARAVEL SITES (NO WORDPRESS)
+================================================================================
+
+CIUDADCCS - ciudadccs.info
+--------------------------
+Status: Laravel framework
+WP-JSON: Returns Laravel 404 page
+Notes: Custom CMS, no standard API
+
+MINTUR (Tourism) - mintur.gob.ve
+--------------------------------
+Status: Laravel framework
+WP-JSON: Returns Laravel 404 page
+Notes: Custom CMS, no standard API
+
+MPPRE (Foreign Ministry) - mppre.gob.ve
+---------------------------------------
+Status: Laravel framework
+WP-JSON: Returns Laravel 404 page
+Notes: Custom CMS, no standard API
+
+================================================================================
+DRUPAL SITES
+================================================================================
+
+MISION VERDAD - misionverdad.com
+--------------------------------
+Status: Drupal 7
+Generator: "Drupal 7 (https://www.drupal.org)"
+WP-JSON: Returns HTML (no API)
+Drupal API: /api/, /node.json - both return HTML
+Notes: Drupal REST services not enabled publicly
+
+================================================================================
+SITES NOT YET PROBED
+================================================================================
+
+- Bandes (bandes.gob.ve) - LARAVEL (no WordPress API)
+- BCV (bcv.org.ve) - Central Bank
+- BDV (bdv.com.ve) - Venezuela Bank
+- CANTV (cantv.com.ve) - Telecom
+- Movilnet (movilnet.com.ve) - Mobile carrier
+- Petroleo - Need URL
+- INTT (intt.gob.ve) - Transport
+- Sencamer (sencamer.gob.ve) - Standards
+- GobAnzoategui - State government
+- GobLara - State government
+- TeleSUR (telesurtv.net) - 421 Misdirected Request error
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+1. IMMEDIATE COLLECTION:
+   - Comunas API - High value (Telegram integration!)
+   - Fogade API - Financial data
+
+2. FURTHER PROBING:
+   - Bandes, BCV for financial APIs
+   - State government sites
+   - Try alternative military URLs
+
+3. ARMADA SPECIFIC:
+   - Custom server "ArmadaBolivariana" on nginx
+   - No WordPress, no exposed API
+   - Tested endpoints (all 404):
+     /admin/
+     /intranet/
+     /api/
+     /robots.txt
+     /wp-json/
+   - Site is locked down, requires web scraping
+
+================================================================================
+COMUNAS API - SAMPLE DATA RETRIEVED
+================================================================================
+
+Latest post (Dec 31, 2025):
+"Nueve Comunas avanzan en la organizacion del Corredor Macarao Productivo"
+- Viceministra Albanys Montilla
+- Comuna Por Amor y Lealtad a Chavez
+- Oliver Martinez, vocero de la Comuna
+- Images hosted at: comunas.gob.ve/wp-content/uploads/
+
+API confirmed working for:
+- /wp-json/wp/v2/posts
+- Users endpoint: RESTRICTED (401)
+- Media: Likely available
+
+================================================================================
+SUMMARY
+================================================================================
+
+OPEN APIS (Collect Now):
+1. comunas.gob.ve - WordPress, Telegram integration!
+2. fogade.gob.ve - WordPress, financial data
+
+LARAVEL SITES (No API):
+- bandes.gob.ve
+- ciudadccs.info
+- mintur.gob.ve
+- mppre.gob.ve
+
+DRUPAL SITES (Limited):
+- misionverdad.com - API not exposed
+
+MILITARY (Locked Down):
+- armada.mil.ve - Custom nginx, no API
+- aviacion.mil.ve - Apache, no API
+- ejercito.mil.ve - 403 Forbidden
+- milicia.mil.ve - Apache, no API
+- fanb.mil.ve - Timeout
+- ceofanb.mil.ve - Timeout
+
+================================================================================
+END PROBE RESULTS
+================================================================================

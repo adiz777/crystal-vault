@@ -1,0 +1,22 @@
+================================================================================
+PDVSA (Petroleos de Venezuela) - TECH STACK
+================================================================================
+Date: 2026-01-01
+URL: https://www.pdvsa.com
+
+PLATFORM: UNKNOWN (Timeout)
+- Site times out from US
+- State oil company - high value target
+
+API STATUS: TIMEOUT
+- Cannot probe endpoints
+- Possibly geo-restricted
+
+NOTES:
+- Venezuelan state oil company
+- Sanctioned entity
+- Critical infrastructure data
+
+COLLECTION: Requires VPN or alternative access
+
+================================================================================

@@ -1,0 +1,15 @@
+CiudadCCS - Ciudad CCS (Caracas City News)
+==========================================
+Status: NO WORDPRESS API FOUND
+
+Tested Endpoints:
+- https://ciudadccs.info/wp-json/wp/v2/media - 404
+- http://www.ciudadccs.info/wp-json/wp/v2/media - 404
+- Via Tor: 404
+
+Notes:
+- Site exists but no WordPress REST API exposed
+- May use different CMS or API disabled
+- Caracas city government news outlet
+
+Last tested: 2026-01-01

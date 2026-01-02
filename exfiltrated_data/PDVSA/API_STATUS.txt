@@ -1,0 +1,16 @@
+PDVSA - Petroleos de Venezuela SA
+==================================
+Status: CONNECTION BLOCKED/TIMEOUT
+
+Tested Endpoints:
+- https://www.pdvsa.com/wp-json/wp/v2/media - Timeout
+- http://www.pdvsa.com/wp-json/wp/v2/media - Timeout
+- Via Tor: Timeout
+
+Notes:
+- CRITICAL TARGET - State oil company
+- OFAC-sanctioned entity
+- Website not responding - may be geo-blocked
+- Worth retrying with Venezuelan VPN/proxy
+
+Last tested: 2026-01-01

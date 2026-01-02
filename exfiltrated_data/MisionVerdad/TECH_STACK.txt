@@ -1,0 +1,16 @@
+================================================================================
+MISION VERDAD - TECH STACK
+================================================================================
+Date: 2026-01-01
+URL: https://misionverdad.com
+
+PLATFORM: DRUPAL 7
+- Generator meta tag: "Drupal 7"
+- /wp-json/ returns HTML page
+- Drupal REST services not enabled publicly
+- /api/ and /node.json return HTML
+
+API STATUS: NO PUBLIC API
+COLLECTION: Requires Drupal scraping or direct HTML parsing
+
+================================================================================

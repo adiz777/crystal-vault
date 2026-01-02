@@ -1,0 +1,15 @@
+================================================================================
+SENCAMER (Servicio Nacional de Normalizacion) - TECH STACK
+================================================================================
+Date: 2026-01-01
+URL: https://www.sencamer.gob.ve
+
+PLATFORM: APACHE (Not WordPress)
+- /wp-json/ returns 404 Not Found
+- Standard Apache error page
+- No WordPress installation
+
+API STATUS: NO OPEN API
+COLLECTION: Requires web scraping
+
+================================================================================

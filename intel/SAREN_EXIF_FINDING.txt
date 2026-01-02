@@ -1,0 +1,44 @@
+SAREN EXIF METADATA DISCOVERY
+==============================
+Date: 2025-12-30
+Source: https://www.saren.gob.ve/
+
+FINDING: SAREN (Servicio Autonomo de Registros y Notarias) does NOT strip
+EXIF metadata from uploaded images, unlike SAIME which strips all metadata.
+
+SAMPLE FILE ANALYZED:
+  URL: https://www.saren.gob.ve/wp-content/uploads/2025/12/Noticia-46-1.jpg
+  Size: 427,388 bytes (417 KB)
+
+EXTRACTED EXIF DATA:
+  Camera Manufacturer: Canon
+  Camera Model: Canon EOS 5D Mark III
+  DateTime: 2025:12:24 20:40:57
+  Resolution: 2048x1770
+  X Resolution: 300 DPI
+  Y Resolution: 300 DPI
+
+IMPLICATIONS:
+  - SAREN images may contain GPS coordinates if geotagging was enabled
+  - Timestamps reveal when photos were actually taken (not just uploaded)
+  - Camera model reveals equipment used by government photographers
+  - Could potentially identify specific photographers by equipment patterns
+  - Software used for editing may be revealed in metadata
+
+COMPARISON:
+  - SAIME: Strips all EXIF metadata (WordPress default behavior)
+  - SAREN: Retains EXIF metadata (non-standard WordPress config)
+  - VTV/AVN/Correo: Untested, may also retain EXIF
+
+RECOMMENDATION:
+  - Download and analyze all 100 SAREN media files for EXIF
+  - Check for GPS coordinates in outdoor event photos
+  - Cross-reference timestamps with published event dates
+  - Build equipment profile of government photographers
+
+NOTE: Browser cannot display images due to SAREN's "Clear-Site-Data: cache"
+header, but images can be downloaded via curl and analyzed offline.
+
+FILES IN EXFIL:
+  C:\Users\Squir\Desktop\crystal-vault\exfil\SAREN\SAREN_Media_1.json
+  (100 media URLs with metadata)

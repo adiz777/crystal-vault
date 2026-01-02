@@ -1,0 +1,121 @@
+================================================================================
+BCV (BANCO CENTRAL DE VENEZUELA) - API PROBE RESULTS
+================================================================================
+Date: 2026-01-01
+Target: www.bcv.org.ve / bcv.org.ve
+Method: Tor SOCKS5 proxy + curl
+
+================================================================================
+SITE INFORMATION
+================================================================================
+
+Organization: Banco Central de Venezuela (Central Bank of Venezuela)
+URL: https://www.bcv.org.ve
+Type: Central Bank - Monetary Authority
+
+================================================================================
+API STATUS: TIMEOUT / NO RESPONSE
+================================================================================
+
+Multiple probe attempts via Tor returned:
+- No response (timeout)
+- Empty response
+
+Possible causes:
+1. Site blocking Tor exit nodes
+2. Geographic IP restrictions
+3. Rate limiting
+4. Server issues
+
+================================================================================
+TESTED ENDPOINTS
+================================================================================
+
+https://www.bcv.org.ve/           -> Timeout
+http://www.bcv.org.ve/            -> Timeout
+https://bcv.org.ve/wp-json/       -> No response
+https://www.bcv.org.ve/wp-json/   -> Not tested (site unreachable)
+
+================================================================================
+KNOWN INFORMATION
+================================================================================
+
+The BCV is Venezuela's central bank responsible for:
+- Monetary policy
+- Currency issuance (Bolivar)
+- Foreign exchange controls
+- International reserves management
+
+KEY DATA TYPICALLY AVAILABLE:
+- Exchange rates (official vs parallel)
+- Inflation statistics
+- International reserves
+- Economic indicators
+
+================================================================================
+OFAC/SANCTIONS CONTEXT
+================================================================================
+
+The BCV itself is not directly sanctioned, but:
+- Subject to secondary sanctions risk
+- Venezuelan government gold reserves held at BCV
+- Involved in currency/sanctions evasion schemes
+- Cryptocurrencies (Petro) coordination
+
+================================================================================
+ALTERNATIVE ACCESS METHODS
+================================================================================
+
+1. DIRECT IP ACCESS
+   - Try accessing via IP instead of domain
+   - May bypass some DNS-level blocking
+
+2. DIFFERENT TOR CIRCUITS
+   - New Tor identity
+   - Different exit node country
+
+3. VPN + DIRECT
+   - Non-Tor VPN from permitted region
+
+4. PUBLIC DATA
+   - BCV publishes exchange rates publicly
+   - Economic bulletins available
+   - May have RSS feeds
+
+5. MOBILE APP
+   - BCV may have mobile app with API
+
+================================================================================
+INTELLIGENCE VALUE
+================================================================================
+
+VERY HIGH VALUE:
+- Central bank economic data
+- Official exchange rates
+- Reserve information
+- Monetary policy documents
+
+COLLECTION PRIORITY: HIGH (if accessible)
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+1. Try non-Tor access from different network
+2. Check for published data feeds (RSS, XML)
+3. Look for mobile app APIs
+4. Monitor BCV announcements via state media
+5. Cross-reference with IMF/World Bank data
+
+================================================================================
+NOTES
+================================================================================
+
+- Site appears to block Tor or have connectivity issues
+- May require different collection approach
+- Economic data valuable for sanctions analysis
+- Exchange rate data useful for TBML tracking
+
+================================================================================
+END PROBE RESULTS
+================================================================================

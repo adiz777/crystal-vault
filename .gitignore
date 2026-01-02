@@ -9,3 +9,6 @@ scraped_data/reports/EXIF_REPORT_FULL.json
 Thumbs.db
 Scripts/
 
+# Large media folder (478K+ photos, stored locally only)
+exfiltrated_data/MEDIA - PHOTOS AND VIDEOS/
+

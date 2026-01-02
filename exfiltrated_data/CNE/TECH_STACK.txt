@@ -1,0 +1,23 @@
+================================================================================
+CNE (Consejo Nacional Electoral) - TECH STACK
+================================================================================
+Date: 2026-01-01
+URL: https://www.cne.gob.ve
+
+PLATFORM: UNKNOWN (Timeout)
+- Site times out from US
+- Electoral council - high value target
+- May be geo-restricted
+
+API STATUS: TIMEOUT
+- Cannot probe /wp-json/
+- Connection times out
+
+NOTES:
+- Venezuelan Electoral Council
+- Controls all election data
+- High priority if accessible
+
+COLLECTION: Requires VPN to Venezuela
+
+================================================================================

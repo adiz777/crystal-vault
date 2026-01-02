@@ -1,0 +1,950 @@
+================================================================================
+MARGARITA ISLAND - AUTOMATED OSINT ANALYSIS REPORT
+================================================================================
+Generated: 2026-01-01 18:45
+Source: Venezuelan Government Media APIs
+Collection Method: WordPress REST API via Tor SOCKS5 Proxy
+Analysis Script: analyze_intel.py
+
+================================================================================
+EXECUTIVE SUMMARY
+================================================================================
+
+ARTICLES ANALYZED BY CATEGORY:
+
+  Training Camp References:     478
+  Russian/Wagner Presence:     2304
+  Hezbollah Coverage:            31
+  IRGC/Quds Force:             123
+  Iran General:                 928
+  Family Clan Mentions:           2
+  Maduro Narco-Terror Links:    123
+  Military Exercises:            23
+  Tourism Anomalies:             66
+
+================================================================================
+COVERAGE TIMELINE
+================================================================================
+
+  2018:   14 posts 
+  2019:  266 posts #####
+  2020:  321 posts ######
+  2021:  237 posts ####
+  2022:  234 posts ####
+  2023:  461 posts #########
+  2024:  591 posts ###########
+  2025: 2553 posts ###################################################
+  2026:   13 posts 
+
+================================================================================
+SECTION 1: TRAINING CAMP REFERENCES (478 ARTICLES)
+================================================================================
+
+Keywords: entrenamiento, campo, campamento, ejercicio militar, operaciones especiales
+
+[2025-12-24] Argumentos de Bob Abreu para llegar al Salón de la Fama en MLB
+  URL: https://www.vtv.gob.ve/argumentos-bob-abreu-salon-fama-mlb/
+  Summary: En realidad, no es difícil formular un argumento en contra de Bob Abreu para el Salón de la Fama. Un
+...
+
+[2025-12-23] SPB anuncia formato de competencia y fecha para comenzar la temporada 2026
+  URL: https://www.vtv.gob.ve/spb-anuncia-formatocompetencia-fecha-comenzar-temporada2026/
+  Summary: La Superliga Profesional de Baloncesto (SPB) anunció este lunes 22 de diciembre la fecha del comienzo de la temporada 2026.
+...
+
+[2025-12-23] Rusia prueba prototipo de computadora cuántica de 70 qubits
+  URL: https://www.vtv.gob.ve/rusia-prueba-prototipo-computadora-70-qubits/
+  Summary: Científicos rusos han desarrollado un prototipo de computadora cuántica de 70 qubits. Este experimento forma parte del “Programa Cuántico” de
+...
+
+[2025-12-23] Rusia prueba prototipo de computadora cuántica de 70 qubits
+  URL: https://www.vtv.gob.ve/rusia-prueba-prototipo-computadora-70-qubits/
+  Summary: Científicos rusos han desarrollado un prototipo de computadora cuántica de 70 qubits. Este experimento forma parte del “Programa Cuántico” de
+...
+
+[2025-12-23] Rusia desmiente evacuación de sus diplomáticos y ratifica respaldo a Venezuela
+  URL: https://www.vtv.gob.ve/rusia-desmiente-evacuacion-diplomaticos-ratifica-respaldo-venezuela/
+  Summary: El embajador de la Federación de Rusia en Venezuela, Sergey Mélik-Bagdasárov, desmintió categóricamente informaciones falsas difundidas por la agencia Associated
+...
+
+[2025-12-22] Asesinan a un alto cargo militar ruso con coche bomba en Moscú
+  URL: https://www.vtv.gob.ve/asesinan-alto-cargo-militar-ruso-moscu/
+  Summary: El jefe del Departamento de Entrenamiento Operativo del Estado Mayor General de las Fuerzas Armadas de Rusia, teniente general Fanil
+...
+
+[2025-12-22] Asesinan a un alto cargo militar ruso con coche bomba en Moscú
+  URL: https://www.vtv.gob.ve/asesinan-alto-cargo-militar-ruso-moscu/
+  Summary: El jefe del Departamento de Entrenamiento Operativo del Estado Mayor General de las Fuerzas Armadas de Rusia, teniente general Fanil
+...
+
+[2025-12-22] Asesinan a un alto cargo militar ruso con coche bomba en Moscú
+  URL: https://www.vtv.gob.ve/asesinan-alto-cargo-militar-ruso-moscu/
+  Summary: El jefe del Departamento de Entrenamiento Operativo del Estado Mayor General de las Fuerzas Armadas de Rusia, teniente general Fanil
+...
+
+[2025-12-21] Petro rechaza el bloqueo a Venezuela en medio de la campaña de agresión de EE.UU.
+  URL: https://www.vtv.gob.ve/petro-rechaza-bloqueo-venezuela-campana-agresion-eeuu/
+  Summary: El presidente de Colombia, Gustavo Petro, rechazó el bloqueo a Venezuela, en medio del despliegue militar estadounidense frente a las
+...
+
+[2025-12-20] Científicos rusos descifran señales eléctricas en tormentas marcianas
+  URL: https://www.vtv.gob.ve/cientificos-rusos-descifran-senales-electricas-tormentas-marcianas/
+  Summary: Investigadores del Instituto de Física y Tecnología de Moscú (MFTI) y del Instituto de Investigaciones Espaciales de la Academia Rusa
+...
+
+[2025-12-20] Amor y Prosperidad Alimentaria garantiza productos básicos en regiones del país
+  URL: https://www.vtv.gob.ve/amor-prosperidad-alimentaria-garantiza-productos-basicos-regionespais/
+  Summary: El programa Amor y Prosperidad Alimentaria avanza en distintas entidades nacionales mediante las Ferias del Campo Soberano, espacios que garantizan
+...
+
+[2025-12-19] Nueva Esparta impulsa la economía azul con créditos para pescadores artesanales
+  URL: https://www.vtv.gob.ve/nueva-esparta-impulsa-economia-azul-creditos-pescadores-artesanales/
+  Summary: En Nueva Esparta, pescadores artesanales de cinco municipios recibieron créditos destinados a la adquisición de motores y la reparación de
+...
+
+[2025-12-18] La Sayona planea contratar excombatientes de la guerra de Ucrania con fines bélicos
+  URL: https://www.vtv.gob.ve/sayona-contrata-excombatientes-guerra-ucrania/
+  Summary: La agente de extrema derecha María Corina Machado, alías “La Sayona”, tiene previsto realizar una gira por Europa en enero
+...
+
+[2025-12-18] La Sayona planea contratar excombatientes de la guerra de Ucrania con fines bélicos
+  URL: https://www.vtv.gob.ve/sayona-contrata-excombatientes-guerra-ucrania/
+  Summary: La agente de extrema derecha María Corina Machado, alías “La Sayona”, tiene previsto realizar una gira por Europa en enero
+...
+
+[2025-12-16] Bravos se llevó un juego cerrado y complica la situación de Leones
+  URL: https://www.vtv.gob.ve/bravos-llevo-juego-cerrado-complica-situacion-leones/
+  Summary: Los Bravos de Margarita se apoyaron en el buen picheo y aprovecharon sus oportunidades ofensivas para celebrar un triunfo de
+...
+
+[2025-12-15] Rusia inicia primera producción de chips fotónicos para 5G y transporte autónomo
+  URL: https://www.vtv.gob.ve/inicia-primera-produccion-chips-fotonicos/
+  Summary: En Moscú comenzó la producción de prueba de circuitos integrados fotónicos (CIF), planta única en Rusia, creada en el Centro
+...
+
+[2025-12-15] Miranda inaugura la natación en los Comunales 2025 con dos medallas de oro
+  URL: https://www.vtv.gob.ve/miranda-inaugura-natacion-comunales-medallas-oro/
+  Summary: La disciplina de natación quedó oficialmente inaugurada en los III Juegos Deportivos Nacionales Comunales 2025 con dos medallas de oro
+...
+
+[2025-12-15] Deporte venezolano se potenciará mediante vínculos con China y Rusia
+  URL: https://www.vtv.gob.ve/deporte-venezolano-vinculos-china-rusia/
+  Summary: El deporte venezolano mantendrá intercambios en entrenamientos y tecnologías con China y Rusia, para mejorar las capacidades de cada una
+...
+
+[2025-12-15] Deporte venezolano se potenciará mediante vínculos con China y Rusia
+  URL: https://www.vtv.gob.ve/deporte-venezolano-vinculos-china-rusia/
+  Summary: El deporte venezolano mantendrá intercambios en entrenamientos y tecnologías con China y Rusia, para mejorar las capacidades de cada una
+...
+
+[2025-12-12] Militares ucranianos se rinden ante fuerzas de Rusia tras cerco en Donbás
+  URL: https://www.vtv.gob.ve/militares-ucranianos-rinden-fuerzas-rusia-cerco-donbas/
+  Summary: Un grupo de militares de las Fuerzas Armadas de Ucrania se rindió ante los militares rusos en la ciudad cercada
+...
+
+[2025-12-12] Militares ucranianos se rinden ante fuerzas de Rusia tras cerco en Donbás
+  URL: https://www.vtv.gob.ve/militares-ucranianos-rinden-fuerzas-rusia-cerco-donbas/
+  Summary: Un grupo de militares de las Fuerzas Armadas de Ucrania se rindió ante los militares rusos en la ciudad cercada
+...
+
+[2025-12-12] Militares ucranianos se rinden ante fuerzas de Rusia tras cerco en Donbás
+  URL: https://www.vtv.gob.ve/militares-ucranianos-rinden-fuerzas-rusia-cerco-donbas/
+  Summary: Un grupo de militares de las Fuerzas Armadas de Ucrania se rindió ante los militares rusos en la ciudad cercada
+...
+
+[2025-12-12] Militares ucranianos se rinden ante fuerzas de Rusia tras cerco en Donbás
+  URL: https://www.vtv.gob.ve/militares-ucranianos-rinden-fuerzas-rusia-cerco-donbas/
+  Summary: Un grupo de militares de las Fuerzas Armadas de Ucrania se rindió ante los militares rusos en la ciudad cercada
+...
+
+[2025-12-12] Eslovaquia promete frenar plan de Unión Europea para financiar militarmente a Ucrania
+  URL: https://www.vtv.gob.ve/eslovaquia-promete-frenar-planunioneuropea-financiar-militarmente-ucrania/
+  Summary: El primer ministro de Eslovaquia, Robert Fico, anunció ante el Parlamento del país, que su Gobierno bloqueará cualquier intento de
+...
+
+[2025-12-12] Eslovaquia promete frenar plan de Unión Europea para financiar militarmente a Ucrania
+  URL: https://www.vtv.gob.ve/eslovaquia-promete-frenar-planunioneuropea-financiar-militarmente-ucrania/
+  Summary: El primer ministro de Eslovaquia, Robert Fico, anunció ante el Parlamento del país, que su Gobierno bloqueará cualquier intento de
+...
+
+
+================================================================================
+SECTION 2: RUSSIAN/WAGNER PRESENCE (2304 ARTICLES)
+================================================================================
+
+Keywords: Rusia, rusos, Wagner, Spetsnaz, Moscu
+
+[2026-01-01] ¿Cuáles son los destinos turísticos ideales para viajar este 2026?
+  URL: https://www.vtv.gob.ve/cuales-destinos-turisticos-ideales-viajar-este-2026/
+  Summary: Viajar siempre es una buena manera de desconectar para volver a la cotidianidad; es por ello que en este artículo
+...
+
+[2026-01-01] ¿Cuáles fueron las catástrofes naturales más destructivas de 2025?
+  URL: https://www.vtv.gob.ve/cuales-fueron-catastrofes-naturales-destructivas-2025/
+  Summary: El año 2025 estuvo marcado por una serie de catástrofes naturales que afectaron a millones de personas en todo el
+...
+
+[2026-01-01] Rusia presentará a EE. UU. pruebas de ataque de Ucrania contra residencia de Putin
+  URL: https://www.vtv.gob.ve/rusia-eeuu-pruebas-ataque-ucrania-putin/
+  Summary: El Ministerio de Defensa de Rusia informó que Moscú presentará al Gobierno de Estados Unidos (EE. UU.) una prueba clave del
+...
+
+[2026-01-01] Rusia presentará a EE. UU. pruebas de ataque de Ucrania contra residencia de Putin
+  URL: https://www.vtv.gob.ve/rusia-eeuu-pruebas-ataque-ucrania-putin/
+  Summary: El Ministerio de Defensa de Rusia informó que Moscú presentará al Gobierno de Estados Unidos (EE. UU.) una prueba clave del
+...
+
+[2026-01-01] Rusia presentará a EE. UU. pruebas de ataque de Ucrania contra residencia de Putin
+  URL: https://www.vtv.gob.ve/rusia-eeuu-pruebas-ataque-ucrania-putin/
+  Summary: El Ministerio de Defensa de Rusia informó que Moscú presentará al Gobierno de Estados Unidos (EE. UU.) una prueba clave del
+...
+
+[2026-01-01] Rusia presentará a EE. UU. pruebas de ataque de Ucrania contra residencia de Putin
+  URL: https://www.vtv.gob.ve/rusia-eeuu-pruebas-ataque-ucrania-putin/
+  Summary: El Ministerio de Defensa de Rusia informó que Moscú presentará al Gobierno de Estados Unidos (EE. UU.) una prueba clave del
+...
+
+[2026-01-01] Rusia exige a EE. UU. frenar persecución de petrolero rumbo a Venezuela
+  URL: https://www.vtv.gob.ve/rusia-exige-eeuu-frenar-persecucion-petrolero-rumbo-venezuela/
+  Summary: El gobierno de Rusia ha presentado una solicitud diplomática formal para que Estados Unidos (EE.UU.) detenga la persecución de un
+...
+
+[2025-12-31] Rusia revela pruebas del ataque ucraniano fallido a residencia del presidente Putin
+  URL: https://www.vtv.gob.ve/rusia-pruebas-ataque-ucraniano-residencia-putin/
+  Summary: El Ministerio de Defensa de Rusia reveló más información sobre el intento de Ucrania de atacar con drones una residencia
+...
+
+[2025-12-31] Gobierno venezolano condena ataque contra residencia del presidente Vladímir Putin
+  URL: https://www.vtv.gob.ve/gobierno-venezolano-condena-ataque-residencia-putin/
+  Summary: La República Bolivariana de Venezuela condena de manera enérgica el ataque perpetrado contra la residencia del presidente de la Federación
+...
+
+[2025-12-30] Venezuela proyecta incremento del turismo receptivo para 2026
+  URL: https://www.vtv.gob.ve/venezuela-proyecta-incremento-turismo-receptivo-2026/
+  Summary: Con el arribo de más de seis mil visitantes provenientes de la Federación de Rusia, se proyecta un importante incremento
+...
+
+[2025-12-30] Robot “Zhiyin” dirige concierto de Año Nuevo en la provincia de Jiangxi
+  URL: https://www.vtv.gob.ve/robot-zhiyin-dirige-concierto-ano-nuevo-jiangxi/
+  Summary: En el Gran Teatro del Centro de Artes de la provincia de Jiangxi en China, se celebró un concierto de
+...
+
+[2025-12-30] Robot “Zhiyin” dirige concierto de Año Nuevo en la provincia de Jiangxi
+  URL: https://www.vtv.gob.ve/robot-zhiyin-dirige-concierto-ano-nuevo-jiangxi/
+  Summary: En el Gran Teatro del Centro de Artes de la provincia de Jiangxi en China, se celebró un concierto de
+...
+
+[2025-12-30] Embajadores de la FAO evalúan impacto de sanciones en la seguridad alimentaria
+  URL: https://www.vtv.gob.ve/embajadores-fao-evaluan-impacto-sanciones-seguridad-alimentaria/
+  Summary: Embajadores y representantes diplomáticos de Rusia, Bielorrusia, Nicaragua, China, Cuba y Venezuela ante la Organización de las Naciones Unidas para
+...
+
+[2025-12-30] Embajadores de la FAO evalúan impacto de sanciones en la seguridad alimentaria
+  URL: https://www.vtv.gob.ve/embajadores-fao-evaluan-impacto-sanciones-seguridad-alimentaria/
+  Summary: Embajadores y representantes diplomáticos de Rusia, Bielorrusia, Nicaragua, China, Cuba y Venezuela ante la Organización de las Naciones Unidas para
+...
+
+[2025-12-29] Rusia frustra ataque de drones ucranianos contra la residencia del presidente Putin
+  URL: https://www.vtv.gob.ve/rusia-ataque-drones-ucranianos-residencia-putin/
+  Summary: Ucrania intentó ejecutar un ataque terrorista con 91 vehículos aéreos no tripulados de largo alcance contra la residencia oficial del
+...
+
+[2025-12-29] OIEA: Rusia es pilar contra la proliferación nuclear
+  URL: https://www.vtv.gob.ve/oiea-rusia-pilar-proliferacion-nuclear/
+  Summary: «No podemos permitirnos perder a Rusia como pilar de la no proliferación [nuclear]. Esto sería un golpe devastador para todo
+...
+
+[2025-12-29] OIEA: Rusia es pilar contra la proliferación nuclear
+  URL: https://www.vtv.gob.ve/oiea-rusia-pilar-proliferacion-nuclear/
+  Summary: «No podemos permitirnos perder a Rusia como pilar de la no proliferación [nuclear]. Esto sería un golpe devastador para todo
+...
+
+[2025-12-29] OIEA: Rusia es pilar contra la proliferación nuclear
+  URL: https://www.vtv.gob.ve/oiea-rusia-pilar-proliferacion-nuclear/
+  Summary: «No podemos permitirnos perder a Rusia como pilar de la no proliferación [nuclear]. Esto sería un golpe devastador para todo
+...
+
+[2025-12-29] Irán pone en funcionamiento tres satélites de fabricación nacional
+  URL: https://www.vtv.gob.ve/iran-funcionamiento-satelites-fabricacion-nacional/
+  Summary: Irán anunció la exitosa recepción de señales emitidas por tres satélites de fabricación nacional recientemente lanzados al espacio. Durante una
+...
+
+[2025-12-29] Irán pone en funcionamiento tres satélites de fabricación nacional
+  URL: https://www.vtv.gob.ve/iran-funcionamiento-satelites-fabricacion-nacional/
+  Summary: Irán anunció la exitosa recepción de señales emitidas por tres satélites de fabricación nacional recientemente lanzados al espacio. Durante una
+...
+
+[2025-12-29] Irán pone en funcionamiento tres satélites de fabricación nacional
+  URL: https://www.vtv.gob.ve/iran-funcionamiento-satelites-fabricacion-nacional/
+  Summary: Irán anunció la exitosa recepción de señales emitidas por tres satélites de fabricación nacional recientemente lanzados al espacio. Durante una
+...
+
+[2025-12-29] China inicia ejercicios de bloqueo y disuasión multidimensional cerca de Taiwán
+  URL: https://www.vtv.gob.ve/china-ejercicios-bloqueo-taiwan/
+  Summary: El Comando del Teatro Oriental de China lanzó unos ejercicios militares a gran escala cerca de Taiwán, informó el portavoz
+...
+
+[2025-12-29] China inicia ejercicios de bloqueo y disuasión multidimensional cerca de Taiwán
+  URL: https://www.vtv.gob.ve/china-ejercicios-bloqueo-taiwan/
+  Summary: El Comando del Teatro Oriental de China lanzó unos ejercicios militares a gran escala cerca de Taiwán, informó el portavoz
+...
+
+[2025-12-28] Rusia libera dos bastiones clave en la zona de combates
+  URL: https://www.vtv.gob.ve/rusia-libera-bastiones-zona-combate/
+  Summary: El Ejército ruso ha liberado las ciudades de Guliaipole y Dimítrov del control de las fuerzas ucranianas, según fue informado
+...
+
+[2025-12-28] Rusia defiende el establecimiento del estado palestino
+  URL: https://www.vtv.gob.ve/rusia-defiende-establecimiento-estado-palestino/
+  Summary: Rusia aboga por un acuerdo justo del conflicto entre Palestina e Israel y uno de los factores clave en este
+...
+
+
+================================================================================
+SECTION 3: HEZBOLLAH COVERAGE (31 ARTICLES)
+================================================================================
+
+Keywords: Hezbola, Hizbola, resistencia islamica
+
+[2025-12-16] Hamás: Los palestinos asumirán seguridad de la Franja de Gaza
+  URL: https://www.vtv.gob.ve/hamas-los-palestinos-asumiran-seguridad-de-la-franja-de-gaza/
+  Summary: El Movimiento de Resistencia Islámica de palestina, Hamás, reiteró que la administración del orden interno en la Franja de Gaza
+...
+
+[2025-11-25] Irán: Mano agresiva de Israel debe ser cortada de la región
+  URL: https://www.vtv.gob.ve/iran-mano-agresiva-israel-cortada-region/
+  Summary: El presidente del Parlamento iraní, Mohamad Baqer Qalibaf, afirmó que la “mano agresiva” de Israel debe ser amputada de la
+...
+
+[2025-11-24] Irán: Israel acelera su desaparición al asesinar a líderes de la resistencia
+  URL: https://www.vtv.gob.ve/iran-israel-acelera-desaparicion-lideres-resistencia/
+  Summary: El Estado de Israel acelera su propia desaparición mediante los asesinatos indiscriminados que ejecuta contra líderes de la resistencia antisionista,
+...
+
+[2025-11-23] Presidente de Irán exige retirada de fuerzas sionistas en Líbano
+  URL: https://www.vtv.gob.ve/presidente-iran-retirada-fuerzas-sionistas-libano/
+  Summary: El presidente de Irán, Masud Pezeshkian, rechazó cualquier acción hostil que genere tensión en el Líbano, en particular los ataques
+...
+
+[2025-11-02] Netanyahu amenaza con intensificar ataques contra Hezbolá en Líbano
+  URL: https://www.vtv.gob.ve/netanyahu-amenaza-con-intensificar-ataques-contra-hezbola-en-libano/
+  Summary: Israel ha elevado el tono de sus advertencias contra Hezbolá, la milicia proiraní en Líbano, pues amenaza con intensificar sus
+...
+
+[2025-10-11] Hamás rechaza participación de Tony Blair en el futuro de Gaza
+  URL: https://www.vtv.gob.ve/hamas-rechaza-participacion-de-tony-blair-en-el-futuro-de-gaza-tras-el-alto-el-fuego/
+  Summary: Hamás rechazó firmemente cualquier papel del ex primer ministro británico, Tony Blair, en el futuro de Gaza tras el alto
+...
+
+[2025-10-06] Cancillería iraní respalda toda iniciativa para detener crímenes israelíes en Gaza
+  URL: https://www.vtv.gob.ve/cancilleria-irani-respalda-toda-iniciativa-para-detener-crimenes-israelies-en-gaza/
+  Summary: El Ministerio de Asuntos Exteriores de Irán ha recordado la responsabilidad legal y moral de la comunidad internacional para enfrentar
+...
+
+[2025-10-05] Irán urge al mundo a cesar impunidad de Israel por genocidio en Gaza
+  URL: https://www.vtv.gob.ve/iran-urge-cesar-impunidad-israel-genocidio-gaza/
+  Summary: El portavoz de la Cancillería iraní, Esmail Baqai, repudió la repetida violación del derecho internacional por Israel tras destaparse que
+...
+
+[2025-09-17] Irán: EE.UU. e Israel prevén hundir a Asia occidental en guerras perennes
+  URL: https://www.vtv.gob.ve/iran-eeuu-israel-asia-occidental-guerras-perennes/
+  Summary: El portavoz de la Cancillería de Irán, Esmail Baqai, alerta que Israel prevé arrastrar a Asia Occidental a guerras interminables,
+...
+
+[2025-09-10] Irán: La respuesta contundente a Israel es la unión del mundo musulmán
+  URL: https://www.vtv.gob.ve/iran-respuesta-contundente-israel-union-musulman/
+  Summary: El ministro de Relaciones Exteriores de Irán, Seyed Abás Araqchi, recalcó este miércoles en un mensaje compartido por redes sociales
+...
+
+[2025-09-10] FBI y DEA planean falso positivo sobre “Cartel de Los Soles” para agredir a Venezuela
+  URL: https://www.vtv.gob.ve/fbi-dea-sacar-embarque-identificacion-cartel-soles/
+  Summary: El secretario de Estado de Estados Unidos (EE. UU.), Marco Rubio, planea con la Oficina Federal de Investigación (FBI) y
+...
+
+[2025-08-21] Irán y Egipto condenan plan de Israel de ocupar Gaza y reubicar civiles
+  URL: https://www.vtv.gob.ve/iran-y-egipto-condenan-plan-de-israel-de-ocupar-gaza-y-reubicar-civiles/
+  Summary: El ministro de Asuntos Exteriores de Irán, Seyed Abás Araqchi, y su homólogo egipcio, Badr Abdel Ati, en una conversación
+...
+
+[2025-08-07] Irán descarta fecha para negociar con Estados Unidos
+  URL: https://www.vtv.gob.ve/iran-descarta-fecha-negociar-estados-unidos/
+  Summary: El ministro de Asuntos Exteriores de Irán, Abbas Araghchi, sobre la posible reanudación de las  negociaciones con Estados Unidos, señaló
+...
+
+[2025-07-23] Israel continúa su genocidio al asesinar a mil gazatíes en filas de comida
+  URL: https://www.vtv.gob.ve/israel-continua-genocidio-asesinar-gazaties-filas-comida/
+  Summary: Las autoridades de la República Islámica de Irán denunciaron el asesinato de más de mil palestinos en las filas para
+...
+
+[2025-07-13] Presidente de Irán resultó herido en un ataque de Israel contra Teherán
+  URL: https://www.vtv.gob.ve/presidente-de-iran-resulto-herido-en-un-ataque-de-israel-contra-teheran/
+  Summary: El presidente de Irán, Masud Pezeshkian, resultó con heridas leves en un ataque aéreo israelí el pasado 16 de junio,
+...
+
+[2025-07-07] Irán advierte que ataques de Israel están dirigidos a economía de Líbano
+  URL: https://www.vtv.gob.ve/iran-advierte-ataques-israel-dirigidos-economia-libano/
+  Summary: Irán condena nuevos ataques de Israel al Líbano y advierte que estas agresiones apuntan directamente a la seguridad de los
+...
+
+[2025-06-25] Irán reabre parcialmente su espacio aéreo tras 12 días de agresión sionista
+  URL: https://www.vtv.gob.ve/iran-reabre-parcialmente-espacio-aereo-12-dias-agresion-israeli-estadounidense/
+  Summary: La República Islámica de Irán anunció que ha reabierto parcialmente su espacio aéreo a los vuelos internacionales, un día después
+...
+
+[2025-06-25] Hezbolá felicita a Irán por su victoria contra Israel y EE.UU.
+  URL: https://www.vtv.gob.ve/hezbola-felicita-iran-victoria-israel-eeuu/
+  Summary: La Resistencia de Líbano, Hezbolá; felicitó a Irán por la “victoria divina” frente a los recientes ataques de Estados Unidos e Israel. Por
+...
+
+[2025-06-19] Resistencia del Líbano respalda a Irán ante agresión sionista-estadounidense
+  URL: https://www.vtv.gob.ve/resistencia-libano-respalda-iran-agresion-sionista-estadounidense/
+  Summary: “¿Cuál es el pretexto inválido para la agresión israelí decidida por Estados Unidos y respaldada por los tiranos del mundo?
+...
+
+[2025-06-19] Alcaldes israelíes denuncian negligencia en refugios civiles “Son trampas de muerte”
+  URL: https://www.vtv.gob.ve/alcaldes-israelies-denuncian-negligencia-refugios-civiles/
+  Summary: Alcaldes israelíes denunciaron negligencia del Gobierno de Benjamín Netanyahu, tras revelarse que las estructuras de defensa civil abiertas e instaladas
+...
+
+[2025-01-16] Irán celebra alto al fuego en Gaza como victoria para el pueblo palestino
+  URL: https://www.vtv.gob.ve/iran-celebra-alto-fuego-pueblo-palestino/
+  Summary: El líder de la Revolución Islámica, Ayatolá Jamenei, así como el Cuerpo de Guardianes de la Revolución Islámica, afirmaron que
+...
+
+[2024-10-29] Israel interesado en que Rusia participe en elaboración de acuerdo con el Líbano
+  URL: https://www.vtv.gob.ve/israel-interesado-rusia-participe-elaboracion-acuerdo-libano/
+  Summary: Israel está interesado en que Rusia participe en la elaboración de un acuerdo de paz con el Líbano, informó el
+...
+
+[2024-10-02] Rusia responsabiliza a Israel por agravar conflicto con el asesinato del líder de Hizbulá
+  URL: https://www.vtv.gob.ve/rusia-responsabiliza-israel-agravar-conflicto-asesinato-lider-hizbula/
+  Summary: El embajador de Rusia ante la Organización de las Naciones Unidas (ONU), Vasili Nebenzia, declaró que Israel agravó el conflicto
+...
+
+[2024-10-02] Irán condena doble rasero europeo para justificar a Israel
+  URL: https://www.vtv.gob.ve/iran-condena-doble-rasero-europeo-israel/
+  Summary: La Embajada de Irán en Londres condenó el “doble rasero” de Occidente ante las agresiones israelíes en la región y
+...
+
+[2022-01-15] Denuncian a Arabia Saudita y EE.UU. por mantener brutal guerra económica contra El Líbano
+  URL: https://www.vtv.gob.ve/denuncian-arabia-saudita-ee-uu-mantener-brutal-guerra-economica-el-libano/
+  Summary: “Los Gobiernos de Estados Unidos y Arabia Saudí han librado una siniestra guerra económica y financiera contra El Líbano, en
+...
+
+
+================================================================================
+SECTION 4: IRGC/QUDS FORCE (123 ARTICLES)
+================================================================================
+
+Keywords: IRGC, Guardianes de la Revolucion, Quds, Pasdaran
+
+[2025-12-30] Irán designa a la Marina Canadiense como organización terrorista
+  URL: https://www.vtv.gob.ve/iran-designa-marina-canadiense-organizacion-terrorista/
+  Summary: El Ministerio de Asuntos Exteriores de Irán declaró recíprocamente a la Marina Real Canadiense como organización terrorista, en respuesta a
+...
+
+[2025-12-30] Irán designa a la Marina Canadiense como organización terrorista
+  URL: https://www.vtv.gob.ve/iran-designa-marina-canadiense-organizacion-terrorista/
+  Summary: El Ministerio de Asuntos Exteriores de Irán declaró recíprocamente a la Marina Real Canadiense como organización terrorista, en respuesta a
+...
+
+[2025-12-30] Irán designa a la Marina Canadiense como organización terrorista
+  URL: https://www.vtv.gob.ve/iran-designa-marina-canadiense-organizacion-terrorista/
+  Summary: El Ministerio de Asuntos Exteriores de Irán declaró recíprocamente a la Marina Real Canadiense como organización terrorista, en respuesta a
+...
+
+[2025-12-04] Inicia la fase final de los ejercicios Irán-OCS
+  URL: https://www.vtv.gob.ve/inicia-la-fase-final-de-los-ejercicios-iran-ocs/
+  Summary: La fase final del ejercicio antiterrorista Sahand 2025 ha comenzado este jueves en Irán con la ejecución de operaciones por
+...
+
+[2025-12-04] Inicia la fase final de los ejercicios Irán-OCS
+  URL: https://www.vtv.gob.ve/inicia-la-fase-final-de-los-ejercicios-iran-ocs/
+  Summary: La fase final del ejercicio antiterrorista Sahand 2025 ha comenzado este jueves en Irán con la ejecución de operaciones por
+...
+
+[2025-12-04] Inicia la fase final de los ejercicios Irán-OCS
+  URL: https://www.vtv.gob.ve/inicia-la-fase-final-de-los-ejercicios-iran-ocs/
+  Summary: La fase final del ejercicio antiterrorista Sahand 2025 ha comenzado este jueves en Irán con la ejecución de operaciones por
+...
+
+[2025-12-04] Inicia la fase final de los ejercicios Irán-OCS
+  URL: https://www.vtv.gob.ve/inicia-la-fase-final-de-los-ejercicios-iran-ocs/
+  Summary: La fase final del ejercicio antiterrorista Sahand 2025 ha comenzado este jueves en Irán con la ejecución de operaciones por
+...
+
+[2025-12-04] Inicia la fase final de los ejercicios Irán-OCS
+  URL: https://www.vtv.gob.ve/inicia-la-fase-final-de-los-ejercicios-iran-ocs/
+  Summary: La fase final del ejercicio antiterrorista Sahand 2025 ha comenzado este jueves en Irán con la ejecución de operaciones por
+...
+
+[2025-12-02] Irán inicia ejercicio antiterrorista internacional ‘Sahand 2025’
+  URL: https://www.vtv.gob.ve/iran-inicia-ejercicio-antiterrorista-internacional-sahand-2025/
+  Summary: El ejercicio antiterrorista conjunto ‘Sahand 2025’ de los países miembros de la Organización de Cooperación de Shanghái (OCS), organizado por
+...
+
+[2025-12-02] Irán inicia ejercicio antiterrorista internacional ‘Sahand 2025’
+  URL: https://www.vtv.gob.ve/iran-inicia-ejercicio-antiterrorista-internacional-sahand-2025/
+  Summary: El ejercicio antiterrorista conjunto ‘Sahand 2025’ de los países miembros de la Organización de Cooperación de Shanghái (OCS), organizado por
+...
+
+[2025-12-02] Irán inicia ejercicio antiterrorista internacional ‘Sahand 2025’
+  URL: https://www.vtv.gob.ve/iran-inicia-ejercicio-antiterrorista-internacional-sahand-2025/
+  Summary: El ejercicio antiterrorista conjunto ‘Sahand 2025’ de los países miembros de la Organización de Cooperación de Shanghái (OCS), organizado por
+...
+
+[2025-12-02] Irán inicia ejercicio antiterrorista internacional ‘Sahand 2025’
+  URL: https://www.vtv.gob.ve/iran-inicia-ejercicio-antiterrorista-internacional-sahand-2025/
+  Summary: El ejercicio antiterrorista conjunto ‘Sahand 2025’ de los países miembros de la Organización de Cooperación de Shanghái (OCS), organizado por
+...
+
+[2025-12-02] Irán inicia ejercicio antiterrorista internacional ‘Sahand 2025’
+  URL: https://www.vtv.gob.ve/iran-inicia-ejercicio-antiterrorista-internacional-sahand-2025/
+  Summary: El ejercicio antiterrorista conjunto ‘Sahand 2025’ de los países miembros de la Organización de Cooperación de Shanghái (OCS), organizado por
+...
+
+[2025-12-02] Irán inicia ejercicio antiterrorista internacional ‘Sahand 2025’
+  URL: https://www.vtv.gob.ve/iran-inicia-ejercicio-antiterrorista-internacional-sahand-2025/
+  Summary: El ejercicio antiterrorista conjunto ‘Sahand 2025’ de los países miembros de la Organización de Cooperación de Shanghái (OCS), organizado por
+...
+
+[2025-12-02] Irán inicia ejercicio antiterrorista internacional ‘Sahand 2025’
+  URL: https://www.vtv.gob.ve/iran-inicia-ejercicio-antiterrorista-internacional-sahand-2025/
+  Summary: El ejercicio antiterrorista conjunto ‘Sahand 2025’ de los países miembros de la Organización de Cooperación de Shanghái (OCS), organizado por
+...
+
+[2025-11-22] Reportan nuevos ataques israelíes en varias ciudades de Cisjordania
+  URL: https://www.vtv.gob.ve/reportan-ataques-israelies-varias-ciudades-cisjordania/
+  Summary: Las fuerzas de ocupación israelíes allanaron varias ciudades de Cisjordania y arrestaron a jóvenes, mientras que un mártir murió por
+...
+
+[2025-11-12] Irán desmantela una red de espionaje vinculada a la CIA y al Mossad israelí
+  URL: https://www.vtv.gob.ve/iran-desmantela-red-espionaje-cia-mossad/
+  Summary: La Inteligencia del Cuerpo de Guardianes de Irán desmantela una red antiseguridad vinculada a Estados Unidos e Israel, tras llevar
+...
+
+[2025-11-12] Irán desmantela una red de espionaje vinculada a la CIA y al Mossad israelí
+  URL: https://www.vtv.gob.ve/iran-desmantela-red-espionaje-cia-mossad/
+  Summary: La Inteligencia del Cuerpo de Guardianes de Irán desmantela una red antiseguridad vinculada a Estados Unidos e Israel, tras llevar
+...
+
+[2025-09-17] Seyed Abdolrahim: Preparación militar de Irán disuade a los enemigos
+  URL: https://www.vtv.gob.ve/preparacion-militar-iran-disuade-enemigos/
+  Summary: Durante una visita al cuartel general táctico de la Fuerza Terrestre del Cuerpo de Guardianes de la Revolución Islámica (CGRI)
+...
+
+[2025-09-17] Seyed Abdolrahim: Preparación militar de Irán disuade a los enemigos
+  URL: https://www.vtv.gob.ve/preparacion-militar-iran-disuade-enemigos/
+  Summary: Durante una visita al cuartel general táctico de la Fuerza Terrestre del Cuerpo de Guardianes de la Revolución Islámica (CGRI)
+...
+
+[2025-08-11] Irán incauta buque con más de dos millones de litros de petróleo de contrabando
+  URL: https://www.vtv.gob.ve/iran-incauta-buque-contrabando-millones-petroleo/
+  Summary: El comandante de la policía fronteriza de Irán, general de brigada Ahmad Ali Gudarzi, afirmó que el buque con más
+...
+
+[2025-08-07] Irán incauta más de 200 armas estadounidense en operaciones fronterizas
+  URL: https://www.vtv.gob.ve/iran-incauta-200-armas-estadounidense-operaciones/
+  Summary: La Dirección General de Inteligencia de Irán informó sobre la incautación de más de 210 armas, en su mayoría de
+...
+
+[2025-07-25] Irán sobrepasa sistemas antiaéreos y devasta núcleos militares de Israel
+  URL: https://www.vtv.gob.ve/iran-sobrepaso-los-sistemas-antiaereos-y-devasto-los-nucleos-militares-de-israel/
+  Summary: El portavoz jefe del Estado Mayor de las Fuerzas Armadas de Irán, el general de brigada, Abolfazl Shekarchi, destacó que
+...
+
+[2025-07-25] Irán sobrepasa sistemas antiaéreos y devasta núcleos militares de Israel
+  URL: https://www.vtv.gob.ve/iran-sobrepaso-los-sistemas-antiaereos-y-devasto-los-nucleos-militares-de-israel/
+  Summary: El portavoz jefe del Estado Mayor de las Fuerzas Armadas de Irán, el general de brigada, Abolfazl Shekarchi, destacó que
+...
+
+[2025-07-20] Irán y Rusia realizarán maniobras navales conjuntas en el mar Caspio
+  URL: https://www.vtv.gob.ve/iran-rusia-realizaran-maniobras-navales-mar-caspio/
+  Summary: En un gesto de cooperación estratégica, Irán y Rusia realizarán el ejercicio Casarex 2025 en el mar Caspio, centrado en
+...
+
+
+================================================================================
+SECTION 5: HEZBOLLAH FAMILY CLANS (2 MENTIONS)
+================================================================================
+
+Families: Nassereddine (OFAC Designated), Saleh (Treasury Designated), Rada
+
+[Saleh] [2025-07-04] Irán da último adiós al general mártir Mohamad Said Izadi
+  URL: https://www.vtv.gob.ve/iran-ultimo-adios-general-martir-izadi/
+  Summary: Miles de personas han acompañado el funeral del general de división Mohamad Said Izadi, conocido como Hach Ramadan, un destacado
+...
+
+[Saleh] [2025-07-04] Irán da último adiós al general mártir Mohamad Said Izadi
+  URL: https://www.vtv.gob.ve/iran-ultimo-adios-general-martir-izadi/
+  Summary: Miles de personas han acompañado el funeral del general de división Mohamad Said Izadi, conocido como Hach Ramadan, un destacado
+...
+
+
+================================================================================
+SECTION 6: MADURO NARCO-TERRORISM LINKS (123 ARTICLES)
+================================================================================
+
+Keywords: narcoterrorismo, Cartel de los Soles, narcotrafico, terrorismo
+
+[2025-12-28] Países que Estados Unidos bombardeó durante el 2025
+  URL: https://www.vtv.gob.ve/conoce-paises-eeuu-bombardeo-durante-2025/
+  Summary: Donald Trump está cerca de cumplir un año en el poder. A lo largo de este 2025, ha ordenado múltiples
+...
+
+[2025-12-28] Países que Estados Unidos bombardeó durante el 2025
+  URL: https://www.vtv.gob.ve/conoce-paises-eeuu-bombardeo-durante-2025/
+  Summary: Donald Trump está cerca de cumplir un año en el poder. A lo largo de este 2025, ha ordenado múltiples
+...
+
+[2025-12-23] Rusia reclama ante el Consejo Seguridad de la ONU injerencia de EE.UU. contra Venezuela
+  URL: https://www.vtv.gob.ve/rusia-reclama-consejo-seguridad-injerencia-eeuu-contra-venezuela/
+  Summary: «Estados Unidos está perpetrando hechos totalmente inaceptables porque van en contra de las normas fundamentales del derecho internacional, así como
+...
+
+[2025-12-23] Rusia reclama ante el Consejo Seguridad de la ONU injerencia de EE.UU. contra Venezuela
+  URL: https://www.vtv.gob.ve/rusia-reclama-consejo-seguridad-injerencia-eeuu-contra-venezuela/
+  Summary: «Estados Unidos está perpetrando hechos totalmente inaceptables porque van en contra de las normas fundamentales del derecho internacional, así como
+...
+
+[2025-12-21] Petro rechaza el bloqueo a Venezuela en medio de la campaña de agresión de EE.UU.
+  URL: https://www.vtv.gob.ve/petro-rechaza-bloqueo-venezuela-campana-agresion-eeuu/
+  Summary: El presidente de Colombia, Gustavo Petro, rechazó el bloqueo a Venezuela, en medio del despliegue militar estadounidense frente a las
+...
+
+[2025-12-17] FANB rechaza declaraciones delirantes de Donald Trump
+  URL: https://www.vtv.gob.ve/fanb-rechaza-declaraciones-delirantes-donald-trump/
+  Summary: La Fuerza Armada Nacional Bolivariana (FANB) preservará a toda costa la integridad territorial de Venezuela, los legítimos derechos sobre los
+...
+
+[2025-12-17] Declaración del imperialismo causa indignación en el pueblo de Venezuela
+  URL: https://www.vtv.gob.ve/declaracion-imperialismo-causa-indignacion-pueblo-venezuela/
+  Summary: El secretario general del Partido Socialista Unido de Venezuela (PSUV), Diosdado Cabello Rondón, aseguró que la “declaración delirante” del presidente
+...
+
+[2025-12-15] Maduro repudia campaña sobre narcotráfico de María Machado para una invasión del país
+  URL: https://www.vtv.gob.ve/maduro-repudia-campana-narcotrafico-machado-invasion-pais/
+  Summary: La opositora ultraderechista María Corina Machado afirmó que el “60 por ciento de la población venezolana está metida en narcotráfico”,
+...
+
+[2025-12-14] Pueblo mirandino disfruta las Navidades 2025 en paz
+  URL: https://www.vtv.gob.ve/diosdado-cabello-navidades-2025/
+  Summary: Cumpliendo instrucciones del presidente de la República Bolivariana de Venezuela, Nicolás Maduro, el vicepresidente sectorial de Política, Seguridad Ciudadana y
+...
+
+[2025-12-12] Petro: Verdadero motivo detrás de las agresiones de EE.UU. a Venezuela es el petróleo
+  URL: https://www.vtv.gob.ve/petro-verdadero-motivo-agresiones-eeuu-petroleo/
+  Summary: El presidente de Colombia, Gustavo Petro, manifestó que la incautación de un petrolero por parte de EE.UU. en las costas
+...
+
+[2025-12-12] Petro: Verdadero motivo detrás de las agresiones de EE.UU. a Venezuela es el petróleo
+  URL: https://www.vtv.gob.ve/petro-verdadero-motivo-agresiones-eeuu-petroleo/
+  Summary: El presidente de Colombia, Gustavo Petro, manifestó que la incautación de un petrolero por parte de EE.UU. en las costas
+...
+
+[2025-12-11] Rusia exige a EE.UU. explicación por secuestro de petrolero en costas de Venezuela
+  URL: https://www.vtv.gob.ve/rusia-exige-eeuu-explicacion-secuestro-petrolero-costas/
+  Summary: El ministro de Relaciones Exteriores de Rusia, Serguéi Lavrov, comentó sobre la incautación de un petrolero en las costas de
+...
+
+[2025-12-01] Jefe de Estado: Agresión imperial consolidó unión indisoluble entre el pueblo y la FANB
+  URL: https://www.vtv.gob.ve/jefe-estado-consolidaron-union-indisoluble-pueblo-fanb/
+  Summary: “Hemos vivido 22 semanas de una agresión que se puede calificar como terrorismo psicológico, 22 semanas que nos han puesto
+...
+
+[2025-11-30] Nicaragua expresa su plena y permanente solidaridad hacia Venezuela
+  URL: https://www.vtv.gob.ve/nicaragua-plena-permanente-solidaridad-venezuela/
+  Summary: Nicaragua expresó su apoyo al pueblo y al Gobierno de la República Bolivariana de Venezuela tras el anuncio de Donald
+...
+
+[2025-11-16] EE.UU. intensifica agresiones con nuevo portaviones en el Caribe
+  URL: https://www.vtv.gob.ve/ee-uu-intensifica-agresiones-con-nuevo-portaviones-en-el-caribe/
+  Summary: El Gobierno de Estados Unidos continúa las agresiones en aguas internacionales del Caribe y este domingo ingresó un grupo de
+...
+
+[2025-11-11] Lavrov: Las acciones de EE.UU. contra Venezuela no conducirán a nada bueno
+  URL: https://www.vtv.gob.ve/lavrov-acciones-eeuu-contra-venezuela-conduciran-nada-bueno/
+  Summary: Las acciones de Estados Unidos contra Venezuela no producirán resultados positivos, declaró este martes el ministro de Relaciones Exteriores de
+...
+
+[2025-11-11] Lavrov: Las acciones de EE.UU. contra Venezuela no conducirán a nada bueno
+  URL: https://www.vtv.gob.ve/lavrov-acciones-eeuu-contra-venezuela-conduciran-nada-bueno/
+  Summary: Las acciones de Estados Unidos contra Venezuela no producirán resultados positivos, declaró este martes el ministro de Relaciones Exteriores de
+...
+
+[2025-11-11] Duma rusa insta a condena global de la amenaza militar de EE.UU. a Venezuela
+  URL: https://www.vtv.gob.ve/duma-rusa-insta-condena-global-amenaza-militar-eeuu-venezuela/
+  Summary: La Duma de Estado de la Federación de Rusia llamó a los Parlamentos de todo el mundo a condenar enérgicamente
+...
+
+[2025-11-11] Duma rusa insta a condena global de la amenaza militar de EE.UU. a Venezuela
+  URL: https://www.vtv.gob.ve/duma-rusa-insta-condena-global-amenaza-militar-eeuu-venezuela/
+  Summary: La Duma de Estado de la Federación de Rusia llamó a los Parlamentos de todo el mundo a condenar enérgicamente
+...
+
+[2025-11-11] Duma rusa insta a condena global de la amenaza militar de EE.UU. a Venezuela
+  URL: https://www.vtv.gob.ve/duma-rusa-insta-condena-global-amenaza-militar-eeuu-venezuela/
+  Summary: La Duma de Estado de la Federación de Rusia llamó a los Parlamentos de todo el mundo a condenar enérgicamente
+...
+
+[2025-11-11] Duma rusa insta a condena global de la amenaza militar de EE.UU. a Venezuela
+  URL: https://www.vtv.gob.ve/duma-rusa-insta-condena-global-amenaza-militar-eeuu-venezuela/
+  Summary: La Duma de Estado de la Federación de Rusia llamó a los Parlamentos de todo el mundo a condenar enérgicamente
+...
+
+[2025-11-11] Colombia suspende colaboración de inteligencia con EE.UU.
+  URL: https://www.vtv.gob.ve/colombia-suspende-colaboracion-de-inteligencia-con-ee-uu/
+  Summary: El presidente de Colombia, Gustavo Petro, ordenó «a todos los niveles de la inteligencia de la fuerza pública suspender el
+...
+
+[2025-11-11] Colombia suspende colaboración de inteligencia con EE.UU.
+  URL: https://www.vtv.gob.ve/colombia-suspende-colaboracion-de-inteligencia-con-ee-uu/
+  Summary: El presidente de Colombia, Gustavo Petro, ordenó «a todos los niveles de la inteligencia de la fuerza pública suspender el
+...
+
+[2025-11-03] Gustavo Petro reitera que los ataques en el mar Caribe son “ejecuciones extrajudiciales”
+  URL: https://www.vtv.gob.ve/gustavo-petro-ratifica-ejecuciones-extrajudiciales-eeuu-caribe/
+  Summary: El presidente de Colombia, Gustavo Petro, afirmó este domingo que los ataques de Estados Unidos contra embarcaciones en el mar Caribe,
+...
+
+[2025-11-03] Gustavo Petro reitera que los ataques en el mar Caribe son “ejecuciones extrajudiciales”
+  URL: https://www.vtv.gob.ve/gustavo-petro-ratifica-ejecuciones-extrajudiciales-eeuu-caribe/
+  Summary: El presidente de Colombia, Gustavo Petro, afirmó este domingo que los ataques de Estados Unidos contra embarcaciones en el mar Caribe,
+...
+
+
+================================================================================
+SECTION 7: MILITARY EXERCISES ON MARGARITA (23 ARTICLES)
+================================================================================
+
+[2025-11-16] EE.UU. intensifica agresiones con nuevo portaviones en el Caribe
+  URL: https://www.vtv.gob.ve/ee-uu-intensifica-agresiones-con-nuevo-portaviones-en-el-caribe/
+  Summary: El Gobierno de Estados Unidos continúa las agresiones en aguas internacionales del Caribe y este domingo ingresó un grupo de
+...
+
+[2025-11-15] Estados orientales son convocados a gran vigilia y marcha permanente ante amenaza imperial
+  URL: https://www.vtv.gob.ve/presidente-maduro-convoca-gran-vigilia-estados-orientales-amenaza-imperial/
+  Summary: La población de los estados orientales de Venezuela fue convocada a una vigilia y marcha permanente en las calles, para
+...
+
+[2025-11-11] Primera jornada del Plan Independencia 200 desplegó más de 25 tareas en todo el país
+  URL: https://www.vtv.gob.ve/primera-jornada-independencia-200desplego-mas25tareas/
+  Summary: Se ofreció el balance del primer día de la Fase Superior del Plan Independencia 200, ejercicio nacional de carácter cívico-militar-policial,
+...
+
+[2025-11-11] Operación Independencia 200 realiza ejercicios de comando y control en el país
+  URL: https://www.vtv.gob.ve/operacion-independencia-200-ejercicios-pais/
+  Summary: A primeras horas de la mañana, iniciaron en diversos estados del país los ejercicios de Comando, Control y Comunicaciones como
+...
+
+[2025-11-03] Marchas patrióticas en Venezuela reafirman que el pueblo movilizado garantiza la paz
+  URL: https://www.vtv.gob.ve/marchas-patrioticas-venezuela-reafirman-garantiza-paz/
+  Summary: Los venezolanos se han mantenido activos en las calles en respaldo a la paz y la soberanía nacional, ante las
+...
+
+[2025-10-27] Jornadas de movilización nacional se mantienen activas en defensa de la paz y soberanía
+  URL: https://www.vtv.gob.ve/jornadas-movilizacion-nacional-activas-defensa-paz-soberania/
+  Summary: El Partido Socialista Unido de Venezuela (PSUV) ha convocado a una agenda de movilización permanente en todo el territorio nacional
+...
+
+[2025-10-17] Venezuela felicita al canal ruso RT por 20 años en defensa de la verdad
+  URL: https://www.vtv.gob.ve/venezuela-felicita-canal-ruso-rt-defensa-verdad/
+  Summary: “Yo quiero enviar un saludo muy especial desde Caracas, Venezuela, al medio de comunicación multidimensional Russia Today (RT), que cumple,
+...
+
+[2025-10-17] Venezuela felicita al canal ruso RT por 20 años en defensa de la verdad
+  URL: https://www.vtv.gob.ve/venezuela-felicita-canal-ruso-rt-defensa-verdad/
+  Summary: “Yo quiero enviar un saludo muy especial desde Caracas, Venezuela, al medio de comunicación multidimensional Russia Today (RT), que cumple,
+...
+
+[2025-09-20] Milicia pesquera realizará seis movilizaciones marinas por la soberanía
+  URL: https://www.vtv.gob.ve/milicia-pesquera-seis-movilizaciones-marinas-soberania/
+  Summary: El ministro del Poder Popular para la Pesca y Acuicultura, Juan Carlos Loyo, informó este sábado que la Milicia Bolivariana
+...
+
+[2025-09-20] Jornada «Los Cuarteles van al Pueblo» se despliega en todo el país
+  URL: https://www.vtv.gob.ve/inicia-despliegue-cuarteles-van-pueblo-todo-pais/
+  Summary: Este sábado, a primeras horas de la mañana, inició el despliegue de «Los Cuarteles van al Pueblo«, en todo el
+...
+
+[2025-09-20] Jornada «Los Cuarteles van al Pueblo» se despliega en todo el país
+  URL: https://www.vtv.gob.ve/inicia-despliegue-cuarteles-van-pueblo-todo-pais/
+  Summary: Este sábado, a primeras horas de la mañana, inició el despliegue de «Los Cuarteles van al Pueblo«, en todo el
+...
+
+[2025-09-11] Nueva Esparta se activa en defensa territorial con el Plan Independencia 200
+  URL: https://www.vtv.gob.ve/nueva-esparta-defensa-territorial-plan-independencia200/
+  Summary: &nbsp; Con espíritu patriótico y vocación de defensa integral, el estado Nueva Esparta se incorporó con firmeza al Plan Independencia
+...
+
+[2025-04-14] Ejercicio de Resistencia Comunal 2025 fortalece defensa marítima en Nueva Esparta 
+  URL: https://www.vtv.gob.ve/ejercicio-resistencia-comunal-fortalece-defensa-nueva-esparta/
+  Summary: La Zona Operativa de Defensa Integral Marítima e Insular (Zodimain) activó el ejercicio de Resistencia Comunal 2025 en Nueva Esparta,
+...
+
+[2025-01-10] Jefe de la Duma rusa felicita a presidente Maduro a nombre de Vladímir Putin
+  URL: https://www.vtv.gob.ve/jefe-duma-felicita-presidente-maduro-vladimir-putin/
+  Summary: El presidente de la Duma de la Federación de Rusia (Cámara Baja del Parlamento), Viacheslav Volodin, transmitió las felicitaciones del
+...
+
+[2024-06-10] Más de 40 mil turistas rusos han arribado a Venezuela
+  URL: https://www.vtv.gob.ve/mas-40-mil-turistas-rusos-arribado/
+  Summary: Más de 40 mil turistas rusos han arribado a Venezuela, como parte de la operación chárter Moscú-Porlamar. Con la llegada
+...
+
+[2024-06-10] Más de 40 mil turistas rusos han arribado a Venezuela
+  URL: https://www.vtv.gob.ve/mas-40-mil-turistas-rusos-arribado/
+  Summary: Más de 40 mil turistas rusos han arribado a Venezuela, como parte de la operación chárter Moscú-Porlamar. Con la llegada
+...
+
+[2024-04-13] FANB despliega ejercicio militar con Milicia Nacional Bolivariana
+  URL: https://www.vtv.gob.ve/fanb-despliega-ejercicio-militar-milicia-nacional-bolivariana/
+  Summary: Más de 348 mil milicianos y milicianos y efectivos de la Fuerza Armada Nacional Bolivariana (FANB), fueron desplegados este sábado
+...
+
+[2023-08-28] Recuperan pozo de agua potable mediante sistema 1&#215;10 en Guárico
+  URL: https://www.vtv.gob.ve/recuperan-pozo-agua-potable-1x10-guarico/
+  Summary: Como parte del millón 334 mil 471 casos resueltos mediante el 1&#215;10 del Buen Gobierno, que representan el 60.14%, se resolvió
+...
+
+[2023-03-26] CAIGA QUIEN CAIGA (II) | Golpe contra los corruptos en Pdvsa
+  URL: https://www.vtv.gob.ve/caiga-quien-caiga-golpes-corruptos-pdvsa-ii-3/
+  Summary: El 29 de noviembre del año 2017, el presidente de la República Bolivariana de Venezuela, Nicolás Maduro Moros, decretó esta
+...
+
+[2023-03-26] CAIGA QUIEN CAIGA (II) | Golpe contra los corruptos en Pdvsa
+  URL: https://www.vtv.gob.ve/caiga-quien-caiga-golpes-corruptos-pdvsa-ii-3/
+  Summary: El 29 de noviembre del año 2017, el presidente de la República Bolivariana de Venezuela, Nicolás Maduro Moros, decretó esta
+...
+
+
+================================================================================
+SECTION 8: TOURISM ANOMALIES (66 ARTICLES)
+================================================================================
+
+Searching for: foreign tourism + suspicious patterns on Margarita
+
+[2026-01-01] ¿Cuáles son los destinos turísticos ideales para viajar este 2026?
+  URL: https://www.vtv.gob.ve/cuales-destinos-turisticos-ideales-viajar-este-2026/
+  Summary: Viajar siempre es una buena manera de desconectar para volver a la cotidianidad; es por ello que en este artículo
+...
+
+[2025-12-30] Venezuela proyecta incremento del turismo receptivo para 2026
+  URL: https://www.vtv.gob.ve/venezuela-proyecta-incremento-turismo-receptivo-2026/
+  Summary: Con el arribo de más de seis mil visitantes provenientes de la Federación de Rusia, se proyecta un importante incremento
+...
+
+[2025-12-28] Nueva Esparta se fortalece en materia de turismo
+  URL: https://www.vtv.gob.ve/gobierno-regional-nueva-esparta-fortalece-materia-turismo/
+  Summary: En aras de dar continuidad a la gestión del 1X10 del Buen Gobierno en el estado Nueva Esparta, la ministra
+...
+
+[2025-12-28] Nueva Esparta se fortalece en materia de turismo
+  URL: https://www.vtv.gob.ve/gobierno-regional-nueva-esparta-fortalece-materia-turismo/
+  Summary: En aras de dar continuidad a la gestión del 1X10 del Buen Gobierno en el estado Nueva Esparta, la ministra
+...
+
+[2025-12-23] Nuevos 100 turistas rusos visitan la Isla de Margarita
+  URL: https://www.vtv.gob.ve/nuevos-100-turistas-rusos-visitan-isla-de-margarita/
+  Summary: La Isla de Margarita, en el estado Nueva Esparta, recibió 100 nuevos turistas rusos de la operación chárter Moscú-Porlamar con
+...
+
+[2025-12-23] Nuevos 100 turistas rusos visitan la Isla de Margarita
+  URL: https://www.vtv.gob.ve/nuevos-100-turistas-rusos-visitan-isla-de-margarita/
+  Summary: La Isla de Margarita, en el estado Nueva Esparta, recibió 100 nuevos turistas rusos de la operación chárter Moscú-Porlamar con
+...
+
+[2025-12-10] Diputado Salazar celebra alianza entre sector público y privado
+  URL: https://www.vtv.gob.ve/diputado-salazar-cooperacion-empresariado-sector-publico/
+  Summary: El presidente del partido Copei y diputado a la Asamblea Nacional (AN), Miguel Salazar, celebró la alianza entre el empresariado
+...
+
+[2025-12-09] Refuerzan acciones estratégicas para la conexión Moscú-Porlamar
+  URL: https://www.vtv.gob.ve/refuerzan-acciones-estrategicas-conexion-moscu-porlamar/
+  Summary: Con el propósito de avanzar en la planificación de la operación chárter Moscú-Porlamar, la ministra del Poder Popular para el
+...
+
+[2025-12-09] Arriban nuevos turistas rusos a Margarita para fortalecer lazos comerciales con Venezuela
+  URL: https://www.vtv.gob.ve/turistas-rusos-isla-margarita/
+  Summary: La perla del Caribe ha dado una cálida bienvenida a un nuevo grupo de 100 viajeros procedentes de la Federación de Rusia, específicamente
+...
+
+[2025-12-09] Arriban nuevos turistas rusos a Margarita para fortalecer lazos comerciales con Venezuela
+  URL: https://www.vtv.gob.ve/turistas-rusos-isla-margarita/
+  Summary: La perla del Caribe ha dado una cálida bienvenida a un nuevo grupo de 100 viajeros procedentes de la Federación de Rusia, específicamente
+...
+
+[2025-11-25] Arriban 100 nuevos turistas rusos a la isla de Margarita
+  URL: https://www.vtv.gob.ve/arriban-100-nuevos-turistas-rusos-margarita/
+  Summary: Con el arribo de 100 turistas rusos este martes 25 de noviembre a la isla de Margarita, en el estado
+...
+
+[2025-11-21] Arriba vuelo con 468 turistas rusos a la isla de Margarita
+  URL: https://www.vtv.gob.ve/arriba-vuelo-468-turistas-rusos-isla-margarita/
+  Summary: Un nuevo vuelo chárter procedente de la Federación de Rusia con 468 turistas, arribó al Aeropuerto Internacional del Caribe General
+...
+
+[2025-11-21] Arriba vuelo con 468 turistas rusos a la isla de Margarita
+  URL: https://www.vtv.gob.ve/arriba-vuelo-468-turistas-rusos-isla-margarita/
+  Summary: Un nuevo vuelo chárter procedente de la Federación de Rusia con 468 turistas, arribó al Aeropuerto Internacional del Caribe General
+...
+
+[2025-11-11] Viajeros polacos arriban a Margarita para conocer atractivos turísticos
+  URL: https://www.vtv.gob.ve/turistas-polacos-arriban-margarita-atracciones-nacionales/
+  Summary: Un grupo de turistas polacos arribaron por vía aérea a la Isla de Margarita, estado Nueva Esparta; como parte de
+...
+
+[2025-11-11] Turismo receptivo se consolida con la llegada de 880 visitantes de Rusia y Polonia
+  URL: https://www.vtv.gob.ve/turismo-receptivo-consolida-l880-visitantes-rusia-polonia/
+  Summary: El compromiso de Venezuela con el turismo receptivo como motor económico se consolida con la reciente llegada de 880 turistas,
+...
+
+[2025-11-11] Turismo receptivo se consolida con la llegada de 880 visitantes de Rusia y Polonia
+  URL: https://www.vtv.gob.ve/turismo-receptivo-consolida-l880-visitantes-rusia-polonia/
+  Summary: El compromiso de Venezuela con el turismo receptivo como motor económico se consolida con la reciente llegada de 880 turistas,
+...
+
+[2025-11-11] Turismo receptivo de Venezuela crecerá un 35% para el cierre de 2025
+  URL: https://www.vtv.gob.ve/turismo-receptivo-venezuela-crecera-35-2025/
+  Summary: Para el cierre del presente año, se prevé un crecimiento del 35% en turismo receptivo, así lo informó la ministra
+...
+
+[2025-11-11] Turismo receptivo de Venezuela crecerá un 35% para el cierre de 2025
+  URL: https://www.vtv.gob.ve/turismo-receptivo-venezuela-crecera-35-2025/
+  Summary: Para el cierre del presente año, se prevé un crecimiento del 35% en turismo receptivo, así lo informó la ministra
+...
+
+[2025-11-02] Más de 5 mil turistas rusos han arribado a Venezuela
+  URL: https://www.vtv.gob.ve/turistas-rusos-arribado-venezuela/
+  Summary: Esta semana, el Aeropuerto Internacional del Caribe General en Jefe Santiago Mariño, en la isla de Margarita, recibió a 468
+...
+
+[2025-11-02] Más de 5 mil turistas rusos han arribado a Venezuela
+  URL: https://www.vtv.gob.ve/turistas-rusos-arribado-venezuela/
+  Summary: Esta semana, el Aeropuerto Internacional del Caribe General en Jefe Santiago Mariño, en la isla de Margarita, recibió a 468
+...
+
+
+================================================================================
+ANALYSIS METHODOLOGY
+================================================================================
+
+1. Collection via WordPress REST API (/wp-json/wp/v2/posts)
+2. Anonymized via Tor SOCKS5 proxy (127.0.0.1:9050)
+3. Spanish keyword variants with accent normalization
+4. JSON storage for structured analysis
+5. Python regex-based entity extraction
+6. Cross-reference with known intelligence (DOJ, OFAC, Congressional)
+
+================================================================================
+CROSS-REFERENCE
+================================================================================
+
+This analysis should be cross-referenced with:
+- MARGARITA_INTELLIGENCE_FINDINGS.txt (primary findings document)
+- SOURCES_AND_METHODOLOGY.txt (collection details)
+- ../Hez/ directory (Hezbollah-Iran-Venezuela project)
+
+================================================================================
+END AUTOMATED ANALYSIS REPORT
+================================================================================

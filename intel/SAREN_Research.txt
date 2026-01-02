@@ -1,0 +1,66 @@
+SAREN - Servicio Autonomo de Registros y Notarias
+(Autonomous Service of Registries and Notaries)
+
+URL: https://www.saren.gob.ve
+API Endpoint: https://www.saren.gob.ve/wp-json/
+
+WHAT IT IS:
+Venezuela's registry and notary service. Handles property records,
+business registration, legal document authentication.
+
+INFRASTRUCTURE:
+- Server: nginx
+- CMS: WordPress
+- Trackers: Google Analytics (G-series)
+- Plugins: Divi Theme, Contact Form 7
+- CDNs: jsDelivr, Google APIs, Google Static
+
+EXPOSED USERS (3):
+1. Christiam Caceres
+   - Username: ccaceres
+   - Profile: https://www.saren.gob.ve/author/ccaceres/
+
+2. Sarabi Blanco
+   - Username: sblanco
+   - Profile: https://www.saren.gob.ve/author/sblanco/
+
+3. soporte (Support Account)
+   - Username: soporte
+   - Profile: https://www.saren.gob.ve/author/soporte/
+
+SECURITY NOTE:
+Contact Form 7 plugin may leak submission data via API.
+All user data retrieved from open /wp-json/wp/v2/users endpoint.
+No authentication required.
+
+---
+
+VTV - Venezolana de Television
+(Venezuelan Television)
+
+URL: https://www.vtv.gob.ve
+API Endpoint: https://www.vtv.gob.ve/wp-json/
+
+WHAT IT IS:
+State television. Primary regime propaganda outlet. Largest source.
+
+SCALE:
+- 168,178 posts across 1,682 pages
+
+INFRASTRUCTURE:
+- Server: nginx
+- CMS: WordPress
+- Plugins: Divi Theme, Elementor, Yoast SEO
+- CDNs: Google APIs
+- Wordfence detected but not blocking
+
+TRACKING:
+Google Analytics: UA-130677023-1
+
+EXPOSED USERS (1):
+1. ptrmaster
+
+---
+
+Source: Crystal Vault OSINT Project
+Data collected: December 2025

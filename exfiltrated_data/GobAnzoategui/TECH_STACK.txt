@@ -1,0 +1,24 @@
+================================================================================
+GOBANZOATEGUI (Anzoategui State Government) - TECH STACK
+================================================================================
+Date: 2026-01-01
+URL: https://anzoategui.gob.ve
+IP: 209.126.102.168
+
+PLATFORM: WORDPRESS (confirmed)
+- /wp-content/uploads/ paths visible in search results
+- Subdomain exists: consultoria.anzoategui.gob.ve
+
+API STATUS: TIMEOUT
+- Server does not respond from US
+- Likely geo-blocked or infrastructure issues
+- DNS resolves but connection times out
+
+EXPECTED ENDPOINTS (when accessible):
+- /wp-json/wp/v2/posts
+- /wp-json/wp/v2/media
+- /wp-json/wp/v2/users
+
+COLLECTION: Requires VPN to Venezuela or retry later
+
+================================================================================

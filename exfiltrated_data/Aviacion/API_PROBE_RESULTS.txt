@@ -1,0 +1,116 @@
+================================================================================
+AVIACION MILITAR BOLIVARIANA - API PROBE RESULTS
+================================================================================
+Date: 2026-01-01
+Target: www.aviacion.mil.ve
+Method: Tor SOCKS5 proxy + curl
+
+================================================================================
+SITE INFORMATION
+================================================================================
+
+Organization: Aviacion Militar Bolivariana (Venezuelan Air Force)
+URL: https://www.aviacion.mil.ve
+Description: "web oficial de la AMB"
+Server: Apache/2.4.57 (Ubuntu)
+Timezone: America/Caracas (GMT-4)
+
+================================================================================
+API STATUS: OPEN - WORDPRESS REST API AVAILABLE
+================================================================================
+
+IMPORTANT: Standard /wp-json/ returns 404
+USE THIS INSTEAD: /index.php?rest_route=/
+
+API Root: https://www.aviacion.mil.ve/index.php?rest_route=/
+
+WordPress Version: 6.8.1
+Elementor Version: 3.29.0
+
+================================================================================
+AVAILABLE NAMESPACES
+================================================================================
+
+- oembed/1.0
+- envato-elements/v2
+- wordfence/v1         <-- SECURITY PLUGIN
+- pum/v1               <-- POPUP MAKER
+- elementor/v1
+- health-check/v1
+- astra/v1             <-- THEME
+- elementor/v1/documents
+- elementor-ai/v1
+- elementor-pro/v1
+- nps-survey/v1
+- wpforms/v1           <-- FORMS PLUGIN
+- wp/v2                <-- STANDARD WP API
+- wp-site-health/v1
+- wp-block-editor/v1
+
+================================================================================
+ENDPOINT ACCESS STATUS
+================================================================================
+
+ACCESSIBLE:
+- Posts: /index.php?rest_route=/wp/v2/posts
+- Media: /index.php?rest_route=/wp/v2/media
+- Pages: /index.php?rest_route=/wp/v2/pages
+
+RESTRICTED (401):
+- Users: "Lo siento, no tienes permiso para listar usuarios"
+
+================================================================================
+SAMPLE DATA RETRIEVED
+================================================================================
+
+LATEST POST (Dec 11, 2024):
+Title: "Aviacion Militar Bolivariana realiza santa misa en honor a la Virgen de Loreto"
+ID: 5156
+Status: publish
+Author ID: 3
+
+LATEST MEDIA (Dec 29, 2025):
+File: WhatsApp-Image-2025-12-29-at-19.13.40-1.jpeg
+ID: 11952
+Type: attachment
+URL: aviacion.mil.ve/wp-content/uploads/2025/12/
+
+================================================================================
+COLLECTION ENDPOINTS
+================================================================================
+
+Posts (100 per page max):
+https://www.aviacion.mil.ve/index.php?rest_route=/wp/v2/posts&per_page=100&page=1
+
+Media (100 per page max):
+https://www.aviacion.mil.ve/index.php?rest_route=/wp/v2/media&per_page=100&page=1
+
+Pages:
+https://www.aviacion.mil.ve/index.php?rest_route=/wp/v2/pages&per_page=100&page=1
+
+================================================================================
+INTELLIGENCE VALUE
+================================================================================
+
+HIGH VALUE TARGET:
+- Venezuelan Air Force official website
+- Contains military news, events, personnel info
+- Media uploads include WhatsApp images (potential EXIF data)
+- Wordfence plugin may have exposed security logs
+- WPForms may contain form submission data
+
+COLLECTION PRIORITY: HIGH
+
+================================================================================
+NOTES
+================================================================================
+
+- Site uses Elementor page builder (Pro version)
+- Astra theme installed
+- Popup Maker plugin active
+- WPForms for contact/forms
+- Recent activity: Media uploaded Dec 29, 2025
+
+================================================================================
+END PROBE RESULTS
+================================================================================

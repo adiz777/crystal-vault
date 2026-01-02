@@ -1,0 +1,35 @@
+================================================================================
+TELESUR - API PROBE RESULTS
+================================================================================
+Date: 2026-01-01
+Target: telesurtv.net
+Method: Tor SOCKS5 proxy
+
+================================================================================
+API STATUS: 421 MISDIRECTED REQUEST
+================================================================================
+
+Server returns: 421 Misdirected Request
+"Request sent to a non-authoritative server"
+
+This typically means:
+- CDN/proxy misconfiguration
+- SNI mismatch
+- Multi-tenant hosting issue
+
+================================================================================
+NOTES
+================================================================================
+
+- TeleSUR is Venezuelan/Latin American state media network
+- Major propaganda outlet
+- High value target for content analysis
+
+Try:
+- Different Tor exit nodes
+- Direct IP access
+- Alternative domains
+
+COLLECTION STATUS: INACCESSIBLE - SERVER ERROR
+
+================================================================================

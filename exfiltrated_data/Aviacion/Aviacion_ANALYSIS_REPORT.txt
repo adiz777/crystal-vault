@@ -1,0 +1,246 @@
+================================================================================
+AVIACION - OSINT ANALYSIS REPORT
+================================================================================
+Generated: 2026-01-01 19:14
+Source: WordPress REST API Collection
+
+================================================================================
+COLLECTION SUMMARY
+================================================================================
+
+Total Items Collected: 684
+  - Posts: 105
+  - Media: 519
+  - Pages: 60
+
+================================================================================
+COVERAGE BY YEAR
+================================================================================
+
+  2024:  145 items ##############
+  2025:  435 items ###########################################
+
+================================================================================
+AUTHOR ANALYSIS
+================================================================================
+
+  Author ID 1: 457 items
+  Author ID 3: 119 items
+  Author ID 4: 4 items
+
+================================================================================
+KEYWORD INTELLIGENCE HITS
+================================================================================
+
+
+RUSSIA (1 hits):
+------------------------------------------------------------
+  [2025-10-18] INFORMACION CIBERDEFENSA...
+    URL: https://www.aviacion.mil.ve/?page_id=10849
+
+CHINA (1 hits):
+------------------------------------------------------------
+  [2025-10-18] INFORMACION CIBERDEFENSA...
+    URL: https://www.aviacion.mil.ve/?page_id=10849
+
+TRAINING (7 hits):
+------------------------------------------------------------
+  [2025-11-13] LEYES DE DERECHOS INTERNACIONAL HUMANITARIOS...
+    URL: https://www.aviacion.mil.ve/?page_id=11276
+  [2025-06-09] SUCRE...
+    URL: https://www.aviacion.mil.ve/?page_id=9125
+  [2025-05-29] BAPAEZ...
+    URL: https://www.aviacion.mil.ve/?page_id=8847
+  [2025-02-26] BALANDA...
+    URL: https://www.aviacion.mil.ve/?page_id=7330
+  [2025-02-25] BASUCRE...
+    URL: https://www.aviacion.mil.ve/?page_id=7294
+  [2025-02-06] BAEL...
+    URL: https://www.aviacion.mil.ve/?page_id=6505
+  [2024-11-24] DIREDU...
+    URL: https://www.aviacion.mil.ve/?page_id=3551
+
+MILITARY (57 hits):
+------------------------------------------------------------
+  [2025-12-13] N° 6 NORMAS ACTUA FANB RESL 008610...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11809
+  [2025-11-20] N° 2 CONVENIO DE GINEBRA PARA ALIVIAR LA SUERTE QUE CORREN L...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11529
+  [2025-11-17] N° 10 RESOL N° 029635 USO LENGUAJE GÉNERO FANB...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11433
+  [2025-11-17] N° 3 LEY CONSTITU FANB...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11428
+  [2025-11-04] Fuerza-Armada-nacional-combatiendo...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11150
+  [2025-09-30] logo nuevo Aviacion Militar Bolivariana...
+    URL: https://www.aviacion.mil.ve/?attachment_id=10439
+  [2025-09-30] logo nuevo Aviacion Militar Bolivariana...
+    URL: https://www.aviacion.mil.ve/?attachment_id=10438
+  [2025-09-30] Aviacion Militar Bolivariana...
+    URL: https://www.aviacion.mil.ve/?attachment_id=10437
+  [2025-09-30] Aviacion Militar Bolivariana...
+    URL: https://www.aviacion.mil.ve/?attachment_id=10429
+  [2024-11-21] EJERCITO BOLIVARIANO...
+    URL: https://www.aviacion.mil.ve/?attachment_id=3230
+  [2024-11-21] ARMADA BOLIVARIANA...
+    URL: https://www.aviacion.mil.ve/?attachment_id=3229
+  [2024-10-16] escudo-aviacion-militar-bolivariano (2)...
+    URL: https://www.aviacion.mil.ve/?attachment_id=1854
+  [2024-10-10] Aviación Militar Bolivariana...
+    URL: https://www.aviacion.mil.ve/?attachment_id=1752
+  [2024-10-10] Aviación Militar Bolivariana...
+    URL: https://www.aviacion.mil.ve/?attachment_id=1736
+  [2025-11-17] LEYES normativa DH....
+    URL: https://www.aviacion.mil.ve/?page_id=11408
+
+MADURO (22 hits):
+------------------------------------------------------------
+  [2025-12-28] maduro-familia-nina-ia-2-portada-800&#215;445-1...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11905
+  [2025-12-28] pueblo-con-maduro...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11901
+  [2025-12-24] maduro-esta-obras...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11885
+  [2025-12-24] Esta-Maduro-40-millonews...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11881
+  [2025-12-09] maduro-gobierno-popular-PORTADA-800X445...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11788
+  [2025-11-04] maduro-apascasio-mata-cdi-GPORTADA-800X445...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11143
+  [2025-11-04] maduro...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11135
+  [2025-10-30] pmaduro...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11027
+  [2025-10-27] Maduro-3...
+    URL: https://www.aviacion.mil.ve/?attachment_id=10922
+  [2025-10-21] Maduro-comuna-8-raices-PORTADA-800X445...
+    URL: https://www.aviacion.mil.ve/?attachment_id=10892
+  [2025-09-30] Maduro-7...
+    URL: https://www.aviacion.mil.ve/?attachment_id=10400
+  [2025-10-18] INFORMACION CIBERDEFENSA...
+    URL: https://www.aviacion.mil.ve/?page_id=10849
+  [2024-11-26] NOTICIAS MADURO 3...
+    URL: https://www.aviacion.mil.ve/?page_id=3679
+  [2024-11-26] NOTICIAS MADURO 2...
+    URL: https://www.aviacion.mil.ve/?page_id=3668
+  [2024-11-26] NOTICIAS MADURO 1...
+    URL: https://www.aviacion.mil.ve/?page_id=3657
+
+WEAPONS (12 hits):
+------------------------------------------------------------
+  [2025-11-17] N° 18 TRATA PROHI ARMAS NUCLEARES...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11398
+  [2025-11-17] N° 14 CONV PRO DESA ALMA ARMAS QUÍMICAS...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11394
+  [2025-11-17] N° 13 PROT III PROH EMPLEO ARMAS INCENDIARIAS...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11393
+  [2025-11-17] N° 10 CONV PROHI REST EMPLEO ARMAS CONVENCIONALES...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11390
+  [2025-11-17] N° 9 CONV PROHI DESA PROD ALMA ARMAS BACTERIOLÓGICAS...
+    URL: https://www.aviacion.mil.ve/?attachment_id=11389
+  [2025-11-13] LEYES DE DERECHOS INTERNACIONAL HUMANITARIOS...
+    URL: https://www.aviacion.mil.ve/?page_id=11276
+  [2025-06-21] NOTICIAS AMB 2...
+    URL: https://www.aviacion.mil.ve/?page_id=9548
+  [2025-06-09] SUCRE...
+    URL: https://www.aviacion.mil.ve/?page_id=9125
+  [2025-02-25] BASUCRE...
+    URL: https://www.aviacion.mil.ve/?page_id=7294
+  [2024-12-10] ENGAMB...
+    URL: https://www.aviacion.mil.ve/?page_id=4960
+  [2024-11-27] CIBERDEFENSA...
+    URL: https://www.aviacion.mil.ve/?page_id=3751
+  [2024-11-26] DAL...
+    URL: https://www.aviacion.mil.ve/?page_id=3638
+
+CUBA (3 hits):
+------------------------------------------------------------
+  [2024-11-26] NOTICIAS MADURO 3...
+    URL: https://www.aviacion.mil.ve/?page_id=3679
+  [2024-11-26] NOTICIAS MADURO 1...
+    URL: https://www.aviacion.mil.ve/?page_id=3657
+  [2024-10-10] INSTITUCIÓN...
+    URL: https://www.aviacion.mil.ve/
+
+DRUGS (1 hits):
+------------------------------------------------------------
+  [2024-10-23] INGAV...
+    URL: https://www.aviacion.mil.ve/?page_id=2858
+
+MARGARITA (1 hits):
+------------------------------------------------------------
+  [2025-03-11] BACACERES...
+    URL: https://www.aviacion.mil.ve/?page_id=7939
+
+================================================================================
+MEDIA FILES COLLECTED
+================================================================================
+
+Total Media URLs: 519
+
+By Type:
+  image/jpeg: 266
+  image/png: 148
+  application/pdf: 80
+  image/webp: 21
+  video/mp4: 4
+
+Recent Media (last 20):
+  [2025-12-29] WhatsApp Image 2025-12-29 at 19.13.40 (1)
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-29-at-19.13.40-1.jpeg
+  [2025-12-29] WhatsApp Image 2025-12-29 at 19.13.40 (3)
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-29-at-19.13.40-3.jpeg
+  [2025-12-29] WhatsApp Image 2025-12-29 at 19.13.41
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-29-at-19.13.41-1.jpeg
+  [2025-12-29] WhatsApp Image 2025-12-28 at 16.22.45
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-28-at-16.22.45.jpeg
+  [2025-12-29] WhatsApp Image 2025-12-28 at 16.13.20
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-28-at-16.13.20.jpeg
+  [2025-12-29] WhatsApp Image 2025-12-29 at 19.12.43
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-29-at-19.12.43.jpeg
+  [2025-12-29] WhatsApp Image 2025-12-29 at 19.12.44 (3)
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-29-at-19.12.44-3.jpeg
+  [2025-12-29] WhatsApp Image 2025-12-29 at 19.12.44 (2)
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-29-at-19.12.44-2.jpeg
+  [2025-12-29] 2Y2A1110 (2)
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/2Y2A1110-2-scaled.jpg
+  [2025-12-29] photo_5071079461784062865_y
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/photo_5071079461784062865_y.jpg
+  [2025-12-29] 2Y2A1228
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/2Y2A1228-scaled.jpg
+  [2025-12-29] photo_5084655398140185549_y
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/photo_5084655398140185549_y.jpg
+  [2025-12-29] photo_5084655398140185553_y
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/photo_5084655398140185553_y-e1767050933213.jpg
+  [2025-12-29] WhatsApp Image 2025-12-28 at 16.22.45 (1)
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-28-at-16.22.45-1.jpeg
+  [2025-12-29] photo_5082851529055734806_y
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/photo_5082851529055734806_y-1-e1767050783257.jpg
+  [2025-12-29] WhatsApp Image 2025-12-29 at 19.13.41
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-29-at-19.13.41.jpeg
+  [2025-12-29] WhatsApp Image 2025-12-29 at 19.12.44
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-29-at-19.12.44.jpeg
+  [2025-12-29] 2Y2A1095
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/2Y2A1095-scaled.jpg
+  [2025-12-29] photo_5082851529055734806_y
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/photo_5082851529055734806_y-e1767050427177.jpg
+  [2025-12-29] 11_ZC__5535_P
+    https://www.aviacion.mil.ve/wp-content/uploads/2025/12/11_ZC__5535_P-scaled.jpg
+
+================================================================================
+INTELLIGENCE SUMMARY
+================================================================================
+
+  MILITARY: 57 references
+  MADURO: 22 references
+  WEAPONS: 12 references
+  TRAINING: 7 references
+  CUBA: 3 references
+  RUSSIA: 1 references
+  CHINA: 1 references
+  DRUGS: 1 references
+  MARGARITA: 1 references
+
+================================================================================
+END REPORT
+================================================================================

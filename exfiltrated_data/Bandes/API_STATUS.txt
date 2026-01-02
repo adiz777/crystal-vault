@@ -1,0 +1,14 @@
+Bandes - Banco de Desarrollo Economico y Social
+================================================
+Status: NO WORDPRESS API FOUND
+
+Tested Endpoints:
+- https://bandes.gob.ve/wp-json/wp/v2/media - 404
+- http://www.bandes.gob.ve/wp-json/wp/v2/media - Connection refused
+
+Notes:
+- Development bank website has no WordPress REST API
+- OFAC-sanctioned entity
+- Site may use different CMS
+
+Last tested: 2026-01-01

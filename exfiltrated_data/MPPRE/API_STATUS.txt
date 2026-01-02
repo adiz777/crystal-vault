@@ -1,0 +1,16 @@
+MPPRE - Ministry of Foreign Affairs
+====================================
+Status: CONNECTION TIMEOUT / SSL ISSUES
+
+Tested Endpoints:
+- https://mppre.gob.ve/wp-json/wp/v2/media - Timeout
+- http://mppre.gob.ve/wp-json/wp/v2/media - Timeout
+- Via urllib3 SSL bypass - SSL/Connection errors
+
+Notes:
+- Foreign Affairs Ministry website
+- All connection attempts fail with timeout or SSL errors
+- May require Venezuelan network access
+- Server appears to be geo-blocked or heavily restricted
+
+Last tested: 2026-01-01
